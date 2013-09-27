@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2CC617F530E3000E7971 /* MKVersion.m */; };
 		60F7689B17F5264B00937CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
-		60F768A017F5264B00937CB1 /* MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F7689F17F5264B00937CB1 /* MKCommons.h */; };
-		60F768A217F5264B00937CB1 /* MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768A117F5264B00937CB1 /* MKCommons.m */; };
 		60F768A917F5264B00937CB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768A817F5264B00937CB1 /* XCTest.framework */; };
 		60F768AA17F5264B00937CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
 		60F768AC17F5264B00937CB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768AB17F5264B00937CB1 /* UIKit.framework */; };
 		60F768AF17F5264B00937CB1 /* libMKCommons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689717F5264B00937CB1 /* libMKCommons.a */; };
 		60F768B517F5264B00937CB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60F768B317F5264B00937CB1 /* InfoPlist.strings */; };
-		60F768B717F5264B00937CB1 /* MKCommonsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768B617F5264B00937CB1 /* MKCommonsTests.m */; };
+		60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768D617F529D500937CB1 /* MKFallbackQueue.m */; };
+		60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768D817F529D500937CB1 /* MKSerialManager.m */; };
+		60F768E017F529D500937CB1 /* MKMiscHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768DA17F529D500937CB1 /* MKMiscHelper.m */; };
+		60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768DC17F529D500937CB1 /* MKStopwatch.m */; };
+		60F768EB17F52B0100937CB1 /* MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768EA17F52A9D00937CB1 /* MKCommons.h */; };
+		60F768EF17F52BB300937CB1 /* MKFallbackQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768EC17F52BB300937CB1 /* MKFallbackQueueTest.m */; };
+		60F768F017F52BB300937CB1 /* MKMiscHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768ED17F52BB300937CB1 /* MKMiscHelperTest.m */; };
+		60F768F117F52BB300937CB1 /* MKSerialManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768EE17F52BB300937CB1 /* MKSerialManagerTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,24 +41,35 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				60F768A017F5264B00937CB1 /* MKCommons.h in CopyFiles */,
+				60F768EB17F52B0100937CB1 /* MKCommons.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		60EF2CC517F530E3000E7971 /* MKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVersion.h; sourceTree = "<group>"; };
+		60EF2CC617F530E3000E7971 /* MKVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVersion.m; sourceTree = "<group>"; };
 		60F7689717F5264B00937CB1 /* libMKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMKCommons.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F7689A17F5264B00937CB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60F7689E17F5264B00937CB1 /* MKCommons-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MKCommons-Prefix.pch"; sourceTree = "<group>"; };
-		60F7689F17F5264B00937CB1 /* MKCommons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKCommons.h; sourceTree = "<group>"; };
-		60F768A117F5264B00937CB1 /* MKCommons.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKCommons.m; sourceTree = "<group>"; };
 		60F768A717F5264B00937CB1 /* MKCommonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKCommonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F768A817F5264B00937CB1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		60F768AB17F5264B00937CB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		60F768B217F5264B00937CB1 /* MKCommonsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MKCommonsTests-Info.plist"; sourceTree = "<group>"; };
 		60F768B417F5264B00937CB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		60F768B617F5264B00937CB1 /* MKCommonsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MKCommonsTests.m; sourceTree = "<group>"; };
+		60F768D517F529D500937CB1 /* MKFallbackQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFallbackQueue.h; sourceTree = "<group>"; };
+		60F768D617F529D500937CB1 /* MKFallbackQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFallbackQueue.m; sourceTree = "<group>"; };
+		60F768D717F529D500937CB1 /* MKSerialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSerialManager.h; sourceTree = "<group>"; };
+		60F768D817F529D500937CB1 /* MKSerialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSerialManager.m; sourceTree = "<group>"; };
+		60F768D917F529D500937CB1 /* MKMiscHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMiscHelper.h; sourceTree = "<group>"; };
+		60F768DA17F529D500937CB1 /* MKMiscHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMiscHelper.m; sourceTree = "<group>"; };
+		60F768DB17F529D500937CB1 /* MKStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKStopwatch.h; sourceTree = "<group>"; };
+		60F768DC17F529D500937CB1 /* MKStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStopwatch.m; sourceTree = "<group>"; };
+		60F768EA17F52A9D00937CB1 /* MKCommons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKCommons.h; sourceTree = "<group>"; };
+		60F768EC17F52BB300937CB1 /* MKFallbackQueueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFallbackQueueTest.m; sourceTree = "<group>"; };
+		60F768ED17F52BB300937CB1 /* MKMiscHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMiscHelperTest.m; sourceTree = "<group>"; };
+		60F768EE17F52BB300937CB1 /* MKSerialManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSerialManagerTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +127,17 @@
 		60F7689C17F5264B00937CB1 /* MKCommons */ = {
 			isa = PBXGroup;
 			children = (
-				60F7689F17F5264B00937CB1 /* MKCommons.h */,
-				60F768A117F5264B00937CB1 /* MKCommons.m */,
+				60F768EA17F52A9D00937CB1 /* MKCommons.h */,
+				60F768D517F529D500937CB1 /* MKFallbackQueue.h */,
+				60F768D617F529D500937CB1 /* MKFallbackQueue.m */,
+				60F768D917F529D500937CB1 /* MKMiscHelper.h */,
+				60F768DA17F529D500937CB1 /* MKMiscHelper.m */,
+				60F768D717F529D500937CB1 /* MKSerialManager.h */,
+				60F768D817F529D500937CB1 /* MKSerialManager.m */,
+				60F768DB17F529D500937CB1 /* MKStopwatch.h */,
+				60F768DC17F529D500937CB1 /* MKStopwatch.m */,
+				60EF2CC517F530E3000E7971 /* MKVersion.h */,
+				60EF2CC617F530E3000E7971 /* MKVersion.m */,
 				60F7689D17F5264B00937CB1 /* Supporting Files */,
 			);
 			path = MKCommons;
@@ -128,7 +154,9 @@
 		60F768B017F5264B00937CB1 /* MKCommonsTests */ = {
 			isa = PBXGroup;
 			children = (
-				60F768B617F5264B00937CB1 /* MKCommonsTests.m */,
+				60F768EC17F52BB300937CB1 /* MKFallbackQueueTest.m */,
+				60F768ED17F52BB300937CB1 /* MKMiscHelperTest.m */,
+				60F768EE17F52BB300937CB1 /* MKSerialManagerTest.m */,
 				60F768B117F5264B00937CB1 /* Supporting Files */,
 			);
 			path = MKCommonsTests;
@@ -224,7 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60F768A217F5264B00937CB1 /* MKCommons.m in Sources */,
+				60F768E017F529D500937CB1 /* MKMiscHelper.m in Sources */,
+				60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */,
+				60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */,
+				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
+				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60F768B717F5264B00937CB1 /* MKCommonsTests.m in Sources */,
+				60F768F017F52BB300937CB1 /* MKMiscHelperTest.m in Sources */,
+				60F768EF17F52BB300937CB1 /* MKFallbackQueueTest.m in Sources */,
+				60F768F117F52BB300937CB1 /* MKSerialManagerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +443,7 @@
 				60F768BC17F5264B00937CB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		60F768BD17F5264B00937CB1 /* Build configuration list for PBXNativeTarget "MKCommonsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +452,7 @@
 				60F768BF17F5264B00937CB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

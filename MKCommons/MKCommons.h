@@ -6,8 +6,12 @@
 //  Copyright (c) 2013 Michael Kuck. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#ifndef MKCommons_MKCommons_h
+#define MKCommons_MKCommons_h
 
-@interface MKCommons : NSObject
+#import "MKFallbackQueue.h"
+#import "MKMiscHelper.h"
+#import "MKSerialManager.h"
+#import "MKStopwatch.h"
 
-@end
+#endif
