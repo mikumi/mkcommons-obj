@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D517F529D500937CB1 /* MKFallbackQueue.h */; };
+		60AA0F7A17F535D1001781D2 /* MKMiscHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKMiscHelper.h */; };
+		60AA0F7B17F535D4001781D2 /* MKSerialManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D717F529D500937CB1 /* MKSerialManager.h */; };
+		60AA0F7C17F535D8001781D2 /* MKStopwatch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768DB17F529D500937CB1 /* MKStopwatch.h */; };
 		60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2CC617F530E3000E7971 /* MKVersion.m */; };
-		60F7689B17F5264B00937CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
 		60F768A917F5264B00937CB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768A817F5264B00937CB1 /* XCTest.framework */; };
 		60F768AA17F5264B00937CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
 		60F768AC17F5264B00937CB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768AB17F5264B00937CB1 /* UIKit.framework */; };
@@ -42,6 +45,10 @@
 			dstSubfolderSpec = 16;
 			files = (
 				60F768EB17F52B0100937CB1 /* MKCommons.h in CopyFiles */,
+				60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in CopyFiles */,
+				60AA0F7A17F535D1001781D2 /* MKMiscHelper.h in CopyFiles */,
+				60AA0F7B17F535D4001781D2 /* MKSerialManager.h in CopyFiles */,
+				60AA0F7C17F535D8001781D2 /* MKStopwatch.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60F7689B17F5264B00937CB1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
