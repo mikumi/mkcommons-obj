@@ -54,7 +54,6 @@ NSInteger const PRIME = 701;
     
     // "Encrypt" with PRIME
     long long encrypted = [beforeEncryption longLongValue] * PRIME;
-//    NSLog(@"%lld", [beforeEncryption longLongValue]);
     
     // Add dashes and append to serial
     NSMutableString *withDashes = [NSMutableString stringWithFormat:@"%017lld", encrypted];
@@ -81,18 +80,12 @@ NSInteger const PRIME = 701;
     [mutableSerial deleteCharactersInRange:NSMakeRange(4, 1)];
     
     NSString *decryptedSerial = [NSString stringWithFormat:@"%014lld", [mutableSerial longLongValue] / PRIME];
-//    NSLog(@"decryptedSerial: %@", decryptedSerial);
     
     NSInteger decryptedRandom = [[decryptedSerial substringWithRange:NSMakeRange(0, 2)] integerValue];
     NSInteger decryptedFeature = [[decryptedSerial substringWithRange:NSMakeRange(2, 2)] integerValue];
     NSInteger decryptedExpiryTime = [[decryptedSerial substringWithRange:NSMakeRange(4, 7)] integerValue];
     NSInteger decryptedChecksum = [[decryptedSerial substringWithRange:NSMakeRange(11, 3)] integerValue];
-    
-//    NSLog(@"random: %02d", decryptedRandom);
-//    NSLog(@"feature: %02d", decryptedFeature);
-//    NSLog(@"expiryTime: %07d", decryptedExpiryTime);
-//    NSLog(@"checksum: %02d", decryptedChecksum);
-    
+        
     NSString *forChecksum = [NSString stringWithFormat:@"%02ld%02ld%07ld", (long)decryptedRandom, (long)decryptedFeature, (long)decryptedExpiryTime];
     NSInteger calculatedChecksum = [self simpleChecksum:[forChecksum longLongValue]];
     

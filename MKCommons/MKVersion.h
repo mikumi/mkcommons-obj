@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Michael Kuck. All rights reserved.
 //
 
-extern NSString *const APPLICATION_VERSION(void);
+extern NSString *const MKApplicationVersion(void);
 
 extern NSUInteger const MAJOR;
 extern NSUInteger const MINOR;
@@ -14,12 +14,16 @@ extern NSUInteger const PATCH;
 
 NSUInteger const MAJOR = 1;
 NSUInteger const MINOR = 0;
-NSUInteger const PATCH = 1;
+NSUInteger const PATCH = 2;
 
 /*
  * ********************************
  * MKCommons Changelog
  * ********************************
+ *
+ * v1.0.2
+ * - Added MKLog class
+ * - Updated other classes to use MKLog
  *
  * v1.0.1
  * - Fixed copy headers build step to include all single headers for the different parts

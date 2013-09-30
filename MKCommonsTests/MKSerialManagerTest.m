@@ -11,6 +11,8 @@ extern void __gcov_flush();
 
 #import "MKSerialManager.h"
 
+#import "MKCommons.h"
+
 @interface MKSerialManagerTest : XCTestCase
 
 @property (nonatomic, strong) MKSerialManager *serialManager;
@@ -40,7 +42,7 @@ extern void __gcov_flush();
     NSInteger feature = 01;
     NSInteger expiryTime = 24 * 7;
     NSString *serial = [self.serialManager generateSerialForProduct:product andFeature:feature withExpiryTime:expiryTime];
-    NSLog(@"Serial generated: %@", serial);
+    MKLogInfo(@"Serial generated: %@", serial);
 
     NSString *expectedFront = product;
     NSString *actualFront = [serial substringToIndex:2];
@@ -96,12 +98,11 @@ extern void __gcov_flush();
             [serials addObject:serial];
         }
         if ((i % 10) == 0) {
-            NSLog(@"%d serials found. continue searching...", [serials count]);
+            MKLogVerbose(@"%lu serials found. continue searching...", (unsigned long)[serials count]);
         }
-//        NSLog(@"serial found: %@", serial);
         i--;
     }
-    XCTAssert([serials count] >= atLeast, @"Not enough serials found: %d. Should be at least %d.", [serials count], atLeast);
+    XCTAssert([serials count] >= atLeast, @"Not enough serials found: %lu. Should be at least %lu.", (unsigned long)[serials count], (unsigned long)atLeast);
 }
 
 @end

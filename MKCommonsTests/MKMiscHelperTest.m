@@ -8,7 +8,7 @@
 
 #import <XCTest/XCTest.h>
 
-#import "MKMiscHelper.h"
+#import "MKCommons.h"
 
 @interface MKMiscHelperTest : XCTestCase
 
@@ -30,20 +30,16 @@
 
 - (void)testEvaluateBlock
 {
-//    void (^blockWithNoArgs)() = ^(){
-//        NSLog(@"This is a block with no args");
-//    };
-    
     void (^blockWith1Arg)(NSNumber *) = ^(NSNumber *number1){
-        NSLog(@"This is a block with a number %d", [number1 integerValue]);
+        MKLogVerbose(@"This is a block with a number %ld", (long)[number1 integerValue]);
     };
     
     void (^blockWith2Args)(NSNumber *, NSNumber *) = ^(NSNumber *number1, NSNumber *number2){
-        NSLog(@"This is a block with numbers %d and %d", [number1 integerValue], [number2 integerValue]);
+        MKLogVerbose(@"This is a block with numbers %ld and %ld", (long)[number1 integerValue], (long)[number2 integerValue]);
     };
     
     void (^blockWith3Args)(NSNumber *, NSNumber *, NSNumber *) = ^(NSNumber *number1, NSNumber *number2, NSNumber *number3){
-        NSLog(@"This is a block with numbers %d, %d and %d", [number1 integerValue], [number2 integerValue], [number3 integerValue]);
+        MKLogVerbose(@"This is a block with numbers %ld, %ld and %ld", (long)[number1 integerValue], (long)[number2 integerValue], (long)[number3 integerValue]);
     };
     
 //    BLOCK_SAFE_RUN(blockWithNoArgs);

@@ -8,7 +8,7 @@
 
 #import "MKVersion.h"
 
-NSString *const APPLICATION_VERSION(void) {
+NSString *const MKApplicationVersion(void) {
     NSString *version = [NSString stringWithFormat:@"%ld.%ld.%ld", (long)MAJOR, (long)MINOR, (long)PATCH];
     return version;
 }

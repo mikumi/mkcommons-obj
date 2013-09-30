@@ -13,5 +13,6 @@
 #import "MKMiscHelper.h"
 #import "MKSerialManager.h"
 #import "MKStopwatch.h"
+#import "MKLog.h"
 
 #endif
