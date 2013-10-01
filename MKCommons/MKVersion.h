@@ -14,12 +14,15 @@ extern NSUInteger const PATCH;
 
 NSUInteger const MAJOR = 1;
 NSUInteger const MINOR = 0;
-NSUInteger const PATCH = 3;
+NSUInteger const PATCH = 4;
 
 /*
  * ********************************
  * MKCommons Changelog
  * ********************************
+ *
+ * v1.0.4
+ * - Updated test suite for MKPreferencesManager and MKSerialManager
  *
  * v1.0.3
  * - Added MKPreferencesManager class
