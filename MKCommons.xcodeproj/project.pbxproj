@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */; };
+		603FE1C517F9B6980044ED58 /* MKPreferencesManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */; };
 		60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D517F529D500937CB1 /* MKFallbackQueue.h */; };
 		60AA0F7A17F535D1001781D2 /* MKMiscHelper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKMiscHelper.h */; };
 		60AA0F7B17F535D4001781D2 /* MKSerialManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D717F529D500937CB1 /* MKSerialManager.h */; };
@@ -53,6 +55,7 @@
 				60AA0F7B17F535D4001781D2 /* MKSerialManager.h in Copy Files */,
 				60AA0F7C17F535D8001781D2 /* MKStopwatch.h in Copy Files */,
 				60F9B90D17F97E230086A155 /* MKLog.h in Copy Files */,
+				603FE1C517F9B6980044ED58 /* MKPreferencesManager.h in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		6009179F17F7C0E10047B7D8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPreferencesManager.h; sourceTree = "<group>"; };
+		603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManager.m; sourceTree = "<group>"; };
 		60EF2CC517F530E3000E7971 /* MKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVersion.h; sourceTree = "<group>"; };
 		60EF2CC617F530E3000E7971 /* MKVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVersion.m; sourceTree = "<group>"; };
 		60F7689717F5264B00937CB1 /* libMKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMKCommons.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +154,8 @@
 				60F9B90917F971540086A155 /* MKLog.m */,
 				60F768D917F529D500937CB1 /* MKMiscHelper.h */,
 				60F768DA17F529D500937CB1 /* MKMiscHelper.m */,
+				603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */,
+				603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */,
 				60F768D717F529D500937CB1 /* MKSerialManager.h */,
 				60F768D817F529D500937CB1 /* MKSerialManager.m */,
 				60F768DB17F529D500937CB1 /* MKStopwatch.h */,
@@ -275,6 +282,7 @@
 				60F768E017F529D500937CB1 /* MKMiscHelper.m in Sources */,
 				60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */,
 				60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */,
+				603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */,
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
 				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
 			);

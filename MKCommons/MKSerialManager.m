@@ -12,7 +12,7 @@ NSInteger const PRIME = 701;
 
 @interface MKSerialManager ()
 
-- (NSInteger)simpleChecksum:(long long)input;
++ (NSInteger)simpleChecksum:(long long)input;
 
 @end
 
@@ -30,7 +30,7 @@ NSInteger const PRIME = 701;
  
  */
 
-- (NSString *)generateSerialForProduct:(NSString *)product
++ (NSString *)generateSerialForProduct:(NSString *)product
                            andFeature:(NSInteger)feature
                             withExpiryTime:(NSInteger)expiryTime;
 {
@@ -65,7 +65,7 @@ NSInteger const PRIME = 701;
     return serial;
 }
 
-- (BOOL)isSerialValid:(NSString *)serial
++ (BOOL)isSerialValid:(NSString *)serial
           forProduct:(NSString *)product
           forFeature:(NSInteger)feature;
 {
@@ -100,7 +100,7 @@ NSInteger const PRIME = 701;
     }
 }
 
-- (NSInteger)simpleChecksum:(long long)input {
++ (NSInteger)simpleChecksum:(long long)input {
     NSString *inputString = [NSString stringWithFormat:@"%lld", input];
     NSInteger checksum = 0;
     for (NSUInteger i = 0; i < [inputString length]; i++) {

@@ -14,5 +14,6 @@
 #import "MKSerialManager.h"
 #import "MKStopwatch.h"
 #import "MKLog.h"
+#import "MKPreferencesManager.h"
 
 #endif
