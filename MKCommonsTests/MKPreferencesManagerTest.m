@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+extern void __gcov_flush();
 
 #import "MKPreferencesManager.h"
 
@@ -34,6 +35,9 @@ static NSString *const TEST_KEY2 = @"MKPreferencesManagerTestKey2";
 - (void)tearDown
 {
     [self cleanup];
+#ifdef COVERAGE
+    __gcov_flush();
+#endif
     [super tearDown];
 }
 
@@ -45,18 +49,20 @@ static NSString *const TEST_KEY2 = @"MKPreferencesManagerTestKey2";
 
 - (void)testSetAndGetBool
 {
-    BOOL testYES = YES;
-    BOOL testNO = NO;
+    BOOL testValue1 = YES;
     XCTAssertEqualObjects(nil, [[MKPreferencesManager defaultManager] objectForKey:TEST_KEY1], @"Key should not exist yet.");
-    XCTAssertEqualObjects(nil, [[MKPreferencesManager defaultManager] objectForKey:TEST_KEY2], @"Key should not exist yet.");
     
-    [[MKPreferencesManager defaultManager] setBool:testYES forKey:TEST_KEY1];
-    [[MKPreferencesManager defaultManager] setBool:testNO forKey:TEST_KEY2];
+    [[MKPreferencesManager defaultManager] setBool:testValue1 forKey:TEST_KEY1];
     
     XCTAssertNotEqualObjects(nil, [[MKPreferencesManager defaultManager] objectForKey:TEST_KEY1], @"Key should exist now.");
-    XCTAssertNotEqualObjects(nil, [[MKPreferencesManager defaultManager] objectForKey:TEST_KEY1], @"Key should exist now.");
-    XCTAssertEqual(testYES, [[MKPreferencesManager defaultManager] boolForKey:TEST_KEY1], @"Key should exist now.");
-    XCTAssertEqual(testNO, [[MKPreferencesManager defaultManager] boolForKey:TEST_KEY2], @"Key should exist now.");
+    XCTAssertEqual(testValue1, [[MKPreferencesManager defaultManager] boolForKey:TEST_KEY1], @"Key should exist now.");
+    
+    [[MKPreferencesManager defaultManager] synchronize];
+    [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:TEST_KEY1];
+    XCTAssertEqual(testValue1, [[MKPreferencesManager defaultManager] boolForKey:TEST_KEY1], @"Key should still exist locally.");
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TEST_KEY1];
+    XCTAssertNotEqual(testValue1, [[MKPreferencesManager defaultManager] boolForKey:TEST_KEY1], @"Key should still not exist anymore");
+    
 }
 
 - (void)testSetAndGetDouble
@@ -68,6 +74,12 @@ static NSString *const TEST_KEY2 = @"MKPreferencesManagerTestKey2";
     
     XCTAssertNotEqualObjects(nil, [[MKPreferencesManager defaultManager] objectForKey:TEST_KEY1], @"Key should exist now.");
     XCTAssertEqual(testValue, [[MKPreferencesManager defaultManager] doubleForKey:TEST_KEY1], @"Key should exist now.");
+    
+    [[MKPreferencesManager defaultManager] synchronize];
+    [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:TEST_KEY1];
+    XCTAssertEqual(testValue, [[MKPreferencesManager defaultManager] doubleForKey:TEST_KEY1], @"Key should still exist locally.");
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TEST_KEY1];
+    XCTAssertNotEqual(testValue, [[MKPreferencesManager defaultManager] doubleForKey:TEST_KEY1], @"Key should still not exist anymore");
 }
 
 - (void)testSetAndGetInteger
@@ -79,6 +91,12 @@ static NSString *const TEST_KEY2 = @"MKPreferencesManagerTestKey2";
     
     XCTAssertNotEqualObjects(nil, [[MKPreferencesManager defaultManager] objectForKey:TEST_KEY1], @"Key should exist now.");
     XCTAssertEqual(testValue, [[MKPreferencesManager defaultManager] integerForKey:TEST_KEY1], @"Key should exist now.");
+    
+    [[MKPreferencesManager defaultManager] synchronize];
+    [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:TEST_KEY1];
+    XCTAssertEqual(testValue, [[MKPreferencesManager defaultManager] integerForKey:TEST_KEY1], @"Key should still exist locally.");
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TEST_KEY1];
+    XCTAssertNotEqual(testValue, [[MKPreferencesManager defaultManager] integerForKey:TEST_KEY1], @"Key should still not exist anymore");
 }
 
 - (void)testSetAndGetObject
@@ -89,6 +107,12 @@ static NSString *const TEST_KEY2 = @"MKPreferencesManagerTestKey2";
     [[MKPreferencesManager defaultManager] setObject:testValue forKey:TEST_KEY1];
     
     XCTAssertEqualObjects(testValue, [[MKPreferencesManager defaultManager] objectForKey:TEST_KEY1], @"Key should exist now.");
+    
+    [[MKPreferencesManager defaultManager] synchronize];
+    [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:TEST_KEY1];
+    XCTAssertEqual(testValue, [[MKPreferencesManager defaultManager] objectForKey:TEST_KEY1], @"Key should still exist locally.");
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TEST_KEY1];
+    XCTAssertNotEqual(testValue, [[MKPreferencesManager defaultManager] objectForKey:TEST_KEY1], @"Key should still not exist anymore");
 }
 
 - (void)testMissingKey

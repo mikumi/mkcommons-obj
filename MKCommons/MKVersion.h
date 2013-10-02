@@ -14,12 +14,17 @@ extern NSUInteger const PATCH;
 
 NSUInteger const MAJOR = 1;
 NSUInteger const MINOR = 0;
-NSUInteger const PATCH = 4;
+NSUInteger const PATCH = 5;
 
 /*
  * ********************************
  * MKCommons Changelog
  * ********************************
+ *
+ * v1.0.5
+ * - Added isRunningOnIphone to MiscHelper
+ * - Improved Test coverage (total over 90% now)
+ * - Included build configration for coverage builds
  *
  * v1.0.4
  * - Updated test suite for MKPreferencesManager and MKSerialManager

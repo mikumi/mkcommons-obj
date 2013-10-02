@@ -8,19 +8,15 @@
 
 #import "MKMiscHelper.h"
 
+#import <UIKit/UIKit.h>
+
 @implementation MKMiscHelper
 
-+ (NSInteger)positionOfString:(NSString *)string inArray:(NSArray *)array {
-    __block NSInteger position = -1;
-    [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        if ([obj isEqualToString:string]) {
-            position = (NSInteger)idx;
-            *stop = YES;
-        }
-    }];
-    return position;
-}
-
+/**
+ * Find out if the current platform is running iOS 7.0 or anything below.
+ *
+ * @return True if < 7.0, false if >= 7.0.
+ */
 + (BOOL)isLegacyPlatform {
     BOOL iOS6OrLess = kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_6_1;
     if (iOS6OrLess) {
@@ -28,6 +24,15 @@
     } else {
         return NO;
     }
+}
+
+/**
+ * Found out if running on an iPhone-like device (including iPod) or iPad
+ *
+ * @return YES if running on iPhone
+ */
++ (BOOL)isRunningOnPhone {
+    return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone);
 }
 
 

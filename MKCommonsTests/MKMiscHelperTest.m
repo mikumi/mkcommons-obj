@@ -7,8 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+extern void __gcov_flush();
 
-#import "MKCommons.h"
+#import <UIKit/UIKit.h>
+
+#import "MKMiscHelper.h"
 
 @interface MKMiscHelperTest : XCTestCase
 
@@ -25,28 +28,26 @@
 - (void)tearDown
 {
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+#ifdef COVERAGE
+    __gcov_flush();
+#endif
     [super tearDown];
 }
 
-- (void)testEvaluateBlock
-{
-    void (^blockWith1Arg)(NSNumber *) = ^(NSNumber *number1){
-        MKLogVerbose(@"This is a block with a number %ld", (long)[number1 integerValue]);
-    };
-    
-    void (^blockWith2Args)(NSNumber *, NSNumber *) = ^(NSNumber *number1, NSNumber *number2){
-        MKLogVerbose(@"This is a block with numbers %ld and %ld", (long)[number1 integerValue], (long)[number2 integerValue]);
-    };
-    
-    void (^blockWith3Args)(NSNumber *, NSNumber *, NSNumber *) = ^(NSNumber *number1, NSNumber *number2, NSNumber *number3){
-        MKLogVerbose(@"This is a block with numbers %ld, %ld and %ld", (long)[number1 integerValue], (long)[number2 integerValue], (long)[number3 integerValue]);
-    };
-    
-//    BLOCK_SAFE_RUN(blockWithNoArgs);
-    executeBlock(blockWith1Arg, [NSNumber numberWithInt:1]);
-    executeBlock(blockWith2Args, [NSNumber numberWithInt:1], [NSNumber numberWithInt:2]);
-    executeBlock(blockWith3Args, [NSNumber numberWithInt:1], [NSNumber numberWithInt:2], [NSNumber numberWithInt:3]);
-    
+- (void)testIsLegacyPlatform {
+    if (kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_6_1) {
+        XCTAssertEqual(YES, [MKMiscHelper isLegacyPlatform], @"Should be able to identify legacy platforms < iOS 7.0");
+    } else {
+        XCTAssertEqual(NO, [MKMiscHelper isLegacyPlatform], @"Should be able to identify a modern platform >= IOS 7.0");
+    }
+}
+
+- (void)testIsRunningOnPhone {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+        XCTAssertEqual(YES, [MKMiscHelper isRunningOnPhone], @"Should return YES for running on a phone.");
+    } else {
+        XCTAssertEqual(NO, [MKMiscHelper isRunningOnPhone], @"Should return NO for running on a pad.");
+    }
 }
 
 @end

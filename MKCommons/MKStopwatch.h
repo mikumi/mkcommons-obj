@@ -10,8 +10,6 @@
 
 @interface MKStopwatch : NSObject
 
-- (id)init;
-
 - (void)start;
 - (void)stop;
 - (void)reset;
