@@ -31,8 +31,8 @@ NSInteger const PRIME = 701;
  */
 
 + (NSString *)generateSerialForProduct:(NSString *)product
-                           andFeature:(NSInteger)feature
-                            withExpiryTime:(NSInteger)expiryTime;
+                           feature:(NSInteger)feature
+                            expiryTime:(NSInteger)expiryTime;
 {
     // serial prefix: product
     NSString *serial = [product substringToIndex:2];

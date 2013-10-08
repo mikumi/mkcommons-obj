@@ -14,12 +14,15 @@ extern NSUInteger const PATCH;
 
 NSUInteger const MAJOR = 1;
 NSUInteger const MINOR = 0;
-NSUInteger const PATCH = 5;
+NSUInteger const PATCH = 6;
 
 /*
  * ********************************
  * MKCommons Changelog
  * ********************************
+ *
+ * v1.0.6
+ * - Small code cleanup
  *
  * v1.0.5
  * - Added isRunningOnIphone to MiscHelper

@@ -38,7 +38,7 @@ extern void __gcov_flush();
     NSString *product = @"PM";
     NSInteger feature = 01;
     NSInteger expiryTime = 24 * 7;
-    NSString *serial = [MKSerialManager generateSerialForProduct:product andFeature:feature withExpiryTime:expiryTime];
+    NSString *serial = [MKSerialManager generateSerialForProduct:product feature:feature expiryTime:expiryTime];
     MKLogInfo(@"Serial generated: %@", serial);
 
     NSString *expectedFront = product;
@@ -51,7 +51,7 @@ extern void __gcov_flush();
     NSString *product = @"PM";
     NSInteger feature = 01;
     NSInteger expiryTime = 24;
-    NSString *serial = [MKSerialManager generateSerialForProduct:product andFeature:feature withExpiryTime:expiryTime];
+    NSString *serial = [MKSerialManager generateSerialForProduct:product feature:feature expiryTime:expiryTime];
     
     BOOL success = [MKSerialManager isSerialValid:serial forProduct:product forFeature:feature];
     XCTAssertEqual(YES, success, @"Serial should be ok.");
@@ -64,7 +64,7 @@ extern void __gcov_flush();
     NSString *product = @"PM";
     NSInteger feature = 01;
     NSInteger expiryTime = -24;
-    NSString *serial = [MKSerialManager generateSerialForProduct:product andFeature:feature withExpiryTime:expiryTime];
+    NSString *serial = [MKSerialManager generateSerialForProduct:product feature:feature expiryTime:expiryTime];
     
     BOOL success = [MKSerialManager isSerialValid:serial forProduct:product forFeature:feature];
     XCTAssertEqual(NO, success, @"Serial should have been expired.");
@@ -90,7 +90,7 @@ extern void __gcov_flush();
     NSMutableSet *serials = [[NSMutableSet alloc] init];
     NSInteger i = 1000;
     while ((i > 0) && ([serials count] < atLeast)) {
-        NSString *serial = [MKSerialManager generateSerialForProduct:@"PM" andFeature:01 withExpiryTime:24];
+        NSString *serial = [MKSerialManager generateSerialForProduct:@"PM" feature:01 expiryTime:24];
         if (![serials containsObject:serial]) {
             [serials addObject:serial];
         }
