@@ -43,6 +43,7 @@ NSString *const MKPreferencesManagerChangedKeys = @"MKPreferencesManagerChangedK
 {
     self = [super init];
     if (self) {
+        _shouldUseICloud = YES;
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(iCloudUpdate:)
                                                      name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
@@ -149,7 +150,11 @@ NSString *const MKPreferencesManagerChangedKeys = @"MKPreferencesManagerChangedK
  * // TODO: this method comment needs be updated.
  */
 - (NSUbiquitousKeyValueStore *)iCloudStore {
-    return [NSUbiquitousKeyValueStore defaultStore];
+    if (self.shouldUseICloud) {
+        return [NSUbiquitousKeyValueStore defaultStore];
+    } else {
+        return nil;
+    }
 }
 
 /**
@@ -160,6 +165,9 @@ NSString *const MKPreferencesManagerChangedKeys = @"MKPreferencesManagerChangedK
 }
 
 - (void)iCloudUpdate:(NSNotification *)notification {
+    if (!self.shouldUseICloud) {
+        return;
+    }
     NSNumber *reason = [[notification userInfo] objectForKey:NSUbiquitousKeyValueStoreChangeReasonKey];
     if (reason) {
         NSInteger reasonValue = [reason integerValue];

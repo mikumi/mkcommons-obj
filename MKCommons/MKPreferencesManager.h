@@ -20,6 +20,8 @@ extern NSString *const MKPreferencesManagerChangedKeys;
 */
 @interface MKPreferencesManager : NSObject
 
+@property (nonatomic, assign) BOOL shouldUseICloud;
+
 + (MKPreferencesManager *)defaultManager;
 
 - (void)setBool:(BOOL)value forKey:(NSString *)key;
