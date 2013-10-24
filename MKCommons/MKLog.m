@@ -9,6 +9,7 @@
 #import "MKLog.h"
 
 static MKLogLevel _logLevel = MKLogLevelWarning;
+static BOOL _isUsingTimestamps = NO;
 
 /**
  * Set the global logging level
@@ -27,3 +28,54 @@ void MKSetLogLevel(MKLogLevel logLevel) {
 MKLogLevel MKGetCurrentLogLevel() {
     return _logLevel;
 }
+
+/**
+ * Enable timestamps in log
+ *
+ * @param enabled Set to YES if timestamps should be used, otherwise NO.
+ */
+extern void MKSetUseTimestamps(BOOL enabled) {
+    _isUsingTimestamps = enabled;
+}
+
+/**
+ * Check if log is using timestamps.
+ *
+ * @return YES if using timestamps, otherwise NO.
+ */
+extern BOOL MKIsUsingTimestamps() {
+    return _isUsingTimestamps;
+}
+
+/**
+ * Method for internal use only. Use MKLog[Level](...) instead.
+ */
+extern void _MK_LOG_INTERNAL(MKLogLevel logLevel, NSString *className, NSUInteger line, NSString *message) {
+    if (MKGetCurrentLogLevel() >= logLevel) {
+        NSString *logLevelPrefix;
+        if (logLevel == MKLogLevelError) {
+            logLevelPrefix = @"[ERROR] ";
+        } else if (logLevel == MKLogLevelWarning) {
+            logLevelPrefix = @"[WARNING] ";
+        } else {
+            logLevelPrefix = @"";
+        }
+        NSString *timestampPrefix;
+        if (MKIsUsingTimestamps()) {
+            NSDate *timestamp = [NSDate date];
+            NSDateFormatter *format = [[NSDateFormatter alloc] init];
+            [format setDateFormat:@"yy/MM/dd HH:mm:ss "];
+            timestampPrefix = [format stringFromDate:timestamp];
+        } else {
+            timestampPrefix = @"";
+        }
+        NSString *output = [NSString stringWithFormat:@"%@%@<%@:%d> %@",
+                            timestampPrefix,
+                            logLevelPrefix,
+                            className,
+                            line,
+                            message];
+        NSLog(@"%@", output);
+    }
+}
+

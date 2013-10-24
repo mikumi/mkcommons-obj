@@ -18,29 +18,36 @@ typedef NS_ENUM(NSUInteger, MKLogLevel) {
 
 extern void MKSetLogLevel(MKLogLevel logLevel);
 extern MKLogLevel MKGetCurrentLogLevel();
+extern void MKSetUseTimestamps(BOOL enabled);
+extern BOOL MKIsUsingTimestamps();
+extern void _MK_LOG_INTERNAL(MKLogLevel logLevel, NSString *className, NSUInteger line, NSString *message);
 
 #define MKLogError(message, ...) { \
-                                        if (MKGetCurrentLogLevel() >= MKLogLevelError) { \
-                                        NSLog(@"[ERROR] <%@:%u> %@", NSStringFromClass([self class]), __LINE__, [NSString stringWithFormat:(message), ##__VA_ARGS__]); \
-                                        } \
-                                    }
+    NSString *_mk_log_className = NSStringFromClass([self class]); \
+    NSUInteger _mk_log_line = __LINE__; \
+    NSString *_mk_log_message = [NSString stringWithFormat:(message),##__VA_ARGS__]; \
+    _MK_LOG_INTERNAL(MKLogLevelError, _mk_log_className, _mk_log_line, _mk_log_message); \
+}
 
 #define MKLogWarning(message, ...) { \
-                                        if (MKGetCurrentLogLevel() >= MKLogLevelWarning) { \
-                                        NSLog(@"[WARNING] <%@:%u> %@", NSStringFromClass([self class]), __LINE__, [NSString stringWithFormat:(message), ##__VA_ARGS__]); \
-                                        } \
-                                    }
+    NSString *_mk_log_className = NSStringFromClass([self class]); \
+    NSUInteger _mk_log_line = __LINE__; \
+    NSString *_mk_log_message = [NSString stringWithFormat:(message),##__VA_ARGS__]; \
+    _MK_LOG_INTERNAL(MKLogLevelWarning, _mk_log_className, _mk_log_line, _mk_log_message); \
+}
 
 #define MKLogInfo(message, ...) { \
-                                        if (MKGetCurrentLogLevel() >= MKLogLevelInfo) { \
-                                        NSLog(@"<%@:%u> %@", NSStringFromClass([self class]), __LINE__, [NSString stringWithFormat:(message), ##__VA_ARGS__]); \
-                                        } \
-                                    }
+    NSString *_mk_log_className = NSStringFromClass([self class]); \
+    NSUInteger _mk_log_line = __LINE__; \
+    NSString *_mk_log_message = [NSString stringWithFormat:(message),##__VA_ARGS__]; \
+    _MK_LOG_INTERNAL(MKLogLevelInfo, _mk_log_className, _mk_log_line, _mk_log_message); \
+}
 
 #define MKLogVerbose(message, ...) { \
-                                        if (MKGetCurrentLogLevel() >= MKLogLevelVerbose) { \
-                                        NSLog(@"<%@:%u> %@", NSStringFromClass([self class]), __LINE__, [NSString stringWithFormat:(message), ##__VA_ARGS__]); \
-                                        } \
-                                    }
+    NSString *_mk_log_className = NSStringFromClass([self class]); \
+    NSUInteger _mk_log_line = __LINE__; \
+    NSString *_mk_log_message = [NSString stringWithFormat:(message),##__VA_ARGS__]; \
+    _MK_LOG_INTERNAL(MKLogLevelVerbose, _mk_log_className, _mk_log_line, _mk_log_message); \
+}
 
 

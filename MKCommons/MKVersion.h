@@ -14,12 +14,17 @@ extern NSUInteger const PATCH;
 
 NSUInteger const MAJOR = 1;
 NSUInteger const MINOR = 0;
-NSUInteger const PATCH = 6;
+NSUInteger const PATCH = 7;
 
 /*
  * ********************************
  * MKCommons Changelog
  * ********************************
+ *
+ * v1.0.7
+ * - Added build configuration for DEBUG with LOCAL_TESTING disabled
+ * - Added Stopwatch, JsonObject and Ratings classes to MKCommons (Ratings not finished yet)
+ * - Improved MKLog to display optional timestamps. Refactored as well
  *
  * v1.0.6
  * - Small code cleanup
