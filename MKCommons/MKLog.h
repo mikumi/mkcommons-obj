@@ -13,7 +13,8 @@ typedef NS_ENUM(NSUInteger, MKLogLevel) {
     MKLogLevelError = 1,
     MKLogLevelWarning = 2,
     MKLogLevelInfo = 3,
-    MKLogLevelVerbose = 4
+    MKLogLevelDebug = 4,
+    MKLogLevelVerbose = 5
 };
 
 extern void MKSetLogLevel(MKLogLevel logLevel);
@@ -41,6 +42,13 @@ extern void _MK_LOG_INTERNAL(MKLogLevel logLevel, NSString *className, NSUIntege
     NSUInteger _mk_log_line = __LINE__; \
     NSString *_mk_log_message = [NSString stringWithFormat:(message),##__VA_ARGS__]; \
     _MK_LOG_INTERNAL(MKLogLevelInfo, _mk_log_className, _mk_log_line, _mk_log_message); \
+}
+
+#define MKLogDebug(message, ...) { \
+NSString *_mk_log_className = NSStringFromClass([self class]); \
+NSUInteger _mk_log_line = __LINE__; \
+NSString *_mk_log_message = [NSString stringWithFormat:(message),##__VA_ARGS__]; \
+_MK_LOG_INTERNAL(MKLogLevelDebug, _mk_log_className, _mk_log_line, _mk_log_message); \
 }
 
 #define MKLogVerbose(message, ...) { \

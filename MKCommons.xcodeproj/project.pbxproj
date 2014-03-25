@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6021D2FC1866E904003BCB59 /* MKRatings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021D2FB1866E904003BCB59 /* MKRatings.m */; };
+		6021D2FD1866EBE4003BCB59 /* MKRatings.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 6021D2FA1866E904003BCB59 /* MKRatings.h */; };
 		603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */; };
 		603FE1C517F9B6980044ED58 /* MKPreferencesManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */; };
 		603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */; };
 		6068A5B0180B847900B43B0E /*  MKRateView.xib in Copy Files */ = {isa = PBXBuildFile; fileRef = 6062BB2518082054005F978D /*  MKRateView.xib */; };
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
-		607DB04F180814AF0005B256 /* MKRatings.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB04E180814AF0005B256 /* MKRatings.m */; };
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
-		607DB0531808196D0005B256 /* MKRatings.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 607DB04D180814AF0005B256 /* MKRatings.h */; };
 		607DB0541808196F0005B256 /* MKJsonObject.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 607DB050180814D30005B256 /* MKJsonObject.h */; };
 		60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D517F529D500937CB1 /* MKFallbackQueue.h */; };
 		60AA0F7A17F535D1001781D2 /* MKMiscHelper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKMiscHelper.h */; };
@@ -59,9 +59,9 @@
 				60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in Copy Files */,
 				60AA0F7A17F535D1001781D2 /* MKMiscHelper.h in Copy Files */,
 				60AA0F7B17F535D4001781D2 /* MKSerialManager.h in Copy Files */,
-				607DB0531808196D0005B256 /* MKRatings.h in Copy Files */,
 				607DB0541808196F0005B256 /* MKJsonObject.h in Copy Files */,
 				60AA0F7C17F535D8001781D2 /* MKStopwatch.h in Copy Files */,
+				6021D2FD1866EBE4003BCB59 /* MKRatings.h in Copy Files */,
 				60F9B90D17F97E230086A155 /* MKLog.h in Copy Files */,
 				6068A5B0180B847900B43B0E /*  MKRateView.xib in Copy Files */,
 				603FE1C517F9B6980044ED58 /* MKPreferencesManager.h in Copy Files */,
@@ -72,13 +72,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6021D2FA1866E904003BCB59 /* MKRatings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRatings.h; sourceTree = "<group>"; };
+		6021D2FB1866E904003BCB59 /* MKRatings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRatings.m; sourceTree = "<group>"; };
 		603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPreferencesManager.h; sourceTree = "<group>"; };
 		603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManager.m; sourceTree = "<group>"; };
 		603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManagerTest.m; sourceTree = "<group>"; };
 		6062BB2518082054005F978D /*  MKRateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = " MKRateView.xib"; sourceTree = "<group>"; };
 		607A153017FC114B00269FD9 /* MKStopWatchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStopWatchTest.m; sourceTree = "<group>"; };
-		607DB04D180814AF0005B256 /* MKRatings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRatings.h; sourceTree = "<group>"; };
-		607DB04E180814AF0005B256 /* MKRatings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRatings.m; sourceTree = "<group>"; };
 		607DB050180814D30005B256 /* MKJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKJsonObject.h; sourceTree = "<group>"; };
 		607DB051180814D30005B256 /* MKJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKJsonObject.m; sourceTree = "<group>"; };
 		60EF2CC517F530E3000E7971 /* MKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVersion.h; sourceTree = "<group>"; };
@@ -161,6 +161,7 @@
 		60F7689C17F5264B00937CB1 /* MKCommons */ = {
 			isa = PBXGroup;
 			children = (
+				6062BB2518082054005F978D /*  MKRateView.xib */,
 				60F768EA17F52A9D00937CB1 /* MKCommons.h */,
 				60F768D517F529D500937CB1 /* MKFallbackQueue.h */,
 				60F768D617F529D500937CB1 /* MKFallbackQueue.m */,
@@ -172,15 +173,14 @@
 				60F768DA17F529D500937CB1 /* MKMiscHelper.m */,
 				603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */,
 				603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */,
-				607DB04D180814AF0005B256 /* MKRatings.h */,
-				607DB04E180814AF0005B256 /* MKRatings.m */,
+				6021D2FA1866E904003BCB59 /* MKRatings.h */,
+				6021D2FB1866E904003BCB59 /* MKRatings.m */,
 				60F768D717F529D500937CB1 /* MKSerialManager.h */,
 				60F768D817F529D500937CB1 /* MKSerialManager.m */,
 				60F768DB17F529D500937CB1 /* MKStopwatch.h */,
 				60F768DC17F529D500937CB1 /* MKStopwatch.m */,
 				60EF2CC517F530E3000E7971 /* MKVersion.h */,
 				60EF2CC617F530E3000E7971 /* MKVersion.m */,
-				6062BB2518082054005F978D /*  MKRateView.xib */,
 				60F7689D17F5264B00937CB1 /* Supporting Files */,
 			);
 			path = MKCommons;
@@ -299,12 +299,12 @@
 			files = (
 				60F9B90A17F971540086A155 /* MKLog.m in Sources */,
 				60F768E017F529D500937CB1 /* MKMiscHelper.m in Sources */,
+				6021D2FC1866E904003BCB59 /* MKRatings.m in Sources */,
 				60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */,
 				60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */,
 				607DB052180814D30005B256 /* MKJsonObject.m in Sources */,
 				603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */,
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
-				607DB04F180814AF0005B256 /* MKRatings.m in Sources */,
 				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

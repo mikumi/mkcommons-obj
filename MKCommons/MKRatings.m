@@ -1,23 +1,29 @@
 //
 //  MKRatings.m
-//  Ping Monitor
+//  MKCommons
 //
-//  Created by Michael Kuck on 11/10/13.
+//  Created by Michael Kuck on 12/22/13.
 //  Copyright (c) 2013 Michael Kuck. All rights reserved.
 //
 
 #import "MKRatings.h"
 
+// External Frameworks
+#import <Foundation/Foundation.h>
+#import <StoreKit/StoreKit.h>
+
+// Project Headers
 #import "MKPreferencesManager.h"
 #import "MKLog.h"
 
 static NSString *const MKRatingsAppOpenedCounterKey = @"app-opened-counter";
 static NSString *const MKRatingslastPopupDateKey = @"last-popup-date";
 
-@interface MKRatings ()
+@interface MKRatings () <SKStoreProductViewControllerDelegate>
 
 @property (nonatomic, assign) NSUInteger appOpenedCounter;
 @property (nonatomic, assign) NSDate *lastPopDate;
+@property (nonatomic, assign) NSDate *appInstalledDate;
 @property (nonatomic, assign) BOOL isFullyInitialized;
 
 - (void)showRatingsPopup;
@@ -76,7 +82,7 @@ static NSString *const MKRatingslastPopupDateKey = @"last-popup-date";
 }
 
 - (void)showPopupIfRequirementsMatch {
-    if (self.appOpenedCounter > 10) {
+    if (self.appOpenedCounter > 0) {
         [self showRatingsPopup];
     }
 }
@@ -84,7 +90,34 @@ static NSString *const MKRatingslastPopupDateKey = @"last-popup-date";
 #pragma mark - Private Implementation
 
 - (void)showRatingsPopup {
-    // TODO: implement
+    if (self.parentViewController == nil) {
+        MKLogError(@"Parent view controller not set.");
+        return;
+    } else {
+        MKLogInfo(@"Showing ratings popup...");
+    }
+    
+    CGFloat const ratingsPopupHeight = 200;
+    
+    CGRect ratingsBounds = self.parentViewController.view.bounds;
+    ratingsBounds.size.height = ratingsBounds.size.height = ratingsPopupHeight;
+    ratingsBounds.origin.y = (self.parentViewController.view.bounds.size.height / 2) - (ratingsBounds.size.height / 2);
+    
+    UIView *ratingsView = [[UIView alloc] initWithFrame:ratingsBounds];
+    ratingsView.backgroundColor = [UIColor whiteColor];
+    ratingsView.alpha = 0.5f;
+    
+    [self.parentViewController.view addSubview:ratingsView];
+    
+//    SKStoreProductViewController *storeProductViewController = [[SKStoreProductViewController alloc] init];
+//    [storeProductViewController setDelegate:self];
+//    [storeProductViewController loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier : @"664943649"} completionBlock:^(BOOL result, NSError *error) {
+//        if (error) {
+//            MKLogError(@"%@", [error localizedDescription]);
+//        } else {
+//            [self.parentViewController presentViewController:storeProductViewController animated:YES completion:nil];
+//        }
+//    }];
 }
 
 @end
