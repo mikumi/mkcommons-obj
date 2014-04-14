@@ -36,6 +36,8 @@ extern NSString *const MKPreferencesManagerChangedKeys;
 
 - (void)removeObjectForKey:(NSString *)key;
 
+- (void)resetPreferences;
+
 - (void)synchronize;
 
 @end

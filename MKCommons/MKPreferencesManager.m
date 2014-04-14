@@ -75,26 +75,41 @@ NSString *const MKPreferencesManagerChangedKeys = @"MKPreferencesManagerChangedK
     // TODO: synchronize all keys
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
 - (void)setBool:(BOOL)value forKey:(NSString *)key {
     [self.localStore setBool:value forKey:key];
     [self.iCloudStore setBool:value forKey:key];
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
 - (void)setDouble:(double)value forKey:(NSString *)key {
     [self.localStore setDouble:value forKey:key];
     [self.iCloudStore setDouble:value forKey:key];
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
 - (void)setInteger:(NSInteger)value forKey:(NSString *)key {
     [self.localStore setInteger:value forKey:key];
     [self.iCloudStore setLongLong:value forKey:key];
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
 - (void)setObject:(id)object forKey:(NSString *)key {
     [self.localStore setObject:object forKey:key];
     [self.iCloudStore setObject:object forKey:key];
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
 - (BOOL)boolForKey:(NSString *)key {
     BOOL value = NO;
     if ([self.iCloudStore objectForKey:key] != nil) {
@@ -106,6 +121,9 @@ NSString *const MKPreferencesManagerChangedKeys = @"MKPreferencesManagerChangedK
     return value;
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
 - (double)doubleForKey:(NSString *)key {
     double value = 0.0f;
     if ([self.iCloudStore objectForKey:key] != nil) {
@@ -117,6 +135,9 @@ NSString *const MKPreferencesManagerChangedKeys = @"MKPreferencesManagerChangedK
     return value;
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
 - (NSInteger)integerForKey:(NSString *)key {
     NSInteger value = 0;
     if ([self.iCloudStore objectForKey:key] != nil) {
@@ -128,6 +149,9 @@ NSString *const MKPreferencesManagerChangedKeys = @"MKPreferencesManagerChangedK
     return value;
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
 - (id)objectForKey:(NSString *)key {
     id value = nil;
     if ([self.iCloudStore objectForKey:key] != nil) {
@@ -139,9 +163,24 @@ NSString *const MKPreferencesManagerChangedKeys = @"MKPreferencesManagerChangedK
     return value;
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
 - (void)removeObjectForKey:(NSString *)key {
     [self.localStore removeObjectForKey:key];
     [self.iCloudStore removeObjectForKey:key];
+}
+
+/**
+ * // TODO: this method comment needs be updated.
+ */
+- (void)resetPreferences {
+    [[[NSUbiquitousKeyValueStore defaultStore] dictionaryRepresentation] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:key];
+    }];
+    [[[NSUserDefaults standardUserDefaults] dictionaryRepresentation] enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
+    }];
 }
 
 #pragma mark - Private methods

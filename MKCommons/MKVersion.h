@@ -14,12 +14,15 @@ extern NSUInteger const PATCH;
 
 NSUInteger const MAJOR = 1;
 NSUInteger const MINOR = 0;
-NSUInteger const PATCH = 7;
+NSUInteger const PATCH = 8;
 
 /*
  * ********************************
  * MKCommons Changelog
  * ********************************
+ *
+ * v1.0.8
+ * - Added possibility to reset preferences (both local + iCloud)
  *
  * v1.0.7
  * - Added build configuration for DEBUG with LOCAL_TESTING disabled
