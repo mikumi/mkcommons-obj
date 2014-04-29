@@ -14,7 +14,6 @@
 #import "MKLog.h"
 #import "MKMiscHelper.h"
 #import "MKPreferencesManager.h"
-#import "MKRatings.h"
 #import "MKSerialManager.h"
 #import "MKStopwatch.h"
 
