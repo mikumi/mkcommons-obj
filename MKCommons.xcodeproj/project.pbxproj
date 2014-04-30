@@ -14,7 +14,7 @@
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
 		607DB0541808196F0005B256 /* MKJsonObject.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 607DB050180814D30005B256 /* MKJsonObject.h */; };
 		60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D517F529D500937CB1 /* MKFallbackQueue.h */; };
-		60AA0F7A17F535D1001781D2 /* MKMiscHelper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKMiscHelper.h */; };
+		60AA0F7A17F535D1001781D2 /* MKSystemHelper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKSystemHelper.h */; };
 		60AA0F7B17F535D4001781D2 /* MKSerialManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D717F529D500937CB1 /* MKSerialManager.h */; };
 		60AA0F7C17F535D8001781D2 /* MKStopwatch.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768DB17F529D500937CB1 /* MKStopwatch.h */; };
 		60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2CC617F530E3000E7971 /* MKVersion.m */; };
@@ -24,7 +24,7 @@
 		60F768AF17F5264B00937CB1 /* libMKCommons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689717F5264B00937CB1 /* libMKCommons.a */; };
 		60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768D617F529D500937CB1 /* MKFallbackQueue.m */; };
 		60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768D817F529D500937CB1 /* MKSerialManager.m */; };
-		60F768E017F529D500937CB1 /* MKMiscHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768DA17F529D500937CB1 /* MKMiscHelper.m */; };
+		60F768E017F529D500937CB1 /* MKSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768DA17F529D500937CB1 /* MKSystemHelper.m */; };
 		60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768DC17F529D500937CB1 /* MKStopwatch.m */; };
 		60F768EB17F52B0100937CB1 /* MKCommons.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768EA17F52A9D00937CB1 /* MKCommons.h */; };
 		60F768EF17F52BB300937CB1 /* MKFallbackQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768EC17F52BB300937CB1 /* MKFallbackQueueTest.m */; };
@@ -54,7 +54,7 @@
 			files = (
 				60F768EB17F52B0100937CB1 /* MKCommons.h in Copy Files */,
 				60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in Copy Files */,
-				60AA0F7A17F535D1001781D2 /* MKMiscHelper.h in Copy Files */,
+				60AA0F7A17F535D1001781D2 /* MKSystemHelper.h in Copy Files */,
 				60AA0F7B17F535D4001781D2 /* MKSerialManager.h in Copy Files */,
 				607DB0541808196F0005B256 /* MKJsonObject.h in Copy Files */,
 				60AA0F7C17F535D8001781D2 /* MKStopwatch.h in Copy Files */,
@@ -86,8 +86,8 @@
 		60F768D617F529D500937CB1 /* MKFallbackQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFallbackQueue.m; sourceTree = "<group>"; };
 		60F768D717F529D500937CB1 /* MKSerialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSerialManager.h; sourceTree = "<group>"; };
 		60F768D817F529D500937CB1 /* MKSerialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSerialManager.m; sourceTree = "<group>"; };
-		60F768D917F529D500937CB1 /* MKMiscHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMiscHelper.h; sourceTree = "<group>"; };
-		60F768DA17F529D500937CB1 /* MKMiscHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMiscHelper.m; sourceTree = "<group>"; };
+		60F768D917F529D500937CB1 /* MKSystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSystemHelper.h; sourceTree = "<group>"; };
+		60F768DA17F529D500937CB1 /* MKSystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSystemHelper.m; sourceTree = "<group>"; };
 		60F768DB17F529D500937CB1 /* MKStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKStopwatch.h; sourceTree = "<group>"; };
 		60F768DC17F529D500937CB1 /* MKStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStopwatch.m; sourceTree = "<group>"; };
 		60F768EA17F52A9D00937CB1 /* MKCommons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKCommons.h; sourceTree = "<group>"; };
@@ -160,8 +160,8 @@
 				607DB051180814D30005B256 /* MKJsonObject.m */,
 				60F9B90817F971540086A155 /* MKLog.h */,
 				60F9B90917F971540086A155 /* MKLog.m */,
-				60F768D917F529D500937CB1 /* MKMiscHelper.h */,
-				60F768DA17F529D500937CB1 /* MKMiscHelper.m */,
+				60F768D917F529D500937CB1 /* MKSystemHelper.h */,
+				60F768DA17F529D500937CB1 /* MKSystemHelper.m */,
 				603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */,
 				603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */,
 				60F768D717F529D500937CB1 /* MKSerialManager.h */,
@@ -287,7 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60F9B90A17F971540086A155 /* MKLog.m in Sources */,
-				60F768E017F529D500937CB1 /* MKMiscHelper.m in Sources */,
+				60F768E017F529D500937CB1 /* MKSystemHelper.m in Sources */,
 				60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */,
 				60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */,
 				607DB052180814D30005B256 /* MKJsonObject.m in Sources */,

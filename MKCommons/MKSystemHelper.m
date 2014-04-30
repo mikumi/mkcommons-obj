@@ -1,16 +1,16 @@
 //
-//  MKMiscHelper.m
-//  Ping Monitor
+//  MKSystemHelper.m
+//  MKCommons
 //
 //  Created by Michael Kuck on 6/27/13.
 //  Copyright (c) 2013 Michael Kuck. All rights reserved.
 //
 
-#import "MKMiscHelper.h"
+#import "MKSystemHelper.h"
 
 #import <UIKit/UIKit.h>
 
-@implementation MKMiscHelper
+@implementation MKSystemHelper
 
 /**
  * Find out if the current platform is running iOS 7.0 or anything below.

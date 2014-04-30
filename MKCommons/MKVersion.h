@@ -14,12 +14,15 @@ extern NSUInteger const PATCH;
 
 NSUInteger const MAJOR = 1;
 NSUInteger const MINOR = 0;
-NSUInteger const PATCH = 8;
+NSUInteger const PATCH = 9;
 
 /*
  * ********************************
  * MKCommons Changelog
  * ********************************
+ *
+ * v1.0.9
+ * - This change log will be discontinued. See commit comments for changes
  *
  * v1.0.8
  * - Added possibility to reset preferences (both local + iCloud)

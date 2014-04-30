@@ -11,7 +11,7 @@ extern void __gcov_flush();
 
 #import <UIKit/UIKit.h>
 
-#import "MKMiscHelper.h"
+#import "MKSystemHelper.h"
 
 @interface MKMiscHelperTest : XCTestCase
 

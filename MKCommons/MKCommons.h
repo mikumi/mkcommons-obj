@@ -12,7 +12,7 @@
 #import "MKFallbackQueue.h"
 #import "MKJsonObject.h"
 #import "MKLog.h"
-#import "MKMiscHelper.h"
+#import "MKSystemHelper.h"
 #import "MKPreferencesManager.h"
 #import "MKSerialManager.h"
 #import "MKStopwatch.h"
