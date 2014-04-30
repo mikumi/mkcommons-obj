@@ -17,6 +17,7 @@
 - (CGFloat)heightOfItemCellInItemListView:(MKItemListView *)itemListView;
 - (UIView *)itemViewForItemListView:(MKItemListView *)itemListView;
 @optional
+- (void)itemListView:(MKItemListView *)itemListView updateContentForItem:(NSUInteger)itemNumber view:(UIView *)itemView;
 - (NSString *)titleForAddItemButtonInItemListView:(MKItemListView *)itemListView;
 - (void)itemListView:(MKItemListView *)itemListView didSelectItem:(NSUInteger)itemNumber;
 - (void)didSelectAddItemInItemListView:(MKItemListView *)itemListView;

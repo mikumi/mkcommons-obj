@@ -47,7 +47,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
     self = [super initWithFrame:frame];
     if (self) {
         _isEditable = YES;
-        _isSelectable = NO;
+        _isSelectable = YES;
         
         _tableView = [[UITableView alloc] init];
         _tableView.delegate = self;
@@ -114,6 +114,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // TODO: Fix creating cell content. Check if already initialized etc
     UITableViewCell *cell;
     if (indexPath.section == TableViewSectionItem) {
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifierItemCell];
@@ -125,9 +126,17 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
             MKLogVerbose(@"Found a reusable %@...", CellIdentifierItemCell);
         }
         cell.backgroundColor = [UIColor whiteColor];
+        if (self.isSelectable) {
+            cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+        } else {
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
         UIView *itemView = [self.delegate itemViewForItemListView:self];
         [cell addSubview:itemView];
         [MKUIHelper addMatchParentConstraintsToView:itemView parentView:cell];
+        if ([self.delegate respondsToSelector:@selector(itemListView:updateContentForItem:view:)]) {
+            [self.delegate itemListView:self updateContentForItem:[indexPath row] view:itemView];
+        }
     } else if (indexPath.section == TableViewSectionAddItem) {
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifierAddItemCell];
         if (cell == nil) {
@@ -219,7 +228,9 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
  */
 - (void)buttonActionNewItem:(id)sender
 {
-    [self.delegate didSelectAddItemInItemListView:self];
+    if ([self.delegate respondsToSelector:@selector(didSelectAddItemInItemListView:)]) {
+        [self.delegate didSelectAddItemInItemListView:self];
+    }
 }
 
 @end
