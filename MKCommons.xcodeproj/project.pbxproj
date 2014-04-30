@@ -8,21 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		603C1FE81910DF4200CAA66B /* MKUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C1FE71910DF4200CAA66B /* MKUIHelper.m */; };
-		603C1FE91910DF6100CAA66B /* MKUIHelper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 603C1FE61910DF4200CAA66B /* MKUIHelper.h */; };
 		603C1FF81910E17E00CAA66B /* MKItemListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C1FF71910E17E00CAA66B /* MKItemListView.m */; };
-		603C1FFA1910E1AD00CAA66B /* MKItemListView.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 603C1FF61910E17E00CAA66B /* MKItemListView.h */; };
 		603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603C1FFB1910E6CD00CAA66B /* UIKit.framework */; };
 		603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
+		603C20031910F82100CAA66B /* MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F768EA17F52A9D00937CB1 /* MKCommons.h */; };
+		603C20041910F82300CAA66B /* MKVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 60EF2CC517F530E3000E7971 /* MKVersion.h */; };
+		603C20051910F82800CAA66B /* MKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F9B90817F971540086A155 /* MKLog.h */; };
+		603C20061910F82B00CAA66B /* MKPreferencesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */; };
+		603C20071910F82D00CAA66B /* MKSystemHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKSystemHelper.h */; };
+		603C20081910F83700CAA66B /* MKSerialManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F768D717F529D500937CB1 /* MKSerialManager.h */; };
+		603C20091910F83A00CAA66B /* MKStopwatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F768DB17F529D500937CB1 /* MKStopwatch.h */; };
+		603C200A1910F83E00CAA66B /* MKItemListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 603C1FF61910E17E00CAA66B /* MKItemListView.h */; };
+		603C200B1910F84200CAA66B /* MKUIHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 603C1FE61910DF4200CAA66B /* MKUIHelper.h */; };
 		603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */; };
-		603FE1C517F9B6980044ED58 /* MKPreferencesManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */; };
 		603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */; };
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
-		607DB0541808196F0005B256 /* MKJsonObject.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 607DB050180814D30005B256 /* MKJsonObject.h */; };
-		60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D517F529D500937CB1 /* MKFallbackQueue.h */; };
-		60AA0F7A17F535D1001781D2 /* MKSystemHelper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKSystemHelper.h */; };
-		60AA0F7B17F535D4001781D2 /* MKSerialManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D717F529D500937CB1 /* MKSerialManager.h */; };
-		60AA0F7C17F535D8001781D2 /* MKStopwatch.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768DB17F529D500937CB1 /* MKStopwatch.h */; };
 		60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2CC617F530E3000E7971 /* MKVersion.m */; };
 		60F768A917F5264B00937CB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768A817F5264B00937CB1 /* XCTest.framework */; };
 		60F768AA17F5264B00937CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
@@ -31,13 +32,11 @@
 		60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768D817F529D500937CB1 /* MKSerialManager.m */; };
 		60F768E017F529D500937CB1 /* MKSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768DA17F529D500937CB1 /* MKSystemHelper.m */; };
 		60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768DC17F529D500937CB1 /* MKStopwatch.m */; };
-		60F768EB17F52B0100937CB1 /* MKCommons.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768EA17F52A9D00937CB1 /* MKCommons.h */; };
 		60F768EF17F52BB300937CB1 /* MKFallbackQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768EC17F52BB300937CB1 /* MKFallbackQueueTest.m */; };
 		60F768F017F52BB300937CB1 /* MKMiscHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768ED17F52BB300937CB1 /* MKMiscHelperTest.m */; };
 		60F768F117F52BB300937CB1 /* MKSerialManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768EE17F52BB300937CB1 /* MKSerialManagerTest.m */; };
 		60F9B90A17F971540086A155 /* MKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90917F971540086A155 /* MKLog.m */; };
 		60F9B90C17F973400086A155 /* MKLogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90B17F973400086A155 /* MKLogTest.m */; };
-		60F9B90D17F97E230086A155 /* MKLog.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F9B90817F971540086A155 /* MKLog.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,29 +48,6 @@
 			remoteInfo = MKCommons;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		60F7689517F5264B00937CB1 /* Copy Files */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-				60F768EB17F52B0100937CB1 /* MKCommons.h in Copy Files */,
-				60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in Copy Files */,
-				60AA0F7A17F535D1001781D2 /* MKSystemHelper.h in Copy Files */,
-				60AA0F7B17F535D4001781D2 /* MKSerialManager.h in Copy Files */,
-				603C1FFA1910E1AD00CAA66B /* MKItemListView.h in Copy Files */,
-				607DB0541808196F0005B256 /* MKJsonObject.h in Copy Files */,
-				60AA0F7C17F535D8001781D2 /* MKStopwatch.h in Copy Files */,
-				60F9B90D17F97E230086A155 /* MKLog.h in Copy Files */,
-				603FE1C517F9B6980044ED58 /* MKPreferencesManager.h in Copy Files */,
-				603C1FE91910DF6100CAA66B /* MKUIHelper.h in Copy Files */,
-			);
-			name = "Copy Files";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		603C1FE61910DF4200CAA66B /* MKUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUIHelper.h; sourceTree = "<group>"; };
@@ -263,6 +239,25 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		603C20021910F7F600CAA66B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				603C20071910F82D00CAA66B /* MKSystemHelper.h in Headers */,
+				603C20031910F82100CAA66B /* MKCommons.h in Headers */,
+				603C20041910F82300CAA66B /* MKVersion.h in Headers */,
+				603C20051910F82800CAA66B /* MKLog.h in Headers */,
+				603C20061910F82B00CAA66B /* MKPreferencesManager.h in Headers */,
+				603C20081910F83700CAA66B /* MKSerialManager.h in Headers */,
+				603C20091910F83A00CAA66B /* MKStopwatch.h in Headers */,
+				603C200A1910F83E00CAA66B /* MKItemListView.h in Headers */,
+				603C200B1910F84200CAA66B /* MKUIHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		60F7689617F5264B00937CB1 /* MKCommons */ = {
 			isa = PBXNativeTarget;
@@ -270,7 +265,7 @@
 			buildPhases = (
 				60F7689317F5264B00937CB1 /* Sources */,
 				60F7689417F5264B00937CB1 /* Frameworks */,
-				60F7689517F5264B00937CB1 /* Copy Files */,
+				603C20021910F7F600CAA66B /* Headers */,
 			);
 			buildRules = (
 			);

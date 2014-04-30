@@ -16,4 +16,5 @@
 + (BOOL)isLegacyPlatform;
 + (BOOL)isRunningOnPhone;
 
+
 @end
