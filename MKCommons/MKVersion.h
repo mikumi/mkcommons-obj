@@ -14,7 +14,7 @@ extern NSUInteger const PATCH;
 
 NSUInteger const MAJOR = 1;
 NSUInteger const MINOR = 0;
-NSUInteger const PATCH = 14;
+NSUInteger const PATCH = 15;
 
 /*
  * ********************************

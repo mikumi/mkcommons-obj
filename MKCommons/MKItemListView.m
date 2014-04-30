@@ -122,19 +122,21 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
             MKLogDebug(@"Creating a %@...", CellIdentifierItemCell);
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                                 reuseIdentifier:CellIdentifierItemCell];
+            cell.backgroundColor = [UIColor whiteColor];
+            if (self.isSelectable) {
+                cell.selectionStyle = UITableViewCellSelectionStyleDefault;
+            } else {
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            }
+            UIView *itemView = [self.delegate itemViewForItemListView:self];
+            [cell.contentView addSubview:itemView];
+            [MKUIHelper addMatchParentConstraintsToView:itemView parentView:cell];
         } else {
             MKLogVerbose(@"Found a reusable %@...", CellIdentifierItemCell);
         }
-        cell.backgroundColor = [UIColor whiteColor];
-        if (self.isSelectable) {
-            cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-        } else {
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        }
-        UIView *itemView = [self.delegate itemViewForItemListView:self];
-        [cell addSubview:itemView];
-        [MKUIHelper addMatchParentConstraintsToView:itemView parentView:cell];
+        assert([cell.contentView.subviews count] == 1); // At this point the cell should always be properly initialized
         if ([self.delegate respondsToSelector:@selector(itemListView:updateContentForItem:view:)]) {
+            UIView *itemView = [cell.contentView.subviews lastObject];
             [self.delegate itemListView:self updateContentForItem:[indexPath row] view:itemView];
         }
     } else if (indexPath.section == TableViewSectionAddItem) {
@@ -142,13 +144,15 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
         if (cell == nil) {
             MKLogDebug(@"Creating a %@...", CellIdentifierAddItemCell);
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifierAddItemCell];
+            cell.backgroundColor = [UIColor clearColor];
+            UIView *newItemView = [self viewForNewItemCell];
+            [cell.contentView addSubview:newItemView];
+            [MKUIHelper addMatchParentConstraintsToView:newItemView parentView:cell];
         } else {
             MKLogVerbose(@"Found a reusable %@...", CellIdentifierAddItemCell);
         }
-        cell.backgroundColor = [UIColor clearColor];
-        UIView *newItemView = [self viewForNewItemCell];
-        [cell addSubview:newItemView];
-        [MKUIHelper addMatchParentConstraintsToView:newItemView parentView:cell];
+        assert([cell.contentView.subviews count] == 1); // At this point the cell should always be properly initialized
+        
     }
     return cell;
 }
