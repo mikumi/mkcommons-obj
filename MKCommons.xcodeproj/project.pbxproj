@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		603C1FE81910DF4200CAA66B /* MKUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C1FE71910DF4200CAA66B /* MKUIHelper.m */; };
+		603C1FE91910DF6100CAA66B /* MKUIHelper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 603C1FE61910DF4200CAA66B /* MKUIHelper.h */; };
+		603C1FF81910E17E00CAA66B /* MKItemListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C1FF71910E17E00CAA66B /* MKItemListView.m */; };
+		603C1FFA1910E1AD00CAA66B /* MKItemListView.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 603C1FF61910E17E00CAA66B /* MKItemListView.h */; };
+		603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603C1FFB1910E6CD00CAA66B /* UIKit.framework */; };
+		603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
 		603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */; };
 		603FE1C517F9B6980044ED58 /* MKPreferencesManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */; };
 		603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */; };
@@ -20,7 +26,6 @@
 		60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2CC617F530E3000E7971 /* MKVersion.m */; };
 		60F768A917F5264B00937CB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768A817F5264B00937CB1 /* XCTest.framework */; };
 		60F768AA17F5264B00937CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
-		60F768AC17F5264B00937CB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768AB17F5264B00937CB1 /* UIKit.framework */; };
 		60F768AF17F5264B00937CB1 /* libMKCommons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689717F5264B00937CB1 /* libMKCommons.a */; };
 		60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768D617F529D500937CB1 /* MKFallbackQueue.m */; };
 		60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768D817F529D500937CB1 /* MKSerialManager.m */; };
@@ -56,10 +61,12 @@
 				60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in Copy Files */,
 				60AA0F7A17F535D1001781D2 /* MKSystemHelper.h in Copy Files */,
 				60AA0F7B17F535D4001781D2 /* MKSerialManager.h in Copy Files */,
+				603C1FFA1910E1AD00CAA66B /* MKItemListView.h in Copy Files */,
 				607DB0541808196F0005B256 /* MKJsonObject.h in Copy Files */,
 				60AA0F7C17F535D8001781D2 /* MKStopwatch.h in Copy Files */,
 				60F9B90D17F97E230086A155 /* MKLog.h in Copy Files */,
 				603FE1C517F9B6980044ED58 /* MKPreferencesManager.h in Copy Files */,
+				603C1FE91910DF6100CAA66B /* MKUIHelper.h in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +74,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		603C1FE61910DF4200CAA66B /* MKUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUIHelper.h; sourceTree = "<group>"; };
+		603C1FE71910DF4200CAA66B /* MKUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKUIHelper.m; sourceTree = "<group>"; };
+		603C1FF61910E17E00CAA66B /* MKItemListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKItemListView.h; sourceTree = "<group>"; };
+		603C1FF71910E17E00CAA66B /* MKItemListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKItemListView.m; sourceTree = "<group>"; };
+		603C1FFB1910E6CD00CAA66B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPreferencesManager.h; sourceTree = "<group>"; };
 		603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManager.m; sourceTree = "<group>"; };
 		603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManagerTest.m; sourceTree = "<group>"; };
@@ -80,7 +92,6 @@
 		60F7689E17F5264B00937CB1 /* MKCommons-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MKCommons-Prefix.pch"; sourceTree = "<group>"; };
 		60F768A717F5264B00937CB1 /* MKCommonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKCommonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F768A817F5264B00937CB1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		60F768AB17F5264B00937CB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		60F768B217F5264B00937CB1 /* MKCommonsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MKCommonsTests-Info.plist"; sourceTree = "<group>"; };
 		60F768D517F529D500937CB1 /* MKFallbackQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFallbackQueue.h; sourceTree = "<group>"; };
 		60F768D617F529D500937CB1 /* MKFallbackQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFallbackQueue.m; sourceTree = "<group>"; };
@@ -104,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */,
+				603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +126,6 @@
 			files = (
 				60F768AF17F5264B00937CB1 /* libMKCommons.a in Frameworks */,
 				60F768A917F5264B00937CB1 /* XCTest.framework in Frameworks */,
-				60F768AC17F5264B00937CB1 /* UIKit.framework in Frameworks */,
 				60F768AA17F5264B00937CB1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +133,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		603C1FEE1910E02400CAA66B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				603C1FF91910E18700CAA66B /* MKItemListView */,
+				603C1FE61910DF4200CAA66B /* MKUIHelper.h */,
+				603C1FE71910DF4200CAA66B /* MKUIHelper.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		603C1FEF1910E05200CAA66B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				60F768D517F529D500937CB1 /* MKFallbackQueue.h */,
+				60F768D617F529D500937CB1 /* MKFallbackQueue.m */,
+				607DB050180814D30005B256 /* MKJsonObject.h */,
+				607DB051180814D30005B256 /* MKJsonObject.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		603C1FF01910E05E00CAA66B /* System */ = {
+			isa = PBXGroup;
+			children = (
+				60F9B90817F971540086A155 /* MKLog.h */,
+				60F9B90917F971540086A155 /* MKLog.m */,
+				603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */,
+				603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */,
+				60F768D917F529D500937CB1 /* MKSystemHelper.h */,
+				60F768DA17F529D500937CB1 /* MKSystemHelper.m */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		603C1FF11910E07F00CAA66B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				60F768D717F529D500937CB1 /* MKSerialManager.h */,
+				60F768D817F529D500937CB1 /* MKSerialManager.m */,
+				60F768DB17F529D500937CB1 /* MKStopwatch.h */,
+				60F768DC17F529D500937CB1 /* MKStopwatch.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		603C1FF91910E18700CAA66B /* MKItemListView */ = {
+			isa = PBXGroup;
+			children = (
+				603C1FF61910E17E00CAA66B /* MKItemListView.h */,
+				603C1FF71910E17E00CAA66B /* MKItemListView.m */,
+			);
+			name = MKItemListView;
+			sourceTree = "<group>";
+		};
 		60F7688E17F5264B00937CB1 = {
 			isa = PBXGroup;
 			children = (
@@ -143,9 +209,9 @@
 		60F7689917F5264B00937CB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				603C1FFB1910E6CD00CAA66B /* UIKit.framework */,
 				60F7689A17F5264B00937CB1 /* Foundation.framework */,
 				60F768A817F5264B00937CB1 /* XCTest.framework */,
-				60F768AB17F5264B00937CB1 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,24 +219,14 @@
 		60F7689C17F5264B00937CB1 /* MKCommons */ = {
 			isa = PBXGroup;
 			children = (
+				603C1FEF1910E05200CAA66B /* Data */,
 				60F768EA17F52A9D00937CB1 /* MKCommons.h */,
-				60F768D517F529D500937CB1 /* MKFallbackQueue.h */,
-				60F768D617F529D500937CB1 /* MKFallbackQueue.m */,
-				607DB050180814D30005B256 /* MKJsonObject.h */,
-				607DB051180814D30005B256 /* MKJsonObject.m */,
-				60F9B90817F971540086A155 /* MKLog.h */,
-				60F9B90917F971540086A155 /* MKLog.m */,
-				60F768D917F529D500937CB1 /* MKSystemHelper.h */,
-				60F768DA17F529D500937CB1 /* MKSystemHelper.m */,
-				603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */,
-				603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */,
-				60F768D717F529D500937CB1 /* MKSerialManager.h */,
-				60F768D817F529D500937CB1 /* MKSerialManager.m */,
-				60F768DB17F529D500937CB1 /* MKStopwatch.h */,
-				60F768DC17F529D500937CB1 /* MKStopwatch.m */,
 				60EF2CC517F530E3000E7971 /* MKVersion.h */,
 				60EF2CC617F530E3000E7971 /* MKVersion.m */,
 				60F7689D17F5264B00937CB1 /* Supporting Files */,
+				603C1FF01910E05E00CAA66B /* System */,
+				603C1FF11910E07F00CAA66B /* Tools */,
+				603C1FEE1910E02400CAA66B /* UI */,
 			);
 			path = MKCommons;
 			sourceTree = "<group>";
@@ -289,7 +345,9 @@
 				60F9B90A17F971540086A155 /* MKLog.m in Sources */,
 				60F768E017F529D500937CB1 /* MKSystemHelper.m in Sources */,
 				60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */,
+				603C1FF81910E17E00CAA66B /* MKItemListView.m in Sources */,
 				60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */,
+				603C1FE81910DF4200CAA66B /* MKUIHelper.m in Sources */,
 				607DB052180814D30005B256 /* MKJsonObject.m in Sources */,
 				603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */,
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
