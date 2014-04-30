@@ -46,15 +46,16 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 {
     self = [super initWithFrame:frame];
     if (self) {
+        _isEditable = YES;
+        _isSelectable = NO;
+        
         _tableView = [[UITableView alloc] init];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [self addSubview:_tableView];
+        _tableView.backgroundColor = self.backgroundColor;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _tableView.backgroundColor = [UIColor clearColor];
         [MKUIHelper addMatchParentConstraintsToView:self.tableView parentView:self];
-        
-        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -75,6 +76,15 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
     [MKUIHelper addMatchParentConstraintsToView:self parentView:self.superview];
 }
 
+/*
+ * (Inherited Comment)
+ */
+- (void)setBackgroundColor:(UIColor *)backgroundColor
+{
+    [super setBackgroundColor:backgroundColor];
+    [self.tableView setBackgroundColor:backgroundColor];
+}
+
 //=== UITableViewDataSource ===//
 #pragma mark - UITableViewDataSource
 
@@ -89,7 +99,11 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
             count = (NSInteger)[self.delegate numberOfItemsInItemListView:self];
         }
     } else if (section == TableViewSectionAddItem) {
-        count = 1;
+        if (self.isEditable) {
+            count = 1;
+        } else {
+            count = 0;
+        }
     }
     MKLogVerbose(@"Section %d rows: %d", section, count);
     return count;
@@ -110,7 +124,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
         } else {
             MKLogVerbose(@"Found a reusable %@...", CellIdentifierItemCell);
         }
-        cell.backgroundColor = [UIColor clearColor];
+        cell.backgroundColor = [UIColor whiteColor];
         UIView *itemView = [self.delegate itemViewForItemListView:self];
         [cell addSubview:itemView];
         [MKUIHelper addMatchParentConstraintsToView:itemView parentView:cell];
@@ -162,11 +176,13 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([indexPath section] == TableViewSectionItem) {
-        assert([indexPath row] >= 0);
-        [self.delegate itemListView:self didSelectItem:(NSUInteger)[indexPath row]];
-    } else if ([indexPath section] == TableViewSectionAddItem) {
-        // Nothing to do
+    if (self.isSelectable) {
+        if ([indexPath section] == TableViewSectionItem) {
+            assert([indexPath row] >= 0);
+            [self.delegate itemListView:self didSelectItem:(NSUInteger)[indexPath row]];
+        } else if ([indexPath section] == TableViewSectionAddItem) {
+            // Nothing to do
+        }
     }
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
