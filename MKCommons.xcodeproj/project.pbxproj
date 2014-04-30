@@ -11,15 +11,17 @@
 		603C1FF81910E17E00CAA66B /* MKItemListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C1FF71910E17E00CAA66B /* MKItemListView.m */; };
 		603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603C1FFB1910E6CD00CAA66B /* UIKit.framework */; };
 		603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
-		603C20031910F82100CAA66B /* MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F768EA17F52A9D00937CB1 /* MKCommons.h */; };
-		603C20041910F82300CAA66B /* MKVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 60EF2CC517F530E3000E7971 /* MKVersion.h */; };
-		603C20051910F82800CAA66B /* MKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F9B90817F971540086A155 /* MKLog.h */; };
-		603C20061910F82B00CAA66B /* MKPreferencesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */; };
-		603C20071910F82D00CAA66B /* MKSystemHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKSystemHelper.h */; };
-		603C20081910F83700CAA66B /* MKSerialManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F768D717F529D500937CB1 /* MKSerialManager.h */; };
-		603C20091910F83A00CAA66B /* MKStopwatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 60F768DB17F529D500937CB1 /* MKStopwatch.h */; };
-		603C200A1910F83E00CAA66B /* MKItemListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 603C1FF61910E17E00CAA66B /* MKItemListView.h */; };
-		603C200B1910F84200CAA66B /* MKUIHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 603C1FE61910DF4200CAA66B /* MKUIHelper.h */; };
+		603C20111911056600CAA66B /* MKFallbackQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D517F529D500937CB1 /* MKFallbackQueue.h */; };
+		603C20121911056600CAA66B /* MKJsonObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 607DB050180814D30005B256 /* MKJsonObject.h */; };
+		603C20131911056600CAA66B /* MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768EA17F52A9D00937CB1 /* MKCommons.h */; };
+		603C20141911056600CAA66B /* MKVersion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60EF2CC517F530E3000E7971 /* MKVersion.h */; };
+		603C20151911056600CAA66B /* MKLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F9B90817F971540086A155 /* MKLog.h */; };
+		603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */; };
+		603C20171911056600CAA66B /* MKSystemHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKSystemHelper.h */; };
+		603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D717F529D500937CB1 /* MKSerialManager.h */; };
+		603C20191911056600CAA66B /* MKStopwatch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768DB17F529D500937CB1 /* MKStopwatch.h */; };
+		603C201A1911056600CAA66B /* MKItemListView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603C1FF61910E17E00CAA66B /* MKItemListView.h */; };
+		603C201B1911056600CAA66B /* MKUIHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603C1FE61910DF4200CAA66B /* MKUIHelper.h */; };
 		603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */; };
 		603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */; };
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
@@ -48,6 +50,29 @@
 			remoteInfo = MKCommons;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		603C200F1911051000CAA66B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				603C20111911056600CAA66B /* MKFallbackQueue.h in CopyFiles */,
+				603C20121911056600CAA66B /* MKJsonObject.h in CopyFiles */,
+				603C20131911056600CAA66B /* MKCommons.h in CopyFiles */,
+				603C20141911056600CAA66B /* MKVersion.h in CopyFiles */,
+				603C20151911056600CAA66B /* MKLog.h in CopyFiles */,
+				603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */,
+				603C20171911056600CAA66B /* MKSystemHelper.h in CopyFiles */,
+				603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */,
+				603C20191911056600CAA66B /* MKStopwatch.h in CopyFiles */,
+				603C201A1911056600CAA66B /* MKItemListView.h in CopyFiles */,
+				603C201B1911056600CAA66B /* MKUIHelper.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		603C1FE61910DF4200CAA66B /* MKUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUIHelper.h; sourceTree = "<group>"; };
@@ -244,15 +269,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				603C20071910F82D00CAA66B /* MKSystemHelper.h in Headers */,
-				603C20031910F82100CAA66B /* MKCommons.h in Headers */,
-				603C20041910F82300CAA66B /* MKVersion.h in Headers */,
-				603C20051910F82800CAA66B /* MKLog.h in Headers */,
-				603C20061910F82B00CAA66B /* MKPreferencesManager.h in Headers */,
-				603C20081910F83700CAA66B /* MKSerialManager.h in Headers */,
-				603C20091910F83A00CAA66B /* MKStopwatch.h in Headers */,
-				603C200A1910F83E00CAA66B /* MKItemListView.h in Headers */,
-				603C200B1910F84200CAA66B /* MKUIHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +282,7 @@
 				60F7689317F5264B00937CB1 /* Sources */,
 				60F7689417F5264B00937CB1 /* Frameworks */,
 				603C20021910F7F600CAA66B /* Headers */,
+				603C200F1911051000CAA66B /* CopyFiles */,
 			);
 			buildRules = (
 			);

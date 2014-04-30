@@ -12,11 +12,14 @@
 
 @protocol MKItemListViewDelegate <NSObject>
 
+@required
 - (NSUInteger)numberOfItemsInItemListView:(MKItemListView *)itemListView;
 - (CGFloat)heightOfItemCellInItemListView:(MKItemListView *)itemListView;
+- (UIView *)itemViewForItemListView:(MKItemListView *)itemListView;
+@optional
+- (NSString *)titleForAddItemButtonInItemListView:(MKItemListView *)itemListView;
 - (void)itemListView:(MKItemListView *)itemListView didSelectItem:(NSUInteger)itemNumber;
 - (void)didSelectAddItemInItemListView:(MKItemListView *)itemListView;
-- (UIView *)itemViewForItemListView:(MKItemListView *)itemListView;
 
 @end
 

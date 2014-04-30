@@ -26,6 +26,8 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 //============================================================
 @interface MKItemListView () <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic, readonly) UIView *viewForNewItemCell;
+
 - (void)buttonActionNewItem:(id)sender;
 
 @end
@@ -34,6 +36,8 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 //== Implementation
 //============================================================
 @implementation MKItemListView
+
+@synthesize viewForNewItemCell = _viewForNewItemCell;
 
 /*
  * (Inherited Comment)
@@ -119,12 +123,9 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
             MKLogVerbose(@"Found a reusable %@...", CellIdentifierAddItemCell);
         }
         cell.backgroundColor = [UIColor clearColor];
-        UIButton *addItemButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [addItemButton setTitle:@"Add Item" forState:UIControlStateNormal];
-        [addItemButton setTintColor:[UIColor whiteColor]];
-        [addItemButton addTarget:self action:@selector(buttonActionNewItem:) forControlEvents:UIControlEventTouchUpInside];
-        [cell addSubview:addItemButton];
-        [MKUIHelper addStayCenterConstraintsToView:addItemButton parentView:cell];
+        UIView *newItemView = [self viewForNewItemCell];
+        [cell addSubview:newItemView];
+        [MKUIHelper addMatchParentConstraintsToView:newItemView parentView:cell];
     }
     return cell;
 }
@@ -172,6 +173,30 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 
 //=== Private Implementation ===//
 #pragma mark - Private Implementation
+
+- (UIView *)viewForNewItemCell
+{
+    if (_viewForNewItemCell == nil) {
+        UIView *view = [[UIView alloc] init];
+        
+        UIButton *const addItemButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        NSString *title;
+        if ([self.delegate respondsToSelector:@selector(titleForAddItemButtonInItemListView:)])
+        {
+            title = [self.delegate titleForAddItemButtonInItemListView:self];
+        } else {
+            title = @"New Item";
+        }
+        [addItemButton setTitle:title forState:UIControlStateNormal];
+        [addItemButton setTintColor:[UIColor whiteColor]];
+        [addItemButton addTarget:self action:@selector(buttonActionNewItem:) forControlEvents:UIControlEventTouchUpInside];
+        [view addSubview:addItemButton];
+        [MKUIHelper addStayCenterConstraintsToView:addItemButton parentView:view];
+        
+        _viewForNewItemCell = view;
+    }
+    return _viewForNewItemCell;
+}
 
 /**
  * // TODO: this method comment needs be updated.
