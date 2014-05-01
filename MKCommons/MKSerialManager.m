@@ -38,8 +38,8 @@ NSInteger const PRIME = 701;
     NSString *serial = [product substringToIndex:2];
     
     // calculate expiry timestamp
-    NSInteger expiryTimeInHoursSinceEpoch = (NSInteger)[[NSDate date] timeIntervalSince1970] / 60 / 60 + expiryTime;
-    NSInteger random = arc4random() % 100;
+    NSInteger const expiryTimeInHoursSinceEpoch = (NSInteger)[[NSDate date] timeIntervalSince1970] / 60 / 60 + expiryTime;
+    NSInteger const random = arc4random() % 100;
     
     // Start with random number at the front
     
@@ -49,14 +49,14 @@ NSInteger const PRIME = 701;
     NSString *beforeEncryption = [NSString stringWithFormat:@"%02ld%02ld%07ld", (long)random, (long)feature, (long)expiryTimeInHoursSinceEpoch];
     
     // calculate checksum and append: FFYYYYYYYCCC
-    NSInteger checksum = [self simpleChecksum:[beforeEncryption longLongValue]];
+    NSInteger const checksum = [self simpleChecksum:[beforeEncryption longLongValue]];
     beforeEncryption = [beforeEncryption stringByAppendingString:[NSString stringWithFormat:@"%03ld", (long)checksum]];
     
     // "Encrypt" with PRIME
-    long long encrypted = [beforeEncryption longLongValue] * PRIME;
+    long long const encrypted = [beforeEncryption longLongValue] * PRIME;
     
     // Add dashes and append to serial
-    NSMutableString *withDashes = [NSMutableString stringWithFormat:@"%017lld", encrypted];
+    NSMutableString *const withDashes = [NSMutableString stringWithFormat:@"%017lld", encrypted];
     [withDashes insertString:@"-" atIndex:12];
     [withDashes insertString:@"-" atIndex:8];
     [withDashes insertString:@"-" atIndex:4];
@@ -72,24 +72,24 @@ NSInteger const PRIME = 701;
     if ([serial length] < 22) {
         return NO;
     }
-    NSMutableString *mutableSerial = [NSMutableString stringWithFormat:@"%@", serial];
+    NSMutableString *const mutableSerial = [NSMutableString stringWithFormat:@"%@", serial];
     [mutableSerial deleteCharactersInRange:NSMakeRange(0, 2)];
     
     [mutableSerial deleteCharactersInRange:NSMakeRange(14, 1)];
     [mutableSerial deleteCharactersInRange:NSMakeRange(9, 1)];
     [mutableSerial deleteCharactersInRange:NSMakeRange(4, 1)];
     
-    NSString *decryptedSerial = [NSString stringWithFormat:@"%014lld", [mutableSerial longLongValue] / PRIME];
+    NSString *const decryptedSerial = [NSString stringWithFormat:@"%014lld", [mutableSerial longLongValue] / PRIME];
     
-    NSInteger decryptedRandom = [[decryptedSerial substringWithRange:NSMakeRange(0, 2)] integerValue];
-    NSInteger decryptedFeature = [[decryptedSerial substringWithRange:NSMakeRange(2, 2)] integerValue];
-    NSInteger decryptedExpiryTime = [[decryptedSerial substringWithRange:NSMakeRange(4, 7)] integerValue];
-    NSInteger decryptedChecksum = [[decryptedSerial substringWithRange:NSMakeRange(11, 3)] integerValue];
+    NSInteger const decryptedRandom = [[decryptedSerial substringWithRange:NSMakeRange(0, 2)] integerValue];
+    NSInteger const decryptedFeature = [[decryptedSerial substringWithRange:NSMakeRange(2, 2)] integerValue];
+    NSInteger const decryptedExpiryTime = [[decryptedSerial substringWithRange:NSMakeRange(4, 7)] integerValue];
+    NSInteger const decryptedChecksum = [[decryptedSerial substringWithRange:NSMakeRange(11, 3)] integerValue];
         
-    NSString *forChecksum = [NSString stringWithFormat:@"%02ld%02ld%07ld", (long)decryptedRandom, (long)decryptedFeature, (long)decryptedExpiryTime];
-    NSInteger calculatedChecksum = [self simpleChecksum:[forChecksum longLongValue]];
+    NSString *const forChecksum = [NSString stringWithFormat:@"%02ld%02ld%07ld", (long)decryptedRandom, (long)decryptedFeature, (long)decryptedExpiryTime];
+    NSInteger const calculatedChecksum = [self simpleChecksum:[forChecksum longLongValue]];
     
-    NSInteger currentTimeInHoursSinceEpoch = (NSInteger)[[NSDate date] timeIntervalSince1970] / 60 / 60;
+    NSInteger const currentTimeInHoursSinceEpoch = (NSInteger)[[NSDate date] timeIntervalSince1970] / 60 / 60;
     
     if (decryptedChecksum != calculatedChecksum) {
         return NO;
@@ -101,7 +101,7 @@ NSInteger const PRIME = 701;
 }
 
 + (NSInteger)simpleChecksum:(long long)input {
-    NSString *inputString = [NSString stringWithFormat:@"%lld", input];
+    NSString *const inputString = [NSString stringWithFormat:@"%lld", input];
     NSInteger checksum = 0;
     for (NSUInteger i = 0; i < [inputString length]; i++) {
         NSInteger digit = [inputString characterAtIndex:i] - 48;

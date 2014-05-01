@@ -39,7 +39,7 @@ NSString *const MKPreferencesManagerChangedKeys = @"MKPreferencesManagerChangedK
 /*
  * (Inherited method comment)
  */
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -207,15 +207,15 @@ NSString *const MKPreferencesManagerChangedKeys = @"MKPreferencesManagerChangedK
     if (!self.shouldUseICloud) {
         return;
     }
-    NSNumber *reason = [[notification userInfo] objectForKey:NSUbiquitousKeyValueStoreChangeReasonKey];
+    NSNumber *const reason = [[notification userInfo] objectForKey:NSUbiquitousKeyValueStoreChangeReasonKey];
     if (reason) {
         NSInteger reasonValue = [reason integerValue];
         if ((reasonValue == NSUbiquitousKeyValueStoreServerChange) ||
             (reasonValue == NSUbiquitousKeyValueStoreInitialSyncChange)) {
-            NSArray *keys = [[notification userInfo] objectForKey:NSUbiquitousKeyValueStoreChangedKeysKey];
+            NSArray *const keys = [[notification userInfo] objectForKey:NSUbiquitousKeyValueStoreChangedKeysKey];
             MKLogInfo(@"iCloud update received with %lu changed keys.", (unsigned long)[keys count]);
             
-            NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] init];
+            NSMutableDictionary *const userInfo = [[NSMutableDictionary alloc] init];
             [userInfo setObject:keys forKey:MKPreferencesManagerChangedKeys];
             [[NSNotificationCenter defaultCenter] postNotificationName:MKPreferencesManagerKeysDidChangeNotification
                                                                 object:self

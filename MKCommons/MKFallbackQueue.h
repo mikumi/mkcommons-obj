@@ -13,7 +13,7 @@
  */
 @interface MKFallbackQueue : NSObject
 
-- (id)initWithObjects:(NSArray *)objects;
+- (instancetype)initWithObjects:(NSArray *)objects;
 
 - (id)topObject;
 - (id)moveTopObjectToBottomAndGetNextOne;

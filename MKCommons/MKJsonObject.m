@@ -23,7 +23,7 @@ typedef void (^MKRemoteSettingsFailureBlock)(NSError *error);
 
 @implementation MKJsonObject
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -48,13 +48,13 @@ typedef void (^MKRemoteSettingsFailureBlock)(NSError *error);
     MKLogInfo(@"Fetching release serial from server: %@", [url description]);
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
-        NSData *jsonData = [NSData dataWithContentsOfURL:url];
+        NSData *const jsonData = [NSData dataWithContentsOfURL:url];
         if (!jsonData) {
             MKLogError(@"Couldn't connect to remote URL");
             return;
         }
         
-        NSError* error;
+        NSError *error;
         self.jsonDictionary = [NSJSONSerialization JSONObjectWithData:jsonData
                                                              options:kNilOptions
                                                                error:&error];

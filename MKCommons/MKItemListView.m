@@ -128,7 +128,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
             } else {
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
-            UIView *itemView = [self.delegate itemViewForItemListView:self];
+            UIView *const itemView = [self.delegate itemViewForItemListView:self];
             [cell.contentView addSubview:itemView];
             [MKUIHelper addMatchParentConstraintsToView:itemView parentView:cell];
         } else {
@@ -136,7 +136,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
         }
         assert([cell.contentView.subviews count] == 1); // At this point the cell should always be properly initialized
         if ([self.delegate respondsToSelector:@selector(itemListView:updateContentForItem:view:)]) {
-            UIView *itemView = [cell.contentView.subviews lastObject];
+            UIView *const itemView = [cell.contentView.subviews lastObject];
             [self.delegate itemListView:self updateContentForItem:[indexPath row] view:itemView];
         }
     } else if (indexPath.section == TableViewSectionAddItem) {
@@ -145,7 +145,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
             MKLogDebug(@"Creating a %@...", CellIdentifierAddItemCell);
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifierAddItemCell];
             cell.backgroundColor = [UIColor clearColor];
-            UIView *newItemView = [self viewForNewItemCell];
+            UIView *const newItemView = [self viewForNewItemCell];
             [cell.contentView addSubview:newItemView];
             [MKUIHelper addMatchParentConstraintsToView:newItemView parentView:cell];
         } else {
@@ -206,7 +206,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 - (UIView *)viewForNewItemCell
 {
     if (_viewForNewItemCell == nil) {
-        UIView *view = [[UIView alloc] init];
+        UIView *const view = [[UIView alloc] init];
         
         UIButton *const addItemButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         NSString *title;
