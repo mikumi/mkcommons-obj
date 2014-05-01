@@ -10,7 +10,7 @@
 
 @interface MKFallbackQueue ()
 
-@property (nonatomic, strong) NSMutableArray *fallbackQueue;
+@property (nonatomic, strong, readonly) NSMutableArray *fallbackQueue;
 
 @end
 
@@ -30,9 +30,9 @@
     self = [super init];
     if (self) {
         if (objects != nil) {
-            self.fallbackQueue = [NSMutableArray arrayWithArray:objects];
+            _fallbackQueue = [NSMutableArray arrayWithArray:objects];
         } else {
-            self.fallbackQueue = [[NSMutableArray alloc] init];
+            _fallbackQueue = [[NSMutableArray alloc] init];
         }
     }
     return self;
