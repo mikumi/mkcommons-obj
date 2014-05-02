@@ -35,5 +35,6 @@
 @property (assign, nonatomic) BOOL isSelectable;
 
 - (void)autoFillParentView;
+- (void)reload;
 
 @end

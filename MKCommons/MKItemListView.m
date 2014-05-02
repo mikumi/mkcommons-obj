@@ -76,6 +76,14 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
     [MKUIHelper addMatchParentConstraintsToView:self parentView:self.superview];
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
+- (void)reload
+{
+    [self.tableView reloadData];
+}
+
 /*
  * (Inherited Comment)
  */

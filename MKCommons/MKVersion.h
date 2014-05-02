@@ -13,8 +13,8 @@ extern NSUInteger const MINOR;
 extern NSUInteger const PATCH;
 
 NSUInteger const MAJOR = 1;
-NSUInteger const MINOR = 0;
-NSUInteger const PATCH = 17;
+NSUInteger const MINOR = 1;
+NSUInteger const PATCH = 0;
 
 /*
  * ********************************
