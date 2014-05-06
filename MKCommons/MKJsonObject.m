@@ -45,12 +45,12 @@ typedef void (^MKRemoteSettingsFailureBlock)(NSError *error);
 {
     self.successBlock = successBlock;
     self.failureBlock = failureBlock;
-    MKLogInfo(@"Fetching release serial from server: %@", [url description]);
+    MKLogInfo(@"Fetching json data from server: %@", [url description]);
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
         NSData *const jsonData = [NSData dataWithContentsOfURL:url];
         if (!jsonData) {
-            MKLogError(@"Couldn't connect to remote URL");
+            MKLogError(@"Couldn't connect to remote URL.");
             return;
         }
         
@@ -61,6 +61,7 @@ typedef void (^MKRemoteSettingsFailureBlock)(NSError *error);
         if (error) {
             MKLogError(@"Error while parsing remote json obect: %@", [error localizedDescription]);
         }
+        MKLogVerbose(@"JSON download finished.");
         dispatch_async(dispatch_get_main_queue(), ^{
             if (error == nil) {
                 if (self.successBlock != nil) {
