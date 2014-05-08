@@ -10,9 +10,10 @@
 
 @interface MKJsonObject : NSObject
 
-- (NSDictionary *)dictionary;
-- (void)fetchFromURL:(NSURL *)url
-           success:(void(^)(NSDictionary *dictionary))successBlock
-           failure:(void(^)(NSError *error))failureBlock;
+@property (strong, nonatomic, readonly) id response;
+
+- (instancetype)initWithUrl:(NSURL *)url;
+- (void)fetchContentSuccess:(void(^)(id response))successBlock
+                    failure:(void(^)(NSError *error))failureBlock;
 
 @end

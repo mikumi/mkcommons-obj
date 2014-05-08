@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSUInteger, MKSystemHelperPathType) {
+    MKPathTypeDocuments = NSDocumentDirectory,
+    MKPathTypeLibrary = NSLibraryDirectory,
+    MKPathTypeCache = NSCachesDirectory
+};
+
 /**
  * Miscellaneous helpers for everything and anything
  */
@@ -15,6 +21,7 @@
 
 + (BOOL)isLegacyPlatform;
 + (BOOL)isRunningOnPhone;
++ (NSString *)pathToDirectory:(MKSystemHelperPathType)pathType;
 
 
 @end

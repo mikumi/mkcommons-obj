@@ -35,5 +35,26 @@
     return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone);
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
++ (NSString *)pathToDirectory:(MKSystemHelperPathType)pathType
+{
+    NSSearchPathDirectory const searchPathType = (NSSearchPathDirectory)pathType;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(searchPathType, NSUserDomainMask, YES);
+    NSString *path = [paths objectAtIndex:0];
+    BOOL isDir = NO;
+    NSError *error;
+    if (! [[NSFileManager defaultManager] fileExistsAtPath:path
+                                               isDirectory:&isDir] && isDir == NO)
+    {
+        [[NSFileManager defaultManager] createDirectoryAtPath:path
+                                  withIntermediateDirectories:NO
+                                                   attributes:nil
+                                                        error:&error];
+    }
+    return path;
+}
+
 
 @end
