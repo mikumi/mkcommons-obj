@@ -10,4 +10,4 @@ extern NSString *const MKApplicationVersion(void);
 
 static NSUInteger const MAJOR = 1;
 static NSUInteger const MINOR = 3;
-static NSUInteger const PATCH = 0;
+static NSUInteger const PATCH = 1;

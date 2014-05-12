@@ -14,6 +14,7 @@
 + (UIColor *)lightBlue;
 + (UIColor *)mediumBlue;
 + (UIColor *)darkBlue;
++ (UIColor *)mediumRed;
 + (UIColor *)veryLightGray;
 + (UIColor *)lightGray;
 

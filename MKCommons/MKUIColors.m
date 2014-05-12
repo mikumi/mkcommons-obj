@@ -63,6 +63,18 @@
 /**
  * // TODO: this method comment needs be updated.
  */
++ (UIColor *)mediumRed
+{
+    UIColor *const color = [UIColor colorWithRed:(240.0f/255.0f)
+                                           green:(62.0f/255.0f)
+                                            blue:(62.0f/255.0f)
+                                           alpha:1.0f];
+    return color;
+}
+
+/**
+ * // TODO: this method comment needs be updated.
+ */
 + (UIColor *)veryLightGray
 {
     UIColor *const color = [UIColor colorWithRed:0.95f green:0.95f blue:0.95f alpha:1.0f];
