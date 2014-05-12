@@ -13,9 +13,11 @@
 #import "MKLog.h"
 
 NS_ENUM(NSInteger, TableViewSection) {
-    TableViewSectionItem = 0,
-    TableViewSectionAddItem = 1,
-    TableViewNumberOfSections = 2
+    TableViewSectionHeader = 0,
+    TableViewSectionItem = 1,
+    TableViewSectionAddItem = 2,
+    TableViewSectionFooter = 3,
+    TableViewNumberOfSections = 4
 };
 
 static NSString *const CellIdentifierItemCell = @"itemCell";

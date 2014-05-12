@@ -26,6 +26,9 @@
 		603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */; };
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
+		608C03161919F57A00D50DE9 /* MKUIColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 608C03141919F57A00D50DE9 /* MKUIColors.h */; };
+		608C03171919F57A00D50DE9 /* MKUIColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 608C03151919F57A00D50DE9 /* MKUIColors.m */; };
+		608C03181919F86E00D50DE9 /* MKUIColors.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 608C03141919F57A00D50DE9 /* MKUIColors.h */; };
 		60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2CC617F530E3000E7971 /* MKVersion.m */; };
 		60F768A917F5264B00937CB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768A817F5264B00937CB1 /* XCTest.framework */; };
 		60F768AA17F5264B00937CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
@@ -68,6 +71,7 @@
 				603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */,
 				603C20191911056600CAA66B /* MKStopwatch.h in CopyFiles */,
 				603C201A1911056600CAA66B /* MKItemListView.h in CopyFiles */,
+				608C03181919F86E00D50DE9 /* MKUIColors.h in CopyFiles */,
 				603C201B1911056600CAA66B /* MKUIHelper.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +90,8 @@
 		607A153017FC114B00269FD9 /* MKStopWatchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStopWatchTest.m; sourceTree = "<group>"; };
 		607DB050180814D30005B256 /* MKJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKJsonObject.h; sourceTree = "<group>"; };
 		607DB051180814D30005B256 /* MKJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKJsonObject.m; sourceTree = "<group>"; };
+		608C03141919F57A00D50DE9 /* MKUIColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUIColors.h; sourceTree = "<group>"; };
+		608C03151919F57A00D50DE9 /* MKUIColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKUIColors.m; sourceTree = "<group>"; };
 		60EF2CC517F530E3000E7971 /* MKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVersion.h; sourceTree = "<group>"; };
 		60EF2CC617F530E3000E7971 /* MKVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVersion.m; sourceTree = "<group>"; };
 		60F7689717F5264B00937CB1 /* libMKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMKCommons.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				603C1FF91910E18700CAA66B /* MKItemListView */,
+				608C03141919F57A00D50DE9 /* MKUIColors.h */,
+				608C03151919F57A00D50DE9 /* MKUIColors.m */,
 				603C1FE61910DF4200CAA66B /* MKUIHelper.h */,
 				603C1FE71910DF4200CAA66B /* MKUIHelper.m */,
 			);
@@ -269,6 +277,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				608C03161919F57A00D50DE9 /* MKUIColors.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +366,7 @@
 				60F9B90A17F971540086A155 /* MKLog.m in Sources */,
 				60F768E017F529D500937CB1 /* MKSystemHelper.m in Sources */,
 				60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */,
+				608C03171919F57A00D50DE9 /* MKUIColors.m in Sources */,
 				603C1FF81910E17E00CAA66B /* MKItemListView.m in Sources */,
 				60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */,
 				603C1FE81910DF4200CAA66B /* MKUIHelper.m in Sources */,
