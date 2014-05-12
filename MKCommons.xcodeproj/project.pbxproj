@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		603629CB1920753B00D744CB /* MKFormTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 603629C91920753B00D744CB /* MKFormTableView.h */; };
+		603629CC1920753B00D744CB /* MKFormTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629CA1920753B00D744CB /* MKFormTableView.m */; };
+		603629D0192080B300D744CB /* MKFormTableViewCellSeparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */; };
+		603629D1192080B300D744CB /* MKFormTableViewCellSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629CF192080B300D744CB /* MKFormTableViewCellSeparator.m */; };
+		603629D21920840D00D744CB /* MKFormTableView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629C91920753B00D744CB /* MKFormTableView.h */; };
+		603629D31920840F00D744CB /* MKFormTableViewCellSeparator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */; };
+		603629D61920873A00D744CB /* MKFormTableViewCellTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 603629D41920873A00D744CB /* MKFormTableViewCellTextField.h */; };
+		603629D71920873A00D744CB /* MKFormTableViewCellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629D51920873A00D744CB /* MKFormTableViewCellTextField.m */; };
+		603629D819208A1200D744CB /* MKFormTableViewCellTextField.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629D41920873A00D744CB /* MKFormTableViewCellTextField.h */; };
+		603629DB19209ED300D744CB /* MKFormTableViewCellInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */; };
+		603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629DA19209ED300D744CB /* MKFormTableViewCellInfo.m */; };
 		603C1FE81910DF4200CAA66B /* MKUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C1FE71910DF4200CAA66B /* MKUIHelper.m */; };
 		603C1FF81910E17E00CAA66B /* MKItemListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C1FF71910E17E00CAA66B /* MKItemListView.m */; };
 		603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603C1FFB1910E6CD00CAA66B /* UIKit.framework */; };
@@ -69,7 +80,10 @@
 				603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */,
 				603C20171911056600CAA66B /* MKSystemHelper.h in CopyFiles */,
 				603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */,
+				603629D31920840F00D744CB /* MKFormTableViewCellSeparator.h in CopyFiles */,
+				603629D819208A1200D744CB /* MKFormTableViewCellTextField.h in CopyFiles */,
 				603C20191911056600CAA66B /* MKStopwatch.h in CopyFiles */,
+				603629D21920840D00D744CB /* MKFormTableView.h in CopyFiles */,
 				603C201A1911056600CAA66B /* MKItemListView.h in CopyFiles */,
 				608C03181919F86E00D50DE9 /* MKUIColors.h in CopyFiles */,
 				603C201B1911056600CAA66B /* MKUIHelper.h in CopyFiles */,
@@ -79,6 +93,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		603629C91920753B00D744CB /* MKFormTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableView.h; sourceTree = "<group>"; };
+		603629CA1920753B00D744CB /* MKFormTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableView.m; sourceTree = "<group>"; };
+		603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellSeparator.h; sourceTree = "<group>"; };
+		603629CF192080B300D744CB /* MKFormTableViewCellSeparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellSeparator.m; sourceTree = "<group>"; };
+		603629D41920873A00D744CB /* MKFormTableViewCellTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellTextField.h; sourceTree = "<group>"; };
+		603629D51920873A00D744CB /* MKFormTableViewCellTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellTextField.m; sourceTree = "<group>"; };
+		603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellInfo.h; sourceTree = "<group>"; };
+		603629DA19209ED300D744CB /* MKFormTableViewCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellInfo.m; sourceTree = "<group>"; };
 		603C1FE61910DF4200CAA66B /* MKUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUIHelper.h; sourceTree = "<group>"; };
 		603C1FE71910DF4200CAA66B /* MKUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKUIHelper.m; sourceTree = "<group>"; };
 		603C1FF61910E17E00CAA66B /* MKItemListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKItemListView.h; sourceTree = "<group>"; };
@@ -140,6 +162,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		603629CD1920753E00D744CB /* MKFormTableView */ = {
+			isa = PBXGroup;
+			children = (
+				603629C91920753B00D744CB /* MKFormTableView.h */,
+				603629CA1920753B00D744CB /* MKFormTableView.m */,
+				603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */,
+				603629CF192080B300D744CB /* MKFormTableViewCellSeparator.m */,
+				603629D41920873A00D744CB /* MKFormTableViewCellTextField.h */,
+				603629D51920873A00D744CB /* MKFormTableViewCellTextField.m */,
+				603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */,
+				603629DA19209ED300D744CB /* MKFormTableViewCellInfo.m */,
+			);
+			name = MKFormTableView;
+			sourceTree = "<group>";
+		};
 		603C1FEE1910E02400CAA66B /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +185,7 @@
 				608C03151919F57A00D50DE9 /* MKUIColors.m */,
 				603C1FE61910DF4200CAA66B /* MKUIHelper.h */,
 				603C1FE71910DF4200CAA66B /* MKUIHelper.m */,
+				603629CD1920753E00D744CB /* MKFormTableView */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -277,7 +315,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603629D61920873A00D744CB /* MKFormTableViewCellTextField.h in Headers */,
 				608C03161919F57A00D50DE9 /* MKUIColors.h in Headers */,
+				603629CB1920753B00D744CB /* MKFormTableView.h in Headers */,
+				603629D0192080B300D744CB /* MKFormTableViewCellSeparator.h in Headers */,
+				603629DB19209ED300D744CB /* MKFormTableViewCellInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +405,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603629CC1920753B00D744CB /* MKFormTableView.m in Sources */,
+				603629D1192080B300D744CB /* MKFormTableViewCellSeparator.m in Sources */,
 				60F9B90A17F971540086A155 /* MKLog.m in Sources */,
 				60F768E017F529D500937CB1 /* MKSystemHelper.m in Sources */,
 				60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */,
@@ -374,6 +418,8 @@
 				603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */,
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
 				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
+				603629D71920873A00D744CB /* MKFormTableViewCellTextField.m in Sources */,
+				603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
