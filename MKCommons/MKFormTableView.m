@@ -16,6 +16,7 @@
 @interface MKFormTableView () <UITableViewDataSource, UITableViewDelegate>
 
 - (void)didTouchOutside:(id)sender;
+- (UITapGestureRecognizer *)newTapGestureRecognizer;
 
 @end
 
@@ -64,7 +65,7 @@
 - (void)initializeInstance
 {
     MKLogVerbose(@"Initializing instance...");
-    self.delegate = self;
+    self.delegate   = self;
     self.dataSource = self;
     _cells = [[NSArray alloc] init];
 }
@@ -84,6 +85,8 @@
 - (UILabel *)addInfoCellWithText:(NSString *)text
 {
     MKFormTableViewCellInfo *infoCell = [[MKFormTableViewCellInfo alloc] initWithText:text];
+    [infoCell addGestureRecognizer:[self newTapGestureRecognizer]];
+    [infoCell.label addGestureRecognizer:[self newTapGestureRecognizer]];
     self.cells = [self.cells arrayByAddingObject:infoCell];
     return infoCell.label;
 
@@ -95,6 +98,7 @@
 - (UIButton *)addButtonCellWithTitle:(NSString *)title
 {
     MKFormTableViewCellButton *buttonCell = [[MKFormTableViewCellButton alloc] initWithTitle:title];
+    [buttonCell addGestureRecognizer:[self newTapGestureRecognizer]];
     self.cells = [self.cells arrayByAddingObject:buttonCell];
     return buttonCell.button;
 
@@ -126,13 +130,7 @@
 - (void)addSeparatorCell
 {
     MKFormTableViewCellSeparator *separatorCell = [[MKFormTableViewCellSeparator alloc] init];
-
-    //=== Resign first responder when touch up outside ===//
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-            initWithTarget:self action:@selector(didTouchOutside:)];
-    tap.cancelsTouchesInView = NO;
-    [separatorCell addGestureRecognizer:tap];
-
+    [separatorCell addGestureRecognizer:[self newTapGestureRecognizer]];
     self.cells = [self.cells arrayByAddingObject:separatorCell];
 }
 
@@ -206,6 +204,17 @@
 - (void)didTouchOutside:(id)sender
 {
     [self endEditing:YES];
+}
+
+/**
+ * // TODO: this method comment needs be updated.
+ */
+- (UITapGestureRecognizer *)newTapGestureRecognizer;
+{
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]
+            initWithTarget:self action:@selector(didTouchOutside:)];
+    tapGestureRecognizer.cancelsTouchesInView = NO;
+    return tapGestureRecognizer;
 }
 
 @end
