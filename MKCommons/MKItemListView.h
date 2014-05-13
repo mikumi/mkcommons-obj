@@ -16,6 +16,7 @@
 - (NSUInteger)numberOfItemsInItemListView:(MKItemListView *)itemListView;
 - (CGFloat)heightOfItemCellInItemListView:(MKItemListView *)itemListView;
 - (UIView *)itemViewForItemListView:(MKItemListView *)itemListView;
+
 @optional
 - (void)itemListView:(MKItemListView *)itemListView updateContentForItem:(NSUInteger)itemNumber view:(UIView *)itemView;
 - (NSString *)titleForAddItemButtonInItemListView:(MKItemListView *)itemListView;
@@ -30,11 +31,12 @@
 @interface MKItemListView : UIView
 
 @property (strong, nonatomic, readonly) UITableView *tableView; // TODO: think about making it private
-@property (strong, nonatomic) id<MKItemListViewDelegate> delegate;
+@property (strong, nonatomic) id <MKItemListViewDelegate> delegate;
 @property (assign, nonatomic) BOOL isEditable;
 @property (assign, nonatomic) BOOL isSelectable;
 
 - (void)autoFillParentView;
+
 - (void)reload;
 
 @end

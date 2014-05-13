@@ -13,7 +13,6 @@
 @property (nonatomic, assign) NSTimeInterval startTime;
 @property (nonatomic, assign) NSTimeInterval stopTime;
 
-
 @end
 
 @implementation MKStopwatch
@@ -47,6 +46,5 @@
 {
     return self.stopTime - self.startTime;
 }
-
 
 @end

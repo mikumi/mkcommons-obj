@@ -10,6 +10,8 @@
 
 #import "MKLog.h"
 #import "MKSystemHelper.h"
+#import "MKFormTableViewCellInfo.h"
+#import "MKFormTableViewCellButton.h"
 
 @interface MKFormTableView () <UITableViewDataSource, UITableViewDelegate>
 
@@ -79,6 +81,28 @@
 /**
  * // TODO: this method comment needs be updated.
  */
+- (UILabel *)addInfoCellWithText:(NSString *)text
+{
+    MKFormTableViewCellInfo *infoCell = [[MKFormTableViewCellInfo alloc] initWithText:text];
+    self.cells = [self.cells arrayByAddingObject:infoCell];
+    return infoCell.label;
+
+}
+
+/**
+ * // TODO: this method comment needs be updated.
+ */
+- (UIButton *)addButtonCellWithTitle:(NSString *)title
+{
+    MKFormTableViewCellButton *buttonCell = [[MKFormTableViewCellButton alloc] initWithTitle:title];
+    self.cells = [self.cells arrayByAddingObject:buttonCell];
+    return buttonCell.button;
+
+}
+
+/**
+ * // TODO: this method comment needs be updated.
+ */
 - (UITextField *)addTextFieldCell
 {
     UITextField *textField = [[UITextField alloc] init];
@@ -90,8 +114,7 @@
  */
 - (UITextField *)addCustomTextFieldCellWithTextField:(UITextField *)textField
 {
-    MKFormTableViewCellTextField *textFieldCell = [[MKFormTableViewCellTextField alloc]
-            initWithTextField:textField];
+    MKFormTableViewCellTextField *textFieldCell = [[MKFormTableViewCellTextField alloc] initWithTextField:textField];
     [textField setClearButtonMode:UITextFieldViewModeWhileEditing];
     self.cells = [self.cells arrayByAddingObject:textFieldCell];
     return textFieldCell.textField;
@@ -106,22 +129,12 @@
 
     //=== Resign first responder when touch up outside ===//
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-            initWithTarget:self
-                    action:@selector(didTouchOutside:)];
+            initWithTarget:self action:@selector(didTouchOutside:)];
     tap.cancelsTouchesInView = NO;
     [separatorCell addGestureRecognizer:tap];
 
     self.cells = [self.cells arrayByAddingObject:separatorCell];
 }
-
-/**
- * // TODO: this method comment needs be updated.
- */
-- (void)addInfoCellWithText:(NSString *)text
-{
-    // TODO: implement
-}
-
 
 //=== UITableViewDataSource ===//
 #pragma mark - UITableViewDataSource
@@ -142,14 +155,16 @@
     return [self.cells count];
 }
 
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "UnavailableInDeploymentTarget"
 /*
  * (Inherited Comment)
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.cells objectAtIndex:[indexPath row]];
+    UITableViewCell *cell = [self.cells objectAtIndex:(NSUInteger)[indexPath row]];
     if ([indexPath row] + 1 < [self.cells count]) {
-        UITableViewCell *nextCell = [self.cells objectAtIndex:([indexPath row] + 1)];
+        UITableViewCell *nextCell = [self.cells objectAtIndex:(NSUInteger)([indexPath row] + 1)];
         // No inset (=full line) between content cells and separator cells
         if ((([cell isKindOfClass:[MKFormTableViewCellSeparator class]]) &&
              (![nextCell isKindOfClass:[MKFormTableViewCellSeparator class]])) ||
@@ -160,10 +175,18 @@
             } else {
                 cell.separatorInset = UIEdgeInsetsZero;
             }
+        } else if (([cell isKindOfClass:[MKFormTableViewCellSeparator class]]) &&
+                   ([nextCell isKindOfClass:[MKFormTableViewCellSeparator class]])) {
+            if ([MKSystemHelper isLegacyPlatform]) {
+                // TODO: implement
+            } else {
+                cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
+            }
         }
     }
     return cell;
 }
+#pragma clang diagnostic pop
 
 //=== UITableViewDelegate ===//
 #pragma mark - UITableViewDelegate

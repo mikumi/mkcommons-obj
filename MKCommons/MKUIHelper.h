@@ -16,11 +16,8 @@
 @interface MKUIHelper : NSObject
 
 + (void)addMatchParentConstraintsToView:(UIView *)view parentView:(UIView *)parentView;
-+ (void)addMatchParentConstraintsToView:(UIView *)view parentView:(UIView *)parentView
-                           distanceLeft:(NSInteger)left
-                            distanceTop:(NSInteger)top
-                          distanceRight:(NSInteger)right
-                         distanceBottom:(NSInteger)bottom;
++ (void)addMatchParentConstraintsToView:(UIView *)view parentView:(UIView *)parentView distanceLeft:(NSInteger)left
+                            distanceTop:(NSInteger)top distanceRight:(NSInteger)right distanceBottom:(NSInteger)bottom;
 + (void)addStayCenterConstraintsToView:(UIView *)view parentView:(UIView *)parentView;
 
 @end

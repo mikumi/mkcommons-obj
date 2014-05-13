@@ -29,9 +29,7 @@
  */
 + (UIColor *)lightBlue
 {
-    UIColor *const color = [UIColor colorWithRed:(124.0f/255.0f)
-                                           green:(198.0f/255.0f)
-                                            blue:(247.0f/255.0f)
+    UIColor *const color = [UIColor colorWithRed:(124.0f / 255.0f) green:(198.0f / 255.0f) blue:(247.0f / 255.0f)
                                            alpha:1.0f];
     return color;
 }
@@ -41,10 +39,8 @@
  */
 + (UIColor *)mediumBlue
 {
-    UIColor *const color = [UIColor colorWithRed:(62.0f/255.0f)
-                                                green:(169.0f/255.0f)
-                                                 blue:(240.0f/255.0f)
-                                                alpha:1.0f];
+    UIColor *const color = [UIColor colorWithRed:(62.0f / 255.0f) green:(169.0f / 255.0f) blue:(240.0f / 255.0f)
+                                           alpha:1.0f];
     return color;
 }
 
@@ -53,10 +49,8 @@
  */
 + (UIColor *)darkBlue
 {
-    UIColor *const color = [UIColor colorWithRed:(38.0f/255.0f)
-                                                     green:(107.0f/255.0f)
-                                                      blue:(153.0f/255.0f)
-                                                     alpha:1.0f];
+    UIColor *const color = [UIColor colorWithRed:(38.0f / 255.0f) green:(107.0f / 255.0f) blue:(153.0f / 255.0f)
+                                           alpha:1.0f];
     return color;
 }
 
@@ -65,9 +59,7 @@
  */
 + (UIColor *)mediumRed
 {
-    UIColor *const color = [UIColor colorWithRed:(240.0f/255.0f)
-                                           green:(62.0f/255.0f)
-                                            blue:(62.0f/255.0f)
+    UIColor *const color = [UIColor colorWithRed:(240.0f / 255.0f) green:(62.0f / 255.0f) blue:(62.0f / 255.0f)
                                            alpha:1.0f];
     return color;
 }
@@ -90,4 +82,9 @@
     return color;
 }
 
++ (UIColor *)mediumGray
+{
+    UIColor *const color = [UIColor colorWithRed:0.70f green:0.70f blue:0.70f alpha:1.0f];
+    return color;
+}
 @end

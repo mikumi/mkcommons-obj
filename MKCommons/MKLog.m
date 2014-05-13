@@ -69,12 +69,8 @@ extern void _MK_LOG_INTERNAL(MKLogLevel logLevel, NSString *className, NSUIntege
         } else {
             timestampPrefix = @"";
         }
-        NSString *const output = [NSString stringWithFormat:@"%@%@<%@:%lu> %@",
-                            timestampPrefix,
-                            logLevelPrefix,
-                            className,
-                            (unsigned long)line,
-                            message];
+        NSString *const output = [NSString stringWithFormat:@"%@%@<%@:%lu> %@", timestampPrefix, logLevelPrefix,
+                                                            className, (unsigned long)line, message];
         NSLog(@"%@", output);
     }
 }

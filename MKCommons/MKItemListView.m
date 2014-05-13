@@ -13,11 +13,7 @@
 #import "MKLog.h"
 
 NS_ENUM(NSInteger, TableViewSection) {
-    TableViewSectionHeader = 0,
-    TableViewSectionItem = 1,
-    TableViewSectionAddItem = 2,
-    TableViewSectionFooter = 3,
-    TableViewNumberOfSections = 4
+    TableViewSectionHeader = 0, TableViewSectionItem = 1, TableViewSectionAddItem = 2, TableViewSectionFooter = 3, TableViewNumberOfSections = 4
 };
 
 static NSString *const CellIdentifierItemCell = @"itemCell";
@@ -50,7 +46,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
     if (self) {
         _isEditable = YES;
         _isSelectable = YES;
-        
+
         _tableView = [[UITableView alloc] init];
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -130,8 +126,8 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifierItemCell];
         if (cell == nil) {
             MKLogDebug(@"Creating a %@...", CellIdentifierItemCell);
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                                reuseIdentifier:CellIdentifierItemCell];
+            cell = [[UITableViewCell alloc]
+                    initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifierItemCell];
             cell.backgroundColor = [UIColor whiteColor];
             if (self.isSelectable) {
                 cell.selectionStyle = UITableViewCellSelectionStyleDefault;
@@ -147,13 +143,14 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
         assert([cell.contentView.subviews count] == 1); // At this point the cell should always be properly initialized
         if ([self.delegate respondsToSelector:@selector(itemListView:updateContentForItem:view:)]) {
             UIView *const itemView = [cell.contentView.subviews lastObject];
-            [self.delegate itemListView:self updateContentForItem:[indexPath row] view:itemView];
+            [self.delegate itemListView:self updateContentForItem:(NSUInteger)[indexPath row] view:itemView];
         }
     } else if (indexPath.section == TableViewSectionAddItem) {
         cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifierAddItemCell];
         if (cell == nil) {
             MKLogDebug(@"Creating a %@...", CellIdentifierAddItemCell);
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifierAddItemCell];
+            cell = [[UITableViewCell alloc]
+                    initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifierAddItemCell];
             cell.backgroundColor = [UIColor clearColor];
             UIView *const newItemView = [self viewForNewItemCell];
             [cell.contentView addSubview:newItemView];
@@ -162,7 +159,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
             MKLogVerbose(@"Found a reusable %@...", CellIdentifierAddItemCell);
         }
         assert([cell.contentView.subviews count] == 1); // At this point the cell should always be properly initialized
-        
+
     }
     return cell;
 }
@@ -217,21 +214,21 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 {
     if (_viewForNewItemCell == nil) {
         UIView *const view = [[UIView alloc] init];
-        
+
         UIButton *const addItemButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         NSString *title;
-        if ([self.delegate respondsToSelector:@selector(titleForAddItemButtonInItemListView:)])
-        {
+        if ([self.delegate respondsToSelector:@selector(titleForAddItemButtonInItemListView:)]) {
             title = [self.delegate titleForAddItemButtonInItemListView:self];
         } else {
             title = @"New Item";
         }
         [addItemButton setTitle:title forState:UIControlStateNormal];
         [addItemButton setTintColor:[UIColor whiteColor]];
-        [addItemButton addTarget:self action:@selector(buttonActionNewItem:) forControlEvents:UIControlEventTouchUpInside];
+        [addItemButton addTarget:self action:@selector(buttonActionNewItem:)
+                forControlEvents:UIControlEventTouchUpInside];
         [view addSubview:addItemButton];
         [MKUIHelper addStayCenterConstraintsToView:addItemButton parentView:view];
-        
+
         _viewForNewItemCell = view;
     }
     return _viewForNewItemCell;

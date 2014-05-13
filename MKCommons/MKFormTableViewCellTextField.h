@@ -13,6 +13,7 @@
 @property (strong, nonatomic, readonly) UITextField *textField;
 
 - (instancetype)initWithTextField:(UITextField *)textField;
-- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier textField:(UITextField *)textField;
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+                    textField:(UITextField *)textField;
 
 @end

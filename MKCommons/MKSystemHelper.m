@@ -17,13 +17,10 @@
  *
  * @return True if < 7.0, false if >= 7.0.
  */
-+ (BOOL)isLegacyPlatform {
++ (BOOL)isLegacyPlatform
+{
     BOOL iOS6OrLess = kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_6_1;
-    if (iOS6OrLess) {
-        return YES;
-    } else {
-        return NO;
-    }
+    return iOS6OrLess;
 }
 
 /**
@@ -31,7 +28,8 @@
  *
  * @return YES if running on iPhone
  */
-+ (BOOL)isRunningOnPhone {
++ (BOOL)isRunningOnPhone
+{
     return (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone);
 }
 
@@ -43,18 +41,14 @@
     NSSearchPathDirectory const searchPathType = (NSSearchPathDirectory)pathType;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(searchPathType, NSUserDomainMask, YES);
     NSString *path = [paths objectAtIndex:0];
-    BOOL isDir = NO;
+    BOOL isDirectoryExist = NO;
     NSError *error;
-    if (! [[NSFileManager defaultManager] fileExistsAtPath:path
-                                               isDirectory:&isDir] && isDir == NO)
-    {
-        [[NSFileManager defaultManager] createDirectoryAtPath:path
-                                  withIntermediateDirectories:NO
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectoryExist] && (!isDirectoryExist)) {
+        [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:NO
                                                    attributes:nil
                                                         error:&error];
     }
     return path;
 }
-
 
 @end

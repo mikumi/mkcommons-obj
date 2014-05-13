@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+
 extern void __gcov_flush();
 
 #import <UIKit/UIKit.h>
@@ -34,7 +35,8 @@ extern void __gcov_flush();
     [super tearDown];
 }
 
-- (void)testIsLegacyPlatform {
+- (void)testIsLegacyPlatform
+{
     if (kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_6_1) {
         XCTAssertEqual(YES, [MKMiscHelper isLegacyPlatform], @"Should be able to identify legacy platforms < iOS 7.0");
     } else {
@@ -42,7 +44,8 @@ extern void __gcov_flush();
     }
 }
 
-- (void)testIsRunningOnPhone {
+- (void)testIsRunningOnPhone
+{
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
         XCTAssertEqual(YES, [MKMiscHelper isRunningOnPhone], @"Should return YES for running on a phone.");
     } else {

@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+
 extern void __gcov_flush();
 
 #import "MKStopwatch.h"
@@ -41,7 +42,7 @@ extern void __gcov_flush();
 - (void)testStartStop
 {
     MKStopwatch *stopwatch = [[MKStopwatch alloc] init];
-    
+
     [stopwatch start];
     [NSThread sleepForTimeInterval:0.5f];
     XCTAssert([stopwatch timeDifference] == 0.0f, @"Time difference won't change until stopped.");
@@ -49,7 +50,5 @@ extern void __gcov_flush();
     [stopwatch stop];
     XCTAssert([stopwatch timeDifference] >= 0.6f, @"Stopwatch should have been running for at least 1s");
 }
-
-
 
 @end

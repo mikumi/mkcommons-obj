@@ -13,7 +13,6 @@
 @property (strong, nonatomic, readonly) id response;
 
 - (instancetype)initWithUrl:(NSURL *)url;
-- (void)fetchContentSuccess:(void(^)(id response))successBlock
-                    failure:(void(^)(NSError *error))failureBlock;
+- (void)fetchContentSuccess:(void (^)(id response))successBlock failure:(void (^)(NSError *error))failureBlock;
 
 @end

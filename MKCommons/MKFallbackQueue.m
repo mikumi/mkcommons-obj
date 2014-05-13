@@ -19,14 +19,16 @@
 /*
  * (Inherited method comment)
  */
-- (instancetype)init {
+- (instancetype)init
+{
     return [self initWithObjects:nil];
 }
 
 /**
  * // TODO: this method comment needs be updated.
  */
-- (instancetype)initWithObjects:(NSArray *)objects {
+- (instancetype)initWithObjects:(NSArray *)objects
+{
     self = [super init];
     if (self) {
         if (objects != nil) {
@@ -41,7 +43,8 @@
 /**
  * // TODO: this method comment needs be updated.
  */
-- (id)topObject {
+- (id)topObject
+{
     id const firstObject = [self.fallbackQueue firstObject];
     return firstObject;
 }
@@ -49,7 +52,8 @@
 /**
  * // TODO: this method comment needs be updated.
  */
-- (id)moveTopObjectToBottomAndGetNextOne {
+- (id)moveTopObjectToBottomAndGetNextOne
+{
     if ([self.fallbackQueue count] <= 0) {
         return nil;
     }

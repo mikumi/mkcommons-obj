@@ -10,12 +10,7 @@
 
 @interface MKSerialManager : NSObject
 
-+ (NSString *)generateSerialForProduct:(NSString *)product
-                            feature:(NSInteger)feature
-                        expiryTime:(NSInteger)expiryTime;
-
-+ (BOOL)isSerialValid:(NSString *)serial
-          forProduct:(NSString *)product
-          forFeature:(NSInteger)feature;
++ (NSString *)generateSerialForProduct:(NSString *)product feature:(NSInteger)feature expiryTime:(NSInteger)expiryTime;
++ (BOOL)isSerialValid:(NSString *)serial forProduct:(NSString *)product forFeature:(NSInteger)feature;
 
 @end

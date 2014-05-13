@@ -53,24 +53,22 @@ typedef void (^MKRemoteSettingsFailureBlock)(NSError *error);
     return self;
 }
 
-- (void)fetchContentSuccess:(void(^)(id response))successBlock
-                    failure:(void(^)(NSError *error))failureBlock
+- (void)fetchContentSuccess:(void (^)(id response))successBlock failure:(void (^)(NSError *error))failureBlock
 {
     self.successBlock = successBlock;
     self.failureBlock = failureBlock;
     MKLogInfo(@"Fetching json data from server: %@", [self.url description]);
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData *const jsonData = [NSData dataWithContentsOfURL:self.url];
         if (!jsonData) {
             MKLogError(@"Couldn't connect to remote URL.");
             return;
         }
-        
+
         NSError *error;
-        _response = [NSJSONSerialization JSONObjectWithData:jsonData
-                                                             options:kNilOptions
-                                                               error:&error];
+        _response = [NSJSONSerialization JSONObjectWithData:jsonData options:(NSJSONReadingOptions)kNilOptions
+                                                      error:&error];
         if (error) {
             MKLogError(@"Error while parsing remote json obect: %@", [error localizedDescription]);
         }

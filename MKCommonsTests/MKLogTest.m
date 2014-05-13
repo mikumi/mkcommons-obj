@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+
 extern void __gcov_flush();
 
 #import "MKLog.h"

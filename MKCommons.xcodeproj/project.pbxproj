@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		600444BE19210413005259D6 /* MKFormTableViewCellInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */; };
+		600444C71921DC98005259D6 /* MKFormTableViewCellButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */; };
+		600444C81921DC98005259D6 /* MKFormTableViewCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */; };
+		600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */; };
 		603629CB1920753B00D744CB /* MKFormTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 603629C91920753B00D744CB /* MKFormTableView.h */; };
 		603629CC1920753B00D744CB /* MKFormTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629CA1920753B00D744CB /* MKFormTableView.m */; };
 		603629D0192080B300D744CB /* MKFormTableViewCellSeparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */; };
@@ -82,6 +85,7 @@
 				603C20171911056600CAA66B /* MKSystemHelper.h in CopyFiles */,
 				603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */,
 				603629D31920840F00D744CB /* MKFormTableViewCellSeparator.h in CopyFiles */,
+				600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */,
 				600444BE19210413005259D6 /* MKFormTableViewCellInfo.h in CopyFiles */,
 				603629D819208A1200D744CB /* MKFormTableViewCellTextField.h in CopyFiles */,
 				603C20191911056600CAA66B /* MKStopwatch.h in CopyFiles */,
@@ -95,6 +99,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellButton.h; sourceTree = "<group>"; };
+		600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellButton.m; sourceTree = "<group>"; };
 		603629C91920753B00D744CB /* MKFormTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableView.h; sourceTree = "<group>"; };
 		603629CA1920753B00D744CB /* MKFormTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableView.m; sourceTree = "<group>"; };
 		603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellSeparator.h; sourceTree = "<group>"; };
@@ -169,6 +175,8 @@
 			children = (
 				603629C91920753B00D744CB /* MKFormTableView.h */,
 				603629CA1920753B00D744CB /* MKFormTableView.m */,
+				600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */,
+				600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */,
 				603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */,
 				603629DA19209ED300D744CB /* MKFormTableViewCellInfo.m */,
 				603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */,
@@ -321,6 +329,7 @@
 				608C03161919F57A00D50DE9 /* MKUIColors.h in Headers */,
 				603629CB1920753B00D744CB /* MKFormTableView.h in Headers */,
 				603629D0192080B300D744CB /* MKFormTableViewCellSeparator.h in Headers */,
+				600444C71921DC98005259D6 /* MKFormTableViewCellButton.h in Headers */,
 				603629DB19209ED300D744CB /* MKFormTableViewCellInfo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +417,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				603629CC1920753B00D744CB /* MKFormTableView.m in Sources */,
+				600444C81921DC98005259D6 /* MKFormTableViewCellButton.m in Sources */,
 				603629D1192080B300D744CB /* MKFormTableViewCellSeparator.m in Sources */,
 				60F9B90A17F971540086A155 /* MKLog.m in Sources */,
 				60F768E017F529D500937CB1 /* MKSystemHelper.m in Sources */,

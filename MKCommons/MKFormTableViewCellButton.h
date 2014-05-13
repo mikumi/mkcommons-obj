@@ -1,20 +1,21 @@
 //
-//  MKFormTableViewCellInfo.h
+//  MKFormTableViewCellButton.h
 //  MKCommons
 //
-//  Created by Michael Kuck on 5/12/14.
+//  Created by Michael Kuck on 5/13/14.
 //  Copyright (c) 2014 Michael Kuck. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "MKFormTableViewCellSeparator.h"
 
 //============================================================
 //== Public Interface
 //============================================================
-@interface MKFormTableViewCellInfo : MKFormTableViewCellSeparator
+@interface MKFormTableViewCellButton : MKFormTableViewCellSeparator
 
-@property (strong, nonatomic, readonly) UILabel *label;
+@property (strong, nonatomic, readonly) UIButton *button;
 
-- (instancetype)initWithText:(NSString *)text;
+- (instancetype)initWithTitle:(NSString *)title;
 
 @end

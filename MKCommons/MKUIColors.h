@@ -17,5 +17,5 @@
 + (UIColor *)mediumRed;
 + (UIColor *)veryLightGray;
 + (UIColor *)lightGray;
-
++ (UIColor *)mediumGray;
 @end

@@ -9,9 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, MKSystemHelperPathType) {
-    MKPathTypeDocuments = NSDocumentDirectory,
-    MKPathTypeLibrary = NSLibraryDirectory,
-    MKPathTypeCache = NSCachesDirectory
+    MKPathTypeDocuments = NSDocumentDirectory, MKPathTypeLibrary = NSLibraryDirectory, MKPathTypeCache = NSCachesDirectory
 };
 
 /**
@@ -22,6 +20,5 @@ typedef NS_ENUM(NSUInteger, MKSystemHelperPathType) {
 + (BOOL)isLegacyPlatform;
 + (BOOL)isRunningOnPhone;
 + (NSString *)pathToDirectory:(MKSystemHelperPathType)pathType;
-
 
 @end
