@@ -20,4 +20,7 @@
 - (UITextField *)addCustomTextFieldCellWithTextField:(UITextField *)textField;
 - (UILabel *)addInfoCellWithText:(NSString *)text;
 - (UIButton *)addButtonCellWithTitle:(NSString *)title;
+- (UIDatePicker *)addDatePickerCell;
+- (void)setCellAtRow:(NSUInteger)row hidden:(BOOL)hidden;
+
 @end

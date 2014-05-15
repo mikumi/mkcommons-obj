@@ -12,6 +12,7 @@
 #import "MKSystemHelper.h"
 #import "MKFormTableViewCellInfo.h"
 #import "MKFormTableViewCellButton.h"
+#import "MKFormTableViewCellDatePicker.h"
 
 @interface MKFormTableView () <UITableViewDataSource, UITableViewDelegate>
 
@@ -134,6 +135,30 @@
     self.cells = [self.cells arrayByAddingObject:separatorCell];
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
+- (UIDatePicker *)addDatePickerCell
+{
+    MKFormTableViewCellDatePicker *datePickerCell = [[MKFormTableViewCellDatePicker alloc] init];
+    datePickerCell.datePicker.backgroundColor = [UIColor whiteColor];
+    self.cells = [self.cells arrayByAddingObject:datePickerCell];
+    return datePickerCell.datePicker;
+}
+
+/*
+ * (Inherited Comment)
+ */
+- (void)setCellAtRow:(NSUInteger)row hidden:(BOOL)hidden
+{
+    if (row < [self.cells count]) {
+        UITableViewCell *const cell = self.cells[row];
+        [self beginUpdates];
+        [cell setHidden:hidden];
+        [self endUpdates];
+    }
+}
+
 //=== UITableViewDataSource ===//
 #pragma mark - UITableViewDataSource
 
@@ -153,8 +178,15 @@
     return [self.cells count];
 }
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "UnavailableInDeploymentTarget"
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if ([[self.cells objectAtIndex:[indexPath row]] isKindOfClass:[MKFormTableViewCellDatePicker class]]) {
+//        return 162;
+//    } else {
+//        return self.rowHeight;
+//    }
+//}
+
 /*
  * (Inherited Comment)
  */
@@ -184,7 +216,6 @@
     }
     return cell;
 }
-#pragma clang diagnostic pop
 
 //=== UITableViewDelegate ===//
 #pragma mark - UITableViewDelegate
