@@ -14,7 +14,7 @@
 #import "MKFormTableViewCellButton.h"
 #import "MKFormTableViewCellDatePicker.h"
 
-@interface MKFormTableView () <UITableViewDataSource, UITableViewDelegate>
+@interface MKFormTableView ()<UITableViewDataSource, UITableViewDelegate>
 
 - (void)didTouchOutside:(id)sender;
 - (UITapGestureRecognizer *)newTapGestureRecognizer;
@@ -142,7 +142,7 @@
 {
     MKFormTableViewCellDatePicker *datePickerCell = [[MKFormTableViewCellDatePicker alloc] init];
     datePickerCell.datePicker.backgroundColor = [UIColor whiteColor];
-    self.cells = [self.cells arrayByAddingObject:datePickerCell];
+    self.cells                                = [self.cells arrayByAddingObject:datePickerCell];
     return datePickerCell.datePicker;
 }
 
@@ -193,7 +193,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [self.cells objectAtIndex:(NSUInteger)[indexPath row]];
-    if ([indexPath row] + 1 < [self.cells count]) {
+    if ([indexPath row] + 1 < [self.cells count]) { // make sure there actually exists a next cell
         UITableViewCell *nextCell = [self.cells objectAtIndex:(NSUInteger)([indexPath row] + 1)];
         // No inset (=full line) between content cells and separator cells
         if ((([cell isKindOfClass:[MKFormTableViewCellSeparator class]]) &&
@@ -206,12 +206,18 @@
                 cell.separatorInset = UIEdgeInsetsZero;
             }
         } else if (([cell isKindOfClass:[MKFormTableViewCellSeparator class]]) &&
-                   ([nextCell isKindOfClass:[MKFormTableViewCellSeparator class]])) {
+                    ([nextCell isKindOfClass:[MKFormTableViewCellSeparator class]])) {
             if ([MKSystemHelper isLegacyPlatform]) {
                 // TODO: implement
             } else {
                 cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
             }
+        }
+    } else { // if last cell
+        if ([MKSystemHelper isLegacyPlatform]) {
+            // TODO: implement
+        } else {
+            cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
         }
     }
     return cell;

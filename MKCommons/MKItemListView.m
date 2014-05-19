@@ -52,7 +52,6 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
         _tableView.dataSource = self;
         [self addSubview:_tableView];
         _tableView.backgroundColor = self.backgroundColor;
-        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [MKUIHelper addMatchParentConstraintsToView:self.tableView parentView:self];
     }
     return self;
@@ -134,6 +133,9 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
             } else {
                 cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
+            if ([indexPath row] >= [self.delegate numberOfItemsInItemListView:self] - 1) {
+                cell.separatorInset = UIEdgeInsetsZero;
+            }
             UIView *const itemView = [self.delegate itemViewForItemListView:self];
             [cell.contentView addSubview:itemView];
             [MKUIHelper addMatchParentConstraintsToView:itemView parentView:cell];
@@ -152,6 +154,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
             cell = [[UITableViewCell alloc]
                     initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifierAddItemCell];
             cell.backgroundColor = [UIColor clearColor];
+            cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
             UIView *const newItemView = [self viewForNewItemCell];
             [cell.contentView addSubview:newItemView];
             [MKUIHelper addMatchParentConstraintsToView:newItemView parentView:cell];
@@ -206,6 +209,12 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
     }
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    return [[UIView alloc] init];
+}
+
 
 //=== Private Implementation ===//
 #pragma mark - Private Implementation
