@@ -74,6 +74,15 @@
 }
 
 /**
+* // TODO: this method comment needs be updated.
+*/
++ (UIColor *)veryVeryLightGray
+{
+    UIColor *const color = [UIColor colorWithRed:0.99f green:0.99f blue:0.99f alpha:1.0f];
+    return color;
+}
+
+/**
  * // TODO: this method comment needs be updated.
  */
 + (UIColor *)lightGray
