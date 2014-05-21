@@ -25,7 +25,8 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 //============================================================
 @interface MKItemListView ()<UITableViewDataSource, UITableViewDelegate>
 
-@property (strong, nonatomic, readonly) UIView *viewForNewItemCell;
+@property (strong, nonatomic, readonly) UITableView *tableView;
+@property (strong, nonatomic, readonly) UIView      *viewForNewItemCell;
 
 - (void)buttonActionNewItem:(id)sender;
 
@@ -55,6 +56,8 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
         _tableView.backgroundColor         = self.backgroundColor;
         _tableView.allowsMultipleSelection = NO;
         _tableView.editing                 = NO;
+        _tableView.tableHeaderView = [[UIView alloc] init];
+        _tableView.tableFooterView = [[UIView alloc] init];
         [MKUIHelper addMatchParentConstraintsToView:self.tableView parentView:self];
     }
     return self;
@@ -69,19 +72,20 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 }
 
 /**
-* Fill the parent view by adding constraints. Will auto resize if necessary.
-*/
+ * Fill the parent view by adding constraints. Will auto resize if necessary.
+ */
 - (void)autoFillParentView
 {
     [MKUIHelper addMatchParentConstraintsToView:self parentView:self.superview];
 }
 
 /**
-* // TODO: this method comment needs be updated.
-*/
+ * // TODO: this method comment needs be updated.
+ */
 - (void)reload
 {
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:TableViewSectionItem] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:TableViewSectionItem]
+                  withRowAnimation:UITableViewRowAnimationAutomatic];
 //    [self.tableView reloadData];
 }
 
@@ -180,8 +184,8 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 }
 
 /*
-* (Inherited Comment)
-*/
+ * (Inherited Comment)
+ */
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([indexPath section] == TableViewSectionItem) {
@@ -192,8 +196,8 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 }
 
 /*
-* (Inherited Comment)
-*/
+ * (Inherited Comment)
+ */
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -208,8 +212,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 #pragma mark - UITableViewDelegate
 
 /*
-* (Inherited Comment)
-*/
+ * (Inherited Comment)
+ */
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([indexPath section] == TableViewSectionItem) {
@@ -229,7 +233,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
         if (self.delegate != nil) {
             height = (CGFloat)[self.delegate heightOfItemCellInItemListView:self];
         }
-    } else {
+    } else if ([indexPath section] == TableViewSectionAddItem) {
         height = self.tableView.rowHeight;
     }
     return height;
@@ -251,12 +255,6 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    return [[UIView alloc] init];
-}
-
-
 //=== Private Implementation ===//
 #pragma mark - Private Implementation
 
@@ -273,7 +271,7 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
             title = @"New Item";
         }
         [addItemButton setTitle:title forState:UIControlStateNormal];
-        [addItemButton setTintColor:[UIColor whiteColor]];
+//        [addItemButton setTintColor:[UIColor whiteColor]];
         [addItemButton addTarget:self action:@selector(buttonActionNewItem:)
                 forControlEvents:UIControlEventTouchUpInside];
         [view addSubview:addItemButton];

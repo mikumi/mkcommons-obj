@@ -31,7 +31,6 @@
 //============================================================
 @interface MKItemListView : UIView
 
-@property (strong, nonatomic, readonly) UITableView *tableView; // TODO: think about making it private
 @property (strong, nonatomic) id <MKItemListViewDelegate> delegate;
 @property (assign, nonatomic) BOOL isEditable;
 @property (assign, nonatomic) BOOL isSelectable;
