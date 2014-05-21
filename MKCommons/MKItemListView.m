@@ -12,17 +12,18 @@
 #import "MKUIHelper.h"
 #import "MKLog.h"
 
-NS_ENUM(NSInteger, TableViewSection) {
+NS_ENUM(NSInteger, TableViewSection)
+{
     TableViewSectionHeader = 0, TableViewSectionItem = 1, TableViewSectionAddItem = 2, TableViewSectionFooter = 3, TableViewNumberOfSections = 4
 };
 
-static NSString *const CellIdentifierItemCell = @"itemCell";
+static NSString *const CellIdentifierItemCell    = @"itemCell";
 static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 
 //============================================================
 //== Private Interface
 //============================================================
-@interface MKItemListView () <UITableViewDataSource, UITableViewDelegate>
+@interface MKItemListView ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic, readonly) UIView *viewForNewItemCell;
 
@@ -44,14 +45,16 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _isEditable = YES;
+        _isEditable   = YES;
         _isSelectable = YES;
 
         _tableView = [[UITableView alloc] init];
-        _tableView.delegate = self;
+        _tableView.delegate   = self;
         _tableView.dataSource = self;
         [self addSubview:_tableView];
-        _tableView.backgroundColor = self.backgroundColor;
+        _tableView.backgroundColor         = self.backgroundColor;
+        _tableView.allowsMultipleSelection = NO;
+        _tableView.editing                 = NO;
         [MKUIHelper addMatchParentConstraintsToView:self.tableView parentView:self];
     }
     return self;
@@ -66,19 +69,20 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 }
 
 /**
- * Fill the parent view by adding constraints. Will auto resize if necessary.
- */
+* Fill the parent view by adding constraints. Will auto resize if necessary.
+*/
 - (void)autoFillParentView
 {
     [MKUIHelper addMatchParentConstraintsToView:self parentView:self.superview];
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 - (void)reload
 {
-    [self.tableView reloadData];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:TableViewSectionItem] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    [self.tableView reloadData];
 }
 
 /*
@@ -138,7 +142,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
             }
             UIView *const itemView = [self.delegate itemViewForItemListView:self];
             [cell.contentView addSubview:itemView];
-            [MKUIHelper addMatchParentConstraintsToView:itemView parentView:cell];
+            [MKUIHelper addMatchParentConstraintsToView:itemView parentView:cell.contentView];
         } else {
             MKLogVerbose(@"Found a reusable %@...", CellIdentifierItemCell);
         }
@@ -154,7 +158,7 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
             cell = [[UITableViewCell alloc]
                     initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifierAddItemCell];
             cell.backgroundColor = [UIColor clearColor];
-            cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
+            cell.separatorInset  = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
             UIView *const newItemView = [self viewForNewItemCell];
             [cell.contentView addSubview:newItemView];
             [MKUIHelper addMatchParentConstraintsToView:newItemView parentView:cell];
@@ -175,8 +179,45 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
     return TableViewNumberOfSections;
 }
 
+/*
+* (Inherited Comment)
+*/
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([indexPath section] == TableViewSectionItem) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
+/*
+* (Inherited Comment)
+*/
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        if (self.delegate) {
+            [self.delegate itemListView:self didRemoveItem:[indexPath row]];
+        }
+    }
+}
+
 //=== UITableViewDelegate ===//
 #pragma mark - UITableViewDelegate
+
+/*
+* (Inherited Comment)
+*/
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([indexPath section] == TableViewSectionItem) {
+        return UITableViewCellEditingStyleDelete;
+    } else {
+        return UITableViewCellEditingStyleNone;
+    }
+}
 
 /*
  * (Inherited Comment)
@@ -244,8 +285,8 @@ static NSString *const CellIdentifierAddItemCell = @"addItemCell";
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 - (void)buttonActionNewItem:(id)sender
 {
     if ([self.delegate respondsToSelector:@selector(didSelectAddItemInItemListView:)]) {
