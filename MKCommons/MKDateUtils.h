@@ -12,7 +12,8 @@
 
 + (NSDate *)dateByCopyingTimeComponentsFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate;
 + (NSDate *)dateByCopyingDateComponentsFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate;
-+ (NSDate *)dateByStrippingTimezoneFromDate:(NSDate *)date;
++ (NSDate *)dateByStrippingTimeZoneFromDate:(NSDate *)date;
++ (NSDate *)dateBySettingTimeZoneForDate:(NSDate *)date;
 + (NSDate *)removeTimeComponentsFromDate:(NSDate *)date;
 + (NSString *)stringFromDate:(NSDate *)date dateStyle:(NSDateFormatterStyle)dateStyle
                    timeStyle:(NSDateFormatterStyle)timeStyle;

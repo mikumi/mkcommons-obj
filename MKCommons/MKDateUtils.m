@@ -42,19 +42,34 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* Convert an NSDate in the current timezone to an NSDate that will display the same time in GMT-0. E.g. 8PM in GMT+8
+* will now be 8PM in GMT-0.
+*
+* @param date The date that the timezone information should be stripped from.
+*
+* @return The same time in GMT-0
 */
-+ (NSDate *)dateByStrippingTimezoneFromDate:(NSDate *)date
++ (NSDate *)dateByStrippingTimeZoneFromDate:(NSDate *)date
 {
-//    NSUInteger const flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit |
-//    NSCalendar       *const calendar   = [NSCalendar currentCalendar];
-//    NSDateComponents *const components = [calendar components:flags fromDate:toDate];
-//    NSDate *result = [calendar dateByAddingComponents:components toDate:dateOnly options:0];
-//
-//    return result;
-    MKLogError(@"Not implemented yet");
-    assert(NO);
-    return nil;
+    NSTimeInterval timeDifferenceSeconds = [[NSTimeZone defaultTimeZone] secondsFromGMT];
+    NSDate *const result = [date dateByAddingTimeInterval:timeDifferenceSeconds];
+    return result;
+}
+
+/**
+* Set the timezone for a timezone-less NSDate (for example removed by dateByStrippingTimeZoneFromDate:). It is assumed
+* that the date is in GMT-0. After setting the time zone, it will display the same time in the current time zone.
+* Example: 8PM in GMT-0 will now display 8PM in the current time zone.
+*
+* @param date An NSDate in GMT-0.
+*
+* @return comment
+*/
++ (NSDate *)dateBySettingTimeZoneForDate:(NSDate *)date
+{
+    NSTimeInterval timeDifferenceSeconds = [[NSTimeZone defaultTimeZone] secondsFromGMT];
+    NSDate *const result = [date dateByAddingTimeInterval:(-timeDifferenceSeconds)];
+    return result;
 }
 
 /**

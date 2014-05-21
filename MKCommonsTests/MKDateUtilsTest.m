@@ -68,6 +68,17 @@
     XCTAssert([expectedResultString isEqualToString:actualResultString], @"Time components were not removed corectly");
 }
 
+- (void)testDateByStrippingTimeZoneInformation
+{
+    NSDate *const now = [NSDate date];
+    NSDate *const stripped = [MKDateUtils dateByStrippingTimeZoneFromDate:now];
+    NSDate *const restored = [MKDateUtils dateBySettingTimeZoneForDate:stripped];
+    MKLogVerbose(@"now: %@ (%@)", now, [self dateToString:now]);
+    MKLogVerbose(@"stripped: %@ (%@)", stripped, [self dateToString:stripped]);
+    MKLogVerbose(@"restored: %@ (%@)", restored, [self dateToString:restored]);
+    // TODO: implement XCTAssert
+}
+
 - (NSString *)dateToString:(NSDate *)date
 {
     return [self dateToString:date withDateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle];
