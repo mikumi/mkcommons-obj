@@ -68,6 +68,8 @@
     MKLogVerbose(@"Initializing instance...");
     self.delegate   = self;
     self.dataSource = self;
+    self.tableHeaderView = [[UIView alloc] init];
+    self.tableFooterView = [[UIView alloc] init];
     _cells = [[NSArray alloc] init];
 }
 
@@ -133,6 +135,14 @@
     MKFormTableViewCellSeparator *separatorCell = [[MKFormTableViewCellSeparator alloc] init];
     [separatorCell addGestureRecognizer:[self newTapGestureRecognizer]];
     self.cells = [self.cells arrayByAddingObject:separatorCell];
+}
+
+/**
+ * // TODO: this method comment needs be updated.
+ */
+- (void)addCustomCell:(UITableViewCell *)customCell
+{
+    self.cells = [self.cells arrayByAddingObject:customCell];
 }
 
 /**
@@ -225,12 +235,6 @@
 
 //=== UITableViewDelegate ===//
 #pragma mark - UITableViewDelegate
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-
-    return [[UIView alloc] init];
-}
 
 //=== Private Implementation ===//
 #pragma mark - Private Implementation

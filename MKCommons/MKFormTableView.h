@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSArray *cells;
 
 - (void)addSeparatorCell;
+- (void)addCustomCell:(UITableViewCell *)customCell;
 - (UITextField *)addTextFieldCell;
 - (UITextField *)addCustomTextFieldCellWithTextField:(UITextField *)textField;
 - (UILabel *)addInfoCellWithText:(NSString *)text;
