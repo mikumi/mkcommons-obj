@@ -9,5 +9,5 @@
 extern NSString *const MKApplicationVersion(void);
 
 static NSUInteger const MAJOR = 1;
-static NSUInteger const MINOR = 5;
-static NSUInteger const PATCH = 7;
+static NSUInteger const MINOR = 6;
+static NSUInteger const PATCH = 0;
