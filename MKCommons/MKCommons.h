@@ -25,6 +25,5 @@
 // UI
 #import "MKUIColors.h"
 #import "MKUIHelper.h"
-#import "MKItemListView.h"
 
 #endif

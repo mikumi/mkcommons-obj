@@ -7,7 +7,6 @@
 //
 
 #import "MKDateUtils.h"
-#import "MKLog.h"
 
 @implementation MKDateUtils
 
@@ -18,7 +17,7 @@
 {
     NSDate *result = [MKDateUtils removeTimeComponentsFromDate:toDate];
 
-    NSUInteger const flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    NSCalendarUnit const flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     NSCalendar       *const calendar   = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
     NSDateComponents *const components = [calendar components:flags fromDate:fromDate];
     result = [calendar dateByAddingComponents:components toDate:result options:0];
@@ -33,7 +32,7 @@
 {
     NSDate *dateOnly = [MKDateUtils removeTimeComponentsFromDate:fromDate];
 
-    NSUInteger const flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    NSCalendarUnit const flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     NSCalendar       *const calendar   = [NSCalendar currentCalendar];
     NSDateComponents *const components = [calendar components:flags fromDate:toDate];
     NSDate *result = [calendar dateByAddingComponents:components toDate:dateOnly options:0];
@@ -77,7 +76,7 @@
 */
 + (NSDate *)removeTimeComponentsFromDate:(NSDate *)date
 {
-    NSUInteger const flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSTimeZoneCalendarUnit;
+    NSCalendarUnit const flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSTimeZoneCalendarUnit;
     NSCalendar       *const calendar   = [NSCalendar currentCalendar];
     NSDateComponents *const components = [calendar components:flags fromDate:date];
 
@@ -120,7 +119,7 @@
     @synchronized(dateFormatter) {
         dateFormatter.dateStyle = dateStyle;
         dateFormatter.timeStyle = timeStyle;
-        dateFormatter.timeZone = timeZone;
+        dateFormatter.timeZone  = timeZone;
         return [dateFormatter stringFromDate:date];
     }
 }
@@ -155,7 +154,7 @@
 */
 + (NSTimeZone *)noTimeZone
 {
-    static NSTimeZone *timeZone;
+    static NSTimeZone      *timeZone;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];

@@ -50,8 +50,8 @@
             _textField = textField;
         }
         [self.contentView addSubview:_textField];
-        [MKUIHelper addMatchParentConstraintsToView:_textField parentView:self.contentView distanceLeft:20 distanceTop:6
-                                      distanceRight:-20 distanceBottom:-6];
+        [MKUIHelper addMatchParentConstraintsForView:_textField parentView:self.contentView distanceLeft:20
+                                         distanceTop:6 distanceRight:-20 distanceBottom:-6];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;

@@ -55,7 +55,7 @@
             _datePicker = datePicker;
         }
         [self.contentView addSubview:_datePicker];
-        [MKUIHelper addMatchParentConstraintsToView:_datePicker parentView:self.contentView];
+        [MKUIHelper addMatchParentConstraintsForView:_datePicker parentView:self.contentView];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;

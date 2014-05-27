@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Michael Kuck. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 #import "MKFormTableViewCellSeparator.h"
 #import "MKFormTableViewCellTextField.h"
 

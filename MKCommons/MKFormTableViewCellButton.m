@@ -44,7 +44,7 @@
         [_button setTitleColor:[MKUIColors lightBlue] forState:UIControlStateSelected];
         [_button setTitleColor:[MKUIColors lightBlue] forState:UIControlStateHighlighted];
         [self.contentView addSubview:_button];
-        [MKUIHelper addStayCenterConstraintsToView:_button parentView:self.contentView];
+        [MKUIHelper addStayCenterConstraintsForView:_button parentView:self.contentView];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;

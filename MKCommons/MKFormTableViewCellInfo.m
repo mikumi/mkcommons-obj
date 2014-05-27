@@ -46,8 +46,8 @@
         _label.numberOfLines = 2;
         [_label setTextColor:[MKUIColors mediumGray]];
         [self.contentView addSubview:_label];
-        [MKUIHelper addMatchParentConstraintsToView:_label parentView:self.contentView distanceLeft:20 distanceTop:6
-                                      distanceRight:-20 distanceBottom:-6];
+        [MKUIHelper addMatchParentConstraintsForView:_label parentView:self.contentView distanceLeft:20 distanceTop:6
+                                       distanceRight:-20 distanceBottom:-6];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;

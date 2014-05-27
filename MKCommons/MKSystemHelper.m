@@ -9,9 +9,7 @@
 #import "MKSystemHelper.h"
 #import "MKLog.h"
 
-#import <UIKit/UIKit.h>
-
-static NSUInteger const NetworkIndicatorTimeout = 30.0f;
+static NSTimeInterval const NetworkIndicatorTimeout = 30.0f;
 
 static NSUInteger     networkActivityIndicatorShowCounter = 0;
 static NSTimer        *networkIndicatorTimer              = nil;
@@ -149,7 +147,7 @@ static NSTimeInterval networkIndicatorTimeLeft            = 0;
     label.font            = [UIFont boldSystemFontOfSize:13.0];
     label.textColor       = [UIColor whiteColor];
     label.text            = @"Loading";
-    label.textAlignment   = UITextAlignmentCenter;
+    label.textAlignment   = NSTextAlignmentCenter;
 
     [view addSubview:indicatorView];
     [view addSubview:label];
