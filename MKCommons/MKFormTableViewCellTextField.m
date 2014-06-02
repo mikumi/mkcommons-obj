@@ -7,8 +7,7 @@
 //
 
 #import "MKFormTableViewCellTextField.h"
-
-#import "MKUIHelper.h"
+#import "UIView+MKConstraints.h"
 
 @implementation MKFormTableViewCellTextField
 
@@ -50,8 +49,8 @@
             _textField = textField;
         }
         [self.contentView addSubview:_textField];
-        [MKUIHelper addMatchParentConstraintsForView:_textField parentView:self.contentView distanceLeft:20
-                                         distanceTop:6 distanceRight:-20 distanceBottom:-6];
+        [_textField addConstraintsToMatchParentView:self.contentView distanceLeft:20 distanceTop:6 distanceRight:20
+                                     distanceBottom:6];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;

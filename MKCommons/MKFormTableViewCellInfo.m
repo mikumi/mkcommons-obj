@@ -7,8 +7,8 @@
 //
 
 #import "MKFormTableViewCellInfo.h"
-#import "MKUIHelper.h"
-#import "MKUIColors.h"
+#import "UIColor+MKCommons.h"
+#import "UIView+MKConstraints.h"
 
 //============================================================
 //== Private Interface
@@ -41,13 +41,13 @@
     if (self) {
         _label = [[UILabel alloc] init];
         _label.textAlignment = NSTextAlignmentCenter;
-        _label.text = text;
-        _label.font = [_label.font fontWithSize:10];
+        _label.text          = text;
+        _label.font          = [_label.font fontWithSize:10];
         _label.numberOfLines = 2;
-        [_label setTextColor:[MKUIColors mediumGray]];
+        [_label setTextColor:[UIColor mediumGray]];
         [self.contentView addSubview:_label];
-        [MKUIHelper addMatchParentConstraintsForView:_label parentView:self.contentView distanceLeft:20 distanceTop:6
-                                       distanceRight:-20 distanceBottom:-6];
+        [_label addConstraintsToMatchParentView:self.contentView distanceLeft:20 distanceTop:6 distanceRight:20
+                                 distanceBottom:6];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;

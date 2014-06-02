@@ -1,28 +1,14 @@
 //
-//  MKUIColors.m
+//  UIColor+MKCommons.m
 //  MKCommons
 //
-//  Created by Michael Kuck on 5/7/14.
+//  Created by Michael Kuck on 5/30/14.
 //  Copyright (c) 2014 Michael Kuck. All rights reserved.
 //
 
-#import "MKUIColors.h"
+#import "UIColor+MKCommons.h"
 
-#import "MKLog.h"
-
-@implementation MKUIColors
-
-/*
- * (Inherited Comment)
- */
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        MKLogError(@"MKUIColor is not meant to be instantiated.");
-    }
-    return self;
-}
+@implementation UIColor (MKCommons)
 
 /**
  * // TODO: this method comment needs be updated.
@@ -74,8 +60,8 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
-*/
+ * // TODO: this method comment needs be updated.
+ */
 + (UIColor *)veryVeryLightGray
 {
     UIColor *const color = [UIColor colorWithRed:0.99f green:0.99f blue:0.99f alpha:1.0f];
@@ -96,4 +82,5 @@
     UIColor *const color = [UIColor colorWithRed:0.70f green:0.70f blue:0.70f alpha:1.0f];
     return color;
 }
+
 @end

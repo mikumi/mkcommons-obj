@@ -7,8 +7,8 @@
 //
 
 #import "MKFormTableViewCellButton.h"
-#import "MKUIHelper.h"
-#import "MKUIColors.h"
+#import "UIColor+MKCommons.h"
+#import "UIView+MKConstraints.h"
 
 //============================================================
 //== Private Interface
@@ -40,11 +40,11 @@
     if (self) {
         _button = [[UIButton alloc] init];
         [_button setTitle:title forState:UIControlStateNormal];
-        [_button setTitleColor:[MKUIColors mediumBlue] forState:UIControlStateNormal];
-        [_button setTitleColor:[MKUIColors lightBlue] forState:UIControlStateSelected];
-        [_button setTitleColor:[MKUIColors lightBlue] forState:UIControlStateHighlighted];
+        [_button setTitleColor:[UIColor mediumBlue] forState:UIControlStateNormal];
+        [_button setTitleColor:[UIColor lightBlue] forState:UIControlStateSelected];
+        [_button setTitleColor:[UIColor lightBlue] forState:UIControlStateHighlighted];
         [self.contentView addSubview:_button];
-        [MKUIHelper addStayCenterConstraintsForView:_button parentView:self.contentView];
+        [_button addConstraintsToCenterWithinParentView:self.contentView];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;

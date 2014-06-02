@@ -8,42 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		600444BE19210413005259D6 /* MKFormTableViewCellInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */; };
-		600444C71921DC98005259D6 /* MKFormTableViewCellButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */; };
 		600444C81921DC98005259D6 /* MKFormTableViewCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */; };
 		600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */; };
-		603629CB1920753B00D744CB /* MKFormTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 603629C91920753B00D744CB /* MKFormTableView.h */; };
+		6027BB851938903A000E6A64 /* UIView+MKConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 6027BB831938903A000E6A64 /* UIView+MKConstraints.m */; };
+		6027BB8919389647000E6A64 /* UIColor+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60A005AF1938673800583927 /* UIColor+MKCommons.h */; };
+		6027BB8A19389649000E6A64 /* UIView+MKConstraints.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6027BB821938903A000E6A64 /* UIView+MKConstraints.h */; };
 		603629CC1920753B00D744CB /* MKFormTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629CA1920753B00D744CB /* MKFormTableView.m */; };
-		603629D0192080B300D744CB /* MKFormTableViewCellSeparator.h in Headers */ = {isa = PBXBuildFile; fileRef = 603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */; };
 		603629D1192080B300D744CB /* MKFormTableViewCellSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629CF192080B300D744CB /* MKFormTableViewCellSeparator.m */; };
 		603629D21920840D00D744CB /* MKFormTableView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629C91920753B00D744CB /* MKFormTableView.h */; };
 		603629D31920840F00D744CB /* MKFormTableViewCellSeparator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */; };
-		603629D61920873A00D744CB /* MKFormTableViewCellTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 603629D41920873A00D744CB /* MKFormTableViewCellTextField.h */; };
 		603629D71920873A00D744CB /* MKFormTableViewCellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629D51920873A00D744CB /* MKFormTableViewCellTextField.m */; };
 		603629D819208A1200D744CB /* MKFormTableViewCellTextField.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629D41920873A00D744CB /* MKFormTableViewCellTextField.h */; };
-		603629DB19209ED300D744CB /* MKFormTableViewCellInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */; };
 		603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629DA19209ED300D744CB /* MKFormTableViewCellInfo.m */; };
-		603C1FE81910DF4200CAA66B /* MKUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 603C1FE71910DF4200CAA66B /* MKUIHelper.m */; };
 		603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603C1FFB1910E6CD00CAA66B /* UIKit.framework */; };
 		603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
 		603C20111911056600CAA66B /* MKFallbackQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D517F529D500937CB1 /* MKFallbackQueue.h */; };
 		603C20121911056600CAA66B /* MKJsonObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 607DB050180814D30005B256 /* MKJsonObject.h */; };
-		603C20131911056600CAA66B /* MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768EA17F52A9D00937CB1 /* MKCommons.h */; };
 		603C20141911056600CAA66B /* MKVersion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60EF2CC517F530E3000E7971 /* MKVersion.h */; };
 		603C20151911056600CAA66B /* MKLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F9B90817F971540086A155 /* MKLog.h */; };
 		603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */; };
 		603C20171911056600CAA66B /* MKSystemHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKSystemHelper.h */; };
 		603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D717F529D500937CB1 /* MKSerialManager.h */; };
 		603C20191911056600CAA66B /* MKStopwatch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768DB17F529D500937CB1 /* MKStopwatch.h */; };
-		603C201B1911056600CAA66B /* MKUIHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603C1FE61910DF4200CAA66B /* MKUIHelper.h */; };
 		603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */; };
 		603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */; };
 		60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */; };
 		606A1F3C19344B0B00FA17F9 /* MKMutableParallelArray.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */; };
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
-		608C03161919F57A00D50DE9 /* MKUIColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 608C03141919F57A00D50DE9 /* MKUIColors.h */; };
-		608C03171919F57A00D50DE9 /* MKUIColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 608C03151919F57A00D50DE9 /* MKUIColors.m */; };
-		608C03181919F86E00D50DE9 /* MKUIColors.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 608C03141919F57A00D50DE9 /* MKUIColors.h */; };
+		60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A005B01938673800583927 /* UIColor+MKCommons.m */; };
 		60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2CC617F530E3000E7971 /* MKVersion.m */; };
 		60F768A917F5264B00937CB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768A817F5264B00937CB1 /* XCTest.framework */; };
 		60F768AA17F5264B00937CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
@@ -57,12 +50,9 @@
 		60F768F117F52BB300937CB1 /* MKSerialManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768EE17F52BB300937CB1 /* MKSerialManagerTest.m */; };
 		60F9B90A17F971540086A155 /* MKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90917F971540086A155 /* MKLog.m */; };
 		60F9B90C17F973400086A155 /* MKLogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90B17F973400086A155 /* MKLogTest.m */; };
-		60FBB67C1929D589008D21C7 /* MKDateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 60FBB67A1929D589008D21C7 /* MKDateUtils.h */; };
 		60FBB67D1929D589008D21C7 /* MKDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FBB67B1929D589008D21C7 /* MKDateUtils.m */; };
 		60FBB67E1929D59D008D21C7 /* MKDateUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60FBB67A1929D589008D21C7 /* MKDateUtils.h */; };
 		60FBB6801929D82B008D21C7 /* MKDateUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */; };
-		DF2AE00057588D984FC7B885 /* MKFormTableViewCellDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */; };
-		DF2AE07A1A77470CBFC57A7B /* MKMutableParallelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */; };
 		DF2AEB75538B99F0E06DBE12 /* MKMutableParallelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */; };
 		DF2AED0046C0B1A3E6803B31 /* MKFormTableViewCellDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE997DB915710E59345EA /* MKFormTableViewCellDatePicker.m */; };
 /* End PBXBuildFile section */
@@ -86,14 +76,15 @@
 			files = (
 				603C20111911056600CAA66B /* MKFallbackQueue.h in CopyFiles */,
 				603C20121911056600CAA66B /* MKJsonObject.h in CopyFiles */,
-				603C20131911056600CAA66B /* MKCommons.h in CopyFiles */,
 				603C20141911056600CAA66B /* MKVersion.h in CopyFiles */,
 				603C20151911056600CAA66B /* MKLog.h in CopyFiles */,
 				603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */,
 				603C20171911056600CAA66B /* MKSystemHelper.h in CopyFiles */,
 				603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */,
 				603629D31920840F00D744CB /* MKFormTableViewCellSeparator.h in CopyFiles */,
+				6027BB8919389647000E6A64 /* UIColor+MKCommons.h in CopyFiles */,
 				60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */,
+				6027BB8A19389649000E6A64 /* UIView+MKConstraints.h in CopyFiles */,
 				600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */,
 				600444BE19210413005259D6 /* MKFormTableViewCellInfo.h in CopyFiles */,
 				606A1F3C19344B0B00FA17F9 /* MKMutableParallelArray.h in CopyFiles */,
@@ -101,8 +92,6 @@
 				603629D819208A1200D744CB /* MKFormTableViewCellTextField.h in CopyFiles */,
 				603C20191911056600CAA66B /* MKStopwatch.h in CopyFiles */,
 				603629D21920840D00D744CB /* MKFormTableView.h in CopyFiles */,
-				608C03181919F86E00D50DE9 /* MKUIColors.h in CopyFiles */,
-				603C201B1911056600CAA66B /* MKUIHelper.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +100,8 @@
 /* Begin PBXFileReference section */
 		600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellButton.h; sourceTree = "<group>"; };
 		600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellButton.m; sourceTree = "<group>"; };
+		6027BB821938903A000E6A64 /* UIView+MKConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MKConstraints.h"; sourceTree = "<group>"; };
+		6027BB831938903A000E6A64 /* UIView+MKConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKConstraints.m"; sourceTree = "<group>"; };
 		603629C91920753B00D744CB /* MKFormTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableView.h; sourceTree = "<group>"; };
 		603629CA1920753B00D744CB /* MKFormTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableView.m; sourceTree = "<group>"; };
 		603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellSeparator.h; sourceTree = "<group>"; };
@@ -119,8 +110,6 @@
 		603629D51920873A00D744CB /* MKFormTableViewCellTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellTextField.m; sourceTree = "<group>"; };
 		603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellInfo.h; sourceTree = "<group>"; };
 		603629DA19209ED300D744CB /* MKFormTableViewCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellInfo.m; sourceTree = "<group>"; };
-		603C1FE61910DF4200CAA66B /* MKUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUIHelper.h; sourceTree = "<group>"; };
-		603C1FE71910DF4200CAA66B /* MKUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKUIHelper.m; sourceTree = "<group>"; };
 		603C1FFB1910E6CD00CAA66B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPreferencesManager.h; sourceTree = "<group>"; };
 		603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManager.m; sourceTree = "<group>"; };
@@ -128,8 +117,8 @@
 		607A153017FC114B00269FD9 /* MKStopWatchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStopWatchTest.m; sourceTree = "<group>"; };
 		607DB050180814D30005B256 /* MKJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKJsonObject.h; sourceTree = "<group>"; };
 		607DB051180814D30005B256 /* MKJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKJsonObject.m; sourceTree = "<group>"; };
-		608C03141919F57A00D50DE9 /* MKUIColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUIColors.h; sourceTree = "<group>"; };
-		608C03151919F57A00D50DE9 /* MKUIColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKUIColors.m; sourceTree = "<group>"; };
+		60A005AF1938673800583927 /* UIColor+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MKCommons.h"; sourceTree = "<group>"; };
+		60A005B01938673800583927 /* UIColor+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MKCommons.m"; sourceTree = "<group>"; };
 		60EF2CC517F530E3000E7971 /* MKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVersion.h; sourceTree = "<group>"; };
 		60EF2CC617F530E3000E7971 /* MKVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVersion.m; sourceTree = "<group>"; };
 		60F7689717F5264B00937CB1 /* libMKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMKCommons.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +135,6 @@
 		60F768DA17F529D500937CB1 /* MKSystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSystemHelper.m; sourceTree = "<group>"; };
 		60F768DB17F529D500937CB1 /* MKStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKStopwatch.h; sourceTree = "<group>"; };
 		60F768DC17F529D500937CB1 /* MKStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStopwatch.m; sourceTree = "<group>"; };
-		60F768EA17F52A9D00937CB1 /* MKCommons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKCommons.h; sourceTree = "<group>"; };
 		60F768EC17F52BB300937CB1 /* MKFallbackQueueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFallbackQueueTest.m; sourceTree = "<group>"; };
 		60F768ED17F52BB300937CB1 /* MKMiscHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMiscHelperTest.m; sourceTree = "<group>"; };
 		60F768EE17F52BB300937CB1 /* MKSerialManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSerialManagerTest.m; sourceTree = "<group>"; };
@@ -207,11 +195,11 @@
 		603C1FEE1910E02400CAA66B /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				608C03141919F57A00D50DE9 /* MKUIColors.h */,
-				608C03151919F57A00D50DE9 /* MKUIColors.m */,
-				603C1FE61910DF4200CAA66B /* MKUIHelper.h */,
-				603C1FE71910DF4200CAA66B /* MKUIHelper.m */,
 				603629CD1920753E00D744CB /* MKFormTableView */,
+				60A005AF1938673800583927 /* UIColor+MKCommons.h */,
+				60A005B01938673800583927 /* UIColor+MKCommons.m */,
+				6027BB821938903A000E6A64 /* UIView+MKConstraints.h */,
+				6027BB831938903A000E6A64 /* UIView+MKConstraints.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -288,7 +276,6 @@
 			isa = PBXGroup;
 			children = (
 				603C1FEF1910E05200CAA66B /* Data */,
-				60F768EA17F52A9D00937CB1 /* MKCommons.h */,
 				60EF2CC517F530E3000E7971 /* MKVersion.h */,
 				60EF2CC617F530E3000E7971 /* MKVersion.m */,
 				60F7689D17F5264B00937CB1 /* Supporting Files */,
@@ -332,25 +319,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		603C20021910F7F600CAA66B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				603629D61920873A00D744CB /* MKFormTableViewCellTextField.h in Headers */,
-				608C03161919F57A00D50DE9 /* MKUIColors.h in Headers */,
-				60FBB67C1929D589008D21C7 /* MKDateUtils.h in Headers */,
-				603629CB1920753B00D744CB /* MKFormTableView.h in Headers */,
-				603629D0192080B300D744CB /* MKFormTableViewCellSeparator.h in Headers */,
-				600444C71921DC98005259D6 /* MKFormTableViewCellButton.h in Headers */,
-				603629DB19209ED300D744CB /* MKFormTableViewCellInfo.h in Headers */,
-				DF2AE00057588D984FC7B885 /* MKFormTableViewCellDatePicker.h in Headers */,
-				DF2AE07A1A77470CBFC57A7B /* MKMutableParallelArray.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		60F7689617F5264B00937CB1 /* MKCommons */ = {
 			isa = PBXNativeTarget;
@@ -358,7 +326,6 @@
 			buildPhases = (
 				60F7689317F5264B00937CB1 /* Sources */,
 				60F7689417F5264B00937CB1 /* Frameworks */,
-				603C20021910F7F600CAA66B /* Headers */,
 				603C200F1911051000CAA66B /* CopyFiles */,
 			);
 			buildRules = (
@@ -438,9 +405,9 @@
 				60F9B90A17F971540086A155 /* MKLog.m in Sources */,
 				60F768E017F529D500937CB1 /* MKSystemHelper.m in Sources */,
 				60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */,
-				608C03171919F57A00D50DE9 /* MKUIColors.m in Sources */,
 				60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */,
-				603C1FE81910DF4200CAA66B /* MKUIHelper.m in Sources */,
+				6027BB851938903A000E6A64 /* UIView+MKConstraints.m in Sources */,
+				60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */,
 				607DB052180814D30005B256 /* MKJsonObject.m in Sources */,
 				603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */,
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,

@@ -4,7 +4,7 @@
 //
 
 #import "MKFormTableViewCellDatePicker.h"
-#import "MKUIHelper.h"
+#import "UIView+MKConstraints.h"
 
 //============================================================
 //== Private Interface
@@ -55,7 +55,7 @@
             _datePicker = datePicker;
         }
         [self.contentView addSubview:_datePicker];
-        [MKUIHelper addMatchParentConstraintsForView:_datePicker parentView:self.contentView];
+        [_datePicker addConstraintsToMatchParentView:self.contentView];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;

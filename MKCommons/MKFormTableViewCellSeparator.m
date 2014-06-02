@@ -7,8 +7,7 @@
 //
 
 #import "MKFormTableViewCellSeparator.h"
-
-#import "MKUIColors.h"
+#import "UIColor+MKCommons.h"
 
 @implementation MKFormTableViewCellSeparator
 
@@ -24,7 +23,7 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        self.backgroundColor = [MKUIColors veryLightGray];
+        self.backgroundColor = [UIColor veryLightGray];
         [self setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     return self;

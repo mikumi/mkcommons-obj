@@ -11,8 +11,7 @@
 extern void __gcov_flush();
 
 #import "MKSerialManager.h"
-
-#import "MKCommons.h"
+#import "MKLog.h"
 
 @interface MKSerialManagerTest : XCTestCase
 
