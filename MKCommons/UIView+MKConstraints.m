@@ -183,4 +183,10 @@
                                                             constant:height]];
 }
 
+- (void)addConstraintsToFixWidth:(CGFloat)width height:(CGFloat)height parentView:(UIView *)parentView
+{
+    [self addConstraintToFixWidth:width parentView:parentView];
+    [self addConstraintToFixHeight:height parentView:parentView];
+}
+
 @end

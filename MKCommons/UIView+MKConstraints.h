@@ -35,5 +35,6 @@
 //=== Size constraints ===//
 - (void)addConstraintToFixWidth:(CGFloat)width parentView:(UIView *)parentView;
 - (void)addConstraintToFixHeight:(CGFloat)height parentView:(UIView *)parentView;
+- (void)addConstraintsToFixWidth:(CGFloat)width height:(CGFloat)height parentView:(UIView *)parentView;
 
 @end
