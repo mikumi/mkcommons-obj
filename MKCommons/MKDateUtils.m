@@ -15,7 +15,7 @@
 */
 + (NSDate *)dateByCopyingTimeComponentsFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate
 {
-    NSDate *result = [MKDateUtils removeTimeComponentsFromDate:toDate];
+    NSDate *result = [MKDateUtils dateByRemovingTimeComponentsFromDate:toDate];
 
     NSCalendarUnit const flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     NSCalendar       *const calendar   = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
@@ -30,7 +30,7 @@
 */
 + (NSDate *)dateByCopyingDateComponentsFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate
 {
-    NSDate *dateOnly = [MKDateUtils removeTimeComponentsFromDate:fromDate];
+    NSDate *dateOnly = [MKDateUtils dateByRemovingTimeComponentsFromDate:fromDate];
 
     NSCalendarUnit const flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     NSCalendar       *const calendar   = [NSCalendar currentCalendar];
@@ -74,7 +74,7 @@
 /**
 * // TODO: this method comment needs be updated.
 */
-+ (NSDate *)removeTimeComponentsFromDate:(NSDate *)date
++ (NSDate *)dateByRemovingTimeComponentsFromDate:(NSDate *)date
 {
     NSCalendarUnit const flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSTimeZoneCalendarUnit;
     NSCalendar       *const calendar   = [NSCalendar currentCalendar];

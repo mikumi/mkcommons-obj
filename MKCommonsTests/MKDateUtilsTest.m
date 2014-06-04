@@ -33,7 +33,7 @@
 
 - (void)testDateByCopyingTimeComponentsFromDate
 {
-    NSDate *const zeroDate = [MKDateUtils removeTimeComponentsFromDate:[NSDate date]];
+    NSDate *const zeroDate = [MKDateUtils dateByRemovingTimeComponentsFromDate:[NSDate date]];
     NSDate *const currentDate = [NSDate date];
     NSDate *const resultDate = [MKDateUtils dateByCopyingTimeComponentsFromDate:currentDate toDate:zeroDate];
     NSString *const expectedTimeString = [self dateToString:currentDate withDateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterMediumStyle];
@@ -61,7 +61,7 @@
 {
     NSDate *const date = [NSDate date];
     MKLogVerbose(@"Date: %@", [self dateToString:date]);
-    NSDate *const result = [MKDateUtils removeTimeComponentsFromDate:date];
+    NSDate *const result = [MKDateUtils dateByRemovingTimeComponentsFromDate:date];
     MKLogVerbose(@"Result: %@", [self dateToString:result]);
     NSString *const expectedResultString = @"12:00:00 AM";
     NSString *const actualResultString = [self dateToString:result withDateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterMediumStyle];

@@ -60,22 +60,22 @@
 }
 
 /**
- * Initializes instance. Should be called from both initWithCoder and initWithNibName (or others as appropriate), as
- * we don't know which one will be called.
- */
+* Initializes instance. Should be called from both initWithCoder and initWithNibName (or others as appropriate), as
+* we don't know which one will be called.
+*/
 - (void)initializeInstance
 {
     MKLogVerbose(@"Initializing instance...");
-    self.delegate   = self;
-    self.dataSource = self;
-    self.tableHeaderView = [[UIView alloc] init];
-    self.tableFooterView = [[UIView alloc] init];
+    self.delegate        = self;
+    self.dataSource      = self;
+    self.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
+    self.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];
     _cells = [[NSArray alloc] init];
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 - (void)setCells:(NSArray *)cells
 {
     _cells = cells;
@@ -83,8 +83,8 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 - (UILabel *)addInfoCellWithText:(NSString *)text
 {
     MKFormTableViewCellInfo *infoCell = [[MKFormTableViewCellInfo alloc] initWithText:text];
@@ -96,8 +96,8 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 - (UIButton *)addButtonCellWithTitle:(NSString *)title
 {
     MKFormTableViewCellButton *buttonCell = [[MKFormTableViewCellButton alloc] initWithTitle:title];
@@ -108,8 +108,8 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 - (UITextField *)addTextFieldCell
 {
     UITextField *textField = [[UITextField alloc] init];
@@ -117,8 +117,8 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 - (UITextField *)addCustomTextFieldCellWithTextField:(UITextField *)textField
 {
     MKFormTableViewCellTextField *textFieldCell = [[MKFormTableViewCellTextField alloc] initWithTextField:textField];
@@ -128,8 +128,8 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 - (void)addSeparatorCell
 {
     MKFormTableViewCellSeparator *separatorCell = [[MKFormTableViewCellSeparator alloc] init];
@@ -138,16 +138,20 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
-- (void)addCustomCell:(UITableViewCell *)customCell
+* // TODO: this method comment needs be updated.
+*/
+- (UITableViewCell *)addCustomCell
 {
-    self.cells = [self.cells arrayByAddingObject:customCell];
+    MKFormTableViewCellSeparator *separatorCell = [[MKFormTableViewCellSeparator alloc] init];
+    [separatorCell addGestureRecognizer:[self newTapGestureRecognizer]];
+    self.cells = [self.cells arrayByAddingObject:separatorCell];
+    self.backgroundColor = [UIColor whiteColor];
+    return separatorCell;
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 - (UIDatePicker *)addDatePickerCell
 {
     MKFormTableViewCellDatePicker *datePickerCell = [[MKFormTableViewCellDatePicker alloc] init];
@@ -216,7 +220,7 @@
                 cell.separatorInset = UIEdgeInsetsZero;
             }
         } else if (([cell isKindOfClass:[MKFormTableViewCellSeparator class]]) &&
-                    ([nextCell isKindOfClass:[MKFormTableViewCellSeparator class]])) {
+                   ([nextCell isKindOfClass:[MKFormTableViewCellSeparator class]])) {
             if ([MKSystemHelper isLegacyPlatform]) {
                 // TODO: implement
             } else {
@@ -240,16 +244,16 @@
 #pragma mark - Private Implementation
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 - (void)didTouchOutside:(id)sender
 {
     [self endEditing:YES];
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 - (UITapGestureRecognizer *)newTapGestureRecognizer;
 {
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]

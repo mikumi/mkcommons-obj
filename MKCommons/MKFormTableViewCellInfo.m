@@ -42,7 +42,7 @@
         _label = [[UILabel alloc] init];
         _label.textAlignment = NSTextAlignmentCenter;
         _label.text          = text;
-        _label.font          = [_label.font fontWithSize:10];
+        _label.font          = [_label.font fontWithSize:12];
         _label.numberOfLines = 2;
         [_label setTextColor:[UIColor mediumGray]];
         [self.contentView addSubview:_label];
