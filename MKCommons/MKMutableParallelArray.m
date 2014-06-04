@@ -111,6 +111,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
     @synchronized(self) {
         [self.objects removeObjectAtIndex:[self indexOfObject:object]];
     }
+    [self postUpdateNotification];
 }
 
 /**

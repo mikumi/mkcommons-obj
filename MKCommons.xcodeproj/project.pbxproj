@@ -37,6 +37,7 @@
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
 		60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A005B01938673800583927 /* UIColor+MKCommons.m */; };
+		60D9730A193DD2C90042C301 /* MKMutableParallelArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D97309193DD2C90042C301 /* MKMutableParallelArrayTest.m */; };
 		60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2CC617F530E3000E7971 /* MKVersion.m */; };
 		60F768A917F5264B00937CB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768A817F5264B00937CB1 /* XCTest.framework */; };
 		60F768AA17F5264B00937CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
@@ -119,6 +120,7 @@
 		607DB051180814D30005B256 /* MKJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKJsonObject.m; sourceTree = "<group>"; };
 		60A005AF1938673800583927 /* UIColor+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MKCommons.h"; sourceTree = "<group>"; };
 		60A005B01938673800583927 /* UIColor+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MKCommons.m"; sourceTree = "<group>"; };
+		60D97309193DD2C90042C301 /* MKMutableParallelArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMutableParallelArrayTest.m; sourceTree = "<group>"; };
 		60EF2CC517F530E3000E7971 /* MKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVersion.h; sourceTree = "<group>"; };
 		60EF2CC617F530E3000E7971 /* MKVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVersion.m; sourceTree = "<group>"; };
 		60F7689717F5264B00937CB1 /* libMKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMKCommons.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,6 +299,7 @@
 		60F768B017F5264B00937CB1 /* MKCommonsTests */ = {
 			isa = PBXGroup;
 			children = (
+				60D97309193DD2C90042C301 /* MKMutableParallelArrayTest.m */,
 				60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */,
 				60F768EC17F52BB300937CB1 /* MKFallbackQueueTest.m */,
 				60F9B90B17F973400086A155 /* MKLogTest.m */,
@@ -428,6 +431,7 @@
 				607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */,
 				60F768F017F52BB300937CB1 /* MKMiscHelperTest.m in Sources */,
 				60F768EF17F52BB300937CB1 /* MKFallbackQueueTest.m in Sources */,
+				60D9730A193DD2C90042C301 /* MKMutableParallelArrayTest.m in Sources */,
 				60F768F117F52BB300937CB1 /* MKSerialManagerTest.m in Sources */,
 				603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */,
 			);
