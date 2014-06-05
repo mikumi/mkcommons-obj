@@ -44,6 +44,7 @@
         _label.text          = text;
         _label.font          = [_label.font fontWithSize:12];
         _label.numberOfLines = 2;
+        _label.lineBreakMode = NSLineBreakByWordWrapping;
         [_label setTextColor:[UIColor mediumGray]];
         [self.contentView addSubview:_label];
         [_label addConstraintsToMatchParentView:self.contentView distanceLeft:20 distanceTop:6 distanceRight:20

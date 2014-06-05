@@ -207,9 +207,9 @@
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = self.cells[(NSUInteger)[indexPath row]];
+    UITableViewCell *const cell = self.cells[(NSUInteger)[indexPath row]];
     if ([indexPath row] + 1 < [self.cells count]) { // make sure there actually exists a next cell
-        UITableViewCell *nextCell = self.cells[(NSUInteger)([indexPath row] + 1)];
+        UITableViewCell *const nextCell = self.cells[(NSUInteger)([indexPath row] + 1)];
         // No inset (=full line) between content cells and separator cells
         if ((([cell isKindOfClass:[MKFormTableViewCellSeparator class]]) &&
              (![nextCell isKindOfClass:[MKFormTableViewCellSeparator class]])) ||
@@ -225,14 +225,14 @@
             if ([MKSystemHelper isLegacyPlatform]) {
                 // TODO: implement
             } else {
-                cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
+                cell.separatorInset = UIEdgeInsetsMake(0, self.frame.size.width, 0, 0);
             }
         }
     } else { // if last cell
         if ([MKSystemHelper isLegacyPlatform]) {
             // TODO: implement
         } else {
-            cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, cell.bounds.size.width);
+            cell.separatorInset = UIEdgeInsetsMake(0, self.frame.size.width, 0, 0);
         }
     }
     return cell;
