@@ -30,12 +30,12 @@
 */
 + (NSDate *)dateByCopyingDateComponentsFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate
 {
-    NSDate *dateOnly = [MKDateUtils dateByRemovingTimeComponentsFromDate:fromDate];
+    NSDate *const dateOnly = [MKDateUtils dateByRemovingTimeComponentsFromDate:fromDate];
 
     NSCalendarUnit const flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     NSCalendar       *const calendar   = [NSCalendar currentCalendar];
     NSDateComponents *const components = [calendar components:flags fromDate:toDate];
-    NSDate *result = [calendar dateByAddingComponents:components toDate:dateOnly options:0];
+    NSDate           *const result     = [calendar dateByAddingComponents:components toDate:dateOnly options:0];
 
     return result;
 }
@@ -50,7 +50,7 @@
 */
 + (NSDate *)dateByStrippingTimeZoneFromDate:(NSDate *)date
 {
-    NSTimeInterval timeDifferenceSeconds = [[NSTimeZone defaultTimeZone] secondsFromGMT];
+    NSTimeInterval const timeDifferenceSeconds = [[NSTimeZone defaultTimeZone] secondsFromGMT];
     NSDate *const result = [date dateByAddingTimeInterval:timeDifferenceSeconds];
     return result;
 }
@@ -66,7 +66,7 @@
 */
 + (NSDate *)dateBySettingTimeZoneForDate:(NSDate *)date
 {
-    NSTimeInterval timeDifferenceSeconds = [[NSTimeZone defaultTimeZone] secondsFromGMT];
+    NSTimeInterval const timeDifferenceSeconds = [[NSTimeZone defaultTimeZone] secondsFromGMT];
     NSDate *const result = [date dateByAddingTimeInterval:(-timeDifferenceSeconds)];
     return result;
 }
@@ -80,8 +80,7 @@
     NSCalendar       *const calendar   = [NSCalendar currentCalendar];
     NSDateComponents *const components = [calendar components:flags fromDate:date];
 
-    NSDate *result = [calendar dateFromComponents:components];
-
+    NSDate           *const result     = [calendar dateFromComponents:components];
     return result;
 }
 

@@ -56,12 +56,12 @@ static NSTimeInterval networkIndicatorTimeLeft            = 0;
 */
 + (NSString *)pathToDirectory:(MKSystemHelperPathType)pathType
 {
-    NSSearchPathDirectory const searchPathType   = (NSSearchPathDirectory)pathType;
-    NSArray                     *paths           = NSSearchPathForDirectoriesInDomains(searchPathType,
-                                                                                       NSUserDomainMask, YES);
-    NSString                    *path            = [paths objectAtIndex:0];
-    BOOL                        isDirectoryExist = NO;
-    NSError                     *error;
+    NSSearchPathDirectory const searchPathType = (NSSearchPathDirectory)pathType;
+
+    NSArray  *const paths = NSSearchPathForDirectoriesInDomains(searchPathType, NSUserDomainMask, YES);
+    NSString *const path  = paths[0];
+    BOOL    isDirectoryExist = NO;
+    NSError *error;
     if (![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectoryExist] && (!isDirectoryExist)) {
         [[NSFileManager defaultManager]
                 createDirectoryAtPath:path withIntermediateDirectories:NO attributes:nil error:&error];
@@ -118,11 +118,11 @@ static NSTimeInterval networkIndicatorTimeLeft            = 0;
 }
 
 /**
- * // TODO: this method comment needs be updated.
- */
+* // TODO: this method comment needs be updated.
+*/
 + (void)showBigNetworkActivityIndicator:(BOOL)isVisible
 {
-    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    UIWindow *const keyWindow = [UIApplication sharedApplication].keyWindow;
     CGRect   frame      = keyWindow.frame;
     CGFloat  viewWidth  = 100;
     CGFloat  viewHeight = 100;
@@ -132,17 +132,17 @@ static NSTimeInterval networkIndicatorTimeLeft            = 0;
     frame.size.height = viewHeight;
 
     // Main View
-    UIView *view = [[UIView alloc] initWithFrame:frame];
+    UIView *const view = [[UIView alloc] initWithFrame:frame];
     view.layer.cornerRadius  = 10.0f;
     view.layer.masksToBounds = YES;
 
     // Indicator view
-    UIActivityIndicatorView *indicatorView = [[UIActivityIndicatorView alloc]
+    UIActivityIndicatorView *const indicatorView = [[UIActivityIndicatorView alloc]
             initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
     indicatorView.frame = CGRectMake(35.0, 25.0, 30.0, 30.0);
 
     // Loading label
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 75.0, 80.0, 15.0)];
+    UILabel *const label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, 75.0, 80.0, 15.0)];
     label.backgroundColor = [UIColor clearColor];
     label.font            = [UIFont boldSystemFontOfSize:13.0];
     label.textColor       = [UIColor whiteColor];

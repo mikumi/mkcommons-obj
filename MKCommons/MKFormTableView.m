@@ -87,7 +87,7 @@
 */
 - (UILabel *)addInfoCellWithText:(NSString *)text
 {
-    MKFormTableViewCellInfo *infoCell = [[MKFormTableViewCellInfo alloc] initWithText:text];
+    MKFormTableViewCellInfo *const infoCell = [[MKFormTableViewCellInfo alloc] initWithText:text];
     [infoCell addGestureRecognizer:[self newTapGestureRecognizer]];
     [infoCell.label addGestureRecognizer:[self newTapGestureRecognizer]];
     self.cells = [self.cells arrayByAddingObject:infoCell];
@@ -100,7 +100,7 @@
 */
 - (UIButton *)addButtonCellWithTitle:(NSString *)title
 {
-    MKFormTableViewCellButton *buttonCell = [[MKFormTableViewCellButton alloc] initWithTitle:title];
+    MKFormTableViewCellButton *const buttonCell = [[MKFormTableViewCellButton alloc] initWithTitle:title];
     [buttonCell addGestureRecognizer:[self newTapGestureRecognizer]];
     self.cells = [self.cells arrayByAddingObject:buttonCell];
     return buttonCell.button;
@@ -112,7 +112,7 @@
 */
 - (UITextField *)addTextFieldCell
 {
-    UITextField *textField = [[UITextField alloc] init];
+    UITextField *const textField = [[UITextField alloc] init];
     return [self addCustomTextFieldCellWithTextField:textField];
 }
 
@@ -121,7 +121,8 @@
 */
 - (UITextField *)addCustomTextFieldCellWithTextField:(UITextField *)textField
 {
-    MKFormTableViewCellTextField *textFieldCell = [[MKFormTableViewCellTextField alloc] initWithTextField:textField];
+    MKFormTableViewCellTextField *const textFieldCell = [[MKFormTableViewCellTextField alloc]
+            initWithTextField:textField];
     [textField setClearButtonMode:UITextFieldViewModeWhileEditing];
     self.cells = [self.cells arrayByAddingObject:textFieldCell];
     return textFieldCell.textField;
@@ -132,7 +133,7 @@
 */
 - (void)addSeparatorCell
 {
-    MKFormTableViewCellSeparator *separatorCell = [[MKFormTableViewCellSeparator alloc] init];
+    MKFormTableViewCellSeparator *const separatorCell = [[MKFormTableViewCellSeparator alloc] init];
     [separatorCell addGestureRecognizer:[self newTapGestureRecognizer]];
     self.cells = [self.cells arrayByAddingObject:separatorCell];
 }
@@ -142,9 +143,9 @@
 */
 - (UITableViewCell *)addCustomCell
 {
-    MKFormTableViewCellSeparator *separatorCell = [[MKFormTableViewCellSeparator alloc] init];
+    MKFormTableViewCellSeparator *const separatorCell = [[MKFormTableViewCellSeparator alloc] init];
     [separatorCell addGestureRecognizer:[self newTapGestureRecognizer]];
-    self.cells = [self.cells arrayByAddingObject:separatorCell];
+    self.cells           = [self.cells arrayByAddingObject:separatorCell];
     self.backgroundColor = [UIColor whiteColor];
     return separatorCell;
 }
@@ -154,7 +155,7 @@
 */
 - (UIDatePicker *)addDatePickerCell
 {
-    MKFormTableViewCellDatePicker *datePickerCell = [[MKFormTableViewCellDatePicker alloc] init];
+    MKFormTableViewCellDatePicker *const datePickerCell = [[MKFormTableViewCellDatePicker alloc] init];
     datePickerCell.datePicker.backgroundColor = [UIColor whiteColor];
     self.cells                                = [self.cells arrayByAddingObject:datePickerCell];
     return datePickerCell.datePicker;
@@ -206,9 +207,9 @@
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.cells objectAtIndex:(NSUInteger)[indexPath row]];
+    UITableViewCell *cell = self.cells[(NSUInteger)[indexPath row]];
     if ([indexPath row] + 1 < [self.cells count]) { // make sure there actually exists a next cell
-        UITableViewCell *nextCell = [self.cells objectAtIndex:(NSUInteger)([indexPath row] + 1)];
+        UITableViewCell *nextCell = self.cells[(NSUInteger)([indexPath row] + 1)];
         // No inset (=full line) between content cells and separator cells
         if ((([cell isKindOfClass:[MKFormTableViewCellSeparator class]]) &&
              (![nextCell isKindOfClass:[MKFormTableViewCellSeparator class]])) ||
@@ -256,7 +257,7 @@
 */
 - (UITapGestureRecognizer *)newTapGestureRecognizer;
 {
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]
+    UITapGestureRecognizer *const tapGestureRecognizer = [[UITapGestureRecognizer alloc]
             initWithTarget:self action:@selector(didTouchOutside:)];
     tapGestureRecognizer.cancelsTouchesInView = NO;
     return tapGestureRecognizer;

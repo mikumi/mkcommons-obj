@@ -89,7 +89,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 */
 - (id)objectAtIndex:(NSUInteger)index
 {
-    return [self.objects objectAtIndex:index];
+    return self.objects[index];
 }
 
 /**
