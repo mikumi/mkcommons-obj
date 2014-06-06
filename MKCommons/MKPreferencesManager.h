@@ -20,7 +20,7 @@ extern NSString *const MKPreferencesManagerChangedKeys;
 */
 @interface MKPreferencesManager : NSObject
 
-@property (nonatomic, assign) BOOL shouldUseICloud;
+@property (assign, atomic) BOOL shouldUseICloud;
 
 + (MKPreferencesManager *)defaultManager;
 
@@ -39,5 +39,9 @@ extern NSString *const MKPreferencesManagerChangedKeys;
 - (void)resetPreferences;
 
 - (void)synchronize;
+
+- (void)addSyncIgnoreKey:(NSString *)key;
+- (void)removeSyncIgnoreKey:(NSString *)key;
+- (NSArray *)syncIgnoreKeys;
 
 @end
