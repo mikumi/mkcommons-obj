@@ -20,7 +20,6 @@ typedef NS_ENUM(NSUInteger, MKSystemHelperPathType) {
 + (BOOL)isLegacyPlatform;
 + (BOOL)isRunningOnPhone;
 + (NSString *)pathToDirectory:(MKSystemHelperPathType)pathType;
-+ (void)showNetworkActivityIndicator:(BOOL)isVisible;
 + (void)showBigNetworkActivityIndicator:(BOOL)isVisible;
 
 @end

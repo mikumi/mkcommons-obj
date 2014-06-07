@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 600272061942DC4500FDC20E /* MKLoadingIndicator.m */; };
+		6002720819430EFD00FDC20E /* MKLoadingIndicator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600272051942DC4500FDC20E /* MKLoadingIndicator.h */; };
 		600444BE19210413005259D6 /* MKFormTableViewCellInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */; };
 		600444C81921DC98005259D6 /* MKFormTableViewCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */; };
 		600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */; };
@@ -84,6 +86,7 @@
 				603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */,
 				603629D31920840F00D744CB /* MKFormTableViewCellSeparator.h in CopyFiles */,
 				6027BB8919389647000E6A64 /* UIColor+MKCommons.h in CopyFiles */,
+				6002720819430EFD00FDC20E /* MKLoadingIndicator.h in CopyFiles */,
 				60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */,
 				6027BB8A19389649000E6A64 /* UIView+MKConstraints.h in CopyFiles */,
 				600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */,
@@ -99,6 +102,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		600272051942DC4500FDC20E /* MKLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLoadingIndicator.h; sourceTree = "<group>"; };
+		600272061942DC4500FDC20E /* MKLoadingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLoadingIndicator.m; sourceTree = "<group>"; };
 		600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellButton.h; sourceTree = "<group>"; };
 		600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellButton.m; sourceTree = "<group>"; };
 		6027BB821938903A000E6A64 /* UIView+MKConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MKConstraints.h"; sourceTree = "<group>"; };
@@ -228,6 +233,8 @@
 				603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */,
 				60F768D917F529D500937CB1 /* MKSystemHelper.h */,
 				60F768DA17F529D500937CB1 /* MKSystemHelper.m */,
+				600272051942DC4500FDC20E /* MKLoadingIndicator.h */,
+				600272061942DC4500FDC20E /* MKLoadingIndicator.m */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -414,6 +421,7 @@
 				607DB052180814D30005B256 /* MKJsonObject.m in Sources */,
 				603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */,
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
+				600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */,
 				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
 				603629D71920873A00D744CB /* MKFormTableViewCellTextField.m in Sources */,
 				603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */,

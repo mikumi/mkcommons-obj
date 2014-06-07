@@ -9,18 +9,10 @@
 #import "MKSystemHelper.h"
 #import "MKLog.h"
 
-static NSTimeInterval const NetworkIndicatorTimeout = 30.0f;
-
-static NSUInteger     networkActivityIndicatorShowCounter = 0;
-static NSTimer        *networkIndicatorTimer              = nil;
-static NSTimeInterval networkIndicatorTimeLeft            = 0;
-
 //============================================================
 //== Private Interface
 //============================================================
 @interface MKSystemHelper ()
-
-+ (void)networkIndicatorTimerEvent:(id)sender;
 
 @end
 
@@ -70,69 +62,22 @@ static NSTimeInterval networkIndicatorTimeLeft            = 0;
 }
 
 /**
-* Show or hide the statusbar network activity indicator. Will use internal counter to allow setting/hiding it in
-* multiple locations at the same time. If the couter is positive, indicator will be shown, if the counter is negative,
-* indicator will be hidden.
-*
-*
-* @param isVisible YES if indicator should be shown, NO if hidden
-*/
-+ (void)showNetworkActivityIndicator:(BOOL)isVisible
-{
-    @synchronized(self) {
-        networkIndicatorTimeLeft = NetworkIndicatorTimeout;
-        if (isVisible) {
-            [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-            networkIndicatorTimeLeft = NetworkIndicatorTimeout;
-            if (networkIndicatorTimer == nil) {
-                networkIndicatorTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self
-                                                                       selector:@selector(networkIndicatorTimerEvent:)
-                                                                       userInfo:nil repeats:YES];
-            }
-        } else {
-            if (networkActivityIndicatorShowCounter > 0) {
-                networkActivityIndicatorShowCounter--;
-            }
-            if (networkActivityIndicatorShowCounter <= 0) {
-                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                [networkIndicatorTimer invalidate];
-                networkIndicatorTimer = nil;
-            }
-        }
-    }
-}
-
-/**
-* // TODO: this method comment needs be updated.
-*/
-+ (void)networkIndicatorTimerEvent:(id)sender
-{
-    @synchronized(self) {
-        networkIndicatorTimeLeft -= 1.0f;
-        if (networkIndicatorTimeLeft <= 0) {
-            networkActivityIndicatorShowCounter = 1;
-            [self showNetworkActivityIndicator:NO];
-            MKLogDebug(@"Disabling network indicator as of timeout...")
-        }
-    }
-}
-
-/**
 * // TODO: this method comment needs be updated.
 */
 + (void)showBigNetworkActivityIndicator:(BOOL)isVisible
 {
+    // Setup Frame
     UIWindow *const keyWindow = [UIApplication sharedApplication].keyWindow;
-    CGRect   frame      = keyWindow.frame;
-    CGFloat  viewWidth  = 100;
-    CGFloat  viewHeight = 100;
-    frame.origin.x    = frame.size.width / 2 - viewWidth / 2;
-    frame.origin.y    = frame.size.height / 2 - viewHeight / 2;
-    frame.size.width  = viewWidth;
-    frame.size.height = viewHeight;
+    CGFloat const viewWidth      = 100;
+    CGFloat const viewHeight     = 100;
+    CGRect        indicatorFrame = keyWindow.frame;
+    indicatorFrame.origin.x    = indicatorFrame.size.width / 2 - viewWidth / 2;
+    indicatorFrame.origin.y    = indicatorFrame.size.height / 2 - viewHeight / 2;
+    indicatorFrame.size.width  = viewWidth;
+    indicatorFrame.size.height = viewHeight;
 
-    // Main View
-    UIView *const view = [[UIView alloc] initWithFrame:frame];
+    // Indicator view container
+    UIView *const view = [[UIView alloc] initWithFrame:indicatorFrame];
     view.layer.cornerRadius  = 10.0f;
     view.layer.masksToBounds = YES;
 
@@ -149,10 +94,14 @@ static NSTimeInterval networkIndicatorTimeLeft            = 0;
     label.text            = @"Loading";
     label.textAlignment   = NSTextAlignmentCenter;
 
+    // Combine everything
     [view addSubview:indicatorView];
     [view addSubview:label];
     [indicatorView startAnimating];
     [keyWindow addSubview:view];
 }
+
+//=== Private Implementation ===//
+#pragma mark - Private Implementation
 
 @end
