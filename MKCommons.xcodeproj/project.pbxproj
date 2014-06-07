@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 600272061942DC4500FDC20E /* MKLoadingIndicator.m */; };
 		6002720819430EFD00FDC20E /* MKLoadingIndicator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600272051942DC4500FDC20E /* MKLoadingIndicator.h */; };
+		6002720E1943183B00FDC20E /* MKBigLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002720D1943183B00FDC20E /* MKBigLoadingIndicator.m */; };
+		6002720F19431B2B00FDC20E /* MKBigLoadingIndicator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6002720C1943183B00FDC20E /* MKBigLoadingIndicator.h */; };
 		600444BE19210413005259D6 /* MKFormTableViewCellInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */; };
 		600444C81921DC98005259D6 /* MKFormTableViewCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */; };
 		600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */; };
@@ -80,6 +82,7 @@
 				603C20111911056600CAA66B /* MKFallbackQueue.h in CopyFiles */,
 				603C20121911056600CAA66B /* MKJsonObject.h in CopyFiles */,
 				603C20141911056600CAA66B /* MKVersion.h in CopyFiles */,
+				6002720F19431B2B00FDC20E /* MKBigLoadingIndicator.h in CopyFiles */,
 				603C20151911056600CAA66B /* MKLog.h in CopyFiles */,
 				603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */,
 				603C20171911056600CAA66B /* MKSystemHelper.h in CopyFiles */,
@@ -104,6 +107,8 @@
 /* Begin PBXFileReference section */
 		600272051942DC4500FDC20E /* MKLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLoadingIndicator.h; sourceTree = "<group>"; };
 		600272061942DC4500FDC20E /* MKLoadingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLoadingIndicator.m; sourceTree = "<group>"; };
+		6002720C1943183B00FDC20E /* MKBigLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBigLoadingIndicator.h; sourceTree = "<group>"; };
+		6002720D1943183B00FDC20E /* MKBigLoadingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBigLoadingIndicator.m; sourceTree = "<group>"; };
 		600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellButton.h; sourceTree = "<group>"; };
 		600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellButton.m; sourceTree = "<group>"; };
 		6027BB821938903A000E6A64 /* UIView+MKConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MKConstraints.h"; sourceTree = "<group>"; };
@@ -227,14 +232,16 @@
 		603C1FF01910E05E00CAA66B /* System */ = {
 			isa = PBXGroup;
 			children = (
+				6002720C1943183B00FDC20E /* MKBigLoadingIndicator.h */,
+				6002720D1943183B00FDC20E /* MKBigLoadingIndicator.m */,
+				600272051942DC4500FDC20E /* MKLoadingIndicator.h */,
+				600272061942DC4500FDC20E /* MKLoadingIndicator.m */,
 				60F9B90817F971540086A155 /* MKLog.h */,
 				60F9B90917F971540086A155 /* MKLog.m */,
 				603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */,
 				603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */,
 				60F768D917F529D500937CB1 /* MKSystemHelper.h */,
 				60F768DA17F529D500937CB1 /* MKSystemHelper.m */,
-				600272051942DC4500FDC20E /* MKLoadingIndicator.h */,
-				600272061942DC4500FDC20E /* MKLoadingIndicator.m */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -423,6 +430,7 @@
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
 				600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */,
 				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
+				6002720E1943183B00FDC20E /* MKBigLoadingIndicator.m in Sources */,
 				603629D71920873A00D744CB /* MKFormTableViewCellTextField.m in Sources */,
 				603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */,
 				DF2AED0046C0B1A3E6803B31 /* MKFormTableViewCellDatePicker.m in Sources */,

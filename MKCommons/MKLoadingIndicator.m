@@ -7,10 +7,12 @@
 //
 
 #import "MKLoadingIndicator.h"
+
 #import "MKLog.h"
 
 static NSString *const CounterLock = @"CounterLock";
-static NSUInteger counter = 0;
+
+static NSUInteger _counter = 0;
 
 //============================================================
 //== Private Interface
@@ -92,8 +94,8 @@ static NSUInteger counter = 0;
 + (void)increaseCounter
 {
     @synchronized(CounterLock) {
-        counter++;
-        MKLogVerbose(@"Counter was increased to %lu", (unsigned long)counter);
+        _counter++;
+        MKLogVerbose(@"Counter was increased to %lu", (unsigned long)_counter);
         [MKLoadingIndicator updateLoadingIndicator];
     }
 }
@@ -104,11 +106,10 @@ static NSUInteger counter = 0;
 + (void)decreaseCounter
 {
     @synchronized(CounterLock) {
-        if (counter > 0) {
-            counter--;
-            MKLogVerbose(@"Counter was decreased to %lu", (unsigned long)counter);
+        if (_counter > 0) {
+            _counter--;
+            MKLogVerbose(@"Counter was decreased to %lu", (unsigned long)_counter);
             [MKLoadingIndicator updateLoadingIndicator];
-
         }
     }
 }
@@ -118,7 +119,7 @@ static NSUInteger counter = 0;
  */
 + (void)updateLoadingIndicator
 {
-    if (counter > 0) {
+    if (_counter > 0) {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     } else {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
