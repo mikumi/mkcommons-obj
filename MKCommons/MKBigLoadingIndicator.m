@@ -11,6 +11,7 @@
 #import "MKBigLoadingIndicator.h"
 
 #import "MKLog.h"
+#import "UIView+MKConstraints.h"
 
 static NSString *const CounterLock = @"CounterLock";
 static NSString *const ViewLock    = @"ViewLock";
@@ -158,23 +159,18 @@ static NSString   *_indicatorText    = @"Loading";
 + (void)bigNetworkActivityIndicatorVisible:(BOOL)isVisible
 {
     @synchronized(ViewLock) {
+        UIView *const rootView = [UIApplication sharedApplication].keyWindow.rootViewController.view;
+
         if (isVisible && _bigIndicatorView != nil) {
-            [[UIApplication sharedApplication].keyWindow bringSubviewToFront:_bigIndicatorView];
+            [rootView bringSubviewToFront:_bigIndicatorView];
         } else if (isVisible && _bigIndicatorView == nil) {
             MKLogDebug(@"Creating big indicator view...");
-            // TODO: use constraints
             // Setup Frame
-            UIWindow *const keyWindow = [UIApplication sharedApplication].keyWindow;
             CGFloat const viewWidth      = 100;
             CGFloat const viewHeight     = 100;
-            CGRect        indicatorFrame = keyWindow.frame;
-            indicatorFrame.origin.x    = indicatorFrame.size.width / 2 - viewWidth / 2;
-            indicatorFrame.origin.y    = indicatorFrame.size.height / 2 - viewHeight / 2;
-            indicatorFrame.size.width  = viewWidth;
-            indicatorFrame.size.height = viewHeight;
 
             // Indicator view container
-            _bigIndicatorView = [[UIView alloc] initWithFrame:indicatorFrame];
+            _bigIndicatorView = [[UIView alloc] init];
             _bigIndicatorView.layer.cornerRadius  = 10.0f;
             _bigIndicatorView.layer.masksToBounds = YES;
             _bigIndicatorView.backgroundColor     = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7];
@@ -196,8 +192,13 @@ static NSString   *_indicatorText    = @"Loading";
             [_bigIndicatorView addSubview:indicatorView];
             [_bigIndicatorView addSubview:label];
             [indicatorView startAnimating];
-            [keyWindow addSubview:_bigIndicatorView];
-            [keyWindow bringSubviewToFront:_bigIndicatorView];
+            [rootView addSubview:_bigIndicatorView];
+            // Set height & width and stay center when rotating
+            [_bigIndicatorView addConstraintsToCenterWithinParentView:rootView];
+            [_bigIndicatorView addConstraintsToFixWidth:viewWidth height:viewHeight
+                                             parentView:rootView];
+
+            [rootView bringSubviewToFront:_bigIndicatorView];
         } else if (_bigIndicatorView != nil) {
             [_bigIndicatorView removeFromSuperview];
             _bigIndicatorView = nil;
