@@ -38,7 +38,7 @@ static NSUInteger counter = 0;
  */
 - (instancetype)init
 {
-    return [self initWithTimeout:30];
+    return [self initWithTimeout:0];
 }
 
 /**
@@ -50,8 +50,11 @@ static NSUInteger counter = 0;
     if (self) {
         _isLoading = YES;
         [MKLoadingIndicator increaseCounter];
-        _timeoutTimer = [NSTimer scheduledTimerWithTimeInterval:timeout target:self
-                                                       selector:@selector(timeoutTimerEvent:) userInfo:nil repeats:NO];
+        if (timeout > 0) {
+            _timeoutTimer = [NSTimer scheduledTimerWithTimeInterval:timeout target:self
+                                                           selector:@selector(timeoutTimerEvent:) userInfo:nil
+                                                            repeats:NO];
+        }
     }
     return self;
 }
