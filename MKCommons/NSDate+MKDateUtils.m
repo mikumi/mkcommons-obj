@@ -1,25 +1,25 @@
 //
-//  MKDateUtils.m
+//  NSDate+MKDateUtils.m
 //  MKCommons
 //
-//  Created by Michael Kuck on 5/19/14.
+//  Created by Michael Kuck on 6/8/14.
 //  Copyright (c) 2014 Michael Kuck. All rights reserved.
 //
 
-#import "MKDateUtils.h"
+#import "NSDate+MKDateUtils.h"
 
-@implementation MKDateUtils
+@implementation NSDate (MKDateUtils)
 
 /**
 * // TODO: this method comment needs be updated.
 */
-+ (NSDate *)dateByCopyingTimeComponentsFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate
+- (NSDate *)dateByMatchingTimeComponentsFromDate:(NSDate *)date
 {
-    NSDate *result = [MKDateUtils dateByRemovingTimeComponentsFromDate:toDate];
+    NSDate *result = [self dateByRemovingTimeComponents];
 
     NSCalendarUnit const flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     NSCalendar       *const calendar   = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
-    NSDateComponents *const components = [calendar components:flags fromDate:fromDate];
+    NSDateComponents *const components = [calendar components:flags fromDate:date];
     result = [calendar dateByAddingComponents:components toDate:result options:0];
 
     return result;
@@ -28,13 +28,13 @@
 /**
 * // TODO: this method comment needs be updated.
 */
-+ (NSDate *)dateByCopyingDateComponentsFromDate:(NSDate *)fromDate toDate:(NSDate *)toDate
+- (NSDate *)dateByMatchingDateComponentsFromDate:(NSDate *)date
 {
-    NSDate *const dateOnly = [MKDateUtils dateByRemovingTimeComponentsFromDate:fromDate];
+    NSDate *const dateOnly = [date dateByRemovingTimeComponents];
 
     NSCalendarUnit const flags = NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
     NSCalendar       *const calendar   = [NSCalendar currentCalendar];
-    NSDateComponents *const components = [calendar components:flags fromDate:toDate];
+    NSDateComponents *const components = [calendar components:flags fromDate:self];
     NSDate           *const result     = [calendar dateByAddingComponents:components toDate:dateOnly options:0];
 
     return result;
@@ -48,10 +48,10 @@
 *
 * @return The same time in GMT-0
 */
-+ (NSDate *)dateByStrippingTimeZoneFromDate:(NSDate *)date
+- (NSDate *)dateByStrippingTimeZone
 {
     NSTimeInterval const timeDifferenceSeconds = [[NSTimeZone defaultTimeZone] secondsFromGMT];
-    NSDate *const result = [date dateByAddingTimeInterval:timeDifferenceSeconds];
+    NSDate *const result = [self dateByAddingTimeInterval:timeDifferenceSeconds];
     return result;
 }
 
@@ -64,21 +64,21 @@
 *
 * @return comment
 */
-+ (NSDate *)dateBySettingTimeZoneForDate:(NSDate *)date
+- (NSDate *)dateBySettingTimeZone
 {
     NSTimeInterval const timeDifferenceSeconds = [[NSTimeZone defaultTimeZone] secondsFromGMT];
-    NSDate *const result = [date dateByAddingTimeInterval:(-timeDifferenceSeconds)];
+    NSDate *const result = [self dateByAddingTimeInterval:(-timeDifferenceSeconds)];
     return result;
 }
 
 /**
 * // TODO: this method comment needs be updated.
 */
-+ (NSDate *)dateByRemovingTimeComponentsFromDate:(NSDate *)date
+- (NSDate *)dateByRemovingTimeComponents
 {
     NSCalendarUnit const flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSTimeZoneCalendarUnit;
     NSCalendar       *const calendar   = [NSCalendar currentCalendar];
-    NSDateComponents *const components = [calendar components:flags fromDate:date];
+    NSDateComponents *const components = [calendar components:flags fromDate:self];
 
     NSDate *const result = [calendar dateFromComponents:components];
     return result;
@@ -87,12 +87,12 @@
 /**
  * // TODO: this method comment needs be updated.
  */
-+ (NSDate *)dateByRemovingSecondsFromDate:(NSDate *)date
+- (NSDate *)dateByRemovingSeconds
 {
     NSCalendarUnit const flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSTimeZoneCalendarUnit |
                                  NSHourCalendarUnit | NSMinuteCalendarUnit;
     NSCalendar       *const calendar   = [NSCalendar currentCalendar];
-    NSDateComponents *const components = [calendar components:flags fromDate:date];
+    NSDateComponents *const components = [calendar components:flags fromDate:self];
 
     NSDate *const result = [calendar dateFromComponents:components];
     return result;
@@ -101,7 +101,7 @@
 /**
 * // TODO: this method comment needs be updated.
 */
-+ (NSString *)stringFromDate:(NSDate *)date dateStyle:(NSDateFormatterStyle)dateStyle
+- (NSString *)stringFromDateWithDateStyle:(NSDateFormatterStyle)dateStyle
                    timeStyle:(NSDateFormatterStyle)timeStyle
 {
     static NSDateFormatter *dateFormatter;
@@ -113,14 +113,14 @@
     @synchronized(dateFormatter) {
         dateFormatter.dateStyle = dateStyle;
         dateFormatter.timeStyle = timeStyle;
-        return [dateFormatter stringFromDate:date];
+        return [dateFormatter stringFromDate:self];
     }
 }
 
 /**
 * // TODO: this method comment needs be updated.
 */
-+ (NSString *)stringFromDate:(NSDate *)date timeZone:(NSTimeZone *)timeZone dateStyle:(NSDateFormatterStyle)dateStyle
+- (NSString *)stringFromDateWithTimeZone:(NSTimeZone *)timeZone dateStyle:(NSDateFormatterStyle)dateStyle
                    timeStyle:(NSDateFormatterStyle)timeStyle
 {
     static NSDateFormatter *dateFormatter;
@@ -133,14 +133,14 @@
         dateFormatter.dateStyle = dateStyle;
         dateFormatter.timeStyle = timeStyle;
         dateFormatter.timeZone  = timeZone;
-        return [dateFormatter stringFromDate:date];
+        return [dateFormatter stringFromDate:self];
     }
 }
 
 /**
 * // TODO: this method comment needs be updated.
 */
-+ (NSString *)stringFromDate:(NSDate *)date format:(NSString *)format
+- (NSString *)stringFromDateWithFormat:(NSString *)format
 {
     static NSDateFormatter *dateFormatter;
     static dispatch_once_t onceToken;
@@ -150,29 +150,16 @@
     });
     @synchronized(dateFormatter) {
         dateFormatter.dateFormat = format;
-        return [dateFormatter stringFromDate:date];
+        return [dateFormatter stringFromDate:self];
     }
 }
 
 /**
 * // TODO: this method comment needs be updated.
 */
-+ (NSString *)stringFromDate:(NSDate *)date
+- (NSString *)stringFromDate
 {
-    return [self stringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
-}
-
-/**
-* // TODO: this method comment needs be updated.
-*/
-+ (NSTimeZone *)noTimeZone
-{
-    static NSTimeZone      *timeZone;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
-    });
-    return timeZone;
+    return [self stringFromDateWithDateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
 }
 
 @end
