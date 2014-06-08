@@ -15,6 +15,7 @@
 + (NSDate *)dateByStrippingTimeZoneFromDate:(NSDate *)date;
 + (NSDate *)dateBySettingTimeZoneForDate:(NSDate *)date;
 + (NSDate *)dateByRemovingTimeComponentsFromDate:(NSDate *)date;
++ (NSDate *)dateByRemovingSecondsFromDate:(NSDate *)date;
 + (NSString *)stringFromDate:(NSDate *)date dateStyle:(NSDateFormatterStyle)dateStyle
                    timeStyle:(NSDateFormatterStyle)timeStyle;
 + (NSString *)stringFromDate:(NSDate *)date timeZone:(NSTimeZone *)timeZone dateStyle:(NSDateFormatterStyle)dateStyle

@@ -80,7 +80,21 @@
     NSCalendar       *const calendar   = [NSCalendar currentCalendar];
     NSDateComponents *const components = [calendar components:flags fromDate:date];
 
-    NSDate           *const result     = [calendar dateFromComponents:components];
+    NSDate *const result = [calendar dateFromComponents:components];
+    return result;
+}
+
+/**
+ * // TODO: this method comment needs be updated.
+ */
++ (NSDate *)dateByRemovingSecondsFromDate:(NSDate *)date
+{
+    NSCalendarUnit const flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSTimeZoneCalendarUnit |
+                                 NSHourCalendarUnit | NSMinuteCalendarUnit;
+    NSCalendar       *const calendar   = [NSCalendar currentCalendar];
+    NSDateComponents *const components = [calendar components:flags fromDate:date];
+
+    NSDate *const result = [calendar dateFromComponents:components];
     return result;
 }
 
