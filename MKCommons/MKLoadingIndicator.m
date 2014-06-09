@@ -44,7 +44,7 @@ static NSUInteger _counter = 0;
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (instancetype)initWithTimeout:(NSTimeInterval)timeout;
 {
@@ -71,7 +71,7 @@ static NSUInteger _counter = 0;
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)loadingDidFinish
 {
@@ -89,7 +89,7 @@ static NSUInteger _counter = 0;
 #pragma mark - Private Implementation
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (void)increaseCounter
 {
@@ -101,7 +101,7 @@ static NSUInteger _counter = 0;
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (void)decreaseCounter
 {
@@ -115,7 +115,7 @@ static NSUInteger _counter = 0;
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (void)updateLoadingIndicator
 {
@@ -127,7 +127,7 @@ static NSUInteger _counter = 0;
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)timeoutTimerEvent:(id)sender
 {

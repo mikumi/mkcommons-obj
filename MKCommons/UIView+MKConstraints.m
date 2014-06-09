@@ -11,7 +11,7 @@
 @implementation UIView (MKConstraints)
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintsToMatchParentView:(UIView *)parentView
 {
@@ -19,7 +19,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintsToMatchParentView:(UIView *)parentView distanceLeft:(CGFloat)left distanceTop:(CGFloat)top
                           distanceRight:(CGFloat)right distanceBottom:(CGFloat)bottom
@@ -31,7 +31,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintsToCenterWithinParentView:(UIView *)parentView
 {
@@ -40,7 +40,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToCenterXWithinParentView:(UIView *)parentView
 {
@@ -52,7 +52,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToCenterYWithinParentView:(UIView *)parentView
 {
@@ -64,7 +64,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToAlignLeftWithView:(UIView *)view distance:(CGFloat)distance parentView:(UIView *)parentView
 {
@@ -76,7 +76,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToAlignRightWithView:(UIView *)view distance:(CGFloat)distance parentView:(UIView *)parentView
 {
@@ -88,7 +88,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToAlignTopWithView:(UIView *)view distance:(CGFloat)distance parentView:(UIView *)parentView
 {
@@ -100,7 +100,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToAlignBottomWithView:(UIView *)view distance:(CGFloat)distance parentView:(UIView *)parentView
 {
@@ -112,7 +112,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToStayLeftOfView:(UIView *)view distance:(CGFloat)distance parentView:(UIView *)parentView
 {
@@ -124,7 +124,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToStayRightOfView:(UIView *)view distance:(CGFloat)distance parentView:(UIView *)parentView
 {
@@ -136,7 +136,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToStayAboveOfView:(UIView *)view distance:(CGFloat)distance parentView:(UIView *)parentView
 {
@@ -148,7 +148,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToStayBelowOfView:(UIView *)view distance:(CGFloat)distance parentView:(UIView *)parentView
 {
@@ -160,7 +160,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToFixWidth:(CGFloat)width parentView:(UIView *)parentView
 {
@@ -172,7 +172,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addConstraintToFixHeight:(CGFloat)height parentView:(UIView *)parentView
 {

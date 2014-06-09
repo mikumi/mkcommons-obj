@@ -25,7 +25,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (instancetype)initWithObjects:(NSArray *)objects
 {
@@ -41,7 +41,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (id)topObject
 {
@@ -50,7 +50,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (id)moveTopObjectToBottomAndGetNextOne
 {

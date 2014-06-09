@@ -74,7 +74,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)setCells:(NSArray *)cells
 {
@@ -83,7 +83,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (UILabel *)addInfoCellWithText:(NSString *)text
 {
@@ -96,7 +96,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (UIButton *)addButtonCellWithTitle:(NSString *)title
 {
@@ -108,7 +108,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (UITextField *)addTextFieldCell
 {
@@ -117,7 +117,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (UITextField *)addCustomTextFieldCellWithTextField:(UITextField *)textField
 {
@@ -129,7 +129,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addSeparatorCell
 {
@@ -139,7 +139,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (UITableViewCell *)addCustomCell
 {
@@ -151,7 +151,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (UIDatePicker *)addDatePickerCell
 {
@@ -245,7 +245,7 @@
 #pragma mark - Private Implementation
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)didTouchOutside:(id)sender
 {
@@ -253,7 +253,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (UITapGestureRecognizer *)newTapGestureRecognizer;
 {

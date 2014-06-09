@@ -54,7 +54,7 @@ static NSString   *_indicatorText    = @"Loading";
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (instancetype)initWithText:(NSString *)text
 {
@@ -62,7 +62,7 @@ static NSString   *_indicatorText    = @"Loading";
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (instancetype)initWithTimeout:(NSTimeInterval)timeout
 {
@@ -70,7 +70,7 @@ static NSString   *_indicatorText    = @"Loading";
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (instancetype)initWithText:(NSString *)text timeout:(NSTimeInterval)timeout
 {
@@ -98,7 +98,7 @@ static NSString   *_indicatorText    = @"Loading";
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)loadingDidFinish
 {
@@ -116,7 +116,7 @@ static NSString   *_indicatorText    = @"Loading";
 #pragma mark - Private Implementation
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (void)increaseCounter
 {
@@ -128,7 +128,7 @@ static NSString   *_indicatorText    = @"Loading";
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (void)decreaseCounter
 {
@@ -142,7 +142,7 @@ static NSString   *_indicatorText    = @"Loading";
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (void)updateLoadingIndicator
 {
@@ -154,7 +154,7 @@ static NSString   *_indicatorText    = @"Loading";
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 + (void)bigNetworkActivityIndicatorVisible:(BOOL)isVisible
 {
@@ -207,7 +207,7 @@ static NSString   *_indicatorText    = @"Loading";
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (void)setIndicatorText:(NSString *)text
 {
@@ -219,7 +219,7 @@ static NSString   *_indicatorText    = @"Loading";
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (NSString *)indicatorText
 {
@@ -229,7 +229,7 @@ static NSString   *_indicatorText    = @"Loading";
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)timeoutTimerEvent:(id)sender
 {

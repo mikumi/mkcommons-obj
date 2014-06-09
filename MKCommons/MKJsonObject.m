@@ -39,7 +39,7 @@ typedef void (^MKRemoteSettingsFailureBlock)(NSError *error);
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (instancetype)initWithUrl:(NSURL *)url
 {
@@ -90,7 +90,7 @@ typedef void (^MKRemoteSettingsFailureBlock)(NSError *error);
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)setresponse:(id)response
 {

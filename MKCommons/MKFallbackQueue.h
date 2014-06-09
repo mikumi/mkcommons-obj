@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 @interface MKFallbackQueue : NSObject
 

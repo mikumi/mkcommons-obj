@@ -11,7 +11,7 @@
 @implementation UIColor (MKCommons)
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (UIColor *)lightBlue
 {
@@ -21,7 +21,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (UIColor *)mediumBlue
 {
@@ -31,7 +31,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (UIColor *)darkBlue
 {
@@ -41,7 +41,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (UIColor *)mediumRed
 {
@@ -51,7 +51,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (UIColor *)veryLightGray
 {
@@ -60,7 +60,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (UIColor *)veryVeryLightGray
 {
@@ -69,7 +69,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (UIColor *)lightGray
 {

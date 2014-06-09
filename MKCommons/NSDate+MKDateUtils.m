@@ -11,7 +11,7 @@
 @implementation NSDate (MKDateUtils)
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (NSDate *)dateByMatchingTimeComponentsFromDate:(NSDate *)date
 {
@@ -26,7 +26,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (NSDate *)dateByMatchingDateComponentsFromDate:(NSDate *)date
 {
@@ -72,7 +72,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (NSDate *)dateBySettingTimeZone:(NSTimeZone *)timeZone
 {
@@ -82,7 +82,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (NSDate *)dateByRemovingTimeComponents
 {
@@ -95,7 +95,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (NSDate *)dateByRemovingSeconds
 {
@@ -109,7 +109,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (NSString *)stringFromDateWithDateStyle:(NSDateFormatterStyle)dateStyle
                    timeStyle:(NSDateFormatterStyle)timeStyle
@@ -128,7 +128,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (NSString *)stringFromDateWithTimeZone:(NSTimeZone *)timeZone dateStyle:(NSDateFormatterStyle)dateStyle
                    timeStyle:(NSDateFormatterStyle)timeStyle
@@ -148,7 +148,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (NSString *)stringFromDateWithFormat:(NSString *)format
 {
@@ -165,7 +165,7 @@
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (NSString *)stringFromDate
 {
@@ -173,7 +173,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (BOOL)isBeforeDate:(NSDate *)date
 {
@@ -185,7 +185,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (BOOL)isAfterDate:(NSDate *)date
 {

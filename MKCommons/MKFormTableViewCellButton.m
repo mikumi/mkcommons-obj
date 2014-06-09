@@ -51,7 +51,7 @@
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (instancetype)initWithTitle:(NSString *)title
 {

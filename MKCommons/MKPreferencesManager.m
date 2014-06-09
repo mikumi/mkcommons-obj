@@ -58,7 +58,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 + (MKPreferencesManager *)defaultManager
 {
@@ -81,7 +81,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)setBool:(BOOL)value forKey:(NSString *)key
 {
@@ -92,7 +92,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)setDouble:(double)value forKey:(NSString *)key
 {
@@ -103,7 +103,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)setInteger:(NSInteger)value forKey:(NSString *)key
 {
@@ -114,7 +114,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)setObject:(id)object forKey:(NSString *)key
 {
@@ -125,7 +125,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (BOOL)boolForKey:(NSString *)key
 {
@@ -140,7 +140,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (double)doubleForKey:(NSString *)key
 {
@@ -155,7 +155,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (NSInteger)integerForKey:(NSString *)key
 {
@@ -170,7 +170,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (id)objectForKey:(NSString *)key
 {
@@ -185,7 +185,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)removeObjectForKey:(NSString *)key
 {
@@ -194,7 +194,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)resetPreferences
 {
@@ -209,7 +209,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)addSyncIgnoreKey:(NSString *)key
 {
@@ -222,7 +222,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)removeSyncIgnoreKey:(NSString *)key
 {
@@ -235,7 +235,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (NSArray *)syncIgnoreKeys
 {
@@ -247,7 +247,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 #pragma mark - Private methods
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (NSUbiquitousKeyValueStore *)iCloudStore
 {
@@ -259,7 +259,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (NSUserDefaults *)localStore
 {

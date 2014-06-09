@@ -74,7 +74,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 #pragma mark - Public Implementation
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)addObject:(id)object
 {
@@ -85,7 +85,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (id)objectAtIndex:(NSUInteger)index
 {
@@ -93,7 +93,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)removeObjectAtIndex:(NSUInteger)index
 {
@@ -104,7 +104,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (void)removeObject:(id)object
 {
@@ -115,7 +115,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 - (NSUInteger)indexOfObject:(id)object
 {
@@ -123,7 +123,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (BOOL)contains:(id)object
 {
@@ -131,7 +131,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (NSArray *)asArray
 {
@@ -139,7 +139,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 }
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (NSUInteger)count
 {
@@ -150,7 +150,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 #pragma mark - Private Implementation
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 - (void)postUpdateNotification
 {

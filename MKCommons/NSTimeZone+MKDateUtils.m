@@ -11,7 +11,7 @@
 @implementation NSTimeZone (MKDateUtils)
 
 /**
-* // TODO: this method comment needs be updated.
+* // DOCU: this method comment needs be updated.
 */
 + (NSTimeZone *)noTimeZone
 {
