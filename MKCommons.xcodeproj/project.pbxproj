@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00CF10BA58574DE7BFFB9F85 /* libPods-MKCommons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D603010E3F644CBB2B68714 /* libPods-MKCommons.a */; };
 		600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 600272061942DC4500FDC20E /* MKLoadingIndicator.m */; };
 		6002720819430EFD00FDC20E /* MKLoadingIndicator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600272051942DC4500FDC20E /* MKLoadingIndicator.h */; };
 		6002720E1943183B00FDC20E /* MKBigLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002720D1943183B00FDC20E /* MKBigLoadingIndicator.m */; };
@@ -182,7 +181,6 @@
 			files = (
 				603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */,
 				603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */,
-				00CF10BA58574DE7BFFB9F85 /* libPods-MKCommons.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
