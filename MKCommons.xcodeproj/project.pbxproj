@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00CF10BA58574DE7BFFB9F85 /* libPods-MKCommons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D603010E3F644CBB2B68714 /* libPods-MKCommons.a */; };
 		600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 600272061942DC4500FDC20E /* MKLoadingIndicator.m */; };
 		6002720819430EFD00FDC20E /* MKLoadingIndicator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600272051942DC4500FDC20E /* MKLoadingIndicator.h */; };
 		6002720E1943183B00FDC20E /* MKBigLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002720D1943183B00FDC20E /* MKBigLoadingIndicator.m */; };
@@ -111,6 +112,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4F739C4E235B4683BADA0EF6 /* Pods-MKCommons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKCommons.xcconfig"; path = "Pods/Pods-MKCommons.xcconfig"; sourceTree = "<group>"; };
 		600272051942DC4500FDC20E /* MKLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLoadingIndicator.h; sourceTree = "<group>"; };
 		600272061942DC4500FDC20E /* MKLoadingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLoadingIndicator.m; sourceTree = "<group>"; };
 		6002720C1943183B00FDC20E /* MKBigLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBigLoadingIndicator.h; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		60F9B90917F971540086A155 /* MKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLog.m; sourceTree = "<group>"; };
 		60F9B90B17F973400086A155 /* MKLogTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLogTest.m; sourceTree = "<group>"; };
 		60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDateUtilsTest.m; sourceTree = "<group>"; };
+		9D603010E3F644CBB2B68714 /* libPods-MKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKCommons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMutableParallelArray.h; sourceTree = "<group>"; };
 		DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellDatePicker.h; sourceTree = "<group>"; };
 		DF2AE997DB915710E59345EA /* MKFormTableViewCellDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellDatePicker.m; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 			files = (
 				603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */,
 				603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */,
+				00CF10BA58574DE7BFFB9F85 /* libPods-MKCommons.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +284,7 @@
 				60F768B017F5264B00937CB1 /* MKCommonsTests */,
 				60F7689917F5264B00937CB1 /* Frameworks */,
 				60F7689817F5264B00937CB1 /* Products */,
+				4F739C4E235B4683BADA0EF6 /* Pods-MKCommons.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,6 +303,7 @@
 				603C1FFB1910E6CD00CAA66B /* UIKit.framework */,
 				60F7689A17F5264B00937CB1 /* Foundation.framework */,
 				60F768A817F5264B00937CB1 /* XCTest.framework */,
+				9D603010E3F644CBB2B68714 /* libPods-MKCommons.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -355,9 +361,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 60F768BA17F5264B00937CB1 /* Build configuration list for PBXNativeTarget "MKCommons" */;
 			buildPhases = (
+				1FE7B5460D884162A332FD2D /* Check Pods Manifest.lock */,
 				60F7689317F5264B00937CB1 /* Sources */,
 				60F7689417F5264B00937CB1 /* Frameworks */,
 				603C200F1911051000CAA66B /* CopyFiles */,
+				819B58E679F24FB68BC1ECC3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -423,6 +431,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FE7B5460D884162A332FD2D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		819B58E679F24FB68BC1ECC3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-MKCommons-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		60F7689317F5264B00937CB1 /* Sources */ = {
@@ -513,17 +554,18 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = "Debug NO_TESTING";
 		};
 		60564C9D1807A573002A160A /* Debug NO_TESTING */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F739C4E235B4683BADA0EF6 /* Pods-MKCommons.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/MKCommons.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MKCommons/MKCommons-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -582,17 +624,18 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Coverage;
 		};
 		607A152C17FC018800269FD9 /* Coverage */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F739C4E235B4683BADA0EF6 /* Pods-MKCommons.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/MKCommons.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MKCommons/MKCommons-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -648,6 +691,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -678,6 +722,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -685,11 +730,11 @@
 		};
 		60F768BB17F5264B00937CB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F739C4E235B4683BADA0EF6 /* Pods-MKCommons.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/MKCommons.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MKCommons/MKCommons-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -697,11 +742,11 @@
 		};
 		60F768BC17F5264B00937CB1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F739C4E235B4683BADA0EF6 /* Pods-MKCommons.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/MKCommons.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MKCommons/MKCommons-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
