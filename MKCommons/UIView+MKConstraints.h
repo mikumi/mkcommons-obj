@@ -37,4 +37,7 @@
 - (void)addConstraintToFixHeight:(CGFloat)height parentView:(UIView *)parentView;
 - (void)addConstraintsToFixWidth:(CGFloat)width height:(CGFloat)height parentView:(UIView *)parentView;
 
+//=== Reset ===//
+- (void)removeAllConstraints;
+
 @end

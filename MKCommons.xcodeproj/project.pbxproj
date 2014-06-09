@@ -24,6 +24,8 @@
 		603629D71920873A00D744CB /* MKFormTableViewCellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629D51920873A00D744CB /* MKFormTableViewCellTextField.m */; };
 		603629D819208A1200D744CB /* MKFormTableViewCellTextField.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629D41920873A00D744CB /* MKFormTableViewCellTextField.h */; };
 		603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629DA19209ED300D744CB /* MKFormTableViewCellInfo.m */; };
+		6036B07B1945BA5E005FF6E6 /* UIButton+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036B07A1945BA5E005FF6E6 /* UIButton+MKCommons.m */; };
+		6036B07C1945BA64005FF6E6 /* UIButton+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6036B0791945BA5E005FF6E6 /* UIButton+MKCommons.h */; };
 		603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603C1FFB1910E6CD00CAA66B /* UIKit.framework */; };
 		603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
 		603C20111911056600CAA66B /* MKFallbackQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D517F529D500937CB1 /* MKFallbackQueue.h */; };
@@ -94,6 +96,7 @@
 				6002720819430EFD00FDC20E /* MKLoadingIndicator.h in CopyFiles */,
 				60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */,
 				60F8493C19454B2000747904 /* NSTimeZone+MKDateUtils.h in CopyFiles */,
+				6036B07C1945BA64005FF6E6 /* UIButton+MKCommons.h in CopyFiles */,
 				6027BB8A19389649000E6A64 /* UIView+MKConstraints.h in CopyFiles */,
 				60F8493419443AC800747904 /* NSDate+MKDateUtils.h in CopyFiles */,
 				600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */,
@@ -124,6 +127,8 @@
 		603629D51920873A00D744CB /* MKFormTableViewCellTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellTextField.m; sourceTree = "<group>"; };
 		603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellInfo.h; sourceTree = "<group>"; };
 		603629DA19209ED300D744CB /* MKFormTableViewCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellInfo.m; sourceTree = "<group>"; };
+		6036B0791945BA5E005FF6E6 /* UIButton+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MKCommons.h"; sourceTree = "<group>"; };
+		6036B07A1945BA5E005FF6E6 /* UIButton+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MKCommons.m"; sourceTree = "<group>"; };
 		603C1FFB1910E6CD00CAA66B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPreferencesManager.h; sourceTree = "<group>"; };
 		603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManager.m; sourceTree = "<group>"; };
@@ -217,6 +222,8 @@
 				60A005B01938673800583927 /* UIColor+MKCommons.m */,
 				6027BB821938903A000E6A64 /* UIView+MKConstraints.h */,
 				6027BB831938903A000E6A64 /* UIView+MKConstraints.m */,
+				6036B0791945BA5E005FF6E6 /* UIButton+MKCommons.h */,
+				6036B07A1945BA5E005FF6E6 /* UIButton+MKCommons.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -434,6 +441,7 @@
 				607DB052180814D30005B256 /* MKJsonObject.m in Sources */,
 				603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */,
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
+				6036B07B1945BA5E005FF6E6 /* UIButton+MKCommons.m in Sources */,
 				600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */,
 				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
 				60F8493A19454B1600747904 /* NSDate+MKDateUtils.m in Sources */,

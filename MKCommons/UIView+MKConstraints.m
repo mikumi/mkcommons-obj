@@ -183,10 +183,21 @@
                                                             constant:height]];
 }
 
+/**
+ * // DOCU: this method comment needs be updated.
+ */
 - (void)addConstraintsToFixWidth:(CGFloat)width height:(CGFloat)height parentView:(UIView *)parentView
 {
     [self addConstraintToFixWidth:width parentView:parentView];
     [self addConstraintToFixHeight:height parentView:parentView];
+}
+
+/**
+ * // DOCU: this method comment needs be updated.
+ */
+- (void)removeAllConstraints
+{
+    [self removeConstraints:self.constraints];
 }
 
 @end
