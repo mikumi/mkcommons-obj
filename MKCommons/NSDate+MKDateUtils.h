@@ -21,5 +21,7 @@
                                timeStyle:(NSDateFormatterStyle)timeStyle;
 - (NSString *)stringFromDateWithFormat:(NSString *)format;
 - (NSString *)stringFromDate;
+- (BOOL)isBeforeDate:(NSDate *)date;
+- (BOOL)isAfterDate:(NSDate *)date;
 
 @end

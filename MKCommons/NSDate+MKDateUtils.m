@@ -162,4 +162,28 @@
     return [self stringFromDateWithDateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterShortStyle];
 }
 
+/**
+ * // TODO: this method comment needs be updated.
+ */
+- (BOOL)isBeforeDate:(NSDate *)date
+{
+    if ([self compare:date] == NSOrderedAscending) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/**
+ * // TODO: this method comment needs be updated.
+ */
+- (BOOL)isAfterDate:(NSDate *)date
+{
+    if ([self compare:date] == NSOrderedDescending) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 @end
