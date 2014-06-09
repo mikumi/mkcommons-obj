@@ -7,11 +7,12 @@
 //
 
 #import <XCTest/XCTest.h>
+
 extern void __gcov_flush();
 
 #import <UIKit/UIKit.h>
 
-#import "MKMiscHelper.h"
+#import "MKSystemHelper.h"
 
 @interface MKMiscHelperTest : XCTestCase
 
@@ -34,19 +35,21 @@ extern void __gcov_flush();
     [super tearDown];
 }
 
-- (void)testIsLegacyPlatform {
+- (void)testIsLegacyPlatform
+{
     if (kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_6_1) {
-        XCTAssertEqual(YES, [MKMiscHelper isLegacyPlatform], @"Should be able to identify legacy platforms < iOS 7.0");
+        XCTAssertEqual(YES, [MKSystemHelper isLegacyPlatform], @"Should be able to identify legacy platforms < iOS 7.0");
     } else {
-        XCTAssertEqual(NO, [MKMiscHelper isLegacyPlatform], @"Should be able to identify a modern platform >= IOS 7.0");
+        XCTAssertEqual(NO, [MKSystemHelper isLegacyPlatform], @"Should be able to identify a modern platform >= IOS 7.0");
     }
 }
 
-- (void)testIsRunningOnPhone {
+- (void)testIsRunningOnPhone
+{
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
-        XCTAssertEqual(YES, [MKMiscHelper isRunningOnPhone], @"Should return YES for running on a phone.");
+        XCTAssertEqual(YES, [MKSystemHelper isRunningOnPhone], @"Should return YES for running on a phone.");
     } else {
-        XCTAssertEqual(NO, [MKMiscHelper isRunningOnPhone], @"Should return NO for running on a pad.");
+        XCTAssertEqual(NO, [MKSystemHelper isRunningOnPhone], @"Should return NO for running on a pad.");
     }
 }
 

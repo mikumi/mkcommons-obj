@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+
 extern void __gcov_flush();
 
 #import "MKFallbackQueue.h"
@@ -32,25 +33,28 @@ extern void __gcov_flush();
     [super tearDown];
 }
 
-- (void)testInitWithNil {
+- (void)testInitWithNil
+{
     MKFallbackQueue *fallbackQueue = [[MKFallbackQueue alloc] init];
     XCTAssertEqualObjects(nil, [fallbackQueue topObject], @"Empty queue should always return nil");
     XCTAssertEqualObjects(nil, [fallbackQueue moveTopObjectToBottomAndGetNextOne], @"Empty queue should always return nil");
 }
 
-- (void)testTopObject {
+- (void)testTopObject
+{
     NSString *test1 = @"Test1";
     NSString *test2 = @"Test2";
     MKFallbackQueue *fallbackQueue = [[MKFallbackQueue alloc] initWithObjects:@[test1, test2]];
-    
+
     XCTAssertEqualObjects(test1, [fallbackQueue topObject], @"Top item should be test1");
 }
 
-- (void)testMoveTopObjectToBottomAndGetNextOne {
+- (void)testMoveTopObjectToBottomAndGetNextOne
+{
     NSString *test1 = @"Test1";
     NSString *test2 = @"Test2";
     MKFallbackQueue *fallbackQueue = [[MKFallbackQueue alloc] initWithObjects:@[test1, test2]];
-    
+
     XCTAssertEqualObjects(test2, [fallbackQueue moveTopObjectToBottomAndGetNextOne], @"Second item should be test2");
     XCTAssertEqualObjects(test2, [fallbackQueue topObject], @"Top item should now be test2");
     XCTAssertEqualObjects(test1, [fallbackQueue moveTopObjectToBottomAndGetNextOne], @"Top item should now be test1 again");

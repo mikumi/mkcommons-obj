@@ -10,7 +10,7 @@
 
 @interface MKFallbackQueue ()
 
-@property (nonatomic, strong) NSMutableArray *fallbackQueue;
+@property (nonatomic, strong, readonly) NSMutableArray *fallbackQueue;
 
 @end
 
@@ -19,44 +19,48 @@
 /*
  * (Inherited method comment)
  */
-- (id)init {
+- (instancetype)init
+{
     return [self initWithObjects:nil];
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
-- (id)initWithObjects:(NSArray *)objects {
+- (instancetype)initWithObjects:(NSArray *)objects
+{
     self = [super init];
     if (self) {
         if (objects != nil) {
-            self.fallbackQueue = [NSMutableArray arrayWithArray:objects];
+            _fallbackQueue = [NSMutableArray arrayWithArray:objects];
         } else {
-            self.fallbackQueue = [[NSMutableArray alloc] init];
+            _fallbackQueue = [[NSMutableArray alloc] init];
         }
     }
     return self;
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
-- (id)topObject {
-    id firstObject = [self.fallbackQueue firstObject];
+- (id)topObject
+{
+    id const firstObject = [self.fallbackQueue firstObject];
     return firstObject;
 }
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
-- (id)moveTopObjectToBottomAndGetNextOne {
+- (id)moveTopObjectToBottomAndGetNextOne
+{
     if ([self.fallbackQueue count] <= 0) {
         return nil;
     }
-    id firstObject = [self.fallbackQueue firstObject];
+    id const firstObject = [self.fallbackQueue firstObject];
     [self.fallbackQueue removeObjectAtIndex:0];
     [self.fallbackQueue addObject:firstObject];
-    id newFirstObject = [self.fallbackQueue firstObject];
+    id const newFirstObject = [self.fallbackQueue firstObject];
     return newFirstObject;
 }
 

@@ -7,35 +7,63 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6021D2FC1866E904003BCB59 /* MKRatings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6021D2FB1866E904003BCB59 /* MKRatings.m */; };
-		6021D2FD1866EBE4003BCB59 /* MKRatings.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 6021D2FA1866E904003BCB59 /* MKRatings.h */; };
+		600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 600272061942DC4500FDC20E /* MKLoadingIndicator.m */; };
+		6002720819430EFD00FDC20E /* MKLoadingIndicator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600272051942DC4500FDC20E /* MKLoadingIndicator.h */; };
+		6002720E1943183B00FDC20E /* MKBigLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002720D1943183B00FDC20E /* MKBigLoadingIndicator.m */; };
+		6002720F19431B2B00FDC20E /* MKBigLoadingIndicator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6002720C1943183B00FDC20E /* MKBigLoadingIndicator.h */; };
+		600444BE19210413005259D6 /* MKFormTableViewCellInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */; };
+		600444C81921DC98005259D6 /* MKFormTableViewCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */; };
+		600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */; };
+		6027BB851938903A000E6A64 /* UIView+MKConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 6027BB831938903A000E6A64 /* UIView+MKConstraints.m */; };
+		6027BB8919389647000E6A64 /* UIColor+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60A005AF1938673800583927 /* UIColor+MKCommons.h */; };
+		6027BB8A19389649000E6A64 /* UIView+MKConstraints.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6027BB821938903A000E6A64 /* UIView+MKConstraints.h */; };
+		603629CC1920753B00D744CB /* MKFormTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629CA1920753B00D744CB /* MKFormTableView.m */; };
+		603629D1192080B300D744CB /* MKFormTableViewCellSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629CF192080B300D744CB /* MKFormTableViewCellSeparator.m */; };
+		603629D21920840D00D744CB /* MKFormTableView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629C91920753B00D744CB /* MKFormTableView.h */; };
+		603629D31920840F00D744CB /* MKFormTableViewCellSeparator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */; };
+		603629D71920873A00D744CB /* MKFormTableViewCellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629D51920873A00D744CB /* MKFormTableViewCellTextField.m */; };
+		603629D819208A1200D744CB /* MKFormTableViewCellTextField.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629D41920873A00D744CB /* MKFormTableViewCellTextField.h */; };
+		603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 603629DA19209ED300D744CB /* MKFormTableViewCellInfo.m */; };
+		6036B07B1945BA5E005FF6E6 /* UIButton+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 6036B07A1945BA5E005FF6E6 /* UIButton+MKCommons.m */; };
+		6036B07C1945BA64005FF6E6 /* UIButton+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6036B0791945BA5E005FF6E6 /* UIButton+MKCommons.h */; };
+		603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603C1FFB1910E6CD00CAA66B /* UIKit.framework */; };
+		603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
+		603C20111911056600CAA66B /* MKFallbackQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D517F529D500937CB1 /* MKFallbackQueue.h */; };
+		603C20121911056600CAA66B /* MKJsonObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 607DB050180814D30005B256 /* MKJsonObject.h */; };
+		603C20141911056600CAA66B /* MKVersion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60EF2CC517F530E3000E7971 /* MKVersion.h */; };
+		603C20151911056600CAA66B /* MKLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F9B90817F971540086A155 /* MKLog.h */; };
+		603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */; };
+		603C20171911056600CAA66B /* MKSystemHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKSystemHelper.h */; };
+		603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D717F529D500937CB1 /* MKSerialManager.h */; };
+		603C20191911056600CAA66B /* MKStopwatch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768DB17F529D500937CB1 /* MKStopwatch.h */; };
 		603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */; };
-		603FE1C517F9B6980044ED58 /* MKPreferencesManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */; };
 		603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */; };
-		6068A5B0180B847900B43B0E /*  MKRateView.xib in Copy Files */ = {isa = PBXBuildFile; fileRef = 6062BB2518082054005F978D /*  MKRateView.xib */; };
+		60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */; };
+		606A1F3C19344B0B00FA17F9 /* MKMutableParallelArray.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */; };
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
-		607DB0541808196F0005B256 /* MKJsonObject.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 607DB050180814D30005B256 /* MKJsonObject.h */; };
-		60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D517F529D500937CB1 /* MKFallbackQueue.h */; };
-		60AA0F7A17F535D1001781D2 /* MKMiscHelper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D917F529D500937CB1 /* MKMiscHelper.h */; };
-		60AA0F7B17F535D4001781D2 /* MKSerialManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768D717F529D500937CB1 /* MKSerialManager.h */; };
-		60AA0F7C17F535D8001781D2 /* MKStopwatch.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768DB17F529D500937CB1 /* MKStopwatch.h */; };
+		60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A005B01938673800583927 /* UIColor+MKCommons.m */; };
+		60D9730A193DD2C90042C301 /* MKMutableParallelArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D97309193DD2C90042C301 /* MKMutableParallelArrayTest.m */; };
 		60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2CC617F530E3000E7971 /* MKVersion.m */; };
 		60F768A917F5264B00937CB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768A817F5264B00937CB1 /* XCTest.framework */; };
 		60F768AA17F5264B00937CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
-		60F768AC17F5264B00937CB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768AB17F5264B00937CB1 /* UIKit.framework */; };
 		60F768AF17F5264B00937CB1 /* libMKCommons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689717F5264B00937CB1 /* libMKCommons.a */; };
 		60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768D617F529D500937CB1 /* MKFallbackQueue.m */; };
 		60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768D817F529D500937CB1 /* MKSerialManager.m */; };
-		60F768E017F529D500937CB1 /* MKMiscHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768DA17F529D500937CB1 /* MKMiscHelper.m */; };
+		60F768E017F529D500937CB1 /* MKSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768DA17F529D500937CB1 /* MKSystemHelper.m */; };
 		60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768DC17F529D500937CB1 /* MKStopwatch.m */; };
-		60F768EB17F52B0100937CB1 /* MKCommons.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F768EA17F52A9D00937CB1 /* MKCommons.h */; };
 		60F768EF17F52BB300937CB1 /* MKFallbackQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768EC17F52BB300937CB1 /* MKFallbackQueueTest.m */; };
 		60F768F017F52BB300937CB1 /* MKMiscHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768ED17F52BB300937CB1 /* MKMiscHelperTest.m */; };
 		60F768F117F52BB300937CB1 /* MKSerialManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768EE17F52BB300937CB1 /* MKSerialManagerTest.m */; };
+		60F8493419443AC800747904 /* NSDate+MKDateUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F8493119443AC400747904 /* NSDate+MKDateUtils.h */; };
+		60F8493A19454B1600747904 /* NSDate+MKDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F8493219443AC400747904 /* NSDate+MKDateUtils.m */; };
+		60F8493B19454B1800747904 /* NSTimeZone+MKDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F8493619443B0C00747904 /* NSTimeZone+MKDateUtils.m */; };
+		60F8493C19454B2000747904 /* NSTimeZone+MKDateUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F8493519443B0C00747904 /* NSTimeZone+MKDateUtils.h */; };
 		60F9B90A17F971540086A155 /* MKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90917F971540086A155 /* MKLog.m */; };
 		60F9B90C17F973400086A155 /* MKLogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90B17F973400086A155 /* MKLogTest.m */; };
-		60F9B90D17F97E230086A155 /* MKLog.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 60F9B90817F971540086A155 /* MKLog.h */; };
+		60FBB6801929D82B008D21C7 /* MKDateUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */; };
+		DF2AEB75538B99F0E06DBE12 /* MKMutableParallelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */; };
+		DF2AED0046C0B1A3E6803B31 /* MKFormTableViewCellDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE997DB915710E59345EA /* MKFormTableViewCellDatePicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,38 +77,68 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		60F7689517F5264B00937CB1 /* Copy Files */ = {
+		603C200F1911051000CAA66B /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				60F768EB17F52B0100937CB1 /* MKCommons.h in Copy Files */,
-				60AA0F7917F535CF001781D2 /* MKFallbackQueue.h in Copy Files */,
-				60AA0F7A17F535D1001781D2 /* MKMiscHelper.h in Copy Files */,
-				60AA0F7B17F535D4001781D2 /* MKSerialManager.h in Copy Files */,
-				607DB0541808196F0005B256 /* MKJsonObject.h in Copy Files */,
-				60AA0F7C17F535D8001781D2 /* MKStopwatch.h in Copy Files */,
-				6021D2FD1866EBE4003BCB59 /* MKRatings.h in Copy Files */,
-				60F9B90D17F97E230086A155 /* MKLog.h in Copy Files */,
-				6068A5B0180B847900B43B0E /*  MKRateView.xib in Copy Files */,
-				603FE1C517F9B6980044ED58 /* MKPreferencesManager.h in Copy Files */,
+				603C20111911056600CAA66B /* MKFallbackQueue.h in CopyFiles */,
+				603C20121911056600CAA66B /* MKJsonObject.h in CopyFiles */,
+				603C20141911056600CAA66B /* MKVersion.h in CopyFiles */,
+				6002720F19431B2B00FDC20E /* MKBigLoadingIndicator.h in CopyFiles */,
+				603C20151911056600CAA66B /* MKLog.h in CopyFiles */,
+				603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */,
+				603C20171911056600CAA66B /* MKSystemHelper.h in CopyFiles */,
+				603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */,
+				603629D31920840F00D744CB /* MKFormTableViewCellSeparator.h in CopyFiles */,
+				6027BB8919389647000E6A64 /* UIColor+MKCommons.h in CopyFiles */,
+				6002720819430EFD00FDC20E /* MKLoadingIndicator.h in CopyFiles */,
+				60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */,
+				60F8493C19454B2000747904 /* NSTimeZone+MKDateUtils.h in CopyFiles */,
+				6036B07C1945BA64005FF6E6 /* UIButton+MKCommons.h in CopyFiles */,
+				6027BB8A19389649000E6A64 /* UIView+MKConstraints.h in CopyFiles */,
+				60F8493419443AC800747904 /* NSDate+MKDateUtils.h in CopyFiles */,
+				600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */,
+				600444BE19210413005259D6 /* MKFormTableViewCellInfo.h in CopyFiles */,
+				606A1F3C19344B0B00FA17F9 /* MKMutableParallelArray.h in CopyFiles */,
+				603629D819208A1200D744CB /* MKFormTableViewCellTextField.h in CopyFiles */,
+				603C20191911056600CAA66B /* MKStopwatch.h in CopyFiles */,
+				603629D21920840D00D744CB /* MKFormTableView.h in CopyFiles */,
 			);
-			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6021D2FA1866E904003BCB59 /* MKRatings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKRatings.h; sourceTree = "<group>"; };
-		6021D2FB1866E904003BCB59 /* MKRatings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKRatings.m; sourceTree = "<group>"; };
+		600272051942DC4500FDC20E /* MKLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLoadingIndicator.h; sourceTree = "<group>"; };
+		600272061942DC4500FDC20E /* MKLoadingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLoadingIndicator.m; sourceTree = "<group>"; };
+		6002720C1943183B00FDC20E /* MKBigLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBigLoadingIndicator.h; sourceTree = "<group>"; };
+		6002720D1943183B00FDC20E /* MKBigLoadingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBigLoadingIndicator.m; sourceTree = "<group>"; };
+		600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellButton.h; sourceTree = "<group>"; };
+		600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellButton.m; sourceTree = "<group>"; };
+		6027BB821938903A000E6A64 /* UIView+MKConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MKConstraints.h"; sourceTree = "<group>"; };
+		6027BB831938903A000E6A64 /* UIView+MKConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKConstraints.m"; sourceTree = "<group>"; };
+		603629C91920753B00D744CB /* MKFormTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableView.h; sourceTree = "<group>"; };
+		603629CA1920753B00D744CB /* MKFormTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableView.m; sourceTree = "<group>"; };
+		603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellSeparator.h; sourceTree = "<group>"; };
+		603629CF192080B300D744CB /* MKFormTableViewCellSeparator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellSeparator.m; sourceTree = "<group>"; };
+		603629D41920873A00D744CB /* MKFormTableViewCellTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellTextField.h; sourceTree = "<group>"; };
+		603629D51920873A00D744CB /* MKFormTableViewCellTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellTextField.m; sourceTree = "<group>"; };
+		603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellInfo.h; sourceTree = "<group>"; };
+		603629DA19209ED300D744CB /* MKFormTableViewCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellInfo.m; sourceTree = "<group>"; };
+		6036B0791945BA5E005FF6E6 /* UIButton+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+MKCommons.h"; sourceTree = "<group>"; };
+		6036B07A1945BA5E005FF6E6 /* UIButton+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MKCommons.m"; sourceTree = "<group>"; };
+		603C1FFB1910E6CD00CAA66B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPreferencesManager.h; sourceTree = "<group>"; };
 		603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManager.m; sourceTree = "<group>"; };
 		603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManagerTest.m; sourceTree = "<group>"; };
-		6062BB2518082054005F978D /*  MKRateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = " MKRateView.xib"; sourceTree = "<group>"; };
 		607A153017FC114B00269FD9 /* MKStopWatchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStopWatchTest.m; sourceTree = "<group>"; };
 		607DB050180814D30005B256 /* MKJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKJsonObject.h; sourceTree = "<group>"; };
 		607DB051180814D30005B256 /* MKJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKJsonObject.m; sourceTree = "<group>"; };
+		60A005AF1938673800583927 /* UIColor+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MKCommons.h"; sourceTree = "<group>"; };
+		60A005B01938673800583927 /* UIColor+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MKCommons.m"; sourceTree = "<group>"; };
+		60D97309193DD2C90042C301 /* MKMutableParallelArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMutableParallelArrayTest.m; sourceTree = "<group>"; };
 		60EF2CC517F530E3000E7971 /* MKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVersion.h; sourceTree = "<group>"; };
 		60EF2CC617F530E3000E7971 /* MKVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVersion.m; sourceTree = "<group>"; };
 		60F7689717F5264B00937CB1 /* libMKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMKCommons.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,23 +146,30 @@
 		60F7689E17F5264B00937CB1 /* MKCommons-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MKCommons-Prefix.pch"; sourceTree = "<group>"; };
 		60F768A717F5264B00937CB1 /* MKCommonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKCommonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60F768A817F5264B00937CB1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		60F768AB17F5264B00937CB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		60F768B217F5264B00937CB1 /* MKCommonsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MKCommonsTests-Info.plist"; sourceTree = "<group>"; };
 		60F768D517F529D500937CB1 /* MKFallbackQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFallbackQueue.h; sourceTree = "<group>"; };
 		60F768D617F529D500937CB1 /* MKFallbackQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFallbackQueue.m; sourceTree = "<group>"; };
 		60F768D717F529D500937CB1 /* MKSerialManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSerialManager.h; sourceTree = "<group>"; };
 		60F768D817F529D500937CB1 /* MKSerialManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSerialManager.m; sourceTree = "<group>"; };
-		60F768D917F529D500937CB1 /* MKMiscHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMiscHelper.h; sourceTree = "<group>"; };
-		60F768DA17F529D500937CB1 /* MKMiscHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMiscHelper.m; sourceTree = "<group>"; };
+		60F768D917F529D500937CB1 /* MKSystemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSystemHelper.h; sourceTree = "<group>"; };
+		60F768DA17F529D500937CB1 /* MKSystemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSystemHelper.m; sourceTree = "<group>"; };
 		60F768DB17F529D500937CB1 /* MKStopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKStopwatch.h; sourceTree = "<group>"; };
 		60F768DC17F529D500937CB1 /* MKStopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStopwatch.m; sourceTree = "<group>"; };
-		60F768EA17F52A9D00937CB1 /* MKCommons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MKCommons.h; sourceTree = "<group>"; };
 		60F768EC17F52BB300937CB1 /* MKFallbackQueueTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFallbackQueueTest.m; sourceTree = "<group>"; };
 		60F768ED17F52BB300937CB1 /* MKMiscHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMiscHelperTest.m; sourceTree = "<group>"; };
 		60F768EE17F52BB300937CB1 /* MKSerialManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSerialManagerTest.m; sourceTree = "<group>"; };
+		60F8493119443AC400747904 /* NSDate+MKDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MKDateUtils.h"; sourceTree = "<group>"; };
+		60F8493219443AC400747904 /* NSDate+MKDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MKDateUtils.m"; sourceTree = "<group>"; };
+		60F8493519443B0C00747904 /* NSTimeZone+MKDateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimeZone+MKDateUtils.h"; sourceTree = "<group>"; };
+		60F8493619443B0C00747904 /* NSTimeZone+MKDateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimeZone+MKDateUtils.m"; sourceTree = "<group>"; };
 		60F9B90817F971540086A155 /* MKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLog.h; sourceTree = "<group>"; };
 		60F9B90917F971540086A155 /* MKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLog.m; sourceTree = "<group>"; };
 		60F9B90B17F973400086A155 /* MKLogTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLogTest.m; sourceTree = "<group>"; };
+		60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDateUtilsTest.m; sourceTree = "<group>"; };
+		DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMutableParallelArray.h; sourceTree = "<group>"; };
+		DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellDatePicker.h; sourceTree = "<group>"; };
+		DF2AE997DB915710E59345EA /* MKFormTableViewCellDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellDatePicker.m; sourceTree = "<group>"; };
+		DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMutableParallelArray.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +177,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */,
+				603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +188,6 @@
 			files = (
 				60F768AF17F5264B00937CB1 /* libMKCommons.a in Frameworks */,
 				60F768A917F5264B00937CB1 /* XCTest.framework in Frameworks */,
-				60F768AC17F5264B00937CB1 /* UIKit.framework in Frameworks */,
 				60F768AA17F5264B00937CB1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +195,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		603629CD1920753E00D744CB /* MKFormTableView */ = {
+			isa = PBXGroup;
+			children = (
+				603629C91920753B00D744CB /* MKFormTableView.h */,
+				603629CA1920753B00D744CB /* MKFormTableView.m */,
+				600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */,
+				600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */,
+				603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */,
+				603629DA19209ED300D744CB /* MKFormTableViewCellInfo.m */,
+				603629CE192080B300D744CB /* MKFormTableViewCellSeparator.h */,
+				603629CF192080B300D744CB /* MKFormTableViewCellSeparator.m */,
+				603629D41920873A00D744CB /* MKFormTableViewCellTextField.h */,
+				603629D51920873A00D744CB /* MKFormTableViewCellTextField.m */,
+				DF2AE997DB915710E59345EA /* MKFormTableViewCellDatePicker.m */,
+				DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */,
+			);
+			name = MKFormTableView;
+			sourceTree = "<group>";
+		};
+		603C1FEE1910E02400CAA66B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				603629CD1920753E00D744CB /* MKFormTableView */,
+				60A005AF1938673800583927 /* UIColor+MKCommons.h */,
+				60A005B01938673800583927 /* UIColor+MKCommons.m */,
+				6027BB821938903A000E6A64 /* UIView+MKConstraints.h */,
+				6027BB831938903A000E6A64 /* UIView+MKConstraints.m */,
+				6036B0791945BA5E005FF6E6 /* UIButton+MKCommons.h */,
+				6036B07A1945BA5E005FF6E6 /* UIButton+MKCommons.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		603C1FEF1910E05200CAA66B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				60F768D517F529D500937CB1 /* MKFallbackQueue.h */,
+				60F768D617F529D500937CB1 /* MKFallbackQueue.m */,
+				607DB050180814D30005B256 /* MKJsonObject.h */,
+				607DB051180814D30005B256 /* MKJsonObject.m */,
+				DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */,
+				DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		603C1FF01910E05E00CAA66B /* System */ = {
+			isa = PBXGroup;
+			children = (
+				6002720C1943183B00FDC20E /* MKBigLoadingIndicator.h */,
+				6002720D1943183B00FDC20E /* MKBigLoadingIndicator.m */,
+				600272051942DC4500FDC20E /* MKLoadingIndicator.h */,
+				600272061942DC4500FDC20E /* MKLoadingIndicator.m */,
+				60F9B90817F971540086A155 /* MKLog.h */,
+				60F9B90917F971540086A155 /* MKLog.m */,
+				603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */,
+				603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */,
+				60F768D917F529D500937CB1 /* MKSystemHelper.h */,
+				60F768DA17F529D500937CB1 /* MKSystemHelper.m */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		603C1FF11910E07F00CAA66B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				60F768D717F529D500937CB1 /* MKSerialManager.h */,
+				60F768D817F529D500937CB1 /* MKSerialManager.m */,
+				60F768DB17F529D500937CB1 /* MKStopwatch.h */,
+				60F768DC17F529D500937CB1 /* MKStopwatch.m */,
+				60F8493119443AC400747904 /* NSDate+MKDateUtils.h */,
+				60F8493219443AC400747904 /* NSDate+MKDateUtils.m */,
+				60F8493519443B0C00747904 /* NSTimeZone+MKDateUtils.h */,
+				60F8493619443B0C00747904 /* NSTimeZone+MKDateUtils.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		60F7688E17F5264B00937CB1 = {
 			isa = PBXGroup;
 			children = (
@@ -151,9 +295,9 @@
 		60F7689917F5264B00937CB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				603C1FFB1910E6CD00CAA66B /* UIKit.framework */,
 				60F7689A17F5264B00937CB1 /* Foundation.framework */,
 				60F768A817F5264B00937CB1 /* XCTest.framework */,
-				60F768AB17F5264B00937CB1 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -161,27 +305,13 @@
 		60F7689C17F5264B00937CB1 /* MKCommons */ = {
 			isa = PBXGroup;
 			children = (
-				6062BB2518082054005F978D /*  MKRateView.xib */,
-				60F768EA17F52A9D00937CB1 /* MKCommons.h */,
-				60F768D517F529D500937CB1 /* MKFallbackQueue.h */,
-				60F768D617F529D500937CB1 /* MKFallbackQueue.m */,
-				607DB050180814D30005B256 /* MKJsonObject.h */,
-				607DB051180814D30005B256 /* MKJsonObject.m */,
-				60F9B90817F971540086A155 /* MKLog.h */,
-				60F9B90917F971540086A155 /* MKLog.m */,
-				60F768D917F529D500937CB1 /* MKMiscHelper.h */,
-				60F768DA17F529D500937CB1 /* MKMiscHelper.m */,
-				603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */,
-				603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */,
-				6021D2FA1866E904003BCB59 /* MKRatings.h */,
-				6021D2FB1866E904003BCB59 /* MKRatings.m */,
-				60F768D717F529D500937CB1 /* MKSerialManager.h */,
-				60F768D817F529D500937CB1 /* MKSerialManager.m */,
-				60F768DB17F529D500937CB1 /* MKStopwatch.h */,
-				60F768DC17F529D500937CB1 /* MKStopwatch.m */,
+				603C1FEF1910E05200CAA66B /* Data */,
 				60EF2CC517F530E3000E7971 /* MKVersion.h */,
 				60EF2CC617F530E3000E7971 /* MKVersion.m */,
 				60F7689D17F5264B00937CB1 /* Supporting Files */,
+				603C1FF01910E05E00CAA66B /* System */,
+				603C1FF11910E07F00CAA66B /* Tools */,
+				603C1FEE1910E02400CAA66B /* UI */,
 			);
 			path = MKCommons;
 			sourceTree = "<group>";
@@ -197,6 +327,8 @@
 		60F768B017F5264B00937CB1 /* MKCommonsTests */ = {
 			isa = PBXGroup;
 			children = (
+				60D97309193DD2C90042C301 /* MKMutableParallelArrayTest.m */,
+				60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */,
 				60F768EC17F52BB300937CB1 /* MKFallbackQueueTest.m */,
 				60F9B90B17F973400086A155 /* MKLogTest.m */,
 				60F768ED17F52BB300937CB1 /* MKMiscHelperTest.m */,
@@ -225,7 +357,7 @@
 			buildPhases = (
 				60F7689317F5264B00937CB1 /* Sources */,
 				60F7689417F5264B00937CB1 /* Frameworks */,
-				60F7689517F5264B00937CB1 /* Copy Files */,
+				603C200F1911051000CAA66B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -297,15 +429,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				603629CC1920753B00D744CB /* MKFormTableView.m in Sources */,
+				600444C81921DC98005259D6 /* MKFormTableViewCellButton.m in Sources */,
+				603629D1192080B300D744CB /* MKFormTableViewCellSeparator.m in Sources */,
 				60F9B90A17F971540086A155 /* MKLog.m in Sources */,
-				60F768E017F529D500937CB1 /* MKMiscHelper.m in Sources */,
-				6021D2FC1866E904003BCB59 /* MKRatings.m in Sources */,
+				60F768E017F529D500937CB1 /* MKSystemHelper.m in Sources */,
 				60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */,
 				60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */,
+				6027BB851938903A000E6A64 /* UIView+MKConstraints.m in Sources */,
+				60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */,
 				607DB052180814D30005B256 /* MKJsonObject.m in Sources */,
 				603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */,
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
+				6036B07B1945BA5E005FF6E6 /* UIButton+MKCommons.m in Sources */,
+				600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */,
 				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
+				60F8493A19454B1600747904 /* NSDate+MKDateUtils.m in Sources */,
+				6002720E1943183B00FDC20E /* MKBigLoadingIndicator.m in Sources */,
+				60F8493B19454B1800747904 /* NSTimeZone+MKDateUtils.m in Sources */,
+				603629D71920873A00D744CB /* MKFormTableViewCellTextField.m in Sources */,
+				603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */,
+				DF2AED0046C0B1A3E6803B31 /* MKFormTableViewCellDatePicker.m in Sources */,
+				DF2AEB75538B99F0E06DBE12 /* MKMutableParallelArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,10 +458,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60FBB6801929D82B008D21C7 /* MKDateUtilsTest.m in Sources */,
 				60F9B90C17F973400086A155 /* MKLogTest.m in Sources */,
 				607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */,
 				60F768F017F52BB300937CB1 /* MKMiscHelperTest.m in Sources */,
 				60F768EF17F52BB300937CB1 /* MKFallbackQueueTest.m in Sources */,
+				60D9730A193DD2C90042C301 /* MKMutableParallelArrayTest.m in Sources */,
 				60F768F117F52BB300937CB1 /* MKSerialManagerTest.m in Sources */,
 				603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */,
 			);

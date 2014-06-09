@@ -9,6 +9,6 @@
 #import "MKVersion.h"
 
 NSString *const MKApplicationVersion(void) {
-    NSString *version = [NSString stringWithFormat:@"%ld.%ld.%ld", (long)MAJOR, (long)MINOR, (long)PATCH];
+    NSString *const version = [NSString stringWithFormat:@"%ld.%ld.%ld", (long)MAJOR, (long)MINOR, (long)PATCH];
     return version;
 }

@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 
 /**
- * // TODO: this method comment needs be updated.
+ * // DOCU: this method comment needs be updated.
  */
 @interface MKFallbackQueue : NSObject
 
-- (id)initWithObjects:(NSArray *)objects;
+- (instancetype)initWithObjects:(NSArray *)objects;
 
 - (id)topObject;
 - (id)moveTopObjectToBottomAndGetNextOne;

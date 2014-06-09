@@ -62,19 +62,15 @@ extern void _MK_LOG_INTERNAL(MKLogLevel logLevel, NSString *className, NSUIntege
         }
         NSString *timestampPrefix;
         if (MKIsUsingTimestamps()) {
-            NSDate *timestamp = [NSDate date];
-            NSDateFormatter *format = [[NSDateFormatter alloc] init];
+            NSDate *const timestamp = [NSDate date];
+            NSDateFormatter *const format = [[NSDateFormatter alloc] init];
             [format setDateFormat:@"yy/MM/dd HH:mm:ss "];
             timestampPrefix = [format stringFromDate:timestamp];
         } else {
             timestampPrefix = @"";
         }
-        NSString *output = [NSString stringWithFormat:@"%@%@<%@:%d> %@",
-                            timestampPrefix,
-                            logLevelPrefix,
-                            className,
-                            line,
-                            message];
+        NSString *const output = [NSString stringWithFormat:@"%@%@<%@:%lu> %@", timestampPrefix, logLevelPrefix,
+                                                            className, (unsigned long)line, message];
         NSLog(@"%@", output);
     }
 }

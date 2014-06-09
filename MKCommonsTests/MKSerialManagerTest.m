@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
+
 extern void __gcov_flush();
 
 #import "MKSerialManager.h"
-
-#import "MKCommons.h"
+#import "MKLog.h"
 
 @interface MKSerialManagerTest : XCTestCase
 
@@ -52,11 +52,10 @@ extern void __gcov_flush();
     NSInteger feature = 01;
     NSInteger expiryTime = 24;
     NSString *serial = [MKSerialManager generateSerialForProduct:product feature:feature expiryTime:expiryTime];
-    
+
     BOOL success = [MKSerialManager isSerialValid:serial forProduct:product forFeature:feature];
     XCTAssertEqual(YES, success, @"Serial should be ok.");
-    
-    
+
 }
 
 - (void)testExpiredSerial
@@ -65,11 +64,10 @@ extern void __gcov_flush();
     NSInteger feature = 01;
     NSInteger expiryTime = -24;
     NSString *serial = [MKSerialManager generateSerialForProduct:product feature:feature expiryTime:expiryTime];
-    
+
     BOOL success = [MKSerialManager isSerialValid:serial forProduct:product forFeature:feature];
     XCTAssertEqual(NO, success, @"Serial should have been expired.");
-    
-    
+
 }
 
 - (void)testInvalidSerial
@@ -77,7 +75,7 @@ extern void __gcov_flush();
     NSString *serial = @"PM1136-6278-5673-08569";
     BOOL success = [MKSerialManager isSerialValid:serial forProduct:@"PM" forFeature:01];
     XCTAssertEqual(NO, success, @"Serial should be invalid.!");
-    
+
     serial = @"?";
     success = [MKSerialManager isSerialValid:serial forProduct:@"PM" forFeature:01];
     XCTAssertEqual(NO, success, @"Serial should be invalid.!");
@@ -86,7 +84,7 @@ extern void __gcov_flush();
 - (void)testHasEnoughSerials
 {
     NSUInteger atLeast = 50;
-    
+
     NSMutableSet *serials = [[NSMutableSet alloc] init];
     NSInteger i = 1000;
     while ((i > 0) && ([serials count] < atLeast)) {
@@ -99,7 +97,8 @@ extern void __gcov_flush();
         }
         i--;
     }
-    XCTAssert([serials count] >= atLeast, @"Not enough serials found: %lu. Should be at least %lu.", (unsigned long)[serials count], (unsigned long)atLeast);
+    XCTAssert([serials count] >=
+              atLeast, @"Not enough serials found: %lu. Should be at least %lu.", (unsigned long)[serials count], (unsigned long)atLeast);
 }
 
 @end

@@ -9,12 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSUInteger, MKLogLevel) {
-    MKLogLevelNone = 0,
-    MKLogLevelError = 1,
-    MKLogLevelWarning = 2,
-    MKLogLevelInfo = 3,
-    MKLogLevelDebug = 4,
-    MKLogLevelVerbose = 5
+    MKLogLevelNone = 0, MKLogLevelError = 1, MKLogLevelWarning = 2, MKLogLevelInfo = 3, MKLogLevelDebug = 4, MKLogLevelVerbose = 5
 };
 
 extern void MKSetLogLevel(MKLogLevel logLevel);
