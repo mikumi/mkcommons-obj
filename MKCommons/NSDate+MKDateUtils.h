@@ -14,6 +14,7 @@
 - (NSDate *)dateByMatchingDateComponentsFromDate:(NSDate *)date;
 - (NSDate *)dateByStrippingTimeZone;
 - (NSDate *)dateBySettingTimeZone;
+- (NSDate *)dateBySettingTimeZone:(NSTimeZone *)timeZone;
 - (NSDate *)dateByRemovingTimeComponents;
 - (NSDate *)dateByRemovingSeconds;
 - (NSString *)stringFromDateWithDateStyle:(NSDateFormatterStyle)dateStyle timeStyle:(NSDateFormatterStyle)timeStyle;

@@ -72,6 +72,16 @@
 }
 
 /**
+ * // TODO: this method comment needs be updated.
+ */
+- (NSDate *)dateBySettingTimeZone:(NSTimeZone *)timeZone
+{
+    NSTimeInterval const timeDifferenceSeconds = [timeZone secondsFromGMT];
+    NSDate *const result = [self dateByAddingTimeInterval:(-timeDifferenceSeconds)];
+    return result;
+}
+
+/**
 * // TODO: this method comment needs be updated.
 */
 - (NSDate *)dateByRemovingTimeComponents
