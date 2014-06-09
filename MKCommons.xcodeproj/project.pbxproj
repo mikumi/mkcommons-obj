@@ -53,9 +53,10 @@
 		60F768EF17F52BB300937CB1 /* MKFallbackQueueTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768EC17F52BB300937CB1 /* MKFallbackQueueTest.m */; };
 		60F768F017F52BB300937CB1 /* MKMiscHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768ED17F52BB300937CB1 /* MKMiscHelperTest.m */; };
 		60F768F117F52BB300937CB1 /* MKSerialManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F768EE17F52BB300937CB1 /* MKSerialManagerTest.m */; };
-		60F8493319443AC400747904 /* NSDate+MKDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F8493219443AC400747904 /* NSDate+MKDateUtils.m */; };
 		60F8493419443AC800747904 /* NSDate+MKDateUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F8493119443AC400747904 /* NSDate+MKDateUtils.h */; };
-		60F8493719443B0C00747904 /* NSTimeZone+MKDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F8493619443B0C00747904 /* NSTimeZone+MKDateUtils.m */; };
+		60F8493A19454B1600747904 /* NSDate+MKDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F8493219443AC400747904 /* NSDate+MKDateUtils.m */; };
+		60F8493B19454B1800747904 /* NSTimeZone+MKDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F8493619443B0C00747904 /* NSTimeZone+MKDateUtils.m */; };
+		60F8493C19454B2000747904 /* NSTimeZone+MKDateUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F8493519443B0C00747904 /* NSTimeZone+MKDateUtils.h */; };
 		60F9B90A17F971540086A155 /* MKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90917F971540086A155 /* MKLog.m */; };
 		60F9B90C17F973400086A155 /* MKLogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90B17F973400086A155 /* MKLogTest.m */; };
 		60FBB6801929D82B008D21C7 /* MKDateUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */; };
@@ -92,10 +93,11 @@
 				6027BB8919389647000E6A64 /* UIColor+MKCommons.h in CopyFiles */,
 				6002720819430EFD00FDC20E /* MKLoadingIndicator.h in CopyFiles */,
 				60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */,
+				60F8493C19454B2000747904 /* NSTimeZone+MKDateUtils.h in CopyFiles */,
 				6027BB8A19389649000E6A64 /* UIView+MKConstraints.h in CopyFiles */,
+				60F8493419443AC800747904 /* NSDate+MKDateUtils.h in CopyFiles */,
 				600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */,
 				600444BE19210413005259D6 /* MKFormTableViewCellInfo.h in CopyFiles */,
-				60F8493419443AC800747904 /* NSDate+MKDateUtils.h in CopyFiles */,
 				606A1F3C19344B0B00FA17F9 /* MKMutableParallelArray.h in CopyFiles */,
 				603629D819208A1200D744CB /* MKFormTableViewCellTextField.h in CopyFiles */,
 				603C20191911056600CAA66B /* MKStopwatch.h in CopyFiles */,
@@ -434,13 +436,13 @@
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
 				600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */,
 				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
+				60F8493A19454B1600747904 /* NSDate+MKDateUtils.m in Sources */,
 				6002720E1943183B00FDC20E /* MKBigLoadingIndicator.m in Sources */,
-				60F8493319443AC400747904 /* NSDate+MKDateUtils.m in Sources */,
+				60F8493B19454B1800747904 /* NSTimeZone+MKDateUtils.m in Sources */,
 				603629D71920873A00D744CB /* MKFormTableViewCellTextField.m in Sources */,
 				603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */,
 				DF2AED0046C0B1A3E6803B31 /* MKFormTableViewCellDatePicker.m in Sources */,
 				DF2AEB75538B99F0E06DBE12 /* MKMutableParallelArray.m in Sources */,
-				60F8493719443B0C00747904 /* NSTimeZone+MKDateUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
