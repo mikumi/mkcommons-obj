@@ -13,6 +13,7 @@ static NSString *const MKMutableParallelArrayDidChangeNotification = @"MKMutable
 @interface MKMutableParallelArray : NSObject <NSCoding>
 
 - (void)addObject:(id)object;
+- (void)insertObject:(id)object atIndex:(NSUInteger)index;
 - (id)objectAtIndex:(NSUInteger)index;
 - (void)removeObjectAtIndex:(NSUInteger)index;
 - (void)removeObject:(id)object;

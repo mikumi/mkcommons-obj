@@ -4,6 +4,7 @@
 //
 
 #import "MKMutableParallelArray.h"
+
 #import "MKLog.h"
 
 static NSString *const JSPreferencesKeyObjects = @"objects";
@@ -80,6 +81,17 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 {
     @synchronized(self) {
         [self.objects addObject:object];
+    }
+    [self postUpdateNotification];
+}
+
+/**
+ * // DOCU: this method comment needs be updated.
+ */
+- (void)insertObject:(id)object atIndex:(NSUInteger)index
+{
+    @synchronized(self) {
+        [self.objects insertObject:object atIndex:index];
     }
     [self postUpdateNotification];
 }
