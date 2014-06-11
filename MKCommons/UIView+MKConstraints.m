@@ -197,6 +197,7 @@
  */
 - (void)removeAllConstraints
 {
+    [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self removeConstraints:self.constraints];
 }
 
