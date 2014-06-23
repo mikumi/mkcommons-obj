@@ -38,6 +38,7 @@
 		603C20191911056600CAA66B /* MKStopwatch.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768DB17F529D500937CB1 /* MKStopwatch.h */; };
 		603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */; };
 		603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */; };
+		6043E92F19584FA80055E5B0 /* MKSynchronizedCounter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE95F7EB7726DD3E1B859 /* MKSynchronizedCounter.h */; };
 		60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */; };
 		606A1F3C19344B0B00FA17F9 /* MKMutableParallelArray.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */; };
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
@@ -62,6 +63,7 @@
 		60F9B90A17F971540086A155 /* MKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90917F971540086A155 /* MKLog.m */; };
 		60F9B90C17F973400086A155 /* MKLogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90B17F973400086A155 /* MKLogTest.m */; };
 		60FBB6801929D82B008D21C7 /* MKDateUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */; };
+		DF2AE278FD9BF72F976E6ADE /* MKSynchronizedCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE2E3C9EE7F9FDC9A5F0C /* MKSynchronizedCounter.m */; };
 		DF2AEB75538B99F0E06DBE12 /* MKMutableParallelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */; };
 		DF2AED0046C0B1A3E6803B31 /* MKFormTableViewCellDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE997DB915710E59345EA /* MKFormTableViewCellDatePicker.m */; };
 /* End PBXBuildFile section */
@@ -88,6 +90,7 @@
 				603C20141911056600CAA66B /* MKVersion.h in CopyFiles */,
 				6002720F19431B2B00FDC20E /* MKBigLoadingIndicator.h in CopyFiles */,
 				603C20151911056600CAA66B /* MKLog.h in CopyFiles */,
+				6043E92F19584FA80055E5B0 /* MKSynchronizedCounter.h in CopyFiles */,
 				603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */,
 				603C20171911056600CAA66B /* MKSystemHelper.h in CopyFiles */,
 				603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */,
@@ -168,7 +171,9 @@
 		60F9B90B17F973400086A155 /* MKLogTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLogTest.m; sourceTree = "<group>"; };
 		60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDateUtilsTest.m; sourceTree = "<group>"; };
 		9D603010E3F644CBB2B68714 /* libPods-MKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKCommons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2AE2E3C9EE7F9FDC9A5F0C /* MKSynchronizedCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSynchronizedCounter.m; sourceTree = "<group>"; };
 		DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMutableParallelArray.h; sourceTree = "<group>"; };
+		DF2AE95F7EB7726DD3E1B859 /* MKSynchronizedCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSynchronizedCounter.h; sourceTree = "<group>"; };
 		DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellDatePicker.h; sourceTree = "<group>"; };
 		DF2AE997DB915710E59345EA /* MKFormTableViewCellDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellDatePicker.m; sourceTree = "<group>"; };
 		DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMutableParallelArray.m; sourceTree = "<group>"; };
@@ -256,6 +261,8 @@
 				603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */,
 				60F768D917F529D500937CB1 /* MKSystemHelper.h */,
 				60F768DA17F529D500937CB1 /* MKSystemHelper.m */,
+				DF2AE2E3C9EE7F9FDC9A5F0C /* MKSynchronizedCounter.m */,
+				DF2AE95F7EB7726DD3E1B859 /* MKSynchronizedCounter.h */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -490,6 +497,7 @@
 				603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */,
 				DF2AED0046C0B1A3E6803B31 /* MKFormTableViewCellDatePicker.m in Sources */,
 				DF2AEB75538B99F0E06DBE12 /* MKMutableParallelArray.m in Sources */,
+				DF2AE278FD9BF72F976E6ADE /* MKSynchronizedCounter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
