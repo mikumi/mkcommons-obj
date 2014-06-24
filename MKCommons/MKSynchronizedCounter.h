@@ -11,7 +11,12 @@
 @interface MKSynchronizedCounter : NSObject
 
 - (void)increment;
+- (void)incrementAndDo:(void (^)(NSInteger newValue))completionBlock;
 - (void)decrement;
-- (NSInteger)count;
+- (void)decrementAndDo:(void (^)(NSInteger newValue))completionBlock;
+- (void)set:(NSInteger)value;
+- (void)set:(NSInteger)value andDo:(void (^)(NSInteger newValue))completionBlock;
+- (NSInteger)get;
+- (NSInteger)getAndDo:(void (^)(NSInteger currentValue))completionBlock;
 
 @end

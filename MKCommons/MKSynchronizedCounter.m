@@ -19,8 +19,9 @@
 //============================================================
 @implementation MKSynchronizedCounter
 
-@synthesize counter = _counter;
-
+/*
+ * (Inherited Comment)
+ */
 - (instancetype)init
 {
     self = [super init];
@@ -35,8 +36,19 @@
 */
 - (void)increment
 {
+    [self incrementAndDo:nil];
+}
+
+/**
+* // DOCU: this method comment needs be updated.
+*/
+- (void)incrementAndDo:(void (^)(NSInteger newValue))completionBlock
+{
     @synchronized(self) {
         self.counter += 1;
+        if (completionBlock) {
+            completionBlock(self.counter);
+        }
     }
 }
 
@@ -45,18 +57,61 @@
 */
 - (void)decrement
 {
+    [self decrementAndDo:nil];
+}
+
+/**
+* // DOCU: this method comment needs be updated.
+*/
+- (void)decrementAndDo:(void (^)(NSInteger newValue))completionBlock
+{
     @synchronized(self) {
         self.counter -= 1;
+        if (completionBlock) {
+            completionBlock(self.counter);
+        }
     }
 }
 
 /**
 * // DOCU: this method comment needs be updated.
 */
-- (NSInteger)count
+- (void)set:(NSInteger)value
+{
+    [self set:value andDo:nil];
+}
+
+/**
+* // DOCU: this method comment needs be updated.
+*/
+- (void)set:(NSInteger)value andDo:(void (^)(NSInteger newValue))completionBlock
 {
     @synchronized(self) {
-        return _counter;
+        self.counter = value;
+        if (completionBlock) {
+            completionBlock(self.counter);
+        }
+    }
+}
+
+/**
+* // DOCU: this method comment needs be updated.
+*/
+- (NSInteger)get
+{
+    return [self getAndDo:nil];
+}
+
+/**
+* // DOCU: this method comment needs be updated.
+*/
+- (NSInteger)getAndDo:(void (^)(NSInteger currentValue))completionBlock
+{
+    @synchronized(self) {
+        if (completionBlock) {
+            completionBlock(self.counter);
+        }
+        return self.counter;
     }
 }
 
