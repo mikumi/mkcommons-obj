@@ -44,6 +44,10 @@
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
 		60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A005B01938673800583927 /* UIColor+MKCommons.m */; };
+		60D6D218195BF26200866E0F /* UIPopoverController+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6D217195BF26200866E0F /* UIPopoverController+MKCommons.m */; };
+		60D6D21C195BF43900866E0F /* UIPopoverController+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60D6D216195BF26200866E0F /* UIPopoverController+MKCommons.h */; };
+		60D6D222195BF92A00866E0F /* UIViewController+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6D21F195BF70100866E0F /* UIViewController+MKCommons.m */; };
+		60D6D223195BF93100866E0F /* UIViewController+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60D6D21E195BF70100866E0F /* UIViewController+MKCommons.h */; };
 		60D9730A193DD2C90042C301 /* MKMutableParallelArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D97309193DD2C90042C301 /* MKMutableParallelArrayTest.m */; };
 		60EF2CC717F530E3000E7971 /* MKVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 60EF2CC617F530E3000E7971 /* MKVersion.m */; };
 		60F768A917F5264B00937CB1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F768A817F5264B00937CB1 /* XCTest.framework */; };
@@ -93,6 +97,7 @@
 				6043E92F19584FA80055E5B0 /* MKSynchronizedCounter.h in CopyFiles */,
 				603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */,
 				603C20171911056600CAA66B /* MKSystemHelper.h in CopyFiles */,
+				60D6D21C195BF43900866E0F /* UIPopoverController+MKCommons.h in CopyFiles */,
 				603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */,
 				603629D31920840F00D744CB /* MKFormTableViewCellSeparator.h in CopyFiles */,
 				6027BB8919389647000E6A64 /* UIColor+MKCommons.h in CopyFiles */,
@@ -100,6 +105,7 @@
 				60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */,
 				60F8493C19454B2000747904 /* NSTimeZone+MKDateUtils.h in CopyFiles */,
 				6036B07C1945BA64005FF6E6 /* UIButton+MKCommons.h in CopyFiles */,
+				60D6D223195BF93100866E0F /* UIViewController+MKCommons.h in CopyFiles */,
 				6027BB8A19389649000E6A64 /* UIView+MKConstraints.h in CopyFiles */,
 				60F8493419443AC800747904 /* NSDate+MKDateUtils.h in CopyFiles */,
 				600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */,
@@ -142,6 +148,10 @@
 		607DB051180814D30005B256 /* MKJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKJsonObject.m; sourceTree = "<group>"; };
 		60A005AF1938673800583927 /* UIColor+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MKCommons.h"; sourceTree = "<group>"; };
 		60A005B01938673800583927 /* UIColor+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MKCommons.m"; sourceTree = "<group>"; };
+		60D6D216195BF26200866E0F /* UIPopoverController+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+MKCommons.h"; sourceTree = "<group>"; };
+		60D6D217195BF26200866E0F /* UIPopoverController+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+MKCommons.m"; sourceTree = "<group>"; };
+		60D6D21E195BF70100866E0F /* UIViewController+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MKCommons.h"; sourceTree = "<group>"; };
+		60D6D21F195BF70100866E0F /* UIViewController+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MKCommons.m"; sourceTree = "<group>"; };
 		60D97309193DD2C90042C301 /* MKMutableParallelArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMutableParallelArrayTest.m; sourceTree = "<group>"; };
 		60EF2CC517F530E3000E7971 /* MKVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKVersion.h; sourceTree = "<group>"; };
 		60EF2CC617F530E3000E7971 /* MKVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKVersion.m; sourceTree = "<group>"; };
@@ -231,6 +241,10 @@
 				6027BB831938903A000E6A64 /* UIView+MKConstraints.m */,
 				6036B0791945BA5E005FF6E6 /* UIButton+MKCommons.h */,
 				6036B07A1945BA5E005FF6E6 /* UIButton+MKCommons.m */,
+				60D6D216195BF26200866E0F /* UIPopoverController+MKCommons.h */,
+				60D6D217195BF26200866E0F /* UIPopoverController+MKCommons.m */,
+				60D6D21E195BF70100866E0F /* UIViewController+MKCommons.h */,
+				60D6D21F195BF70100866E0F /* UIViewController+MKCommons.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -491,12 +505,14 @@
 				600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */,
 				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
 				60F8493A19454B1600747904 /* NSDate+MKDateUtils.m in Sources */,
+				60D6D222195BF92A00866E0F /* UIViewController+MKCommons.m in Sources */,
 				6002720E1943183B00FDC20E /* MKBigLoadingIndicator.m in Sources */,
 				60F8493B19454B1800747904 /* NSTimeZone+MKDateUtils.m in Sources */,
 				603629D71920873A00D744CB /* MKFormTableViewCellTextField.m in Sources */,
 				603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */,
 				DF2AED0046C0B1A3E6803B31 /* MKFormTableViewCellDatePicker.m in Sources */,
 				DF2AEB75538B99F0E06DBE12 /* MKMutableParallelArray.m in Sources */,
+				60D6D218195BF26200866E0F /* UIPopoverController+MKCommons.m in Sources */,
 				DF2AE278FD9BF72F976E6ADE /* MKSynchronizedCounter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
