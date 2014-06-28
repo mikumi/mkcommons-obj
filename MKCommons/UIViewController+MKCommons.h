@@ -15,4 +15,6 @@
 
 @property (strong, nonatomic) UIPopoverController *popoverController;
 
+- (BOOL)isVisible;
+
 @end

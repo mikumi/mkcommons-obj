@@ -31,4 +31,11 @@ static UIPopoverController *_mkPopoverController; // I would name it _popoverCon
     return _mkPopoverController;
 }
 
+/**
+* // DOCU: this method comment needs be updated.
+*/
+- (BOOL)isVisible {
+    return [self isViewLoaded] && self.view.window;
+}
+
 @end
