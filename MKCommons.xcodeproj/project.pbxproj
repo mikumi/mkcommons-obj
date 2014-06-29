@@ -40,6 +40,8 @@
 		603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */; };
 		6043E92F19584FA80055E5B0 /* MKSynchronizedCounter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE95F7EB7726DD3E1B859 /* MKSynchronizedCounter.h */; };
 		60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */; };
+		605A8262195FFFF50088FA50 /* UIImage+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 605A8261195FFFF50088FA50 /* UIImage+MKCommons.m */; };
+		605A8263196000030088FA50 /* UIImage+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 605A8260195FFFF50088FA50 /* UIImage+MKCommons.h */; };
 		606A1F3C19344B0B00FA17F9 /* MKMutableParallelArray.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */; };
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
@@ -105,6 +107,7 @@
 				60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */,
 				60F8493C19454B2000747904 /* NSTimeZone+MKDateUtils.h in CopyFiles */,
 				6036B07C1945BA64005FF6E6 /* UIButton+MKCommons.h in CopyFiles */,
+				605A8263196000030088FA50 /* UIImage+MKCommons.h in CopyFiles */,
 				60D6D223195BF93100866E0F /* UIViewController+MKCommons.h in CopyFiles */,
 				6027BB8A19389649000E6A64 /* UIView+MKConstraints.h in CopyFiles */,
 				60F8493419443AC800747904 /* NSDate+MKDateUtils.h in CopyFiles */,
@@ -143,6 +146,8 @@
 		603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPreferencesManager.h; sourceTree = "<group>"; };
 		603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManager.m; sourceTree = "<group>"; };
 		603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManagerTest.m; sourceTree = "<group>"; };
+		605A8260195FFFF50088FA50 /* UIImage+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MKCommons.h"; sourceTree = "<group>"; };
+		605A8261195FFFF50088FA50 /* UIImage+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MKCommons.m"; sourceTree = "<group>"; };
 		607A153017FC114B00269FD9 /* MKStopWatchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStopWatchTest.m; sourceTree = "<group>"; };
 		607DB050180814D30005B256 /* MKJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKJsonObject.h; sourceTree = "<group>"; };
 		607DB051180814D30005B256 /* MKJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKJsonObject.m; sourceTree = "<group>"; };
@@ -245,6 +250,8 @@
 				60D6D217195BF26200866E0F /* UIPopoverController+MKCommons.m */,
 				60D6D21E195BF70100866E0F /* UIViewController+MKCommons.h */,
 				60D6D21F195BF70100866E0F /* UIViewController+MKCommons.m */,
+				605A8260195FFFF50088FA50 /* UIImage+MKCommons.h */,
+				605A8261195FFFF50088FA50 /* UIImage+MKCommons.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -491,6 +498,7 @@
 			files = (
 				603629CC1920753B00D744CB /* MKFormTableView.m in Sources */,
 				600444C81921DC98005259D6 /* MKFormTableViewCellButton.m in Sources */,
+				605A8262195FFFF50088FA50 /* UIImage+MKCommons.m in Sources */,
 				603629D1192080B300D744CB /* MKFormTableViewCellSeparator.m in Sources */,
 				60F9B90A17F971540086A155 /* MKLog.m in Sources */,
 				60F768E017F529D500937CB1 /* MKSystemHelper.m in Sources */,
