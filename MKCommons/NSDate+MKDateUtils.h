@@ -25,4 +25,6 @@
 - (BOOL)isBeforeDate:(NSDate *)date;
 - (BOOL)isAfterDate:(NSDate *)date;
 
+- (NSInteger)timeDifferenceInDaysToDate:(NSDate *)date;
+
 @end

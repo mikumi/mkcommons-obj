@@ -72,8 +72,8 @@
 }
 
 /**
- * // DOCU: this method comment needs be updated.
- */
+* // DOCU: this method comment needs be updated.
+*/
 - (NSDate *)dateBySettingTimeZone:(NSTimeZone *)timeZone
 {
     NSTimeInterval const timeDifferenceSeconds = [timeZone secondsFromGMT];
@@ -95,8 +95,8 @@
 }
 
 /**
- * // DOCU: this method comment needs be updated.
- */
+* // DOCU: this method comment needs be updated.
+*/
 - (NSDate *)dateByRemovingSeconds
 {
     NSCalendarUnit const flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSTimeZoneCalendarUnit |
@@ -111,8 +111,7 @@
 /**
 * // DOCU: this method comment needs be updated.
 */
-- (NSString *)stringFromDateWithDateStyle:(NSDateFormatterStyle)dateStyle
-                   timeStyle:(NSDateFormatterStyle)timeStyle
+- (NSString *)stringFromDateWithDateStyle:(NSDateFormatterStyle)dateStyle timeStyle:(NSDateFormatterStyle)timeStyle
 {
     static NSDateFormatter *dateFormatter;
     static dispatch_once_t onceToken;
@@ -131,7 +130,7 @@
 * // DOCU: this method comment needs be updated.
 */
 - (NSString *)stringFromDateWithTimeZone:(NSTimeZone *)timeZone dateStyle:(NSDateFormatterStyle)dateStyle
-                   timeStyle:(NSDateFormatterStyle)timeStyle
+                               timeStyle:(NSDateFormatterStyle)timeStyle
 {
     static NSDateFormatter *dateFormatter;
     static dispatch_once_t onceToken;
@@ -173,8 +172,8 @@
 }
 
 /**
- * // DOCU: this method comment needs be updated.
- */
+* // DOCU: this method comment needs be updated.
+*/
 - (BOOL)isBeforeDate:(NSDate *)date
 {
     if ([self compare:date] == NSOrderedAscending) {
@@ -185,8 +184,8 @@
 }
 
 /**
- * // DOCU: this method comment needs be updated.
- */
+* // DOCU: this method comment needs be updated.
+*/
 - (BOOL)isAfterDate:(NSDate *)date
 {
     if ([self compare:date] == NSOrderedDescending) {
@@ -194,6 +193,21 @@
     } else {
         return false;
     }
+}
+
+/**
+* Positive if date is after receiver, negative if it's before. 0 if no difference in days
+* // DOCU: this method comment needs be updated.
+*/
+- (NSInteger)timeDifferenceInDaysToDate:(NSDate *)date
+{
+    NSCalendarUnit const flags = NSDayCalendarUnit;
+    NSCalendar       *const calendar         = [NSCalendar currentCalendar];
+    NSDateComponents *const firstComponents  = [calendar components:flags fromDate:self];
+    NSDateComponents *const secondComponents = [calendar components:flags fromDate:date];
+
+    NSInteger difference = secondComponents.day - firstComponents.day;
+    return difference;
 }
 
 @end

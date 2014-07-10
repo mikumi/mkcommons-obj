@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "MKDateUtils.h"
+#import "NSDate+MKDateUtils.h"
 #import "MKLog.h"
 
 @interface MKDateUtilsTest : XCTestCase
@@ -33,11 +33,13 @@
 
 - (void)testDateByCopyingTimeComponentsFromDate
 {
-    NSDate *const zeroDate = [MKDateUtils dateByRemovingTimeComponentsFromDate:[NSDate date]];
-    NSDate *const currentDate = [NSDate date];
-    NSDate *const resultDate = [MKDateUtils dateByCopyingTimeComponentsFromDate:currentDate toDate:zeroDate];
-    NSString *const expectedTimeString = [self dateToString:currentDate withDateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterMediumStyle];
-    NSString *const actualTimeString = [self dateToString:resultDate withDateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterMediumStyle];
+    NSDate   *const zeroDate           = [[NSDate date] dateByRemovingTimeComponents];
+    NSDate   *const currentDate        = [NSDate date];
+    NSDate   *const resultDate         = [zeroDate dateByMatchingTimeComponentsFromDate:currentDate];
+    NSString *const expectedTimeString = [self dateToString:currentDate withDateStyle:NSDateFormatterNoStyle
+                                                  timeStyle:NSDateFormatterMediumStyle];
+    NSString *const actualTimeString   = [self dateToString:resultDate withDateStyle:NSDateFormatterNoStyle
+                                                  timeStyle:NSDateFormatterMediumStyle];
     MKLogVerbose(@"Date: %@", [self dateToString:zeroDate]);
     MKLogVerbose(@"Date: %@", [self dateToString:currentDate]);
     MKLogVerbose(@"Date: %@", [self dateToString:resultDate]);
@@ -46,11 +48,13 @@
 
 - (void)testDateByCopyingDateComponentsFromDate
 {
-    NSDate *const zeroDate = [NSDate dateWithTimeIntervalSince1970:0];
-    NSDate *const currentDate = [NSDate date];
-    NSDate *const resultDate = [MKDateUtils dateByCopyingDateComponentsFromDate:currentDate toDate:zeroDate];
-    NSString *const expectedTimeString = [self dateToString:currentDate withDateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
-    NSString *const actualTimeString = [self dateToString:resultDate withDateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
+    NSDate   *const zeroDate           = [NSDate dateWithTimeIntervalSince1970:0];
+    NSDate   *const currentDate        = [NSDate date];
+    NSDate   *const resultDate         = [zeroDate dateByMatchingDateComponentsFromDate:currentDate];
+    NSString *const expectedTimeString = [self dateToString:currentDate withDateStyle:NSDateFormatterShortStyle
+                                                  timeStyle:NSDateFormatterNoStyle];
+    NSString *const actualTimeString   = [self dateToString:resultDate withDateStyle:NSDateFormatterShortStyle
+                                                  timeStyle:NSDateFormatterNoStyle];
     MKLogVerbose(@"Date: %@", [self dateToString:zeroDate]);
     MKLogVerbose(@"Date: %@", [self dateToString:currentDate]);
     MKLogVerbose(@"Date: %@", [self dateToString:resultDate]);
@@ -61,22 +65,32 @@
 {
     NSDate *const date = [NSDate date];
     MKLogVerbose(@"Date: %@", [self dateToString:date]);
-    NSDate *const result = [MKDateUtils dateByRemovingTimeComponentsFromDate:date];
+    NSDate *const result = [date dateByRemovingTimeComponents];
     MKLogVerbose(@"Result: %@", [self dateToString:result]);
     NSString *const expectedResultString = @"12:00:00 AM";
-    NSString *const actualResultString = [self dateToString:result withDateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterMediumStyle];
+    NSString *const actualResultString   = [self dateToString:result withDateStyle:NSDateFormatterNoStyle
+                                                    timeStyle:NSDateFormatterMediumStyle];
     XCTAssert([expectedResultString isEqualToString:actualResultString], @"Time components were not removed corectly");
 }
 
 - (void)testDateByStrippingTimeZoneInformation
 {
-    NSDate *const now = [NSDate date];
-    NSDate *const stripped = [MKDateUtils dateByStrippingTimeZoneFromDate:now];
-    NSDate *const restored = [MKDateUtils dateBySettingTimeZoneForDate:stripped];
+    NSDate *const now      = [NSDate date];
+    NSDate *const stripped = [now dateByStrippingTimeZone];
+    NSDate *const restored = [stripped dateBySettingTimeZone];
     MKLogVerbose(@"now: %@ (%@)", now, [self dateToString:now]);
     MKLogVerbose(@"stripped: %@ (%@)", stripped, [self dateToString:stripped]);
     MKLogVerbose(@"restored: %@ (%@)", restored, [self dateToString:restored]);
     // TODO: implement XCTAssert
+}
+
+- (void)testTimeDifferenceInDaysToDate
+{
+    NSDate *const now      = [NSDate date];
+    NSDate *const tomorrow = [now dateByAddingTimeInterval:(24 * 60 * 60)];
+    XCTAssert([now timeDifferenceInDaysToDate:now] == 0, @"");
+    XCTAssert([now timeDifferenceInDaysToDate:tomorrow] == 1, @"");
+    XCTAssert([tomorrow timeDifferenceInDaysToDate:now] == -1, @"");
 }
 
 - (NSString *)dateToString:(NSDate *)date
@@ -84,8 +98,7 @@
     return [self dateToString:date withDateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle];
 }
 
-- (NSString *)dateToString:(NSDate *)date
-             withDateStyle:(NSDateFormatterStyle)dateStyle
+- (NSString *)dateToString:(NSDate *)date withDateStyle:(NSDateFormatterStyle)dateStyle
                  timeStyle:(NSDateFormatterStyle)timeStyle;
 {
     static NSDateFormatter *dateFormatter;
@@ -97,6 +110,5 @@
     [dateFormatter setTimeStyle:timeStyle];
     return [dateFormatter stringFromDate:date];
 }
-
 
 @end
