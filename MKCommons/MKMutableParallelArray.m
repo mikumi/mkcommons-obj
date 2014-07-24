@@ -86,8 +86,8 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 }
 
 /**
- * // DOCU: this method comment needs be updated.
- */
+* // DOCU: this method comment needs be updated.
+*/
 - (void)insertObject:(id)object atIndex:(NSUInteger)index
 {
     @synchronized(self) {
@@ -101,7 +101,9 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 */
 - (id)objectAtIndex:(NSUInteger)index
 {
-    return self.objects[index];
+    @synchronized(self) {
+        return self.objects[index];
+    }
 }
 
 /**
@@ -116,22 +118,24 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 }
 
 /**
- * // DOCU: this method comment needs be updated.
- */
+* // DOCU: this method comment needs be updated.
+*/
 - (void)removeObject:(id)object
 {
     @synchronized(self) {
-        [self.objects removeObjectAtIndex:[self indexOfObject:object]];
+        [self.objects removeObjectAtIndex:[self.objects indexOfObject:object]];
     }
     [self postUpdateNotification];
 }
 
 /**
- * // DOCU: this method comment needs be updated.
- */
+* // DOCU: this method comment needs be updated.
+*/
 - (NSUInteger)indexOfObject:(id)object
 {
-    return [self.objects indexOfObject:object];
+    @synchronized(self) {
+        return [self.objects indexOfObject:object];
+    }
 }
 
 /**
@@ -139,7 +143,9 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 */
 - (BOOL)contains:(id)object
 {
-    return [self.objects containsObject:object];
+    @synchronized(self) {
+        return [self.objects containsObject:object];
+    }
 }
 
 /**
@@ -147,7 +153,9 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 */
 - (NSArray *)asArray
 {
-    return [NSArray arrayWithArray:self.objects];
+    @synchronized(self) {
+        return [NSArray arrayWithArray:self.objects];
+    }
 }
 
 /**
@@ -155,7 +163,9 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 */
 - (NSUInteger)count
 {
-    return [self.objects count];
+    @synchronized(self) {
+        return [self.objects count];
+    }
 }
 
 //=== Private Implementation ===//
