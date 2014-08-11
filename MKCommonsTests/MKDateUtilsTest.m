@@ -13,6 +13,7 @@
 @interface MKDateUtilsTest : XCTestCase
 
 - (NSString *)dateToString:(NSDate *)date;
+- (NSString *)dateToString:(NSDate *)date withDateStyle:(NSDateFormatterStyle)dateStyle timeStyle:(NSDateFormatterStyle)timeStyle;
 
 @end
 
@@ -93,6 +94,22 @@
     XCTAssert([tomorrow timeDifferenceInDaysToDate:now] == -1, @"");
 }
 
+- (void)testDateFromString
+{
+    NSString *const testString1 = @"2014-01-02 03:04:05.006";
+    NSString *const testFormat1 = @"yyyy-MM-dd HH:mm:ss.SSS";
+    NSDate *const testDate = [NSDate dateFromString:testString1 format:testFormat1];
+    XCTAssertEqual(testDate.year, 2014, @"Year did not match");
+    XCTAssertEqual(testDate.month, 1, @"Year did not match");
+    XCTAssertEqual(testDate.day, 2, @"Year did not match");
+    XCTAssertEqual(testDate.hour, 3, @"Year did not match");
+    XCTAssertEqual(testDate.minute, 4, @"Year did not match");
+    XCTAssertEqual(testDate.second, 5, @"Year did not match");
+}
+
+//=== Private Implementation ===//
+#pragma mark - Private Implementation
+
 - (NSString *)dateToString:(NSDate *)date
 {
     return [self dateToString:date withDateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle];
@@ -110,5 +127,6 @@
     [dateFormatter setTimeStyle:timeStyle];
     return [dateFormatter stringFromDate:date];
 }
+
 
 @end

@@ -10,6 +10,8 @@
 
 @interface NSDate (MKDateUtils)
 
++ (NSDate *)dateFromString:(NSString *)dateString format:(NSString *)dateFormat;
+
 - (NSDate *)dateByMatchingTimeComponentsFromDate:(NSDate *)date;
 - (NSDate *)dateByMatchingDateComponentsFromDate:(NSDate *)date;
 - (NSDate *)dateByStrippingTimeZone;
@@ -26,5 +28,12 @@
 - (BOOL)isAfterDate:(NSDate *)date;
 
 - (NSInteger)timeDifferenceInDaysToDate:(NSDate *)date;
+
+- (NSInteger)year;
+- (NSInteger)month;
+- (NSInteger)day;
+- (NSInteger)hour;
+- (NSInteger)minute;
+- (NSInteger)second;
 
 @end
