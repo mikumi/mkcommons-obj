@@ -210,7 +210,6 @@
 
 /**
 * Positive if date is after receiver, negative if it's before. 0 if no difference in days
-* // DOCU: this method comment needs be updated.
 */
 - (NSInteger)timeDifferenceInDaysToDate:(NSDate *)date
 {
