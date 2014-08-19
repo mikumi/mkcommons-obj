@@ -96,8 +96,8 @@
 
 - (void)testDateFromString
 {
-    NSString *const testString1 = @"2014-01-02 03:04:05.006";
-    NSString *const testFormat1 = @"yyyy-MM-dd HH:mm:ss.SSS";
+    NSString *const testString1 = @"2014-01-02T03:04:05.006";
+    NSString *const testFormat1 = @"yyyy-MM-dd'T'HH:mm:ss.SSS";
     NSDate *const testDate = [NSDate dateFromString:testString1 format:testFormat1];
     XCTAssertEqual(testDate.year, 2014, @"Year did not match");
     XCTAssertEqual(testDate.month, 1, @"Year did not match");
