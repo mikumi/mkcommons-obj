@@ -61,7 +61,16 @@
     return path;
 }
 
-//=== Private Implementation ===//
-#pragma mark - Private Implementation
+/**
+* Returns the build number specified in the application bundle.
+*
+* @return NSUInteger containing the build number
+*/
++ (NSUInteger)buildNumber
+{
+    NSUInteger const buildNumber = (NSUInteger)[[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
+            integerValue];
+    return buildNumber;
+}
 
 @end

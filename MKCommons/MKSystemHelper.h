@@ -20,5 +20,6 @@ typedef NS_ENUM(NSUInteger, MKSystemHelperPathType) {
 + (BOOL)isLegacyPlatform;
 + (BOOL)isRunningOnPhone;
 + (NSString *)pathToDirectory:(MKSystemHelperPathType)pathType;
++ (NSUInteger)buildNumber();
 
 @end
