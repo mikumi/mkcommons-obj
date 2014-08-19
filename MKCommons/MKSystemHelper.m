@@ -73,4 +73,12 @@
     return buildNumber;
 }
 
++ (NSString *)versionString
+{
+    NSString *const versionString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    return versionString;
+}
+
+
+
 @end
