@@ -46,6 +46,7 @@
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
 		60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A005B01938673800583927 /* UIColor+MKCommons.m */; };
+		60C3B28C19A4386A004861F6 /* NSError+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE94EE79266E97003E8CA /* NSError+MKCommons.h */; };
 		60D6D218195BF26200866E0F /* UIPopoverController+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6D217195BF26200866E0F /* UIPopoverController+MKCommons.m */; };
 		60D6D21C195BF43900866E0F /* UIPopoverController+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60D6D216195BF26200866E0F /* UIPopoverController+MKCommons.h */; };
 		60D6D222195BF92A00866E0F /* UIViewController+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6D21F195BF70100866E0F /* UIViewController+MKCommons.m */; };
@@ -71,6 +72,7 @@
 		60FBB6801929D82B008D21C7 /* MKDateUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */; };
 		DF2AE278FD9BF72F976E6ADE /* MKSynchronizedCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE2E3C9EE7F9FDC9A5F0C /* MKSynchronizedCounter.m */; };
 		DF2AE4F65CD658D6FEDCDBAC /* NSString+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE2516A657CDD850D4202 /* NSString+MKCommons.m */; };
+		DF2AEAB41729C7D4BDEE7847 /* NSError+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE6544D072DB478FCC9C5 /* NSError+MKCommons.m */; };
 		DF2AEB75538B99F0E06DBE12 /* MKMutableParallelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */; };
 		DF2AED0046C0B1A3E6803B31 /* MKFormTableViewCellDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE997DB915710E59345EA /* MKFormTableViewCellDatePicker.m */; };
 /* End PBXBuildFile section */
@@ -108,6 +110,7 @@
 				60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */,
 				60F8493C19454B2000747904 /* NSTimeZone+MKDateUtils.h in CopyFiles */,
 				6036B07C1945BA64005FF6E6 /* UIButton+MKCommons.h in CopyFiles */,
+				60C3B28C19A4386A004861F6 /* NSError+MKCommons.h in CopyFiles */,
 				605A8263196000030088FA50 /* UIImage+MKCommons.h in CopyFiles */,
 				60D6D223195BF93100866E0F /* UIViewController+MKCommons.h in CopyFiles */,
 				6027BB8A19389649000E6A64 /* UIView+MKConstraints.h in CopyFiles */,
@@ -191,6 +194,8 @@
 		DF2AE2E3C9EE7F9FDC9A5F0C /* MKSynchronizedCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSynchronizedCounter.m; sourceTree = "<group>"; };
 		DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMutableParallelArray.h; sourceTree = "<group>"; };
 		DF2AE5DB60472766858A9669 /* NSString+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKCommons.h"; sourceTree = "<group>"; };
+		DF2AE6544D072DB478FCC9C5 /* NSError+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+MKCommons.m"; sourceTree = "<group>"; };
+		DF2AE94EE79266E97003E8CA /* NSError+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+MKCommons.h"; sourceTree = "<group>"; };
 		DF2AE95F7EB7726DD3E1B859 /* MKSynchronizedCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSynchronizedCounter.h; sourceTree = "<group>"; };
 		DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellDatePicker.h; sourceTree = "<group>"; };
 		DF2AE997DB915710E59345EA /* MKFormTableViewCellDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellDatePicker.m; sourceTree = "<group>"; };
@@ -287,6 +292,8 @@
 				60F768DA17F529D500937CB1 /* MKSystemHelper.m */,
 				DF2AE2E3C9EE7F9FDC9A5F0C /* MKSynchronizedCounter.m */,
 				DF2AE95F7EB7726DD3E1B859 /* MKSynchronizedCounter.h */,
+				DF2AE6544D072DB478FCC9C5 /* NSError+MKCommons.m */,
+				DF2AE94EE79266E97003E8CA /* NSError+MKCommons.h */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -517,6 +524,7 @@
 				6036B07B1945BA5E005FF6E6 /* UIButton+MKCommons.m in Sources */,
 				600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */,
 				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
+				DF2AEAB41729C7D4BDEE7847 /* NSError+MKCommons.m in Sources */,
 				60F8493A19454B1600747904 /* NSDate+MKDateUtils.m in Sources */,
 				60D6D222195BF92A00866E0F /* UIViewController+MKCommons.m in Sources */,
 				6002720E1943183B00FDC20E /* MKBigLoadingIndicator.m in Sources */,
