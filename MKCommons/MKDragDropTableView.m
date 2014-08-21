@@ -14,7 +14,7 @@
 @interface MKDragDropTableView ()
 
 @property (nonatomic, weak) UITableViewCell *draggedCell;
-@property (nonatomic, strong) UIImageView   *cellSnapshot;
+@property (nonatomic, strong) UIImageView   *cellSnapshotView;
 @property (nonatomic, assign) CGPoint       previousTouchLocation;
 
 @end
@@ -114,19 +114,18 @@
     NSIndexPath *const indexPathOfDraggedCell = [self indexPathForRowAtPoint:touchLocation];
     self.draggedCell = [self cellForRowAtIndexPath:indexPathOfDraggedCell];
 
-    self.draggedCell.selected = NO;
+    // Take cell snapshot and add as subview
+    self.draggedCell.selected = NO; // It's important to deselect the cell *before* taking the snapshot
+    UIImage *const cellSnapshotImage = [self.draggedCell takeSnapshot];
+    self.cellSnapshotView = [[UIImageView alloc] initWithImage:cellSnapshotImage];
 
-    // take the snapshot
-    UIImage *cellSnapshot = [self.draggedCell takeSnapshot];
-
-    // add snapshot image as subview
-    self.cellSnapshot = [[UIImageView alloc] initWithImage:cellSnapshot];
     CGRect snapshotFrame = [self rectForRowAtIndexPath:indexPathOfDraggedCell];
     snapshotFrame.size = self.draggedCell.frame.size;
     snapshotFrame.origin.y -= 5; // Offset the snapshot a bit making it look like it has been lifted up
-    [self.cellSnapshot setFrame:snapshotFrame];
-    [self.cellSnapshot setAlpha:0.95f];
-    [self addSubview:self.cellSnapshot];
+    [self.cellSnapshotView setFrame:snapshotFrame];
+    [self.cellSnapshotView setAlpha:0.95f];
+    [self addSubview:self.cellSnapshotView];
+
     // make the original cell invisible to make it look like the snapshot is the real one
     self.draggedCell.hidden = YES;
 
@@ -137,22 +136,19 @@
 - (void)cellDraggingDidContinue:(CGPoint)touchLocation
 {
     // Update position of snapshot
-    CGRect snapshotFrame = [self.cellSnapshot frame];
-//    snapshotFrame.origin.y  = touchLocation.y + self.currentCellSnapshotOffsetY;
-    snapshotFrame.origin.y  = snapshotFrame.origin.y + (touchLocation.y - self.previousTouchLocation.y);
-    self.cellSnapshot.frame = snapshotFrame;
+    CGRect snapshotFrame = [self.cellSnapshotView frame];
+    snapshotFrame.origin.y      = snapshotFrame.origin.y + (touchLocation.y - self.previousTouchLocation.y);
+    self.cellSnapshotView.frame = snapshotFrame;
 
-    // Update table
-    NSIndexPath *indexPathNew = [self indexPathForRowAtPoint:touchLocation];
-    NSIndexPath *indexPathOld = [self indexPathForCell:self.draggedCell];
+    NSIndexPath *const indexPathAtTouchLocation = [self indexPathForRowAtPoint:touchLocation];
+    NSIndexPath *const indexPathOfCell          = [self indexPathForCell:self.draggedCell];
 
-    if (indexPathNew && (indexPathNew.row != indexPathOld.row) && (indexPathNew.row != NSNotFound) &&
-        (indexPathNew.section == indexPathOld.section)) {
-        // TODO: delegate didMove to datasource
+    if (indexPathAtTouchLocation && (indexPathAtTouchLocation.row != indexPathOfCell.row) &&
+        (indexPathAtTouchLocation.row != NSNotFound) && (indexPathAtTouchLocation.section == indexPathOfCell.section)) {
         [self beginUpdates];
-        [self moveRowAtIndexPath:indexPathOld toIndexPath:indexPathNew];
-        // I would expect this to be called by the call above, but it doesn't. so we have to do it manually
-        [self.dataSource tableView:self moveRowAtIndexPath:indexPathOld toIndexPath:indexPathNew];
+        [self moveRowAtIndexPath:indexPathOfCell toIndexPath:indexPathAtTouchLocation];
+        // I would expect this to be called by the call above, but that doesn't seem to be true. so we have to do it manually
+        [self.dataSource tableView:self moveRowAtIndexPath:indexPathOfCell toIndexPath:indexPathAtTouchLocation];
         [self endUpdates];
     }
 
@@ -165,13 +161,13 @@
     CGRect      newSnapshotFrame        = [self rectForRowAtIndexPath:indexPathOfDraggedCell];
 
     [UIView animateWithDuration:0.2 animations:^{
-        [[self cellSnapshot] setFrame:newSnapshotFrame];
-        [[self cellSnapshot] setAlpha:1.0];
+        [[self cellSnapshotView] setFrame:newSnapshotFrame];
+        [[self cellSnapshotView] setAlpha:1.0];
     } completion:^(BOOL completion) {
         if (completion) {
-            [[self cellSnapshot] removeFromSuperview];
-            [self reloadData];
+            [[self cellSnapshotView] removeFromSuperview];
             self.draggedCell.hidden = NO;
+            [self reloadRowsAtIndexPaths:self.indexPathsForVisibleRows withRowAnimation:UITableViewRowAnimationNone];
         }
     }];
 }
