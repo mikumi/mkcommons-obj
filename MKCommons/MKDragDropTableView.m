@@ -17,6 +17,8 @@
 @property (nonatomic, strong) UIImageView   *cellSnapshotView;
 @property (nonatomic, assign) CGPoint       previousTouchLocation;
 
+- (void)initializeInstance;
+
 @end
 
 //============================================================
