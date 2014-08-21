@@ -454,6 +454,7 @@
 		60F7688F17F5264B00937CB1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MK;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Michael Kuck";
 			};
