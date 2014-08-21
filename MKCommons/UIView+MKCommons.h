@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (MKConstraints)
+@interface UIView (MKCommons)
 
 //=== Match parent constraints ===//
 - (void)addConstraintsToMatchParentView:(UIView *)parentView;
@@ -39,5 +39,8 @@
 
 //=== Reset ===//
 - (void)removeAllConstraints;
+
+//=== Other stuff
+- (UIImage *)takeSnapshot;
 
 @end

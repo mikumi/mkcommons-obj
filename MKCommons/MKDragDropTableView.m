@@ -4,7 +4,9 @@
 //
 
 #import "MKDragDropTableView.h"
+
 #import "MKLog.h"
+#import "UIView+MKCommons.h"
 
 //============================================================
 //== Private Interface
@@ -115,7 +117,7 @@
     draggedCell.selected = NO;
 
     // take the snapshot
-    UIImage *cellSnapshot = [self takeSnapshotOfView:draggedCell];
+    UIImage *cellSnapshot = [draggedCell takeSnapshot];
 
     // add snapshot image as subview
     UIImageView *const draggedCellSnapshotView = [[UIImageView alloc] initWithImage:cellSnapshot];
@@ -133,16 +135,6 @@
     self.cellSnapshot        = draggedCellSnapshotView;
     self.cellSnapshotOffsetY = (NSInteger)(draggedCellSnapshotView.frame.origin.y - touchLocation.y);
     self.cellToMove          = draggedCell;
-}
-
-- (UIImage *)takeSnapshotOfView:(UIView *)view
-{
-    CGRect const viewFrame = [view bounds];
-    UIGraphicsBeginImageContextWithOptions(viewFrame.size, YES, [UIScreen mainScreen].scale);
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *const snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return snapshotImage;
 }
 
 - (void)cellDraggingDidContinue:(CGPoint)touchLocation
