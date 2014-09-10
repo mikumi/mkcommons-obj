@@ -24,13 +24,23 @@
 /**
 * Find out if the current platform is running iOS 7.0 or anything below.
 *
-*
 * @return True if < 7.0, false if >= 7.0.
 */
-+ (BOOL)isLegacyPlatform
++ (BOOL)isOS6OrLessPlatform
 {
     BOOL iOS6OrLess = kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_6_1;
     return iOS6OrLess;
+}
+
+/**
+* Find out if the current platform is running iOS 8.0 or anything below.
+*
+* @return True if < 8.0, false if >= 8.0.
+*/
++ (BOOL)isOS7OrLessPlatform
+{
+    BOOL iOS7OrLess = kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_7_1;
+    return iOS7OrLess;
 }
 
 /**

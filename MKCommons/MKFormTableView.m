@@ -215,21 +215,21 @@
              (![nextCell isKindOfClass:[MKFormTableViewCellSeparator class]])) ||
             ((![cell isKindOfClass:[MKFormTableViewCellSeparator class]]) &&
              ([nextCell isKindOfClass:[MKFormTableViewCellSeparator class]]))) {
-            if ([MKSystemHelper isLegacyPlatform]) {
+            if ([MKSystemHelper isOS6OrLessPlatform]) {
                 // TODO: implement
             } else {
                 cell.separatorInset = UIEdgeInsetsZero;
             }
         } else if (([cell isKindOfClass:[MKFormTableViewCellSeparator class]]) &&
                    ([nextCell isKindOfClass:[MKFormTableViewCellSeparator class]])) {
-            if ([MKSystemHelper isLegacyPlatform]) {
+            if ([MKSystemHelper isOS6OrLessPlatform]) {
                 // TODO: implement
             } else {
                 cell.separatorInset = UIEdgeInsetsMake(0, self.frame.size.width, 0, 0);
             }
         }
     } else { // if last cell
-        if ([MKSystemHelper isLegacyPlatform]) {
+        if ([MKSystemHelper isOS6OrLessPlatform]) {
             // TODO: implement
         } else {
             cell.separatorInset = UIEdgeInsetsMake(0, self.frame.size.width, 0, 0);

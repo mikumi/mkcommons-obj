@@ -40,6 +40,8 @@ extern NSString *const MKPreferencesManagerChangedKeys;
 
 - (void)synchronize;
 
+- (void)setSuiteNameForLocalStore:(NSString *)localStoreId;
+
 - (void)addSyncIgnoreKey:(NSString *)key;
 - (void)removeSyncIgnoreKey:(NSString *)key;
 - (NSArray *)syncIgnoreKeys;
