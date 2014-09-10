@@ -219,6 +219,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
     } else {
         MKLogDebug(@"Setting suit name for local store to: %@", localStoreId)
         self.localStore = [[NSUserDefaults alloc] initWithSuiteName:localStoreId];
+        [self.localStore synchronize];
     }
 }
 #pragma clang diagnostic pop
