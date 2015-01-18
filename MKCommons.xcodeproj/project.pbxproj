@@ -40,6 +40,8 @@
 		603FE23C17FA6D970044ED58 /* MKPreferencesManagerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */; };
 		6043E92F19584FA80055E5B0 /* MKSynchronizedCounter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE95F7EB7726DD3E1B859 /* MKSynchronizedCounter.h */; };
 		60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */; };
+		60576E2619D936860025C1D9 /* MKEmailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 60576E2519D936860025C1D9 /* MKEmailHelper.m */; };
+		60576E2819D938B70025C1D9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60576E2719D938B70025C1D9 /* MessageUI.framework */; };
 		605A44E219A486280014A22D /* MKUIThemeProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AEFAED2328D3A0B56FE2A /* MKUIThemeProtocol.h */; };
 		605A44E619A4E7CC0014A22D /* MKDragDropTableView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AEB9181C57D7DD57BE07B /* MKDragDropTableView.h */; };
 		605A8262195FFFF50088FA50 /* UIImage+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 605A8261195FFFF50088FA50 /* UIImage+MKCommons.m */; };
@@ -156,6 +158,9 @@
 		603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPreferencesManager.h; sourceTree = "<group>"; };
 		603FE1C317F9B6770044ED58 /* MKPreferencesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManager.m; sourceTree = "<group>"; };
 		603FE23B17FA6D970044ED58 /* MKPreferencesManagerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManagerTest.m; sourceTree = "<group>"; };
+		60576E2419D936860025C1D9 /* MKEmailHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKEmailHelper.h; sourceTree = "<group>"; };
+		60576E2519D936860025C1D9 /* MKEmailHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKEmailHelper.m; sourceTree = "<group>"; };
+		60576E2719D938B70025C1D9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		605A8260195FFFF50088FA50 /* UIImage+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MKCommons.h"; sourceTree = "<group>"; };
 		605A8261195FFFF50088FA50 /* UIImage+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MKCommons.m"; sourceTree = "<group>"; };
 		607A153017FC114B00269FD9 /* MKStopWatchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStopWatchTest.m; sourceTree = "<group>"; };
@@ -218,6 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60576E2819D938B70025C1D9 /* MessageUI.framework in Frameworks */,
 				603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */,
 				603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */,
 			);
@@ -317,6 +323,8 @@
 		603C1FF11910E07F00CAA66B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				60576E2419D936860025C1D9 /* MKEmailHelper.h */,
+				60576E2519D936860025C1D9 /* MKEmailHelper.m */,
 				60F768D717F529D500937CB1 /* MKSerialManager.h */,
 				60F768D817F529D500937CB1 /* MKSerialManager.m */,
 				60F768DB17F529D500937CB1 /* MKStopwatch.h */,
@@ -354,6 +362,7 @@
 		60F7689917F5264B00937CB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60576E2719D938B70025C1D9 /* MessageUI.framework */,
 				603C1FFB1910E6CD00CAA66B /* UIKit.framework */,
 				60F7689A17F5264B00937CB1 /* Foundation.framework */,
 				60F768A817F5264B00937CB1 /* XCTest.framework */,
@@ -537,6 +546,7 @@
 				60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */,
 				607DB052180814D30005B256 /* MKJsonObject.m in Sources */,
 				603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */,
+				60576E2619D936860025C1D9 /* MKEmailHelper.m in Sources */,
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
 				6036B07B1945BA5E005FF6E6 /* UIButton+MKCommons.m in Sources */,
 				600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */,
