@@ -93,7 +93,7 @@ extern void __gcov_flush();
             [serials addObject:serial];
         }
         if ((i % 10) == 0) {
-            MKLogVerbose(@"%lu serials found. continue searching...", (unsigned long)[serials count]);
+            MKLogDebug(@"%lu serials found. continue searching...", (unsigned long)[serials count]);
         }
         i--;
     }

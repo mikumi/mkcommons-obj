@@ -71,7 +71,7 @@
 */
 - (void)initializeInstance
 {
-    MKLogVerbose(@"Initializing instance...");
+    MKLogDebug(@"Initializing instance...");
     UIGestureRecognizer *const longPressRecognizer = [[UILongPressGestureRecognizer alloc]
             initWithTarget:self action:@selector(handleLongEvent:)];
     [self addGestureRecognizer:longPressRecognizer];
@@ -112,7 +112,7 @@
 
 - (void)cellDraggingDidBegin:(CGPoint)touchLocation
 {
-    MKLogVerbose(@"Dragging did begin.")
+    MKLogDebug(@"Dragging did begin.")
     NSIndexPath *const indexPathOfDraggedCell = [self indexPathForRowAtPoint:touchLocation];
     self.draggedCell = [self cellForRowAtIndexPath:indexPathOfDraggedCell];
 

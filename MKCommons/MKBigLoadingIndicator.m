@@ -93,7 +93,7 @@ static NSString   *_indicatorText    = @"Loading";
  */
 - (void)dealloc
 {
-    MKLogVerbose(@"dealloc");
+    MKLogDebug(@"dealloc");
     [self loadingDidFinish];
 }
 
@@ -122,7 +122,7 @@ static NSString   *_indicatorText    = @"Loading";
 {
     @synchronized(CounterLock) {
         _counter++;
-        MKLogVerbose(@"Counter was increased to %lu", (unsigned long)_counter);
+        MKLogDebug(@"Counter was increased to %lu", (unsigned long)_counter);
         [MKBigLoadingIndicator updateLoadingIndicator];
     }
 }
@@ -135,7 +135,7 @@ static NSString   *_indicatorText    = @"Loading";
     @synchronized(CounterLock) {
         if (_counter > 0) {
             _counter--;
-            MKLogVerbose(@"Counter was decreased to %lu", (unsigned long)_counter);
+            MKLogDebug(@"Counter was decreased to %lu", (unsigned long)_counter);
             [MKBigLoadingIndicator updateLoadingIndicator];
         }
     }

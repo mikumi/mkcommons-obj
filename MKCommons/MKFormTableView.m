@@ -65,7 +65,7 @@
 */
 - (void)initializeInstance
 {
-    MKLogVerbose(@"Initializing instance...");
+    MKLogDebug(@"Initializing instance...");
     self.delegate        = self;
     self.dataSource      = self;
     self.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 0)];

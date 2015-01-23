@@ -72,7 +72,7 @@ typedef void (^MKRemoteSettingsFailureBlock)(NSError *error);
         if (error) {
             MKLogError(@"Error while parsing remote json obect: %@", [error localizedDescription]);
         }
-        MKLogVerbose(@"JSON download finished.");
+        MKLogDebug(@"JSON download finished.");
         dispatch_async(dispatch_get_main_queue(), ^{
             if (error == nil) {
                 if (self.successBlock != nil) {
