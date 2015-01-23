@@ -18,6 +18,9 @@
 
 + (UIColor *)navigationBarContentColor;
 
++ (CGFloat)bigViewPadding;
++ (CGFloat)defaultViewPadding;
+
 + (void)configureApplication;
 
 @end
