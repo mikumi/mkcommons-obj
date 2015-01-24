@@ -10,6 +10,6 @@
 //============================================================
 @interface NSString (MKCommons)
 
-- (BOOL)containsString:(NSString *)substring;
+- (BOOL)containsSubstring:(NSString *)substring;
 
 @end

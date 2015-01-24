@@ -10,13 +10,9 @@
 //============================================================
 @implementation NSString (MKCommons)
 
-- (BOOL)containsString:(NSString *)substring
+- (BOOL)containsSubstring:(NSString *)substring
 {
-    if ([self rangeOfString:substring].location == NSNotFound) {
-        return NO;
-    } else {
-        return YES;
-    }
+    return [self rangeOfString:substring].location != NSNotFound;
 }
 
 @end
