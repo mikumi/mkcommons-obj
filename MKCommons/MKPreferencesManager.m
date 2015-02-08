@@ -79,7 +79,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 {
     [self.localStore synchronize];
     [self.iCloudStore synchronize];
-    // TODO: synchronize all keys
+    MKLogDebug(@"PreferencesManager keys synchronized.")
 }
 
 /**
@@ -132,7 +132,8 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 - (BOOL)boolForKey:(NSString *)key
 {
     BOOL value = NO;
-    if ((![self.ignoreListForSyncing containsObject:key]) && ([self.iCloudStore objectForKey:key] != nil)) {
+    if ((![self.ignoreListForSyncing containsObject:key]) &&
+        [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
         value = [self.iCloudStore boolForKey:key];
         [self.localStore setBool:value forKey:key];
     } else {
@@ -147,7 +148,8 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 - (double)doubleForKey:(NSString *)key
 {
     double value = 0.0f;
-    if ((![self.ignoreListForSyncing containsObject:key]) && ([self.iCloudStore objectForKey:key] != nil)) {
+    if ((![self.ignoreListForSyncing containsObject:key]) &&
+        [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
         value = [self.iCloudStore doubleForKey:key];
         [self.localStore setDouble:value forKey:key];
     } else {
@@ -162,7 +164,8 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 - (NSInteger)integerForKey:(NSString *)key
 {
     NSInteger value = 0;
-    if ((![self.ignoreListForSyncing containsObject:key]) && ([self.iCloudStore objectForKey:key] != nil)) {
+    if ((![self.ignoreListForSyncing containsObject:key]) &&
+        [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
         value = (NSInteger)[self.iCloudStore longLongForKey:key];
         [self.localStore setInteger:value forKey:key];
     } else {
@@ -177,7 +180,8 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 - (id)objectForKey:(NSString *)key
 {
     id value = nil;
-    if ((![self.ignoreListForSyncing containsObject:key]) && ([self.iCloudStore objectForKey:key] != nil)) {
+    if ((![self.ignoreListForSyncing containsObject:key]) &&
+        [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
         value = [self.iCloudStore objectForKey:key];
         [self.localStore setObject:value forKey:key];
     } else {
