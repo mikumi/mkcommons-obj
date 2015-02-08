@@ -49,6 +49,7 @@
 		606A1F3C19344B0B00FA17F9 /* MKMutableParallelArray.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */; };
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
+		608C19CF1A80BCC60011F0B3 /* MKPermissionUtil.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE6A7C17B0BD8CBA28B64 /* MKPermissionUtil.h */; };
 		60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A005B01938673800583927 /* UIColor+MKCommons.m */; };
 		60C3B28C19A4386A004861F6 /* NSError+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE94EE79266E97003E8CA /* NSError+MKCommons.h */; };
 		60D6D218195BF26200866E0F /* UIPopoverController+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6D217195BF26200866E0F /* UIPopoverController+MKCommons.m */; };
@@ -77,6 +78,7 @@
 		DF2AE278FD9BF72F976E6ADE /* MKSynchronizedCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE2E3C9EE7F9FDC9A5F0C /* MKSynchronizedCounter.m */; };
 		DF2AE33CD61625129E2D3BE6 /* UISegmentedControl+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE5BF6249B556E398604A /* UISegmentedControl+MKCommons.m */; };
 		DF2AE4F65CD658D6FEDCDBAC /* NSString+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE2516A657CDD850D4202 /* NSString+MKCommons.m */; };
+		DF2AE6F1166D115DC7539C48 /* MKPermissionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEE6B281A1654D6B966AC /* MKPermissionUtil.m */; };
 		DF2AE86A046A5A296663BB69 /* MKDragDropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEBA9542DB4521794D49A /* MKDragDropTableView.m */; };
 		DF2AE8B788E33C5D2CA206B9 /* UIImageView+MKParallax.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEC8CBFB31A13327DF5EE /* UIImageView+MKParallax.m */; };
 		DF2AEAB41729C7D4BDEE7847 /* NSError+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE6544D072DB478FCC9C5 /* NSError+MKCommons.m */; };
@@ -101,6 +103,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				608C19CF1A80BCC60011F0B3 /* MKPermissionUtil.h in CopyFiles */,
 				605A44E219A486280014A22D /* MKUIThemeProtocol.h in CopyFiles */,
 				603C20111911056600CAA66B /* MKFallbackQueue.h in CopyFiles */,
 				603C20121911056600CAA66B /* MKJsonObject.h in CopyFiles */,
@@ -209,6 +212,7 @@
 		DF2AE5DB60472766858A9669 /* NSString+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKCommons.h"; sourceTree = "<group>"; };
 		DF2AE63FFF12DEA0E2227920 /* UISegmentedControl+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+MKCommons.h"; sourceTree = "<group>"; };
 		DF2AE6544D072DB478FCC9C5 /* NSError+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+MKCommons.m"; sourceTree = "<group>"; };
+		DF2AE6A7C17B0BD8CBA28B64 /* MKPermissionUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPermissionUtil.h; sourceTree = "<group>"; };
 		DF2AE94EE79266E97003E8CA /* NSError+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+MKCommons.h"; sourceTree = "<group>"; };
 		DF2AE95F7EB7726DD3E1B859 /* MKSynchronizedCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSynchronizedCounter.h; sourceTree = "<group>"; };
 		DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellDatePicker.h; sourceTree = "<group>"; };
@@ -218,6 +222,7 @@
 		DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMutableParallelArray.m; sourceTree = "<group>"; };
 		DF2AEC8CBFB31A13327DF5EE /* UIImageView+MKParallax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MKParallax.m"; sourceTree = "<group>"; };
 		DF2AECC8E5BF022419FF616A /* UIImageView+MKParallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MKParallax.h"; sourceTree = "<group>"; };
+		DF2AEE6B281A1654D6B966AC /* MKPermissionUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPermissionUtil.m; sourceTree = "<group>"; };
 		DF2AEFAED2328D3A0B56FE2A /* MKUIThemeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUIThemeProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -321,6 +326,8 @@
 				DF2AE95F7EB7726DD3E1B859 /* MKSynchronizedCounter.h */,
 				DF2AE6544D072DB478FCC9C5 /* NSError+MKCommons.m */,
 				DF2AE94EE79266E97003E8CA /* NSError+MKCommons.h */,
+				DF2AEE6B281A1654D6B966AC /* MKPermissionUtil.m */,
+				DF2AE6A7C17B0BD8CBA28B64 /* MKPermissionUtil.h */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -571,6 +578,8 @@
 				DF2AE86A046A5A296663BB69 /* MKDragDropTableView.m in Sources */,
 				DF2AE8B788E33C5D2CA206B9 /* UIImageView+MKParallax.m in Sources */,
 				DF2AE33CD61625129E2D3BE6 /* UISegmentedControl+MKCommons.m in Sources */,
+				DF2AE6F1166D115DC7539C48 /* MKPermissionUtil.m in Sources */,
+				DF2AE21629B12C5F5C97D6BC /* UIAlertView+MKCommons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
