@@ -40,10 +40,10 @@ extern void _MK_LOG_INTERNAL(MKLogLevel logLevel, NSString *className, NSUIntege
 }
 
 #define MKLogDebug(message, ...) { \
-NSString *_mk_log_className = NSStringFromClass([self class]); \
-NSUInteger _mk_log_line = __LINE__; \
-NSString *_mk_log_message = [NSString stringWithFormat:(message),##__VA_ARGS__]; \
-_MK_LOG_INTERNAL(MKLogLevelDebug, _mk_log_className, _mk_log_line, _mk_log_message); \
+    NSString *_mk_log_className = NSStringFromClass([self class]); \
+    NSUInteger _mk_log_line = __LINE__; \
+    NSString *_mk_log_message = [NSString stringWithFormat:(message),##__VA_ARGS__]; \
+    _MK_LOG_INTERNAL(MKLogLevelDebug, _mk_log_className, _mk_log_line, _mk_log_message); \
 }
 
 #define MKLogVerbose(message, ...) { \

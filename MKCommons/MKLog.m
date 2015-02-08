@@ -34,7 +34,7 @@ MKLogLevel MKGetCurrentLogLevel() {
  *
  * @param enabled Set to YES if timestamps should be used, otherwise NO.
  */
-extern void MKSetUseTimestamps(BOOL enabled) {
+void MKSetUseTimestamps(BOOL enabled) {
     _isUsingTimestamps = enabled;
 }
 
@@ -43,14 +43,14 @@ extern void MKSetUseTimestamps(BOOL enabled) {
  *
  * @return YES if using timestamps, otherwise NO.
  */
-extern BOOL MKIsUsingTimestamps() {
+BOOL MKIsUsingTimestamps() {
     return _isUsingTimestamps;
 }
 
 /**
  * Method for internal use only. Use MKLog[Level](...) instead.
  */
-extern void _MK_LOG_INTERNAL(MKLogLevel logLevel, NSString *className, NSUInteger line, NSString *message) {
+void _MK_LOG_INTERNAL(MKLogLevel logLevel, NSString *className, NSUInteger line, NSString *message) {
     if (MKGetCurrentLogLevel() >= logLevel) {
         NSString *logLevelPrefix;
         if (logLevel == MKLogLevelError) {
