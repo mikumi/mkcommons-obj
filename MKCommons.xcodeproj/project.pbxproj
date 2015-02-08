@@ -49,6 +49,7 @@
 		606A1F3C19344B0B00FA17F9 /* MKMutableParallelArray.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */; };
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
 		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
+		608C19CE1A80BC730011F0B3 /* UIAlertView+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE0AECE5D8AF3C42B1A2D /* UIAlertView+MKCommons.h */; };
 		608C19CF1A80BCC60011F0B3 /* MKPermissionUtil.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE6A7C17B0BD8CBA28B64 /* MKPermissionUtil.h */; };
 		60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A005B01938673800583927 /* UIColor+MKCommons.m */; };
 		60C3B28C19A4386A004861F6 /* NSError+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE94EE79266E97003E8CA /* NSError+MKCommons.h */; };
@@ -75,6 +76,7 @@
 		60F9B90A17F971540086A155 /* MKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90917F971540086A155 /* MKLog.m */; };
 		60F9B90C17F973400086A155 /* MKLogTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60F9B90B17F973400086A155 /* MKLogTest.m */; };
 		60FBB6801929D82B008D21C7 /* MKDateUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */; };
+		DF2AE21629B12C5F5C97D6BC /* UIAlertView+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEA37A1B8CDF7B0069532 /* UIAlertView+MKCommons.m */; };
 		DF2AE278FD9BF72F976E6ADE /* MKSynchronizedCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE2E3C9EE7F9FDC9A5F0C /* MKSynchronizedCounter.m */; };
 		DF2AE33CD61625129E2D3BE6 /* UISegmentedControl+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE5BF6249B556E398604A /* UISegmentedControl+MKCommons.m */; };
 		DF2AE4F65CD658D6FEDCDBAC /* NSString+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE2516A657CDD850D4202 /* NSString+MKCommons.m */; };
@@ -122,6 +124,7 @@
 				60F8493C19454B2000747904 /* NSTimeZone+MKDateUtils.h in CopyFiles */,
 				6036B07C1945BA64005FF6E6 /* UIButton+MKCommons.h in CopyFiles */,
 				60C3B28C19A4386A004861F6 /* NSError+MKCommons.h in CopyFiles */,
+				608C19CE1A80BC730011F0B3 /* UIAlertView+MKCommons.h in CopyFiles */,
 				605A8263196000030088FA50 /* UIImage+MKCommons.h in CopyFiles */,
 				60D6D223195BF93100866E0F /* UIViewController+MKCommons.h in CopyFiles */,
 				6027BB8A19389649000E6A64 /* UIView+MKCommons.h in CopyFiles */,
@@ -205,6 +208,7 @@
 		60F9B90B17F973400086A155 /* MKLogTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLogTest.m; sourceTree = "<group>"; };
 		60FBB67F1929D82B008D21C7 /* MKDateUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDateUtilsTest.m; sourceTree = "<group>"; };
 		9D603010E3F644CBB2B68714 /* libPods-MKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKCommons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF2AE0AECE5D8AF3C42B1A2D /* UIAlertView+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKCommons.h"; sourceTree = "<group>"; };
 		DF2AE2516A657CDD850D4202 /* NSString+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKCommons.m"; sourceTree = "<group>"; };
 		DF2AE2E3C9EE7F9FDC9A5F0C /* MKSynchronizedCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSynchronizedCounter.m; sourceTree = "<group>"; };
 		DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMutableParallelArray.h; sourceTree = "<group>"; };
@@ -217,6 +221,7 @@
 		DF2AE95F7EB7726DD3E1B859 /* MKSynchronizedCounter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKSynchronizedCounter.h; sourceTree = "<group>"; };
 		DF2AE9671D343549ECC1882A /* MKFormTableViewCellDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellDatePicker.h; sourceTree = "<group>"; };
 		DF2AE997DB915710E59345EA /* MKFormTableViewCellDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellDatePicker.m; sourceTree = "<group>"; };
+		DF2AEA37A1B8CDF7B0069532 /* UIAlertView+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKCommons.m"; sourceTree = "<group>"; };
 		DF2AEB9181C57D7DD57BE07B /* MKDragDropTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKDragDropTableView.h; sourceTree = "<group>"; };
 		DF2AEBA9542DB4521794D49A /* MKDragDropTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKDragDropTableView.m; sourceTree = "<group>"; };
 		DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMutableParallelArray.m; sourceTree = "<group>"; };
@@ -292,6 +297,8 @@
 				DF2AECC8E5BF022419FF616A /* UIImageView+MKParallax.h */,
 				DF2AE5BF6249B556E398604A /* UISegmentedControl+MKCommons.m */,
 				DF2AE63FFF12DEA0E2227920 /* UISegmentedControl+MKCommons.h */,
+				DF2AEA37A1B8CDF7B0069532 /* UIAlertView+MKCommons.m */,
+				DF2AE0AECE5D8AF3C42B1A2D /* UIAlertView+MKCommons.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
