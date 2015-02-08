@@ -24,13 +24,23 @@
 /**
 * Find out if the current platform is running iOS 7.0 or anything below.
 *
-*
 * @return True if < 7.0, false if >= 7.0.
 */
-+ (BOOL)isLegacyPlatform
++ (BOOL)isOS6OrLessPlatform
 {
     BOOL iOS6OrLess = kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_6_1;
     return iOS6OrLess;
+}
+
+/**
+* Find out if the current platform is running iOS 8.0 or anything below.
+*
+* @return True if < 8.0, false if >= 8.0.
+*/
++ (BOOL)isOS7OrLessPlatform
+{
+    BOOL iOS7OrLess = kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_7_1;
+    return iOS7OrLess;
 }
 
 /**
@@ -61,7 +71,24 @@
     return path;
 }
 
-//=== Private Implementation ===//
-#pragma mark - Private Implementation
+/**
+* Returns the build number specified in the application bundle.
+*
+* @return NSUInteger containing the build number
+*/
++ (NSUInteger)buildNumber
+{
+    NSUInteger const buildNumber = (NSUInteger)[[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
+            integerValue];
+    return buildNumber;
+}
+
++ (NSString *)versionString
+{
+    NSString *const versionString = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+    return versionString;
+}
+
+
 
 @end

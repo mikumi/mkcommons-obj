@@ -176,7 +176,7 @@ static NSString *const JSPreferencesKeyObjects = @"objects";
 */
 - (void)postUpdateNotification
 {
-    MKLogVerbose(@"Did change, sending out notification...");
+    MKLogDebug(@"Did change, sending out notification...");
     [[NSNotificationCenter defaultCenter] postNotificationName:MKMutableParallelArrayDidChangeNotification object:self];
 }
 

@@ -9,6 +9,7 @@
 #import "MKPreferencesManager.h"
 
 #import "MKLog.h"
+#import "MKSystemHelper.h"
 
 typedef void (^MKReadValueFromICloudBlock)(BOOL needsSync);
 typedef void (^MKReadValueFromUserDefaultsBlock)(BOOL needsSync);
@@ -20,8 +21,9 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 
 @property (strong, atomic, readonly) NSMutableArray *ignoreListForSyncing;
 
+@property (strong, nonatomic) NSUserDefaults *localStore;
+
 - (NSUbiquitousKeyValueStore *)iCloudStore;
-- (NSUserDefaults *)localStore;
 
 - (void)iCloudUpdate:(NSNotification *)notification;
 
@@ -46,13 +48,13 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 {
     self = [super init];
     if (self) {
+        _localStore = [NSUserDefaults standardUserDefaults];
         _shouldUseICloud = YES;
         _ignoreListForSyncing = [[NSMutableArray alloc] init];
+        [self synchronize];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iCloudUpdate:)
                                                      name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
                                                    object:[NSUbiquitousKeyValueStore defaultStore]];
-        [[NSUbiquitousKeyValueStore defaultStore] synchronize];
-        [[NSUserDefaults standardUserDefaults] synchronize];
     }
     return self;
 }
@@ -77,7 +79,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 {
     [self.localStore synchronize];
     [self.iCloudStore synchronize];
-    // TODO: synchronize all keys
+    MKLogDebug(@"PreferencesManager keys synchronized.")
 }
 
 /**
@@ -130,9 +132,10 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 - (BOOL)boolForKey:(NSString *)key
 {
     BOOL value = NO;
-    if ((![self.ignoreListForSyncing containsObject:key]) && ([self.iCloudStore objectForKey:key] != nil)) {
+    if ((![self.ignoreListForSyncing containsObject:key]) &&
+        [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
         value = [self.iCloudStore boolForKey:key];
-        [[NSUserDefaults standardUserDefaults] setBool:value forKey:key];
+        [self.localStore setBool:value forKey:key];
     } else {
         value = [self.localStore boolForKey:key];
     }
@@ -145,9 +148,10 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 - (double)doubleForKey:(NSString *)key
 {
     double value = 0.0f;
-    if ((![self.ignoreListForSyncing containsObject:key]) && ([self.iCloudStore objectForKey:key] != nil)) {
+    if ((![self.ignoreListForSyncing containsObject:key]) &&
+        [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
         value = [self.iCloudStore doubleForKey:key];
-        [[NSUserDefaults standardUserDefaults] setDouble:value forKey:key];
+        [self.localStore setDouble:value forKey:key];
     } else {
         value = [self.localStore doubleForKey:key];
     }
@@ -160,9 +164,10 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 - (NSInteger)integerForKey:(NSString *)key
 {
     NSInteger value = 0;
-    if ((![self.ignoreListForSyncing containsObject:key]) && ([self.iCloudStore objectForKey:key] != nil)) {
+    if ((![self.ignoreListForSyncing containsObject:key]) &&
+        [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
         value = (NSInteger)[self.iCloudStore longLongForKey:key];
-        [[NSUserDefaults standardUserDefaults] setInteger:value forKey:key];
+        [self.localStore setInteger:value forKey:key];
     } else {
         value = [self.localStore integerForKey:key];
     }
@@ -175,9 +180,10 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 - (id)objectForKey:(NSString *)key
 {
     id value = nil;
-    if ((![self.ignoreListForSyncing containsObject:key]) && ([self.iCloudStore objectForKey:key] != nil)) {
+    if ((![self.ignoreListForSyncing containsObject:key]) &&
+        [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
         value = [self.iCloudStore objectForKey:key];
-        [[NSUserDefaults standardUserDefaults] setObject:value forKey:key];
+        [self.localStore setObject:value forKey:key];
     } else {
         value = [self.localStore objectForKey:key];
     }
@@ -202,11 +208,25 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
             enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
                 [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:key];
             }];
-    [[[NSUserDefaults standardUserDefaults] dictionaryRepresentation]
+    [[self.localStore dictionaryRepresentation]
             enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-                [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
+                [self.localStore removeObjectForKey:key];
             }];
 }
+
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "UnavailableInDeploymentTarget"
+- (void)setSuiteNameForLocalStore:(NSString *)localStoreId
+{
+    if ([MKSystemHelper isOS7OrLessPlatform]) {
+        MKLogError(@"Setting suite name is only supported on iOS 8.0+");
+    } else {
+        MKLogDebug(@"Setting suit name for local store to: %@", localStoreId)
+        self.localStore = [[NSUserDefaults alloc] initWithSuiteName:localStoreId];
+        [self.localStore synchronize];
+    }
+}
+#pragma clang diagnostic pop
 
 /**
  * // DOCU: this method comment needs be updated.
@@ -256,14 +276,6 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
     } else {
         return nil;
     }
-}
-
-/**
- * // DOCU: this method comment needs be updated.
- */
-- (NSUserDefaults *)localStore
-{
-    return [NSUserDefaults standardUserDefaults];
 }
 
 - (void)iCloudUpdate:(NSNotification *)notification

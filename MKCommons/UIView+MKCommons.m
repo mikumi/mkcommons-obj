@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Michael Kuck. All rights reserved.
 //
 
-#import "UIView+MKConstraints.h"
+#import "UIView+MKCommons.h"
 
-@implementation UIView (MKConstraints)
+@implementation UIView (MKCommons)
 
 /**
 * // DOCU: this method comment needs be updated.
@@ -199,6 +199,16 @@
 {
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self removeConstraints:self.constraints];
+}
+
+- (UIImage *)takeSnapshot
+{
+    CGRect const viewFrame = [self bounds];
+    UIGraphicsBeginImageContextWithOptions(viewFrame.size, YES, [UIScreen mainScreen].scale);
+    [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *const snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return snapshotImage;
 }
 
 @end

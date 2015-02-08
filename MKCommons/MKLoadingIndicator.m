@@ -66,7 +66,7 @@ static NSUInteger _counter = 0;
  */
 - (void)dealloc
 {
-    MKLogVerbose(@"dealloc");
+    MKLogDebug(@"dealloc");
     [self loadingDidFinish];
 }
 
@@ -95,7 +95,7 @@ static NSUInteger _counter = 0;
 {
     @synchronized(CounterLock) {
         _counter++;
-        MKLogVerbose(@"Counter was increased to %lu", (unsigned long)_counter);
+        MKLogDebug(@"Counter was increased to %lu", (unsigned long)_counter);
         [MKLoadingIndicator updateLoadingIndicator];
     }
 }
@@ -108,7 +108,7 @@ static NSUInteger _counter = 0;
     @synchronized(CounterLock) {
         if (_counter > 0) {
             _counter--;
-            MKLogVerbose(@"Counter was decreased to %lu", (unsigned long)_counter);
+            MKLogDebug(@"Counter was decreased to %lu", (unsigned long)_counter);
             [MKLoadingIndicator updateLoadingIndicator];
         }
     }

@@ -1,15 +1,15 @@
 //
-// Created by Michael Kuck on 8/12/14.
+// Created by Michael Kuck on 8/20/14.
 // Copyright (c) 2014 Michael Kuck. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
 //============================================================
-//== Public Interface
+//== Private Interface
 //============================================================
-@interface NSString (MKCommons)
+@interface MKDragDropTableView : UITableView
 
-- (BOOL)containsSubstring:(NSString *)substring;
+
 
 @end

@@ -38,9 +38,9 @@ extern void __gcov_flush();
 - (void)testIsLegacyPlatform
 {
     if (kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_6_1) {
-        XCTAssertEqual(YES, [MKSystemHelper isLegacyPlatform], @"Should be able to identify legacy platforms < iOS 7.0");
+        XCTAssertEqual(YES, [MKSystemHelper isOS6OrLessPlatform], @"Should be able to identify legacy platforms < iOS 7.0");
     } else {
-        XCTAssertEqual(NO, [MKSystemHelper isLegacyPlatform], @"Should be able to identify a modern platform >= IOS 7.0");
+        XCTAssertEqual(NO, [MKSystemHelper isOS6OrLessPlatform], @"Should be able to identify a modern platform >= IOS 7.0");
     }
 }
 

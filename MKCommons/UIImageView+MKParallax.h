@@ -1,5 +1,5 @@
 //
-// Created by Michael Kuck on 8/12/14.
+// Created by Michael Kuck on 8/21/14.
 // Copyright (c) 2014 Michael Kuck. All rights reserved.
 //
 
@@ -8,8 +8,9 @@
 //============================================================
 //== Public Interface
 //============================================================
-@interface NSString (MKCommons)
+@interface UIImageView (MKParallax)
 
-- (BOOL)containsSubstring:(NSString *)substring;
+- (void)addParallaxEffect;
+- (void)updateParallaxEffectWithScrollView:(UIScrollView *)scrollView;
 
 @end
