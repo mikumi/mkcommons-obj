@@ -46,7 +46,8 @@ static NSString *const DidAskPermissionKeyPrefix = @"MKPermissionUtilDidAskPermi
 #pragma ide diagnostic ignored "UnavailableInDeploymentTarget"
 - (BOOL)hasAskedPermission:(MKPermissionType)permissionType
 {
-    if (permissionType == MKPermissionTypePushNotifications && [MKSystemHelper isOS7OrLessPlatform]) {
+    if (permissionType == MKPermissionTypePushNotifications &&
+            ![[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         return YES;
     }
     NSString *const preferencesKey = [self permissionKeyForType:permissionType];

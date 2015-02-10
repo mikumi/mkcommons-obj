@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 600272061942DC4500FDC20E /* MKLoadingIndicator.m */; };
-		6002720819430EFD00FDC20E /* MKLoadingIndicator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600272051942DC4500FDC20E /* MKLoadingIndicator.h */; };
-		6002720E1943183B00FDC20E /* MKBigLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 6002720D1943183B00FDC20E /* MKBigLoadingIndicator.m */; };
-		6002720F19431B2B00FDC20E /* MKBigLoadingIndicator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6002720C1943183B00FDC20E /* MKBigLoadingIndicator.h */; };
 		600444BE19210413005259D6 /* MKFormTableViewCellInfo.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603629D919209ED300D744CB /* MKFormTableViewCellInfo.h */; };
 		600444C81921DC98005259D6 /* MKFormTableViewCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */; };
 		600444C91921DC9C005259D6 /* MKFormTableViewCellButton.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */; };
@@ -29,7 +25,6 @@
 		603C1FFC1910E6CD00CAA66B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 603C1FFB1910E6CD00CAA66B /* UIKit.framework */; };
 		603C1FFD1910E6DA00CAA66B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60F7689A17F5264B00937CB1 /* Foundation.framework */; };
 		603C20111911056600CAA66B /* MKFallbackQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F768D517F529D500937CB1 /* MKFallbackQueue.h */; };
-		603C20121911056600CAA66B /* MKJsonObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 607DB050180814D30005B256 /* MKJsonObject.h */; };
 		603C20141911056600CAA66B /* MKVersion.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60EF2CC517F530E3000E7971 /* MKVersion.h */; };
 		603C20151911056600CAA66B /* MKLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 60F9B90817F971540086A155 /* MKLog.h */; };
 		603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */; };
@@ -48,7 +43,6 @@
 		605A8263196000030088FA50 /* UIImage+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 605A8260195FFFF50088FA50 /* UIImage+MKCommons.h */; };
 		606A1F3C19344B0B00FA17F9 /* MKMutableParallelArray.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */; };
 		607A153117FC114B00269FD9 /* MKStopWatchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 607A153017FC114B00269FD9 /* MKStopWatchTest.m */; };
-		607DB052180814D30005B256 /* MKJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 607DB051180814D30005B256 /* MKJsonObject.m */; };
 		608C19CE1A80BC730011F0B3 /* UIAlertView+MKCommons.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE0AECE5D8AF3C42B1A2D /* UIAlertView+MKCommons.h */; };
 		608C19CF1A80BCC60011F0B3 /* MKPermissionUtil.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DF2AE6A7C17B0BD8CBA28B64 /* MKPermissionUtil.h */; };
 		60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A005B01938673800583927 /* UIColor+MKCommons.m */; };
@@ -81,11 +75,13 @@
 		DF2AE33CD61625129E2D3BE6 /* UISegmentedControl+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE5BF6249B556E398604A /* UISegmentedControl+MKCommons.m */; };
 		DF2AE4F65CD658D6FEDCDBAC /* NSString+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE2516A657CDD850D4202 /* NSString+MKCommons.m */; };
 		DF2AE6F1166D115DC7539C48 /* MKPermissionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEE6B281A1654D6B966AC /* MKPermissionUtil.m */; };
+		DF2AE82123CA5FD754F7FE76 /* MKLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE640EF5BF4B6CAFDB6C6 /* MKLoadingIndicator.m */; };
 		DF2AE86A046A5A296663BB69 /* MKDragDropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEBA9542DB4521794D49A /* MKDragDropTableView.m */; };
 		DF2AE8B788E33C5D2CA206B9 /* UIImageView+MKParallax.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEC8CBFB31A13327DF5EE /* UIImageView+MKParallax.m */; };
 		DF2AEAB41729C7D4BDEE7847 /* NSError+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE6544D072DB478FCC9C5 /* NSError+MKCommons.m */; };
 		DF2AEB75538B99F0E06DBE12 /* MKMutableParallelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */; };
 		DF2AED0046C0B1A3E6803B31 /* MKFormTableViewCellDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AE997DB915710E59345EA /* MKFormTableViewCellDatePicker.m */; };
+		DF2AEE87E4B2C7D4E3A36618 /* MKBigLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = DF2AED70DD012A48CE3BF38B /* MKBigLoadingIndicator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,9 +104,7 @@
 				608C19CF1A80BCC60011F0B3 /* MKPermissionUtil.h in CopyFiles */,
 				605A44E219A486280014A22D /* MKUIThemeProtocol.h in CopyFiles */,
 				603C20111911056600CAA66B /* MKFallbackQueue.h in CopyFiles */,
-				603C20121911056600CAA66B /* MKJsonObject.h in CopyFiles */,
 				603C20141911056600CAA66B /* MKVersion.h in CopyFiles */,
-				6002720F19431B2B00FDC20E /* MKBigLoadingIndicator.h in CopyFiles */,
 				603C20151911056600CAA66B /* MKLog.h in CopyFiles */,
 				6043E92F19584FA80055E5B0 /* MKSynchronizedCounter.h in CopyFiles */,
 				603C20161911056600CAA66B /* MKPreferencesManager.h in CopyFiles */,
@@ -119,7 +113,6 @@
 				603C20181911056600CAA66B /* MKSerialManager.h in CopyFiles */,
 				603629D31920840F00D744CB /* MKFormTableViewCellSeparator.h in CopyFiles */,
 				6027BB8919389647000E6A64 /* UIColor+MKCommons.h in CopyFiles */,
-				6002720819430EFD00FDC20E /* MKLoadingIndicator.h in CopyFiles */,
 				60509B8F1924A554002A169A /* MKFormTableViewCellDatePicker.h in CopyFiles */,
 				60F8493C19454B2000747904 /* NSTimeZone+MKDateUtils.h in CopyFiles */,
 				6036B07C1945BA64005FF6E6 /* UIButton+MKCommons.h in CopyFiles */,
@@ -143,10 +136,6 @@
 
 /* Begin PBXFileReference section */
 		4F739C4E235B4683BADA0EF6 /* Pods-MKCommons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MKCommons.xcconfig"; path = "Pods/Pods-MKCommons.xcconfig"; sourceTree = "<group>"; };
-		600272051942DC4500FDC20E /* MKLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLoadingIndicator.h; sourceTree = "<group>"; };
-		600272061942DC4500FDC20E /* MKLoadingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLoadingIndicator.m; sourceTree = "<group>"; };
-		6002720C1943183B00FDC20E /* MKBigLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBigLoadingIndicator.h; sourceTree = "<group>"; };
-		6002720D1943183B00FDC20E /* MKBigLoadingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBigLoadingIndicator.m; sourceTree = "<group>"; };
 		600444C51921DC98005259D6 /* MKFormTableViewCellButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellButton.h; sourceTree = "<group>"; };
 		600444C61921DC98005259D6 /* MKFormTableViewCellButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellButton.m; sourceTree = "<group>"; };
 		6027BB821938903A000E6A64 /* UIView+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MKCommons.h"; sourceTree = "<group>"; };
@@ -171,8 +160,6 @@
 		605A8260195FFFF50088FA50 /* UIImage+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MKCommons.h"; sourceTree = "<group>"; };
 		605A8261195FFFF50088FA50 /* UIImage+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MKCommons.m"; sourceTree = "<group>"; };
 		607A153017FC114B00269FD9 /* MKStopWatchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKStopWatchTest.m; sourceTree = "<group>"; };
-		607DB050180814D30005B256 /* MKJsonObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKJsonObject.h; sourceTree = "<group>"; };
-		607DB051180814D30005B256 /* MKJsonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKJsonObject.m; sourceTree = "<group>"; };
 		60A005AF1938673800583927 /* UIColor+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+MKCommons.h"; sourceTree = "<group>"; };
 		60A005B01938673800583927 /* UIColor+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MKCommons.m"; sourceTree = "<group>"; };
 		60D6D216195BF26200866E0F /* UIPopoverController+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+MKCommons.h"; sourceTree = "<group>"; };
@@ -211,10 +198,12 @@
 		DF2AE0AECE5D8AF3C42B1A2D /* UIAlertView+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKCommons.h"; sourceTree = "<group>"; };
 		DF2AE2516A657CDD850D4202 /* NSString+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKCommons.m"; sourceTree = "<group>"; };
 		DF2AE2E3C9EE7F9FDC9A5F0C /* MKSynchronizedCounter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKSynchronizedCounter.m; sourceTree = "<group>"; };
+		DF2AE3AF4C2EB2A719082C0C /* MKBigLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKBigLoadingIndicator.h; sourceTree = "<group>"; };
 		DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKMutableParallelArray.h; sourceTree = "<group>"; };
 		DF2AE5BF6249B556E398604A /* UISegmentedControl+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+MKCommons.m"; sourceTree = "<group>"; };
 		DF2AE5DB60472766858A9669 /* NSString+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MKCommons.h"; sourceTree = "<group>"; };
 		DF2AE63FFF12DEA0E2227920 /* UISegmentedControl+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+MKCommons.h"; sourceTree = "<group>"; };
+		DF2AE640EF5BF4B6CAFDB6C6 /* MKLoadingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKLoadingIndicator.m; sourceTree = "<group>"; };
 		DF2AE6544D072DB478FCC9C5 /* NSError+MKCommons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+MKCommons.m"; sourceTree = "<group>"; };
 		DF2AE6A7C17B0BD8CBA28B64 /* MKPermissionUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKPermissionUtil.h; sourceTree = "<group>"; };
 		DF2AE94EE79266E97003E8CA /* NSError+MKCommons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+MKCommons.h"; sourceTree = "<group>"; };
@@ -227,7 +216,9 @@
 		DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKMutableParallelArray.m; sourceTree = "<group>"; };
 		DF2AEC8CBFB31A13327DF5EE /* UIImageView+MKParallax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MKParallax.m"; sourceTree = "<group>"; };
 		DF2AECC8E5BF022419FF616A /* UIImageView+MKParallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MKParallax.h"; sourceTree = "<group>"; };
+		DF2AED70DD012A48CE3BF38B /* MKBigLoadingIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKBigLoadingIndicator.m; sourceTree = "<group>"; };
 		DF2AEE6B281A1654D6B966AC /* MKPermissionUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKPermissionUtil.m; sourceTree = "<group>"; };
+		DF2AEE8E575F722D75CD8BD1 /* MKLoadingIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKLoadingIndicator.h; sourceTree = "<group>"; };
 		DF2AEFAED2328D3A0B56FE2A /* MKUIThemeProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKUIThemeProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -299,6 +290,10 @@
 				DF2AE63FFF12DEA0E2227920 /* UISegmentedControl+MKCommons.h */,
 				DF2AEA37A1B8CDF7B0069532 /* UIAlertView+MKCommons.m */,
 				DF2AE0AECE5D8AF3C42B1A2D /* UIAlertView+MKCommons.h */,
+				DF2AED70DD012A48CE3BF38B /* MKBigLoadingIndicator.m */,
+				DF2AEE8E575F722D75CD8BD1 /* MKLoadingIndicator.h */,
+				DF2AE640EF5BF4B6CAFDB6C6 /* MKLoadingIndicator.m */,
+				DF2AE3AF4C2EB2A719082C0C /* MKBigLoadingIndicator.h */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -308,8 +303,6 @@
 			children = (
 				60F768D517F529D500937CB1 /* MKFallbackQueue.h */,
 				60F768D617F529D500937CB1 /* MKFallbackQueue.m */,
-				607DB050180814D30005B256 /* MKJsonObject.h */,
-				607DB051180814D30005B256 /* MKJsonObject.m */,
 				DF2AEBFECC399EF814014CB3 /* MKMutableParallelArray.m */,
 				DF2AE4CD330D6569C72E10EF /* MKMutableParallelArray.h */,
 			);
@@ -319,10 +312,6 @@
 		603C1FF01910E05E00CAA66B /* System */ = {
 			isa = PBXGroup;
 			children = (
-				6002720C1943183B00FDC20E /* MKBigLoadingIndicator.h */,
-				6002720D1943183B00FDC20E /* MKBigLoadingIndicator.m */,
-				600272051942DC4500FDC20E /* MKLoadingIndicator.h */,
-				600272061942DC4500FDC20E /* MKLoadingIndicator.m */,
 				60F9B90817F971540086A155 /* MKLog.h */,
 				60F9B90917F971540086A155 /* MKLog.m */,
 				603FE1C217F9B6770044ED58 /* MKPreferencesManager.h */,
@@ -339,7 +328,7 @@
 			name = System;
 			sourceTree = "<group>";
 		};
-		603C1FF11910E07F00CAA66B /* Tools */ = {
+		603C1FF11910E07F00CAA66B /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				60576E2419D936860025C1D9 /* MKEmailHelper.h */,
@@ -355,7 +344,7 @@
 				DF2AE2516A657CDD850D4202 /* NSString+MKCommons.m */,
 				DF2AE5DB60472766858A9669 /* NSString+MKCommons.h */,
 			);
-			name = Tools;
+			name = Util;
 			sourceTree = "<group>";
 		};
 		60F7688E17F5264B00937CB1 = {
@@ -398,7 +387,7 @@
 				60EF2CC617F530E3000E7971 /* MKVersion.m */,
 				60F7689D17F5264B00937CB1 /* Supporting Files */,
 				603C1FF01910E05E00CAA66B /* System */,
-				603C1FF11910E07F00CAA66B /* Tools */,
+				603C1FF11910E07F00CAA66B /* Util */,
 				603C1FEE1910E02400CAA66B /* UI */,
 			);
 			path = MKCommons;
@@ -563,17 +552,14 @@
 				60F768DF17F529D500937CB1 /* MKSerialManager.m in Sources */,
 				6027BB851938903A000E6A64 /* UIView+MKCommons.m in Sources */,
 				60A005B21938673800583927 /* UIColor+MKCommons.m in Sources */,
-				607DB052180814D30005B256 /* MKJsonObject.m in Sources */,
 				603FE1C417F9B6770044ED58 /* MKPreferencesManager.m in Sources */,
 				60576E2619D936860025C1D9 /* MKEmailHelper.m in Sources */,
 				60F768E117F529D500937CB1 /* MKStopwatch.m in Sources */,
 				6036B07B1945BA5E005FF6E6 /* UIButton+MKCommons.m in Sources */,
-				600272071942DC4500FDC20E /* MKLoadingIndicator.m in Sources */,
 				60F768DE17F529D500937CB1 /* MKFallbackQueue.m in Sources */,
 				DF2AEAB41729C7D4BDEE7847 /* NSError+MKCommons.m in Sources */,
 				60F8493A19454B1600747904 /* NSDate+MKDateUtils.m in Sources */,
 				60D6D222195BF92A00866E0F /* UIViewController+MKCommons.m in Sources */,
-				6002720E1943183B00FDC20E /* MKBigLoadingIndicator.m in Sources */,
 				60F8493B19454B1800747904 /* NSTimeZone+MKDateUtils.m in Sources */,
 				603629D71920873A00D744CB /* MKFormTableViewCellTextField.m in Sources */,
 				603629DC19209ED300D744CB /* MKFormTableViewCellInfo.m in Sources */,
@@ -587,6 +573,8 @@
 				DF2AE33CD61625129E2D3BE6 /* UISegmentedControl+MKCommons.m in Sources */,
 				DF2AE6F1166D115DC7539C48 /* MKPermissionUtil.m in Sources */,
 				DF2AE21629B12C5F5C97D6BC /* UIAlertView+MKCommons.m in Sources */,
+				DF2AEE87E4B2C7D4E3A36618 /* MKBigLoadingIndicator.m in Sources */,
+				DF2AE82123CA5FD754F7FE76 /* MKLoadingIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

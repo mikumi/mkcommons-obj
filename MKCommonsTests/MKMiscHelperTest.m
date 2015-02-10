@@ -35,15 +35,6 @@ extern void __gcov_flush();
     [super tearDown];
 }
 
-- (void)testIsLegacyPlatform
-{
-    if (kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_6_1) {
-        XCTAssertEqual(YES, [MKSystemHelper isOS6OrLessPlatform], @"Should be able to identify legacy platforms < iOS 7.0");
-    } else {
-        XCTAssertEqual(NO, [MKSystemHelper isOS6OrLessPlatform], @"Should be able to identify a modern platform >= IOS 7.0");
-    }
-}
-
 - (void)testIsRunningOnPhone
 {
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
