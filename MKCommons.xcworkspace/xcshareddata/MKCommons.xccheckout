@@ -10,24 +10,40 @@
 	<string>MKCommons</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>1CB9268D4E75383E3B2EC412DDB5EE78046E947F</key>
+		<string>https://github.com/mikumi/mkcommons-obj.git</string>
 		<key>55E3CA14-0E27-4AE0-A2D4-81DB75E0E7FB</key>
 		<string>https://github.com/mikumi/mkcommons-obj.git</string>
+		<key>597212C1586FC7BCC12442EF838670CA14B089BA</key>
+		<string>https://bitbucket.org/miku84/ping-monitor-app.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MKCommons.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>55E3CA14-0E27-4AE0-A2D4-81DB75E0E7FB</key>
+		<key>1CB9268D4E75383E3B2EC412DDB5EE78046E947F</key>
 		<string>..</string>
+		<key>55E3CA14-0E27-4AE0-A2D4-81DB75E0E7FB</key>
+		<string>../../MKCommons</string>
+		<key>597212C1586FC7BCC12442EF838670CA14B089BA</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/mikumi/mkcommons-obj.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>55E3CA14-0E27-4AE0-A2D4-81DB75E0E7FB</string>
+	<string>1CB9268D4E75383E3B2EC412DDB5EE78046E947F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>597212C1586FC7BCC12442EF838670CA14B089BA</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
@@ -35,6 +51,14 @@
 			<string>55E3CA14-0E27-4AE0-A2D4-81DB75E0E7FB</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MKCommons</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1CB9268D4E75383E3B2EC412DDB5EE78046E947F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MKCommons-ObjC</string>
 		</dict>
 	</array>
 </dict>

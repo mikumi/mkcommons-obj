@@ -7,20 +7,18 @@
 //
 
 #import <XCTest/XCTest.h>
-
-extern void __gcov_flush();
+#import <OCMock/OCMock.h>
 
 #import "MKPreferencesManager.h"
 
-static NSString *const TEST_KEY1 = @"MKPreferencesManagerTestKey1";
-static NSString *const TEST_KEY2 = @"MKPreferencesManagerTestKey2";
+static NSString *const UserDefaultsTestSuite = @"testSuite";
 
 @interface MKPreferencesManagerTest : XCTestCase
 
-@property (nonatomic, assign) BOOL iCloudNotificationReceived;
-
-- (void)cleanup;
-- (void)receiveICloudNotification:(NSNotification *)notification;
+@property (nonatomic, strong) NSUserDefaults *mockUserDefaults;
+@property (nonatomic, strong) NSUserDefaults *realUserDefaults;
+@property (nonatomic, strong) NSUbiquitousKeyValueStore *mockUbiquitousKeyValueStore;
+@property (nonatomic, strong) NSUbiquitousKeyValueStore *realUbiquitousKeyValueStore;
 
 @end
 
@@ -29,177 +27,49 @@ static NSString *const TEST_KEY2 = @"MKPreferencesManagerTestKey2";
 - (void)setUp
 {
     [super setUp];
-    [self cleanup];
+    [[NSUserDefaults standardUserDefaults] removeSuiteNamed:UserDefaultsTestSuite];
+    self.mockUserDefaults = OCMClassMock([NSUserDefaults class]);
+    self.realUserDefaults = OCMPartialMock([[NSUserDefaults alloc] initWithSuiteName:UserDefaultsTestSuite]);
+    self.mockUbiquitousKeyValueStore = OCMClassMock([NSUbiquitousKeyValueStore class]);
+    self.realUbiquitousKeyValueStore = OCMPartialMock([[NSUbiquitousKeyValueStore alloc] init]);
+    [[[self.realUserDefaults dictionaryRepresentation] allKeys]
+            enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                [self.realUserDefaults removeObjectForKey:obj];
+            }];
 }
 
 - (void)tearDown
 {
-    [self cleanup];
-#ifdef COVERAGE
-    __gcov_flush();
-#endif
+    [[NSUserDefaults standardUserDefaults] removeSuiteNamed:UserDefaultsTestSuite];
+    [[[self.realUserDefaults dictionaryRepresentation] allKeys]
+            enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                [self.realUserDefaults removeObjectForKey:obj];
+            }];
     [super tearDown];
 }
 
-- (void)cleanup
+- (void)testReset
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [[MKPreferencesManager defaultManager] removeObjectForKey:TEST_KEY1];
-    [[MKPreferencesManager defaultManager] removeObjectForKey:TEST_KEY2];
-}
+    MKPreferencesManager *const preferencesManager = [[MKPreferencesManager alloc]
+            initWithUserDefaults:self.realUserDefaults
+            ubiquitousKeyValueStore:self.mockUbiquitousKeyValueStore];
 
-- (void)testSetAndGetBool
-{
-    BOOL testValue1 = YES;
-    XCTAssertEqualObjects(nil, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should not exist yet.");
+    NSString *const testKey1 = @"foo-key";
+    NSString *const testKey2 = @"bar-key";
+    [self.realUserDefaults setObject:@"foo-value" forKey:testKey1];
+    [self.realUserDefaults setObject:@"bar-value" forKey:testKey2];
 
-    [[MKPreferencesManager defaultManager] setBool:testValue1 forKey:TEST_KEY1];
+    NSDictionary *const testICloudDictionary = @{testKey1 : @"foo", testKey2 : @"bar"};
+    OCMStub([self.mockUbiquitousKeyValueStore dictionaryRepresentation]).andReturn(testICloudDictionary);
 
-    XCTAssertNotEqualObjects(nil, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should exist now.");
-    XCTAssertEqual(testValue1, [[MKPreferencesManager defaultManager] boolForKey:TEST_KEY1], @"Key should exist now.");
+    [preferencesManager resetPreferences];
+    XCTAssertTrue([self.realUserDefaults objectForKey:testKey1] == nil);
+    XCTAssertTrue([self.realUserDefaults objectForKey:testKey2] == nil);
+    OCMVerify([self.realUserDefaults synchronize]);
 
-    [[MKPreferencesManager defaultManager] synchronize];
-    [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:TEST_KEY1];
-    XCTAssertEqual(testValue1, [[MKPreferencesManager defaultManager]
-            boolForKey:TEST_KEY1], @"Key should still exist locally.");
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TEST_KEY1];
-    XCTAssertNotEqual(testValue1, [[MKPreferencesManager defaultManager]
-            boolForKey:TEST_KEY1], @"Key should still not exist anymore");
-
-}
-
-- (void)testSetAndGetDouble
-{
-    double testValue = 1.5f;
-    XCTAssertEqualObjects(nil, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should not exist yet.");
-
-    [[MKPreferencesManager defaultManager] setDouble:testValue forKey:TEST_KEY1];
-
-    XCTAssertNotEqualObjects(nil, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should exist now.");
-    XCTAssertEqual(testValue, [[MKPreferencesManager defaultManager] doubleForKey:TEST_KEY1], @"Key should exist now.");
-
-    [[MKPreferencesManager defaultManager] synchronize];
-    [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:TEST_KEY1];
-    XCTAssertEqual(testValue, [[MKPreferencesManager defaultManager]
-            doubleForKey:TEST_KEY1], @"Key should still exist locally.");
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TEST_KEY1];
-    XCTAssertNotEqual(testValue, [[MKPreferencesManager defaultManager]
-            doubleForKey:TEST_KEY1], @"Key should still not exist anymore");
-}
-
-- (void)testSetAndGetInteger
-{
-    NSInteger testValue = 11;
-    XCTAssertEqualObjects(nil, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should not exist yet.");
-
-    [[MKPreferencesManager defaultManager] setInteger:testValue forKey:TEST_KEY1];
-
-    XCTAssertNotEqualObjects(nil, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should exist now.");
-    XCTAssertEqual(testValue, [[MKPreferencesManager defaultManager]
-            integerForKey:TEST_KEY1], @"Key should exist now.");
-
-    [[MKPreferencesManager defaultManager] synchronize];
-    [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:TEST_KEY1];
-    XCTAssertEqual(testValue, [[MKPreferencesManager defaultManager]
-            integerForKey:TEST_KEY1], @"Key should still exist locally.");
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TEST_KEY1];
-    XCTAssertNotEqual(testValue, [[MKPreferencesManager defaultManager]
-            integerForKey:TEST_KEY1], @"Key should still not exist anymore");
-}
-
-- (void)testSetAndGetObject
-{
-    NSString *testValue = @"Test";
-    XCTAssertEqualObjects(nil, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should not exist yet.");
-
-    [[MKPreferencesManager defaultManager] setObject:testValue forKey:TEST_KEY1];
-
-    XCTAssertEqualObjects(testValue, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should exist now.");
-
-    [[MKPreferencesManager defaultManager] synchronize];
-    [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:TEST_KEY1];
-    XCTAssertEqual(testValue, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should still exist locally.");
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TEST_KEY1];
-    XCTAssertNotEqual(testValue, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should still not exist anymore");
-}
-
-- (void)testMissingKey
-{
-    NSString *testValue = @"Test";
-    [[MKPreferencesManager defaultManager] setObject:testValue forKey:TEST_KEY1];
-    XCTAssertEqualObjects(testValue, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should exist.");
-
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TEST_KEY1];
-    XCTAssertEqualObjects(testValue, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should still exist as it is still stored in iCloud.");
-    [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:TEST_KEY1];
-    XCTAssertEqualObjects(testValue, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should still exist as it is still stored locally.");
-}
-
-- (void)testDifferentKeys
-{
-    NSString *testValue = @"Test";
-    [[MKPreferencesManager defaultManager] setObject:testValue forKey:TEST_KEY1];
-    XCTAssertEqualObjects(testValue, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should exist.");
-
-    [[NSUserDefaults standardUserDefaults] setObject:@"ShouldntBeUsed" forKey:TEST_KEY1];
-    XCTAssertEqualObjects(testValue, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"iCloud value should still be used.");
-}
-
-- (void)receiveICloudNotification:(NSNotification *)notification
-{
-    self.iCloudNotificationReceived = YES;
-}
-
-- (void)testUpdateNotification
-{
-    self.iCloudNotificationReceived = NO;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveICloudNotification:)
-                                                 name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
-                                               object:nil];
-
-    NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] init];
-    NSArray *changedKeys = [NSArray arrayWithObject:TEST_KEY1];
-    [userInfo setObject:changedKeys forKey:NSUbiquitousKeyValueStoreChangedKeysKey];
-    [userInfo setObject:[NSNumber numberWithInteger:NSUbiquitousKeyValueStoreInitialSyncChange]
-                 forKey:NSUbiquitousKeyValueStoreChangeReasonKey];
-
-    [[NSNotificationCenter defaultCenter] postNotificationName:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
-                                                        object:[NSUbiquitousKeyValueStore defaultStore]
-                                                      userInfo:userInfo];
-
-    NSRunLoop *runLoop = [NSRunLoop currentRunLoop];
-    // Begin a run loop terminated when the downloadComplete it set to true
-    NSDate *testExpireDate = [[NSDate date] dateByAddingTimeInterval:10];
-    while (!self.iCloudNotificationReceived && [runLoop runMode:NSDefaultRunLoopMode beforeDate:testExpireDate]);
-    XCTAssertEqual(self.iCloudNotificationReceived, YES, @"iCloud notification should have been received.");
-}
-
-- (void)testRemoveObject
-{
-    NSString *testValue = @"Test";
-    [[MKPreferencesManager defaultManager] setObject:testValue forKey:TEST_KEY1];
-    XCTAssertEqualObjects(testValue, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should exist.");
-
-    [[MKPreferencesManager defaultManager] removeObjectForKey:TEST_KEY1];
-
-    XCTAssertEqualObjects(nil, [[MKPreferencesManager defaultManager]
-            objectForKey:TEST_KEY1], @"Key should not exist anymore.");
+    OCMVerify([self.mockUbiquitousKeyValueStore removeObjectForKey:testKey1]);
+    OCMVerify([self.mockUbiquitousKeyValueStore removeObjectForKey:testKey2]);
+    OCMVerify([self.mockUbiquitousKeyValueStore synchronize]);
 }
 
 @end

@@ -1,10 +1,13 @@
 PODS:
-  - UIView+AutoLayout (2.0.0)
+  - OCMock (3.1.2)
+  - UIView+AutoLayout (2.0.1)
 
 DEPENDENCIES:
-  - UIView+AutoLayout
+  - OCMock
+  - UIView+AutoLayout (~> 2.0.1)
 
 SPEC CHECKSUMS:
-  UIView+AutoLayout: 8037c1a0c6aae47da8656f0465f6bd1a87f26af7
+  OCMock: ecdd510b73ef397f2f97274785c1e87fd147c49f
+  UIView+AutoLayout: d876c583c3dec28b5c3916175ea4b6ad70a8be34
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.4
