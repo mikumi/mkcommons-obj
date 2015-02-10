@@ -211,10 +211,13 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
             enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
                 [self.iCloudStore removeObjectForKey:key];
             }];
+    [self.iCloudStore synchronize];
+
     [[self.localStore dictionaryRepresentation]
             enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
                 [self.localStore removeObjectForKey:key];
             }];
+    [self.localStore synchronize];
 }
 
 - (void)addSyncIgnoreKey:(NSString *)key
