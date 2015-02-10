@@ -9,59 +9,78 @@
 #import "MKPreferencesManager.h"
 
 #import "MKLog.h"
-#import "MKSystemHelper.h"
-
-typedef void (^MKReadValueFromICloudBlock)(BOOL needsSync);
-typedef void (^MKReadValueFromUserDefaultsBlock)(BOOL needsSync);
 
 NSString *const MKPreferencesManagerKeysDidChangeNotification = @"MKPreferencesManagerKeysDidChangeNotification";
 NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesManagerChangedKeys";
 
+//============================================================
+//== Private Interface
+//============================================================
 @interface MKPreferencesManager ()
 
 @property (strong, atomic, readonly) NSMutableArray *ignoreListForSyncing;
 
-@property (strong, nonatomic) NSUserDefaults *localStore;
-
-- (NSUbiquitousKeyValueStore *)iCloudStore;
+@property (strong, nonatomic, readonly) NSUserDefaults            *localStore;
+@property (strong, nonatomic, readonly) NSUbiquitousKeyValueStore *iCloudStore;
 
 - (void)iCloudUpdate:(NSNotification *)notification;
 
 @end
 
+//============================================================
+//== Implementation
+//============================================================
 @implementation MKPreferencesManager
 
-#pragma mark - Public methods
+#pragma mark - Life Cycle
 
-/*
- * (Inherited method comment)
- */
+- (instancetype)init
+{
+    return [self initWithUserDefaults:[NSUserDefaults standardUserDefaults]
+            ubiquitousKeyValueStore:[NSUbiquitousKeyValueStore defaultStore]];
+}
+
+/**
+* One of the parameters can be nil if desired. If both are nil, nothing is stored, not even temporarily.
+*/
+- (instancetype)initWithUserDefaults:(NSUserDefaults *)localStore
+             ubiquitousKeyValueStore:(NSUbiquitousKeyValueStore *)iCloudStore
+{
+    return [self initWithUserDefaults:localStore ubiquitousKeyValueStore:iCloudStore ignoredKeysForICloud:@[]];
+}
+
+/**
+* One of the stores can be nil if desired. If both are nil, nothing is stored, not even temporarily. The ignored key
+* list can be empty, but not nil
+*/
+- (instancetype)initWithUserDefaults:(NSUserDefaults *)localStore
+             ubiquitousKeyValueStore:(NSUbiquitousKeyValueStore *)iCloudStore
+                ignoredKeysForICloud:(NSArray *)iCloudIgnoreList
+{
+    NSAssert(iCloudIgnoreList, @"Ignore list cannot be nil");
+    self = [super init];
+    if (self) {
+        _localStore           = localStore;
+        _iCloudStore          = iCloudStore;
+        _ignoreListForSyncing = [[NSMutableArray alloc] initWithArray:iCloudIgnoreList];
+
+        [self synchronize];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iCloudUpdate:)
+                name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
+                object:self.iCloudStore];
+    }
+    return self;
+}
+
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-/*
- * (Inherited method comment)
- */
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _localStore = [NSUserDefaults standardUserDefaults];
-        _shouldUseICloud = YES;
-        _ignoreListForSyncing = [[NSMutableArray alloc] init];
-        [self synchronize];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iCloudUpdate:)
-                                                     name:NSUbiquitousKeyValueStoreDidChangeExternallyNotification
-                                                   object:[NSUbiquitousKeyValueStore defaultStore]];
-    }
-    return self;
-}
-
 /**
- * // DOCU: this method comment needs be updated.
- */
+* Manager with default standardUserDefaults and iCloud's NSUbiquitousKeyValueStore defaultStore. All keys will be
+* synced by default.
+*/
 + (MKPreferencesManager *)defaultManager
 {
     static dispatch_once_t      onceToken;
@@ -72,9 +91,11 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
     return sharedInstance;
 }
 
+#pragma mark - Public methods
+
 /**
- * Synchronizes iCloud and local storage
- */
+* Synchronizes iCloud and local storage
+*/
 - (void)synchronize
 {
     [self.localStore synchronize];
@@ -82,55 +103,45 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
     MKLogDebug(@"PreferencesManager keys synchronized.")
 }
 
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (void)setBool:(BOOL)value forKey:(NSString *)key
 {
+    NSAssert(key, @"key cannot be nil");
     [self.localStore setBool:value forKey:key];
     if (![self.ignoreListForSyncing containsObject:key]) {
         [self.iCloudStore setBool:value forKey:key];
     }
 }
 
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (void)setDouble:(double)value forKey:(NSString *)key
 {
+    NSAssert(key, @"key cannot be nil");
     [self.localStore setDouble:value forKey:key];
     if (![self.ignoreListForSyncing containsObject:key]) {
         [self.iCloudStore setDouble:value forKey:key];
     }
 }
 
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (void)setInteger:(NSInteger)value forKey:(NSString *)key
 {
+    NSAssert(key, @"key cannot be nil");
     [self.localStore setInteger:value forKey:key];
     if (![self.ignoreListForSyncing containsObject:key]) {
         [self.iCloudStore setLongLong:value forKey:key];
     }
 }
 
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (void)setObject:(id)object forKey:(NSString *)key
 {
+    NSAssert(key, @"key cannot be nil");
     [self.localStore setObject:object forKey:key];
     if (![self.ignoreListForSyncing containsObject:key]) {
         [self.iCloudStore setObject:object forKey:key];
     }
 }
 
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (BOOL)boolForKey:(NSString *)key
 {
+    NSAssert(key, @"key cannot be nil");
     BOOL value = NO;
     if ((![self.ignoreListForSyncing containsObject:key]) &&
         [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
@@ -142,11 +153,9 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
     return value;
 }
 
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (double)doubleForKey:(NSString *)key
 {
+    NSAssert(key, @"key cannot be nil");
     double value = 0.0f;
     if ((![self.ignoreListForSyncing containsObject:key]) &&
         [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
@@ -158,11 +167,9 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
     return value;
 }
 
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (NSInteger)integerForKey:(NSString *)key
 {
+    NSAssert(key, @"key cannot be nil");
     NSInteger value = 0;
     if ((![self.ignoreListForSyncing containsObject:key]) &&
         [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
@@ -174,11 +181,9 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
     return value;
 }
 
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (id)objectForKey:(NSString *)key
 {
+    NSAssert(key, @"key cannot be nil");
     id value = nil;
     if ((![self.ignoreListForSyncing containsObject:key]) &&
         [self.iCloudStore.dictionaryRepresentation.allKeys containsObject:key]) {
@@ -190,23 +195,21 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
     return value;
 }
 
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (void)removeObjectForKey:(NSString *)key
 {
+    NSAssert(key, @"key cannot be nil");
     [self.localStore removeObjectForKey:key];
     [self.iCloudStore removeObjectForKey:key];
 }
 
 /**
- * // DOCU: this method comment needs be updated.
- */
+* This will remove all keys in the specified stores.
+*/
 - (void)resetPreferences
 {
-    [[[NSUbiquitousKeyValueStore defaultStore] dictionaryRepresentation]
+    [[self.iCloudStore dictionaryRepresentation]
             enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-                [[NSUbiquitousKeyValueStore defaultStore] removeObjectForKey:key];
+                [self.iCloudStore removeObjectForKey:key];
             }];
     [[self.localStore dictionaryRepresentation]
             enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
@@ -214,25 +217,9 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
             }];
 }
 
-#pragma clang diagnostic push
-#pragma ide diagnostic ignored "UnavailableInDeploymentTarget"
-- (void)setSuiteNameForLocalStore:(NSString *)localStoreId
-{
-    if ([MKSystemHelper isOS7OrLessPlatform]) {
-        MKLogError(@"Setting suite name is only supported on iOS 8.0+");
-    } else {
-        MKLogDebug(@"Setting suit name for local store to: %@", localStoreId)
-        self.localStore = [[NSUserDefaults alloc] initWithSuiteName:localStoreId];
-        [self.localStore synchronize];
-    }
-}
-#pragma clang diagnostic pop
-
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (void)addSyncIgnoreKey:(NSString *)key
 {
+    NSAssert(key, @"key cannot be nil");
     @synchronized(self.ignoreListForSyncing) {
         if (![self.ignoreListForSyncing containsObject:key]) {
             [self.ignoreListForSyncing addObject:key];
@@ -241,11 +228,9 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
     }
 }
 
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (void)removeSyncIgnoreKey:(NSString *)key
 {
+    NSAssert(key, @"key cannot be nil");
     @synchronized(self.ignoreListForSyncing) {
         if ([self.ignoreListForSyncing containsObject:key]) {
             [self.ignoreListForSyncing removeObject:key];
@@ -254,9 +239,6 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
     }
 }
 
-/**
- * // DOCU: this method comment needs be updated.
- */
 - (NSArray *)syncIgnoreKeys
 {
     @synchronized(self.ignoreListForSyncing) {
@@ -266,21 +248,9 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 
 #pragma mark - Private methods
 
-/**
- * // DOCU: this method comment needs be updated.
- */
-- (NSUbiquitousKeyValueStore *)iCloudStore
-{
-    if (self.shouldUseICloud) {
-        return [NSUbiquitousKeyValueStore defaultStore];
-    } else {
-        return nil;
-    }
-}
-
 - (void)iCloudUpdate:(NSNotification *)notification
 {
-    if (!self.shouldUseICloud) {
+    if (!self.iCloudStore) {
         return;
     }
     NSNumber *const reason = notification.userInfo[NSUbiquitousKeyValueStoreChangeReasonKey];

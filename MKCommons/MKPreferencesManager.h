@@ -12,16 +12,19 @@ extern NSString *const MKPreferencesManagerKeysDidChangeNotification;
 extern NSString *const MKPreferencesManagerChangedKeys;
 
 /**
- * Stores and reads values to and from both NSUserDefaults and iCloud. 
- *
- * As long as iCloud KVS is available (should be even the case when it's 
- * disabled or offline), iCloud always holds the truth. NSUserDefaults will 
- * only be used as a backup.
+* Stores and reads values to and from both NSUserDefaults and iCloud.
+*
+* As long as iCloud KVS is available (should be even the case when it's
+* disabled or offline), iCloud always holds the truth. NSUserDefaults will
+* only be used as a backup.
 */
 @interface MKPreferencesManager : NSObject
 
-@property (assign, atomic) BOOL shouldUseICloud;
-
+- (instancetype)initWithUserDefaults:(NSUserDefaults *)localStore
+             ubiquitousKeyValueStore:(NSUbiquitousKeyValueStore *)iCloudStore;
+- (instancetype)initWithUserDefaults:(NSUserDefaults *)localStore
+             ubiquitousKeyValueStore:(NSUbiquitousKeyValueStore *)iCloudStore
+                ignoredKeysForICloud:(NSArray *)iCloudIgnoreList;
 + (MKPreferencesManager *)defaultManager;
 
 - (void)setBool:(BOOL)value forKey:(NSString *)key;
@@ -39,8 +42,6 @@ extern NSString *const MKPreferencesManagerChangedKeys;
 - (void)resetPreferences;
 
 - (void)synchronize;
-
-- (void)setSuiteNameForLocalStore:(NSString *)localStoreId;
 
 - (void)addSyncIgnoreKey:(NSString *)key;
 - (void)removeSyncIgnoreKey:(NSString *)key;

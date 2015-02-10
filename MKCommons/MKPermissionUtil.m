@@ -5,15 +5,16 @@
 
 #import "MKPermissionUtil.h"
 #import "MKPreferencesManager.h"
-#import "MKSystemHelper.h"
 #import "UIAlertView+MKCommons.h"
 
-static NSString *const DidAskPermissionKeyPrefix = @"DidAskPermission";
+static NSString *const DidAskPermissionKeyPrefix = @"MKPermissionUtilDidAskPermission";
 
 //============================================================
 //== Private Interface
 //============================================================
 @interface MKPermissionUtil ()
+
+@property (nonatomic, strong, readonly) MKPreferencesManager *preferencesManager;
 
 @property (nonatomic, strong) UIAlertView *alert;
 
@@ -28,15 +29,31 @@ static NSString *const DidAskPermissionKeyPrefix = @"DidAskPermission";
 //============================================================
 @implementation MKPermissionUtil
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        NSArray *const iCloudIgnoreKeys = @[[self permissionKeyForType:MKPermissionTypePushNotifications]];
+        _preferencesManager             = [[MKPreferencesManager alloc]
+                initWithUserDefaults:[NSUserDefaults standardUserDefaults]
+                ubiquitousKeyValueStore:[NSUbiquitousKeyValueStore defaultStore]
+                ignoredKeysForICloud:iCloudIgnoreKeys];
+    }
+    return self;
+}
+
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "UnavailableInDeploymentTarget"
 - (BOOL)hasAskedPermission:(MKPermissionType)permissionType
 {
     if (permissionType == MKPermissionTypePushNotifications && [MKSystemHelper isOS7OrLessPlatform]) {
         return YES;
     }
     NSString *const preferencesKey = [self permissionKeyForType:permissionType];
-    BOOL const hasAsked = [[MKPreferencesManager defaultManager] boolForKey:preferencesKey];
+    BOOL const hasAsked = [self.preferencesManager boolForKey:preferencesKey];
     return hasAsked;
 }
+#pragma clang diagnostic pop
 
 - (void)askForPermission:(MKPermissionType)permissionType title:(NSString *)title message:(NSString *)message
                 yesTitle:(NSString *)yesTitle noTitle:(NSString *)noTitle
@@ -72,9 +89,8 @@ static NSString *const DidAskPermissionKeyPrefix = @"DidAskPermission";
 - (void)storePermission:(BOOL)isPermitted forPermissionType:(MKPermissionType)permissionType
 {
     NSString             *const preferencesKey     = [self permissionKeyForType:permissionType];
-    MKPreferencesManager *const preferencesManager = [MKPreferencesManager defaultManager];
-    [preferencesManager setBool:isPermitted forKey:preferencesKey];
-    [preferencesManager synchronize];
+    [self.preferencesManager setBool:isPermitted forKey:preferencesKey];
+    [self.preferencesManager synchronize];
 }
 
 - (void)requestNativePermission:(MKPermissionType)permissionType
