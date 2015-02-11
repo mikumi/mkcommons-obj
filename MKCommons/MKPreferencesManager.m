@@ -263,6 +263,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
             (reasonValue == NSUbiquitousKeyValueStoreInitialSyncChange)) {
             NSArray *const keys = notification.userInfo[NSUbiquitousKeyValueStoreChangedKeysKey];
             MKLogInfo(@"iCloud update received with %lu changed keys.", (unsigned long)[keys count]);
+            MKLogDebug(@"Keys: %@", keys);
 
             NSMutableDictionary *const userInfo = [[NSMutableDictionary alloc] init];
             userInfo[MKPreferencesManagerChangedKeys] = keys;
