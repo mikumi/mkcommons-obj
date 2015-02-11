@@ -101,7 +101,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
 {
     [self.localStore synchronize];
     [self.iCloudStore synchronize];
-    MKLogDebug(@"PreferencesManager keys synchronized.")
+    MKLogVerbose(@"PreferencesManager keys synchronized.")
 }
 
 - (void)setBool:(BOOL)value forKey:(NSString *)key
@@ -212,13 +212,12 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
             enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
                 [self.iCloudStore removeObjectForKey:key];
             }];
-    [self.iCloudStore synchronize];
-
     [[self.localStore dictionaryRepresentation]
             enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
                 [self.localStore removeObjectForKey:key];
             }];
-    [self.localStore synchronize];
+
+    [self synchronize];
 }
 
 - (void)addSyncIgnoreKey:(NSString *)key
