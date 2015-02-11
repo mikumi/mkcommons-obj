@@ -57,6 +57,7 @@ NSString *const MKPreferencesManagerChangedKeys               = @"MKPreferencesM
              ubiquitousKeyValueStore:(NSUbiquitousKeyValueStore *)iCloudStore
                 ignoredKeysForICloud:(NSArray *)iCloudIgnoreList
 {
+    NSAssert(localStore || iCloudStore, @"You must provide at least one store to save data in");
     NSAssert(iCloudIgnoreList, @"Ignore list cannot be nil");
     self = [super init];
     if (self) {
