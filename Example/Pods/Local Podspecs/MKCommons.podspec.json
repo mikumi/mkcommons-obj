@@ -1,6 +1,6 @@
 {
   "name": "MKCommons",
-  "version": "0.1.0",
+  "version": "1.12.0",
   "summary": "A collection of common utils",
   "description": "                       A collection of common utils\n",
   "homepage": "https://github.com/mikumi/mkcommons-obj",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/mikumi/mkcommons-obj.git",
-    "tag": "0.1.0"
+    "tag": "1.12.0"
   },
   "platforms": {
     "ios": "7.0"
