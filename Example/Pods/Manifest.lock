@@ -1,0 +1,20 @@
+PODS:
+  - MKCommons (0.1.0):
+    - MKLog (~> 0.1.1)
+    - PureLayout (~> 2.0.5)
+  - MKLog (0.1.1)
+  - PureLayout (2.0.5)
+
+DEPENDENCIES:
+  - MKCommons (from `../`)
+
+EXTERNAL SOURCES:
+  MKCommons:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MKCommons: 2947dad5e54ef397563345b92f006c377d3d9cb9
+  MKLog: 4f794acd0f5d557b63bfdb49f59953593be94b0b
+  PureLayout: a0fe75f1cf485801e7e00b723b8a3c32dca558e2
+
+COCOAPODS: 0.36.3

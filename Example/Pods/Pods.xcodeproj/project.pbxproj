@@ -1,0 +1,1970 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		008EE4D6BC8555D55DD0AAB5 /* MKFormTableViewCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB514407EEF4593FFF4ADD7 /* MKFormTableViewCellButton.m */; };
+		009376F12CB9D08B033CD386 /* NSError+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EBCC4E31749A6589BBCDD9D /* NSError+MKCommons.h */; };
+		00B8A2D41D29670A98F4F37C /* MKFormTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F0C670CFB87E6E20566611 /* MKFormTableViewCellInfo.m */; };
+		0243AD05AB8B89D6EAF52AC0 /* UISegmentedControl+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CDFC131061EB2A5860C9B6 /* UISegmentedControl+MKCommons.h */; };
+		02F5F86FBD2693895E06AF13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109EAD43D0B37FB6DD82FB4 /* Foundation.framework */; };
+		0610C9199CB36BEADB495FD9 /* MKFormTableViewCellInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4F162F956BBFA28A60BC84 /* MKFormTableViewCellInfo.h */; };
+		061244E3D8CE992ACD80A002 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F8179AC28F2890F7883EB493 /* NSArray+PureLayout.h */; };
+		069667EFA1ABD0DC182BE1BD /* NSTimeZone+MKDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C52519841A681A28539D8990 /* NSTimeZone+MKDateUtils.m */; };
+		07DD52EB5E1040F3A1FB95FC /* NSError+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FEE73E47083FAC87801D0 /* NSError+MKCommons.m */; };
+		0A2A2F4364505E9CF7548877 /* UIButton+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BDC94BC4E5A1F34FE5CA14 /* UIButton+MKCommons.m */; };
+		0A8CA47E9BD2D101E7216D60 /* Pods-Tests-MKCommons-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7763F5EF750E2CB52282D2A0 /* Pods-Tests-MKCommons-dummy.m */; };
+		0D07C1AA4C3EB557CBB986CF /* MKPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BEE974ACFBF40293A48488 /* MKPreferencesManager.m */; };
+		0D34E63BB17FE60D0F7BE705 /* NSString+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = ED053B3BA540EA79FCB24698 /* NSString+MKCommons.m */; };
+		0E2FC8590816C8E96B4146F0 /* NSDate+MKDateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2039E3068B92E837B06FA1E5 /* NSDate+MKDateUtils.h */; };
+		0FCA3D75CDC191FF5C63CF55 /* NSString+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F029181809ED4B5B9755BBA /* NSString+MKCommons.h */; };
+		1051384C153AF10A4802AFE3 /* UIViewController+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 748562D495ABECC074A78996 /* UIViewController+MKCommons.m */; };
+		12149B682C834E4903CA56C1 /* UIViewController+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F405F9E958428EA7B5B63D /* UIViewController+MKCommons.h */; };
+		12420FF983F28CC758E89567 /* MKFormTableViewCellSeparator.h in Headers */ = {isa = PBXBuildFile; fileRef = B9005EED202BE8B09069CB3A /* MKFormTableViewCellSeparator.h */; };
+		13E8BABBF096821F0E322C4A /* UISegmentedControl+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FCAB59D748EDBB641C1777 /* UISegmentedControl+MKCommons.m */; };
+		168BD743B876CAB12D3A5FC3 /* UISegmentedControl+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CDFC131061EB2A5860C9B6 /* UISegmentedControl+MKCommons.h */; };
+		17EFEBA6418568B984654873 /* MKFormTableViewCellButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2913BA5F9FBDD5F33751D1 /* MKFormTableViewCellButton.h */; };
+		1A5A6E7982452E3F948E97A3 /* MKBigLoadingIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = A45AED11688EE1432FF2EE23 /* MKBigLoadingIndicator.h */; };
+		1C38786BC15A6C36160797EF /* MKEmailHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC87065D48329A47C806F6C /* MKEmailHelper.h */; };
+		1E06E20029F107136AC99F2A /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = D9C0D9D28C762847995720B8 /* ALView+PureLayout.h */; };
+		1ED4B5F734CB353061E3619B /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 2864E21ED17F80DDA18A64FE /* PureLayoutDefines.h */; };
+		1F83B3D593140497B6502F84 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EAF3D5E7B787FC59D8FFA9 /* PureLayout+Internal.h */; };
+		238156341F0B3ED786EA9AE9 /* MKFormTableViewCellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E9599BCCB405D1C8545C74BE /* MKFormTableViewCellTextField.m */; };
+		26186DCD93EC7D28FE51B00A /* UISegmentedControl+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 77FCAB59D748EDBB641C1777 /* UISegmentedControl+MKCommons.m */; };
+		2729DE3509D894303F49BFAD /* MKMutableParallelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 421D59AC4EC7DE4CD0830309 /* MKMutableParallelArray.h */; };
+		2748C47CF52ACBE79915A745 /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 8054CC357F6BD752AC622253 /* PureLayout.h */; };
+		275A603F61F74E148F4C842D /* MKBigLoadingIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = A45AED11688EE1432FF2EE23 /* MKBigLoadingIndicator.h */; };
+		29B08D1F1858D604FEDFA6F1 /* UIPopoverController+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B770B3242E22C4AA37C55 /* UIPopoverController+MKCommons.h */; };
+		2A110A654FC0E61DCCA1ABF6 /* MKSystemHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C1A0F2651AD3DF65195BEE9 /* MKSystemHelper.h */; };
+		2E0F34F02F36487451A7AD40 /* UIAlertView+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5A371BC8576305A42E7F71 /* UIAlertView+MKCommons.h */; };
+		2E8B2C1DDCBE99D4DDD1291E /* MKStopwatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 3325D5EC2D0E254889D739DD /* MKStopwatch.h */; };
+		2F527E5E797EE083347A91CC /* MKFormTableViewCellSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 788F2B57B62EA4FD6BAAFB64 /* MKFormTableViewCellSeparator.m */; };
+		2FD3A44D5F9D97ABE050CC30 /* MKLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 508468AD58C45BFD85A902A2 /* MKLoadingIndicator.m */; };
+		30E833B4FE1A88B016F3C470 /* UIAlertView+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 9439D321ED5BA68CE09F34F5 /* UIAlertView+MKCommons.m */; };
+		329B2EC396EA7BE93D7414F6 /* MKFormTableViewCellDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D78FFF8BBBB591540ED5629 /* MKFormTableViewCellDatePicker.h */; };
+		3430B360CB3E60B98C7E1C24 /* MKFormTableViewCellDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FCB93099E2907DC12C994E /* MKFormTableViewCellDatePicker.m */; };
+		35A301A5A72BE31326CCD4E1 /* MKStopwatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 3325D5EC2D0E254889D739DD /* MKStopwatch.h */; };
+		36761142C4FF68D59C203E65 /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 91CAB90EA417E37947C085D8 /* NSLayoutConstraint+PureLayout.h */; };
+		378ABA4EC182DDFCF29BB308 /* UIAlertView+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 9439D321ED5BA68CE09F34F5 /* UIAlertView+MKCommons.m */; };
+		37F67E5614AB9739B92334A5 /* NSTimeZone+MKDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C52519841A681A28539D8990 /* NSTimeZone+MKDateUtils.m */; };
+		385C35F781B2044A54C20A1F /* UIImage+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 147C9E35F932EDDA3B538EE0 /* UIImage+MKCommons.m */; };
+		3881707A829381C8E5975DE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109EAD43D0B37FB6DD82FB4 /* Foundation.framework */; };
+		3A847268E9BEE6A433DBF59B /* MKPreferencesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E893E333128D1D4AD3649D8D /* MKPreferencesManager.h */; };
+		4278DDE598C2196C6AF046B2 /* MKFormTableViewCellDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D78FFF8BBBB591540ED5629 /* MKFormTableViewCellDatePicker.h */; };
+		429998AA9382EB909AF55E65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109EAD43D0B37FB6DD82FB4 /* Foundation.framework */; };
+		43B71DCE1E94C84702BE885D /* MKSystemHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C1A0F2651AD3DF65195BEE9 /* MKSystemHelper.h */; };
+		472328A5F391385B03BDBB6A /* MKFormTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D4781439E13A1E68ACEDD9 /* MKFormTableView.m */; };
+		4B311266F8D9A482007C42DB /* UIViewController+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 748562D495ABECC074A78996 /* UIViewController+MKCommons.m */; };
+		4BFAEB2987CA2465A2BE04B2 /* MKStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEB8C88DB6B228064BD5144 /* MKStopwatch.m */; };
+		4C0681C31453275F9F8CD080 /* MKPermissionUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = BBCA706AF6D3A5503C9A8F51 /* MKPermissionUtil.h */; };
+		4CBDC91F915D7415A0A6FE9C /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 770DF626EC822F0421BAAAB6 /* Pods-Tests-dummy.m */; };
+		4E19D466266503E1DACA671B /* PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 8054CC357F6BD752AC622253 /* PureLayout.h */; };
+		4ED742F2D72F2D20014C39FA /* MKFallbackQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF48712628B618FD873F725 /* MKFallbackQueue.m */; };
+		50A070BAA6329CB5D93E2086 /* MKLoadingIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B551FCA543335CA5F500F7 /* MKLoadingIndicator.h */; };
+		512FCB1C360B598042FC9361 /* MKMutableParallelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A09B6F262AE1CB58A9F3FA4F /* MKMutableParallelArray.m */; };
+		51F0E7329714DAD4DC0F68C8 /* MKFallbackQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 397266D41A56E2F51D08823E /* MKFallbackQueue.h */; };
+		5306FA7461B9762E73EF5134 /* NSString+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = ED053B3BA540EA79FCB24698 /* NSString+MKCommons.m */; };
+		5356421A8F427C7F52723CAA /* Pods-MKCommons-MKLog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 07AA09DBA6640AFA5F81586C /* Pods-MKCommons-MKLog-dummy.m */; };
+		542CE7DEFD7B366618C3DFFE /* MKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 95F9F9332FC46D8DCDFBBB57 /* MKLog.h */; };
+		552F6152DD5A38AA576B95A9 /* MKFormTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E3D4781439E13A1E68ACEDD9 /* MKFormTableView.m */; };
+		553B5EC977FBF932E1C76871 /* MKFormTableViewCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = ECB514407EEF4593FFF4ADD7 /* MKFormTableViewCellButton.m */; };
+		57140CCB7FA5BED009F0C91F /* MKFormTableViewCellDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FCB93099E2907DC12C994E /* MKFormTableViewCellDatePicker.m */; };
+		57B3F2D8E67CD4E99028735E /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 55675AE2E9BCA444613D18DF /* NSLayoutConstraint+PureLayout.m */; };
+		57CA880F20D3E437AC5F816D /* MKSerialManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F57A36D26731F725C1E31DC /* MKSerialManager.h */; };
+		5A356430F12F2C4F6C5C85F2 /* MKSynchronizedCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = CF8FE91C6A85D60D96E07AD0 /* MKSynchronizedCounter.h */; };
+		5AD0F1C08739DA877D2FFD4D /* MKSynchronizedCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = CF8FE91C6A85D60D96E07AD0 /* MKSynchronizedCounter.h */; };
+		5BC95CF0FAC051DAE4E16CE0 /* MKDragDropTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E8A1469B26C72C2D9519014 /* MKDragDropTableView.h */; };
+		5DDF37AD8B8B812EF9337968 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109EAD43D0B37FB6DD82FB4 /* Foundation.framework */; };
+		5DE6FF764CABAAA4A5ED6189 /* MKFormTableViewCellTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = AE80C0A7F79C38D7F13159D2 /* MKFormTableViewCellTextField.h */; };
+		5E2F8EC3EFF04869391CB2A3 /* UIPopoverController+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AE460AF7B1B7D446A96C96 /* UIPopoverController+MKCommons.m */; };
+		613488B08B8689EA3B0B676B /* MKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 13623064744B477D415BAE87 /* MKLog.m */; };
+		61C3D299F6FE40FCC8A690A6 /* Pods-MKCommons-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9AC06B24E0BC59183EAEA8 /* Pods-MKCommons-dummy.m */; };
+		626AF23CCB1EE7F5CDE11050 /* MKSerialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6AF122598EB7DD8D246E29 /* MKSerialManager.m */; };
+		647E669D2ACA7E98B6F0C903 /* UIImageView+MKParallax.h in Headers */ = {isa = PBXBuildFile; fileRef = 783296D4094E103DBA608825 /* UIImageView+MKParallax.h */; };
+		650EB2767959246264CBB71E /* MKPreferencesManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E893E333128D1D4AD3649D8D /* MKPreferencesManager.h */; };
+		6696FBDBCAC0775FC11C43FE /* UIColor+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = CA32568CC2401354D6C3B7EE /* UIColor+MKCommons.h */; };
+		66C19D6B66E03F02235E76C6 /* NSTimeZone+MKDateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B78C4BDD9414178A99ACCCF3 /* NSTimeZone+MKDateUtils.h */; };
+		6725D83C40099D355EF577EB /* MKDragDropTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E8A1469B26C72C2D9519014 /* MKDragDropTableView.h */; };
+		67F0577E87E36870032CA6E7 /* MKStopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEB8C88DB6B228064BD5144 /* MKStopwatch.m */; };
+		68D8364F1AB6166E1540E40F /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9867147EDDCDBD8499D73358 /* ALView+PureLayout.m */; };
+		695CEF4BABE6CB405512794D /* UIImage+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ACB32AAFE058E56547C5905 /* UIImage+MKCommons.h */; };
+		6C0DE8D1DA23FB1DD2E2DB5A /* UIImage+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ACB32AAFE058E56547C5905 /* UIImage+MKCommons.h */; };
+		6CD3DB7028A6B721167AB464 /* MKSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4A7D5B08685DCE7C51166 /* MKSystemHelper.m */; };
+		6FA6FD738A2284BDB7F368B9 /* NSDate+MKDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C07FF62C6344A97354EEA /* NSDate+MKDateUtils.m */; };
+		6FE513937F3404E6794FE870 /* PureLayout+Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 08EAF3D5E7B787FC59D8FFA9 /* PureLayout+Internal.h */; };
+		751F6C59DB58CB0034B88FCA /* MKBigLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 067F9037F33201133E395847 /* MKBigLoadingIndicator.m */; };
+		77F97173FD13FC733E6AEB96 /* MKMutableParallelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A09B6F262AE1CB58A9F3FA4F /* MKMutableParallelArray.m */; };
+		78FCC8D6831CB490AFA43A42 /* Pods-Tests-MKLog-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4C66E4516DC9DF272DF5C7 /* Pods-Tests-MKLog-dummy.m */; };
+		7AEFE71438AB895B033B3020 /* UIButton+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BDC94BC4E5A1F34FE5CA14 /* UIButton+MKCommons.m */; };
+		7C2EF9DAD3EF5284D11BF35D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109EAD43D0B37FB6DD82FB4 /* Foundation.framework */; };
+		80EB3E75AA6D960D24E5CDEE /* NSDate+MKDateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B9C07FF62C6344A97354EEA /* NSDate+MKDateUtils.m */; };
+		817796D0AB13491836C5B9DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109EAD43D0B37FB6DD82FB4 /* Foundation.framework */; };
+		835BA726B75D51A28A03E353 /* MKFormTableViewCellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E9599BCCB405D1C8545C74BE /* MKFormTableViewCellTextField.m */; };
+		835F52647D82CBCB0B8F9366 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9867147EDDCDBD8499D73358 /* ALView+PureLayout.m */; };
+		86271F4800A7FC59727FB533 /* MKPermissionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E165B8BD7A81893B2D3AC0 /* MKPermissionUtil.m */; };
+		865A8084F7048D4AD7D98B87 /* NSArray+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = F8179AC28F2890F7883EB493 /* NSArray+PureLayout.h */; };
+		8661FB5AAE74F434ADD7008D /* MKBigLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 067F9037F33201133E395847 /* MKBigLoadingIndicator.m */; };
+		8FE68AA5E54C2451D1FEDF37 /* MKDragDropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A223CEB90B62A1CFE866E14C /* MKDragDropTableView.m */; };
+		919F83C064AD627E72336146 /* UIAlertView+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5A371BC8576305A42E7F71 /* UIAlertView+MKCommons.h */; };
+		93BC5D4B206F3CD4DC5121B6 /* NSString+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F029181809ED4B5B9755BBA /* NSString+MKCommons.h */; };
+		94718AB3F0799D05E45A124C /* NSError+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2FEE73E47083FAC87801D0 /* NSError+MKCommons.m */; };
+		966061824A9283825ECE8A92 /* MKPermissionUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E165B8BD7A81893B2D3AC0 /* MKPermissionUtil.m */; };
+		98C457EB2B885EE3D5827291 /* PureLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 2864E21ED17F80DDA18A64FE /* PureLayoutDefines.h */; };
+		98EF3E1D252E8D44FA95FD94 /* MKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 13623064744B477D415BAE87 /* MKLog.m */; };
+		9A629F8D3C19523C22E92871 /* MKFallbackQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 397266D41A56E2F51D08823E /* MKFallbackQueue.h */; };
+		9C93C96679949FD0A4F3E4B3 /* UIImageView+MKParallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFF48469B1CFEB9BBDDC8CE /* UIImageView+MKParallax.m */; };
+		9CCF83F2869AEBE1C027A2DD /* MKMutableParallelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 421D59AC4EC7DE4CD0830309 /* MKMutableParallelArray.h */; };
+		A078FF9E4F88A9AD2910D3C5 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DC3E4DA128E25AD232C9B3 /* NSArray+PureLayout.m */; };
+		A23F4409EE01AE05A5DD84FC /* NSDate+MKDateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 2039E3068B92E837B06FA1E5 /* NSDate+MKDateUtils.h */; };
+		A391FFA10D4F7121F1B27690 /* MKEmailHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FC87065D48329A47C806F6C /* MKEmailHelper.h */; };
+		A5EE8CAD644B184E7A1511A8 /* MKFallbackQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF48712628B618FD873F725 /* MKFallbackQueue.m */; };
+		A7FDE24B66E72B20CD71F791 /* NSLayoutConstraint+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 91CAB90EA417E37947C085D8 /* NSLayoutConstraint+PureLayout.h */; };
+		A92CE0D54EB6D727A4A8B75E /* MKEmailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BEA590EA12314AFC75A817 /* MKEmailHelper.m */; };
+		AB03F158EE77CA2A9DBC38B1 /* MKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 95F9F9332FC46D8DCDFBBB57 /* MKLog.h */; };
+		AB6FFEED4DBF2A0F1018679B /* MKFormTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = DE4DD486798750D93CBB2513 /* MKFormTableView.h */; };
+		ABD8D2B96B5B32AB3DF51209 /* MKSerialManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6AF122598EB7DD8D246E29 /* MKSerialManager.m */; };
+		AC99CB272C72A2E579534AF2 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 56DC3E4DA128E25AD232C9B3 /* NSArray+PureLayout.m */; };
+		AE1C4BA0DC9955F3D8B9A53F /* Pods-MKCommons-PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A12C84EC9697472F11266EF /* Pods-MKCommons-PureLayout-dummy.m */; };
+		AEE31F72686E7D7889DCA84C /* MKUIThemeProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FA1C5853421CEF63353093B9 /* MKUIThemeProtocol.h */; };
+		B0493CC98DC567135D526A72 /* MKLoadingIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B551FCA543335CA5F500F7 /* MKLoadingIndicator.h */; };
+		B2D0738774447FC209F91A87 /* UIButton+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 4187B5283AA15951892F5BD8 /* UIButton+MKCommons.h */; };
+		B52AAB5C7981EA1CB92163AE /* MKFormTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F0C670CFB87E6E20566611 /* MKFormTableViewCellInfo.m */; };
+		B5FA2C8733A0BD4BEC7AB402 /* UIView+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4B162849E7B877958B7BAB /* UIView+MKCommons.h */; };
+		B977E1FDBFBA318C9555C2D0 /* UIImage+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 147C9E35F932EDDA3B538EE0 /* UIImage+MKCommons.m */; };
+		BB4A940AA5B4564CB95FF545 /* UIPopoverController+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AE460AF7B1B7D446A96C96 /* UIPopoverController+MKCommons.m */; };
+		BCBABC19DBF3D3B12ACF5352 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 55675AE2E9BCA444613D18DF /* NSLayoutConstraint+PureLayout.m */; };
+		BD651BCA23E8FB17C91E28B9 /* MKFormTableViewCellSeparator.m in Sources */ = {isa = PBXBuildFile; fileRef = 788F2B57B62EA4FD6BAAFB64 /* MKFormTableViewCellSeparator.m */; };
+		C0AD6897937BC539FB58DA1F /* MKFormTableViewCellButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B2913BA5F9FBDD5F33751D1 /* MKFormTableViewCellButton.h */; };
+		C12A086CA188B1270086BC77 /* MKUIThemeProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = FA1C5853421CEF63353093B9 /* MKUIThemeProtocol.h */; };
+		C13A8A0CE3B8FADF728A64D8 /* UIViewController+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F405F9E958428EA7B5B63D /* UIViewController+MKCommons.h */; };
+		C2DC9EB7B5473B813B3B4E00 /* MKPermissionUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = BBCA706AF6D3A5503C9A8F51 /* MKPermissionUtil.h */; };
+		C2EA05AA079CF3C856F1BCF1 /* UIColor+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = CA32568CC2401354D6C3B7EE /* UIColor+MKCommons.h */; };
+		C48FE1F7A7F08323F7B709E8 /* MKFormTableViewCellInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C4F162F956BBFA28A60BC84 /* MKFormTableViewCellInfo.h */; };
+		C4A9D3AF3659997C1CEC9787 /* UIView+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = A01BDF655961FE76B185FF83 /* UIView+MKCommons.m */; };
+		C619CBCFE8E12F79AB16E234 /* Pods-MKCommons-MKCommons-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE2178B889D09751F2A1B15 /* Pods-MKCommons-MKCommons-dummy.m */; };
+		C86718C6F48C6361C7FA0451 /* MKEmailHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 57BEA590EA12314AFC75A817 /* MKEmailHelper.m */; };
+		C8DFD46AEA576D369282FCFD /* MKSystemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB4A7D5B08685DCE7C51166 /* MKSystemHelper.m */; };
+		C99DD03574F8B2C3959143A7 /* MKPreferencesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 06BEE974ACFBF40293A48488 /* MKPreferencesManager.m */; };
+		CBFED4833764E832EE1E70D2 /* MKSynchronizedCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 226B29BC82217802ADAB3695 /* MKSynchronizedCounter.m */; };
+		D6917A162C494EDF41EB1595 /* MKFormTableViewCellTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = AE80C0A7F79C38D7F13159D2 /* MKFormTableViewCellTextField.h */; };
+		D8A1FD85149472BA94A0E418 /* UIImageView+MKParallax.h in Headers */ = {isa = PBXBuildFile; fileRef = 783296D4094E103DBA608825 /* UIImageView+MKParallax.h */; };
+		DC7552775A55CC214F8F16D2 /* MKSerialManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F57A36D26731F725C1E31DC /* MKSerialManager.h */; };
+		E15E1F443F417D61FC66A36E /* UIColor+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 955DA237D7DAA9E3E28A4662 /* UIColor+MKCommons.m */; };
+		E1F5E16A20F655D424843589 /* NSError+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EBCC4E31749A6589BBCDD9D /* NSError+MKCommons.h */; };
+		E4FE3629AB31931B6DB783E3 /* UIPopoverController+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9B770B3242E22C4AA37C55 /* UIPopoverController+MKCommons.h */; };
+		EA4D9C26B670FFB9C37ACA11 /* UIColor+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = 955DA237D7DAA9E3E28A4662 /* UIColor+MKCommons.m */; };
+		EA64FB9A94F901C595E78A53 /* ALView+PureLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = D9C0D9D28C762847995720B8 /* ALView+PureLayout.h */; };
+		EAE2F1F4C052942F8062B0DC /* NSTimeZone+MKDateUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B78C4BDD9414178A99ACCCF3 /* NSTimeZone+MKDateUtils.h */; };
+		EB2836CACF64568316B35545 /* MKFormTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = DE4DD486798750D93CBB2513 /* MKFormTableView.h */; };
+		EBE22A8D892A5A027BDCCE9D /* Pods-Tests-PureLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C5D00F256D41A4485FC69 /* Pods-Tests-PureLayout-dummy.m */; };
+		ED4B76EDEA4D3EA244728A82 /* MKFormTableViewCellSeparator.h in Headers */ = {isa = PBXBuildFile; fileRef = B9005EED202BE8B09069CB3A /* MKFormTableViewCellSeparator.h */; };
+		F0025D1CD2572CB9F20E9C2C /* MKSynchronizedCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 226B29BC82217802ADAB3695 /* MKSynchronizedCounter.m */; };
+		F14EF261B193829082CCFD77 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109EAD43D0B37FB6DD82FB4 /* Foundation.framework */; };
+		F1C97271085109319EAA8F12 /* MKDragDropTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A223CEB90B62A1CFE866E14C /* MKDragDropTableView.m */; };
+		F2CAD737CB9BF47012853F6E /* UIImageView+MKParallax.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DFF48469B1CFEB9BBDDC8CE /* UIImageView+MKParallax.m */; };
+		F5CBAA79AE850DA0B861D09E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109EAD43D0B37FB6DD82FB4 /* Foundation.framework */; };
+		F9595F0CF4057765030E8A6A /* UIView+MKCommons.m in Sources */ = {isa = PBXBuildFile; fileRef = A01BDF655961FE76B185FF83 /* UIView+MKCommons.m */; };
+		FA6815BFFB98BFE314A8DBB5 /* MKLoadingIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 508468AD58C45BFD85A902A2 /* MKLoadingIndicator.m */; };
+		FC0FD8209262B72D482062B4 /* UIView+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4B162849E7B877958B7BAB /* UIView+MKCommons.h */; };
+		FF1556C42C482604B43C81E6 /* UIButton+MKCommons.h in Headers */ = {isa = PBXBuildFile; fileRef = 4187B5283AA15951892F5BD8 /* UIButton+MKCommons.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0836D71B05AE199FECDCB444 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B33AA5D2CC9CEE3CFFE7FE4F;
+			remoteInfo = "Pods-MKCommons-MKLog";
+		};
+		23F1B79AF31931192F2DA05A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 917EE876D0123C5036E8AB91;
+			remoteInfo = "Pods-Tests-MKCommons-MKCommons";
+		};
+		2ECCBD75691D972B23F0934F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1D7059B9F267FD25A8ABADD;
+			remoteInfo = "Pods-MKCommons-MKLog-MKLog";
+		};
+		3D686468595D79454FCF4618 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEFD025C6A47FB3091DAA7A1;
+			remoteInfo = "Pods-Tests-MKCommons";
+		};
+		4D031BE1188C76CCEE686CA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F5BE931A283816962C08E6B;
+			remoteInfo = "Pods-MKCommons-MKCommons";
+		};
+		4DCBD91D7072338D12E04D89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29810D03622C7BC8A93B298F;
+			remoteInfo = "Pods-MKCommons-MKCommons-MKCommons";
+		};
+		6181868840AC6D3486C6DDB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD1231274EFCB6C748DA688C;
+			remoteInfo = "Pods-MKCommons-PureLayout";
+		};
+		6BBB69D74EA2F3E701B244C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD1231274EFCB6C748DA688C;
+			remoteInfo = "Pods-MKCommons-PureLayout";
+		};
+		8D231C7F325D97640727042D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AC4C15D5DAAD8FDCE4B16F8;
+			remoteInfo = "Pods-Tests-MKLog";
+		};
+		91922CF36960036C90C22723 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5723F34044E3DB42F7DA380;
+			remoteInfo = "Pods-Tests-PureLayout";
+		};
+		93909AD1853383191DF1FABC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B33AA5D2CC9CEE3CFFE7FE4F;
+			remoteInfo = "Pods-MKCommons-MKLog";
+		};
+		984A8DB00A393FEFCBA0246F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50C68A7A62F5E833ACE40C6B;
+			remoteInfo = "Pods-Tests-MKLog-MKLog";
+		};
+		EBED43949917D7B743C05E04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AC4C15D5DAAD8FDCE4B16F8;
+			remoteInfo = "Pods-Tests-MKLog";
+		};
+		FC6D465E0DE71AE921ACD51F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F69B93DA74D35014F4AF38C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5723F34044E3DB42F7DA380;
+			remoteInfo = "Pods-Tests-PureLayout";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0355DAF99A424A8E6CD80CB1 /* Pods-Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-environment.h"; sourceTree = "<group>"; };
+		067F9037F33201133E395847 /* MKBigLoadingIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKBigLoadingIndicator.m; sourceTree = "<group>"; };
+		06BEE974ACFBF40293A48488 /* MKPreferencesManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKPreferencesManager.m; sourceTree = "<group>"; };
+		07AA09DBA6640AFA5F81586C /* Pods-MKCommons-MKLog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MKCommons-MKLog-dummy.m"; sourceTree = "<group>"; };
+		089116E1C4B1AD81C59519D1 /* Pods-MKCommons-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MKCommons-acknowledgements.plist"; sourceTree = "<group>"; };
+		08EAF3D5E7B787FC59D8FFA9 /* PureLayout+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		09B0DCDF33C0953A607B4DF5 /* libPods-MKCommons-MKLog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKCommons-MKLog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A0616639B7D9EF157D2B453 /* Pods-Tests-PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Tests-PureLayout-prefix.pch"; path = "../Pods-Tests-PureLayout/Pods-Tests-PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		0A12C84EC9697472F11266EF /* Pods-MKCommons-PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MKCommons-PureLayout-dummy.m"; sourceTree = "<group>"; };
+		0D5A371BC8576305A42E7F71 /* UIAlertView+MKCommons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+MKCommons.h"; sourceTree = "<group>"; };
+		1351A02EB6C89047DBD89C38 /* Pods-MKCommons-MKLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MKCommons-MKLog.xcconfig"; sourceTree = "<group>"; };
+		13623064744B477D415BAE87 /* MKLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MKLog.m; path = Pod/Classes/MKLog.m; sourceTree = "<group>"; };
+		13B551FCA543335CA5F500F7 /* MKLoadingIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKLoadingIndicator.h; sourceTree = "<group>"; };
+		147C9E35F932EDDA3B538EE0 /* UIImage+MKCommons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MKCommons.m"; sourceTree = "<group>"; };
+		1B44497A1CF3A6DCBAA4C35D /* libPods-MKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKCommons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BB4A7D5B08685DCE7C51166 /* MKSystemHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKSystemHelper.m; sourceTree = "<group>"; };
+		1C1A0F2651AD3DF65195BEE9 /* MKSystemHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKSystemHelper.h; sourceTree = "<group>"; };
+		1EBCC4E31749A6589BBCDD9D /* NSError+MKCommons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSError+MKCommons.h"; sourceTree = "<group>"; };
+		2039E3068B92E837B06FA1E5 /* NSDate+MKDateUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+MKDateUtils.h"; sourceTree = "<group>"; };
+		21CDFC131061EB2A5860C9B6 /* UISegmentedControl+MKCommons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+MKCommons.h"; sourceTree = "<group>"; };
+		226B29BC82217802ADAB3695 /* MKSynchronizedCounter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKSynchronizedCounter.m; sourceTree = "<group>"; };
+		2450B38454D0B529F09DAE4D /* Pods-Tests-MKLog.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-MKLog.xcconfig"; path = "../Pods-Tests-MKLog/Pods-Tests-MKLog.xcconfig"; sourceTree = "<group>"; };
+		2864E21ED17F80DDA18A64FE /* PureLayoutDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
+		2B2913BA5F9FBDD5F33751D1 /* MKFormTableViewCellButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellButton.h; sourceTree = "<group>"; };
+		2C3CBF78F18E284AC4A107BC /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C6AF122598EB7DD8D246E29 /* MKSerialManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKSerialManager.m; sourceTree = "<group>"; };
+		2E8A1469B26C72C2D9519014 /* MKDragDropTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKDragDropTableView.h; sourceTree = "<group>"; };
+		31BDC94BC4E5A1F34FE5CA14 /* UIButton+MKCommons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MKCommons.m"; sourceTree = "<group>"; };
+		3325D5EC2D0E254889D739DD /* MKStopwatch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKStopwatch.h; sourceTree = "<group>"; };
+		37F405F9E958428EA7B5B63D /* UIViewController+MKCommons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MKCommons.h"; sourceTree = "<group>"; };
+		397266D41A56E2F51D08823E /* MKFallbackQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKFallbackQueue.h; sourceTree = "<group>"; };
+		4187B5283AA15951892F5BD8 /* UIButton+MKCommons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+MKCommons.h"; sourceTree = "<group>"; };
+		421D59AC4EC7DE4CD0830309 /* MKMutableParallelArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKMutableParallelArray.h; sourceTree = "<group>"; };
+		47FD43B7A828A3CB06860B38 /* Pods-MKCommons-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MKCommons-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4B1C5D00F256D41A4485FC69 /* Pods-Tests-PureLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Tests-PureLayout-dummy.m"; path = "../Pods-Tests-PureLayout/Pods-Tests-PureLayout-dummy.m"; sourceTree = "<group>"; };
+		4F029181809ED4B5B9755BBA /* NSString+MKCommons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+MKCommons.h"; sourceTree = "<group>"; };
+		4F57A36D26731F725C1E31DC /* MKSerialManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKSerialManager.h; sourceTree = "<group>"; };
+		508468AD58C45BFD85A902A2 /* MKLoadingIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKLoadingIndicator.m; sourceTree = "<group>"; };
+		51FCB93099E2907DC12C994E /* MKFormTableViewCellDatePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellDatePicker.m; sourceTree = "<group>"; };
+		55675AE2E9BCA444613D18DF /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		56DC3E4DA128E25AD232C9B3 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		57AE460AF7B1B7D446A96C96 /* UIPopoverController+MKCommons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIPopoverController+MKCommons.m"; sourceTree = "<group>"; };
+		57BEA590EA12314AFC75A817 /* MKEmailHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKEmailHelper.m; sourceTree = "<group>"; };
+		59FF058CF68F1902919DF46E /* Pods-MKCommons-MKCommons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MKCommons-MKCommons.xcconfig"; sourceTree = "<group>"; };
+		5A4C66E4516DC9DF272DF5C7 /* Pods-Tests-MKLog-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Tests-MKLog-dummy.m"; path = "../Pods-Tests-MKLog/Pods-Tests-MKLog-dummy.m"; sourceTree = "<group>"; };
+		5B2FEE73E47083FAC87801D0 /* NSError+MKCommons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSError+MKCommons.m"; sourceTree = "<group>"; };
+		5CE2178B889D09751F2A1B15 /* Pods-MKCommons-MKCommons-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MKCommons-MKCommons-dummy.m"; sourceTree = "<group>"; };
+		5FC87065D48329A47C806F6C /* MKEmailHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKEmailHelper.h; sourceTree = "<group>"; };
+		6724265F7F7FF208508333E5 /* Pods-MKCommons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MKCommons.debug.xcconfig"; sourceTree = "<group>"; };
+		6890D52722C0E505860D03EE /* libPods-Tests-MKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-MKCommons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D78FFF8BBBB591540ED5629 /* MKFormTableViewCellDatePicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellDatePicker.h; sourceTree = "<group>"; };
+		6EC8A412B11ACD2C417DD80B /* Pods-Tests-MKCommons-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-MKCommons-Private.xcconfig"; path = "../Pods-Tests-MKCommons/Pods-Tests-MKCommons-Private.xcconfig"; sourceTree = "<group>"; };
+		6FEB8C88DB6B228064BD5144 /* MKStopwatch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKStopwatch.m; sourceTree = "<group>"; };
+		720CD5CC2FDF05BA8EB8D0E0 /* libPods-MKCommons-PureLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKCommons-PureLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		748562D495ABECC074A78996 /* UIViewController+MKCommons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MKCommons.m"; sourceTree = "<group>"; };
+		76FFDD707054219FDA4E972E /* MKCommons.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKCommons.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		770DF626EC822F0421BAAAB6 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
+		7763F5EF750E2CB52282D2A0 /* Pods-Tests-MKCommons-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-Tests-MKCommons-dummy.m"; path = "../Pods-Tests-MKCommons/Pods-Tests-MKCommons-dummy.m"; sourceTree = "<group>"; };
+		77AB35357607BA552948AF94 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77FCAB59D748EDBB641C1777 /* UISegmentedControl+MKCommons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+MKCommons.m"; sourceTree = "<group>"; };
+		783296D4094E103DBA608825 /* UIImageView+MKParallax.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MKParallax.h"; sourceTree = "<group>"; };
+		788F2B57B62EA4FD6BAAFB64 /* MKFormTableViewCellSeparator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellSeparator.m; sourceTree = "<group>"; };
+		8054CC357F6BD752AC622253 /* PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		823ED322509001A229B715BE /* libPods-MKCommons-MKCommons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MKCommons-MKCommons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		828CA17B2B71F4454FA0BEE3 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8ACB32AAFE058E56547C5905 /* UIImage+MKCommons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+MKCommons.h"; sourceTree = "<group>"; };
+		8B9C07FF62C6344A97354EEA /* NSDate+MKDateUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MKDateUtils.m"; sourceTree = "<group>"; };
+		8E7D94A88ED3BC3854C3DDF0 /* Pods-Tests-MKLog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Tests-MKLog-prefix.pch"; path = "../Pods-Tests-MKLog/Pods-Tests-MKLog-prefix.pch"; sourceTree = "<group>"; };
+		916E6F86351262A9DC2AED72 /* Pods-Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		91AB39BF58AB275F205C5999 /* Pods-MKCommons-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MKCommons-environment.h"; sourceTree = "<group>"; };
+		91CAB90EA417E37947C085D8 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		93E165B8BD7A81893B2D3AC0 /* MKPermissionUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKPermissionUtil.m; sourceTree = "<group>"; };
+		9439D321ED5BA68CE09F34F5 /* UIAlertView+MKCommons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+MKCommons.m"; sourceTree = "<group>"; };
+		955DA237D7DAA9E3E28A4662 /* UIColor+MKCommons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+MKCommons.m"; sourceTree = "<group>"; };
+		95F9F9332FC46D8DCDFBBB57 /* MKLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MKLog.h; path = Pod/Classes/MKLog.h; sourceTree = "<group>"; };
+		9867147EDDCDBD8499D73358 /* ALView+PureLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		9C4F162F956BBFA28A60BC84 /* MKFormTableViewCellInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellInfo.h; sourceTree = "<group>"; };
+		9D0AED5B8744988EE6336C50 /* Pods-MKCommons-MKCommons-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MKCommons-MKCommons-Private.xcconfig"; sourceTree = "<group>"; };
+		9DFF48469B1CFEB9BBDDC8CE /* UIImageView+MKParallax.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MKParallax.m"; sourceTree = "<group>"; };
+		A01BDF655961FE76B185FF83 /* UIView+MKCommons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+MKCommons.m"; sourceTree = "<group>"; };
+		A09B6F262AE1CB58A9F3FA4F /* MKMutableParallelArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKMutableParallelArray.m; sourceTree = "<group>"; };
+		A1F0C670CFB87E6E20566611 /* MKFormTableViewCellInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellInfo.m; sourceTree = "<group>"; };
+		A223CEB90B62A1CFE866E14C /* MKDragDropTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKDragDropTableView.m; sourceTree = "<group>"; };
+		A45AED11688EE1432FF2EE23 /* MKBigLoadingIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKBigLoadingIndicator.h; sourceTree = "<group>"; };
+		A5FED0D369D69486ABE11F60 /* Pods-MKCommons-PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MKCommons-PureLayout.xcconfig"; sourceTree = "<group>"; };
+		AB9B770B3242E22C4AA37C55 /* UIPopoverController+MKCommons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIPopoverController+MKCommons.h"; sourceTree = "<group>"; };
+		AC18B7AEA2C9C3AB0BA8F604 /* Pods-MKCommons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MKCommons.release.xcconfig"; sourceTree = "<group>"; };
+		AE80C0A7F79C38D7F13159D2 /* MKFormTableViewCellTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellTextField.h; sourceTree = "<group>"; };
+		B03968BF6FCED44C917B8985 /* libPods-Tests-PureLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-PureLayout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B109EAD43D0B37FB6DD82FB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B297426B7A3AAEE5C94B13B5 /* Pods-MKCommons-PureLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MKCommons-PureLayout-prefix.pch"; sourceTree = "<group>"; };
+		B6BF05C0E3FC47260389E3B9 /* Pods-Tests-PureLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-PureLayout-Private.xcconfig"; path = "../Pods-Tests-PureLayout/Pods-Tests-PureLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		B78C4BDD9414178A99ACCCF3 /* NSTimeZone+MKDateUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSTimeZone+MKDateUtils.h"; sourceTree = "<group>"; };
+		B9005EED202BE8B09069CB3A /* MKFormTableViewCellSeparator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKFormTableViewCellSeparator.h; sourceTree = "<group>"; };
+		BBCA706AF6D3A5503C9A8F51 /* MKPermissionUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKPermissionUtil.h; sourceTree = "<group>"; };
+		BD5EC5304DF8EBDE65F6171F /* Pods-MKCommons-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MKCommons-resources.sh"; sourceTree = "<group>"; };
+		C52519841A681A28539D8990 /* NSTimeZone+MKDateUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSTimeZone+MKDateUtils.m"; sourceTree = "<group>"; };
+		CA32568CC2401354D6C3B7EE /* UIColor+MKCommons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+MKCommons.h"; sourceTree = "<group>"; };
+		CB39E0F1C4C10BB7F5AAAB24 /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		CBB6349E8F908B0198C0ADE1 /* Pods-MKCommons-MKLog-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MKCommons-MKLog-prefix.pch"; sourceTree = "<group>"; };
+		CF8FE91C6A85D60D96E07AD0 /* MKSynchronizedCounter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKSynchronizedCounter.h; sourceTree = "<group>"; };
+		CFD504E273A3E35188ECC82E /* MKLog.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKLog.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32C3A8D980A0221C23274E8 /* Pods-MKCommons-PureLayout-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MKCommons-PureLayout-Private.xcconfig"; sourceTree = "<group>"; };
+		D643207F261BE9F475C00B88 /* MKLog.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKLog.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D921060A316885BC3CE5D3D9 /* Pods-MKCommons-MKCommons-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MKCommons-MKCommons-prefix.pch"; sourceTree = "<group>"; };
+		D9C0D9D28C762847995720B8 /* ALView+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		DCFCDB830EFB46899BD809B8 /* Pods-Tests-MKCommons.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-MKCommons.xcconfig"; path = "../Pods-Tests-MKCommons/Pods-Tests-MKCommons.xcconfig"; sourceTree = "<group>"; };
+		DE4DD486798750D93CBB2513 /* MKFormTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKFormTableView.h; sourceTree = "<group>"; };
+		DF13B869AF6D3854279123E2 /* Pods-Tests-MKLog-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-MKLog-Private.xcconfig"; path = "../Pods-Tests-MKLog/Pods-Tests-MKLog-Private.xcconfig"; sourceTree = "<group>"; };
+		DF60DF5484DD829E30C8552C /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
+		E3D4781439E13A1E68ACEDD9 /* MKFormTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKFormTableView.m; sourceTree = "<group>"; };
+		E893E333128D1D4AD3649D8D /* MKPreferencesManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKPreferencesManager.h; sourceTree = "<group>"; };
+		E9599BCCB405D1C8545C74BE /* MKFormTableViewCellTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellTextField.m; sourceTree = "<group>"; };
+		E9F2FC8E24B4D0E55BC18D76 /* libPods-Tests-MKLog.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests-MKLog.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC9AC06B24E0BC59183EAEA8 /* Pods-MKCommons-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MKCommons-dummy.m"; sourceTree = "<group>"; };
+		EC9AEE9FCDF1EABE99392588 /* Pods-Tests-MKCommons-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-Tests-MKCommons-prefix.pch"; path = "../Pods-Tests-MKCommons/Pods-Tests-MKCommons-prefix.pch"; sourceTree = "<group>"; };
+		ECB514407EEF4593FFF4ADD7 /* MKFormTableViewCellButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKFormTableViewCellButton.m; sourceTree = "<group>"; };
+		ECF48712628B618FD873F725 /* MKFallbackQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MKFallbackQueue.m; sourceTree = "<group>"; };
+		ED053B3BA540EA79FCB24698 /* NSString+MKCommons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+MKCommons.m"; sourceTree = "<group>"; };
+		F1582757EB5DA5F8D0940349 /* Pods-MKCommons-MKLog-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MKCommons-MKLog-Private.xcconfig"; sourceTree = "<group>"; };
+		F519D7D26992D983D856414F /* Pods-Tests-PureLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests-PureLayout.xcconfig"; path = "../Pods-Tests-PureLayout/Pods-Tests-PureLayout.xcconfig"; sourceTree = "<group>"; };
+		F5207B11F0E5AE21FA77D9B9 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F8179AC28F2890F7883EB493 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		FA1C5853421CEF63353093B9 /* MKUIThemeProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MKUIThemeProtocol.h; sourceTree = "<group>"; };
+		FE4B162849E7B877958B7BAB /* UIView+MKCommons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+MKCommons.h"; sourceTree = "<group>"; };
+		FF3B37365E407087F3C4ADAF /* MKCommons.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MKCommons.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0DFB80A4E2EF06C9650B48D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CBAA79AE850DA0B861D09E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		136CA5C96CAE4C618C8B6FC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F14EF261B193829082CCFD77 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		236FDE0497A8115E624B1CFC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		344FED440A8A896CBF163357 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F5F86FBD2693895E06AF13 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FB2603CEBC23A6AA26193B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AADA074FF634A69D9818AA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F8FC30F308464157DF5CAB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C2EF9DAD3EF5284D11BF35D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0E71D71E7F30E2BB86BD612 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3B2C736AC2A7C0F89661103 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DDF37AD8B8B812EF9337968 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C70BE3941E9D6611E984CA87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3881707A829381C8E5975DE7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBA48ED35BF09F4C86AF05D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				429998AA9382EB909AF55E65 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA362AD182A994DE69E641E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				817796D0AB13491836C5B9DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03875EF281B4E40D2AB27F90 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D9C0D9D28C762847995720B8 /* ALView+PureLayout.h */,
+				9867147EDDCDBD8499D73358 /* ALView+PureLayout.m */,
+				F8179AC28F2890F7883EB493 /* NSArray+PureLayout.h */,
+				56DC3E4DA128E25AD232C9B3 /* NSArray+PureLayout.m */,
+				91CAB90EA417E37947C085D8 /* NSLayoutConstraint+PureLayout.h */,
+				55675AE2E9BCA444613D18DF /* NSLayoutConstraint+PureLayout.m */,
+				8054CC357F6BD752AC622253 /* PureLayout.h */,
+				08EAF3D5E7B787FC59D8FFA9 /* PureLayout+Internal.h */,
+				2864E21ED17F80DDA18A64FE /* PureLayoutDefines.h */,
+				70D9A7652F03FAEF9582A5E8 /* Support Files */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
+		11193F5D26C53255109CE8BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E07F472C94A3BC950DD3F59B /* MKLog */,
+				03875EF281B4E40D2AB27F90 /* PureLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		15020B549CF95DC2EE6EA44E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A45AED11688EE1432FF2EE23 /* MKBigLoadingIndicator.h */,
+				067F9037F33201133E395847 /* MKBigLoadingIndicator.m */,
+				2E8A1469B26C72C2D9519014 /* MKDragDropTableView.h */,
+				A223CEB90B62A1CFE866E14C /* MKDragDropTableView.m */,
+				5FC87065D48329A47C806F6C /* MKEmailHelper.h */,
+				57BEA590EA12314AFC75A817 /* MKEmailHelper.m */,
+				397266D41A56E2F51D08823E /* MKFallbackQueue.h */,
+				ECF48712628B618FD873F725 /* MKFallbackQueue.m */,
+				DE4DD486798750D93CBB2513 /* MKFormTableView.h */,
+				E3D4781439E13A1E68ACEDD9 /* MKFormTableView.m */,
+				2B2913BA5F9FBDD5F33751D1 /* MKFormTableViewCellButton.h */,
+				ECB514407EEF4593FFF4ADD7 /* MKFormTableViewCellButton.m */,
+				6D78FFF8BBBB591540ED5629 /* MKFormTableViewCellDatePicker.h */,
+				51FCB93099E2907DC12C994E /* MKFormTableViewCellDatePicker.m */,
+				9C4F162F956BBFA28A60BC84 /* MKFormTableViewCellInfo.h */,
+				A1F0C670CFB87E6E20566611 /* MKFormTableViewCellInfo.m */,
+				B9005EED202BE8B09069CB3A /* MKFormTableViewCellSeparator.h */,
+				788F2B57B62EA4FD6BAAFB64 /* MKFormTableViewCellSeparator.m */,
+				AE80C0A7F79C38D7F13159D2 /* MKFormTableViewCellTextField.h */,
+				E9599BCCB405D1C8545C74BE /* MKFormTableViewCellTextField.m */,
+				13B551FCA543335CA5F500F7 /* MKLoadingIndicator.h */,
+				508468AD58C45BFD85A902A2 /* MKLoadingIndicator.m */,
+				421D59AC4EC7DE4CD0830309 /* MKMutableParallelArray.h */,
+				A09B6F262AE1CB58A9F3FA4F /* MKMutableParallelArray.m */,
+				BBCA706AF6D3A5503C9A8F51 /* MKPermissionUtil.h */,
+				93E165B8BD7A81893B2D3AC0 /* MKPermissionUtil.m */,
+				E893E333128D1D4AD3649D8D /* MKPreferencesManager.h */,
+				06BEE974ACFBF40293A48488 /* MKPreferencesManager.m */,
+				4F57A36D26731F725C1E31DC /* MKSerialManager.h */,
+				2C6AF122598EB7DD8D246E29 /* MKSerialManager.m */,
+				3325D5EC2D0E254889D739DD /* MKStopwatch.h */,
+				6FEB8C88DB6B228064BD5144 /* MKStopwatch.m */,
+				CF8FE91C6A85D60D96E07AD0 /* MKSynchronizedCounter.h */,
+				226B29BC82217802ADAB3695 /* MKSynchronizedCounter.m */,
+				1C1A0F2651AD3DF65195BEE9 /* MKSystemHelper.h */,
+				1BB4A7D5B08685DCE7C51166 /* MKSystemHelper.m */,
+				FA1C5853421CEF63353093B9 /* MKUIThemeProtocol.h */,
+				2039E3068B92E837B06FA1E5 /* NSDate+MKDateUtils.h */,
+				8B9C07FF62C6344A97354EEA /* NSDate+MKDateUtils.m */,
+				1EBCC4E31749A6589BBCDD9D /* NSError+MKCommons.h */,
+				5B2FEE73E47083FAC87801D0 /* NSError+MKCommons.m */,
+				4F029181809ED4B5B9755BBA /* NSString+MKCommons.h */,
+				ED053B3BA540EA79FCB24698 /* NSString+MKCommons.m */,
+				B78C4BDD9414178A99ACCCF3 /* NSTimeZone+MKDateUtils.h */,
+				C52519841A681A28539D8990 /* NSTimeZone+MKDateUtils.m */,
+				0D5A371BC8576305A42E7F71 /* UIAlertView+MKCommons.h */,
+				9439D321ED5BA68CE09F34F5 /* UIAlertView+MKCommons.m */,
+				4187B5283AA15951892F5BD8 /* UIButton+MKCommons.h */,
+				31BDC94BC4E5A1F34FE5CA14 /* UIButton+MKCommons.m */,
+				CA32568CC2401354D6C3B7EE /* UIColor+MKCommons.h */,
+				955DA237D7DAA9E3E28A4662 /* UIColor+MKCommons.m */,
+				8ACB32AAFE058E56547C5905 /* UIImage+MKCommons.h */,
+				147C9E35F932EDDA3B538EE0 /* UIImage+MKCommons.m */,
+				783296D4094E103DBA608825 /* UIImageView+MKParallax.h */,
+				9DFF48469B1CFEB9BBDDC8CE /* UIImageView+MKParallax.m */,
+				AB9B770B3242E22C4AA37C55 /* UIPopoverController+MKCommons.h */,
+				57AE460AF7B1B7D446A96C96 /* UIPopoverController+MKCommons.m */,
+				21CDFC131061EB2A5860C9B6 /* UISegmentedControl+MKCommons.h */,
+				77FCAB59D748EDBB641C1777 /* UISegmentedControl+MKCommons.m */,
+				FE4B162849E7B877958B7BAB /* UIView+MKCommons.h */,
+				A01BDF655961FE76B185FF83 /* UIView+MKCommons.m */,
+				37F405F9E958428EA7B5B63D /* UIViewController+MKCommons.h */,
+				748562D495ABECC074A78996 /* UIViewController+MKCommons.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		3021E86DC3BA3F2720BCE62D = {
+			isa = PBXGroup;
+			children = (
+				F5207B11F0E5AE21FA77D9B9 /* Podfile */,
+				318F5D26763B1BB1A341A689 /* Development Pods */,
+				6F691474953C2A32516425FA /* Frameworks */,
+				11193F5D26C53255109CE8BB /* Pods */,
+				AE60AB37236B3721E0BFAACF /* Products */,
+				C34C5283DDF36C9624E2D17A /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		318F5D26763B1BB1A341A689 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6A4D5D2B141BD28FCF547F5 /* MKCommons */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		328170D18E612D987300EC22 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1351A02EB6C89047DBD89C38 /* Pods-MKCommons-MKLog.xcconfig */,
+				F1582757EB5DA5F8D0940349 /* Pods-MKCommons-MKLog-Private.xcconfig */,
+				07AA09DBA6640AFA5F81586C /* Pods-MKCommons-MKLog-dummy.m */,
+				CBB6349E8F908B0198C0ADE1 /* Pods-MKCommons-MKLog-prefix.pch */,
+				2450B38454D0B529F09DAE4D /* Pods-Tests-MKLog.xcconfig */,
+				DF13B869AF6D3854279123E2 /* Pods-Tests-MKLog-Private.xcconfig */,
+				5A4C66E4516DC9DF272DF5C7 /* Pods-Tests-MKLog-dummy.m */,
+				8E7D94A88ED3BC3854C3DDF0 /* Pods-Tests-MKLog-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MKCommons-MKLog";
+			sourceTree = "<group>";
+		};
+		575EFFF1D4828B3682D46B1E /* Pods-MKCommons */ = {
+			isa = PBXGroup;
+			children = (
+				47FD43B7A828A3CB06860B38 /* Pods-MKCommons-acknowledgements.markdown */,
+				089116E1C4B1AD81C59519D1 /* Pods-MKCommons-acknowledgements.plist */,
+				EC9AC06B24E0BC59183EAEA8 /* Pods-MKCommons-dummy.m */,
+				91AB39BF58AB275F205C5999 /* Pods-MKCommons-environment.h */,
+				BD5EC5304DF8EBDE65F6171F /* Pods-MKCommons-resources.sh */,
+				6724265F7F7FF208508333E5 /* Pods-MKCommons.debug.xcconfig */,
+				AC18B7AEA2C9C3AB0BA8F604 /* Pods-MKCommons.release.xcconfig */,
+			);
+			name = "Pods-MKCommons";
+			path = "Target Support Files/Pods-MKCommons";
+			sourceTree = "<group>";
+		};
+		5CFC678B6795E8BF5FB7E169 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				59FF058CF68F1902919DF46E /* Pods-MKCommons-MKCommons.xcconfig */,
+				9D0AED5B8744988EE6336C50 /* Pods-MKCommons-MKCommons-Private.xcconfig */,
+				5CE2178B889D09751F2A1B15 /* Pods-MKCommons-MKCommons-dummy.m */,
+				D921060A316885BC3CE5D3D9 /* Pods-MKCommons-MKCommons-prefix.pch */,
+				DCFCDB830EFB46899BD809B8 /* Pods-Tests-MKCommons.xcconfig */,
+				6EC8A412B11ACD2C417DD80B /* Pods-Tests-MKCommons-Private.xcconfig */,
+				7763F5EF750E2CB52282D2A0 /* Pods-Tests-MKCommons-dummy.m */,
+				EC9AEE9FCDF1EABE99392588 /* Pods-Tests-MKCommons-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-MKCommons-MKCommons";
+			sourceTree = "<group>";
+		};
+		6F691474953C2A32516425FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D794FD240A118380ACC683AB /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70D9A7652F03FAEF9582A5E8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5FED0D369D69486ABE11F60 /* Pods-MKCommons-PureLayout.xcconfig */,
+				D32C3A8D980A0221C23274E8 /* Pods-MKCommons-PureLayout-Private.xcconfig */,
+				0A12C84EC9697472F11266EF /* Pods-MKCommons-PureLayout-dummy.m */,
+				B297426B7A3AAEE5C94B13B5 /* Pods-MKCommons-PureLayout-prefix.pch */,
+				F519D7D26992D983D856414F /* Pods-Tests-PureLayout.xcconfig */,
+				B6BF05C0E3FC47260389E3B9 /* Pods-Tests-PureLayout-Private.xcconfig */,
+				4B1C5D00F256D41A4485FC69 /* Pods-Tests-PureLayout-dummy.m */,
+				0A0616639B7D9EF157D2B453 /* Pods-Tests-PureLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-MKCommons-PureLayout";
+			sourceTree = "<group>";
+		};
+		87E40C985C54959C53EF987C /* Pods-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				916E6F86351262A9DC2AED72 /* Pods-Tests-acknowledgements.markdown */,
+				CB39E0F1C4C10BB7F5AAAB24 /* Pods-Tests-acknowledgements.plist */,
+				770DF626EC822F0421BAAAB6 /* Pods-Tests-dummy.m */,
+				0355DAF99A424A8E6CD80CB1 /* Pods-Tests-environment.h */,
+				DF60DF5484DD829E30C8552C /* Pods-Tests-resources.sh */,
+				2C3CBF78F18E284AC4A107BC /* Pods-Tests.debug.xcconfig */,
+				828CA17B2B71F4454FA0BEE3 /* Pods-Tests.release.xcconfig */,
+			);
+			name = "Pods-Tests";
+			path = "Target Support Files/Pods-Tests";
+			sourceTree = "<group>";
+		};
+		AE60AB37236B3721E0BFAACF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF3B37365E407087F3C4ADAF /* MKCommons.bundle */,
+				76FFDD707054219FDA4E972E /* MKCommons.bundle */,
+				CFD504E273A3E35188ECC82E /* MKLog.bundle */,
+				D643207F261BE9F475C00B88 /* MKLog.bundle */,
+				1B44497A1CF3A6DCBAA4C35D /* libPods-MKCommons.a */,
+				823ED322509001A229B715BE /* libPods-MKCommons-MKCommons.a */,
+				09B0DCDF33C0953A607B4DF5 /* libPods-MKCommons-MKLog.a */,
+				720CD5CC2FDF05BA8EB8D0E0 /* libPods-MKCommons-PureLayout.a */,
+				77AB35357607BA552948AF94 /* libPods-Tests.a */,
+				6890D52722C0E505860D03EE /* libPods-Tests-MKCommons.a */,
+				E9F2FC8E24B4D0E55BC18D76 /* libPods-Tests-MKLog.a */,
+				B03968BF6FCED44C917B8985 /* libPods-Tests-PureLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C34C5283DDF36C9624E2D17A /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				575EFFF1D4828B3682D46B1E /* Pods-MKCommons */,
+				87E40C985C54959C53EF987C /* Pods-Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D794FD240A118380ACC683AB /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B109EAD43D0B37FB6DD82FB4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D8CA761B8DBF1F89C7247AD2 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				15020B549CF95DC2EE6EA44E /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		E07F472C94A3BC950DD3F59B /* MKLog */ = {
+			isa = PBXGroup;
+			children = (
+				95F9F9332FC46D8DCDFBBB57 /* MKLog.h */,
+				13623064744B477D415BAE87 /* MKLog.m */,
+				328170D18E612D987300EC22 /* Support Files */,
+			);
+			path = MKLog;
+			sourceTree = "<group>";
+		};
+		E6A4D5D2B141BD28FCF547F5 /* MKCommons */ = {
+			isa = PBXGroup;
+			children = (
+				D8CA761B8DBF1F89C7247AD2 /* Pod */,
+				5CFC678B6795E8BF5FB7E169 /* Support Files */,
+			);
+			name = MKCommons;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		096C5B361308D0CCE336F05B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E06E20029F107136AC99F2A /* ALView+PureLayout.h in Headers */,
+				865A8084F7048D4AD7D98B87 /* NSArray+PureLayout.h in Headers */,
+				A7FDE24B66E72B20CD71F791 /* NSLayoutConstraint+PureLayout.h in Headers */,
+				6FE513937F3404E6794FE870 /* PureLayout+Internal.h in Headers */,
+				2748C47CF52ACBE79915A745 /* PureLayout.h in Headers */,
+				1ED4B5F734CB353061E3619B /* PureLayoutDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85A4808E9992BC60B8BA2393 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB03F158EE77CA2A9DBC38B1 /* MKLog.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2AE5707A37F550BEA357853 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542CE7DEFD7B366618C3DFFE /* MKLog.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4786F524002BA0DA1BBCF2D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA64FB9A94F901C595E78A53 /* ALView+PureLayout.h in Headers */,
+				061244E3D8CE992ACD80A002 /* NSArray+PureLayout.h in Headers */,
+				36761142C4FF68D59C203E65 /* NSLayoutConstraint+PureLayout.h in Headers */,
+				1F83B3D593140497B6502F84 /* PureLayout+Internal.h in Headers */,
+				4E19D466266503E1DACA671B /* PureLayout.h in Headers */,
+				98C457EB2B885EE3D5827291 /* PureLayoutDefines.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C611A2F8584B3DF735511962 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A5A6E7982452E3F948E97A3 /* MKBigLoadingIndicator.h in Headers */,
+				5BC95CF0FAC051DAE4E16CE0 /* MKDragDropTableView.h in Headers */,
+				1C38786BC15A6C36160797EF /* MKEmailHelper.h in Headers */,
+				9A629F8D3C19523C22E92871 /* MKFallbackQueue.h in Headers */,
+				AB6FFEED4DBF2A0F1018679B /* MKFormTableView.h in Headers */,
+				C0AD6897937BC539FB58DA1F /* MKFormTableViewCellButton.h in Headers */,
+				329B2EC396EA7BE93D7414F6 /* MKFormTableViewCellDatePicker.h in Headers */,
+				0610C9199CB36BEADB495FD9 /* MKFormTableViewCellInfo.h in Headers */,
+				12420FF983F28CC758E89567 /* MKFormTableViewCellSeparator.h in Headers */,
+				D6917A162C494EDF41EB1595 /* MKFormTableViewCellTextField.h in Headers */,
+				B0493CC98DC567135D526A72 /* MKLoadingIndicator.h in Headers */,
+				9CCF83F2869AEBE1C027A2DD /* MKMutableParallelArray.h in Headers */,
+				C2DC9EB7B5473B813B3B4E00 /* MKPermissionUtil.h in Headers */,
+				650EB2767959246264CBB71E /* MKPreferencesManager.h in Headers */,
+				DC7552775A55CC214F8F16D2 /* MKSerialManager.h in Headers */,
+				2E8B2C1DDCBE99D4DDD1291E /* MKStopwatch.h in Headers */,
+				5A356430F12F2C4F6C5C85F2 /* MKSynchronizedCounter.h in Headers */,
+				43B71DCE1E94C84702BE885D /* MKSystemHelper.h in Headers */,
+				AEE31F72686E7D7889DCA84C /* MKUIThemeProtocol.h in Headers */,
+				A23F4409EE01AE05A5DD84FC /* NSDate+MKDateUtils.h in Headers */,
+				E1F5E16A20F655D424843589 /* NSError+MKCommons.h in Headers */,
+				0FCA3D75CDC191FF5C63CF55 /* NSString+MKCommons.h in Headers */,
+				66C19D6B66E03F02235E76C6 /* NSTimeZone+MKDateUtils.h in Headers */,
+				919F83C064AD627E72336146 /* UIAlertView+MKCommons.h in Headers */,
+				B2D0738774447FC209F91A87 /* UIButton+MKCommons.h in Headers */,
+				C2EA05AA079CF3C856F1BCF1 /* UIColor+MKCommons.h in Headers */,
+				6C0DE8D1DA23FB1DD2E2DB5A /* UIImage+MKCommons.h in Headers */,
+				647E669D2ACA7E98B6F0C903 /* UIImageView+MKParallax.h in Headers */,
+				29B08D1F1858D604FEDFA6F1 /* UIPopoverController+MKCommons.h in Headers */,
+				168BD743B876CAB12D3A5FC3 /* UISegmentedControl+MKCommons.h in Headers */,
+				B5FA2C8733A0BD4BEC7AB402 /* UIView+MKCommons.h in Headers */,
+				12149B682C834E4903CA56C1 /* UIViewController+MKCommons.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6FB1CCCC447AF86768942E4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275A603F61F74E148F4C842D /* MKBigLoadingIndicator.h in Headers */,
+				6725D83C40099D355EF577EB /* MKDragDropTableView.h in Headers */,
+				A391FFA10D4F7121F1B27690 /* MKEmailHelper.h in Headers */,
+				51F0E7329714DAD4DC0F68C8 /* MKFallbackQueue.h in Headers */,
+				EB2836CACF64568316B35545 /* MKFormTableView.h in Headers */,
+				17EFEBA6418568B984654873 /* MKFormTableViewCellButton.h in Headers */,
+				4278DDE598C2196C6AF046B2 /* MKFormTableViewCellDatePicker.h in Headers */,
+				C48FE1F7A7F08323F7B709E8 /* MKFormTableViewCellInfo.h in Headers */,
+				ED4B76EDEA4D3EA244728A82 /* MKFormTableViewCellSeparator.h in Headers */,
+				5DE6FF764CABAAA4A5ED6189 /* MKFormTableViewCellTextField.h in Headers */,
+				50A070BAA6329CB5D93E2086 /* MKLoadingIndicator.h in Headers */,
+				2729DE3509D894303F49BFAD /* MKMutableParallelArray.h in Headers */,
+				4C0681C31453275F9F8CD080 /* MKPermissionUtil.h in Headers */,
+				3A847268E9BEE6A433DBF59B /* MKPreferencesManager.h in Headers */,
+				57CA880F20D3E437AC5F816D /* MKSerialManager.h in Headers */,
+				35A301A5A72BE31326CCD4E1 /* MKStopwatch.h in Headers */,
+				5AD0F1C08739DA877D2FFD4D /* MKSynchronizedCounter.h in Headers */,
+				2A110A654FC0E61DCCA1ABF6 /* MKSystemHelper.h in Headers */,
+				C12A086CA188B1270086BC77 /* MKUIThemeProtocol.h in Headers */,
+				0E2FC8590816C8E96B4146F0 /* NSDate+MKDateUtils.h in Headers */,
+				009376F12CB9D08B033CD386 /* NSError+MKCommons.h in Headers */,
+				93BC5D4B206F3CD4DC5121B6 /* NSString+MKCommons.h in Headers */,
+				EAE2F1F4C052942F8062B0DC /* NSTimeZone+MKDateUtils.h in Headers */,
+				2E0F34F02F36487451A7AD40 /* UIAlertView+MKCommons.h in Headers */,
+				FF1556C42C482604B43C81E6 /* UIButton+MKCommons.h in Headers */,
+				6696FBDBCAC0775FC11C43FE /* UIColor+MKCommons.h in Headers */,
+				695CEF4BABE6CB405512794D /* UIImage+MKCommons.h in Headers */,
+				D8A1FD85149472BA94A0E418 /* UIImageView+MKParallax.h in Headers */,
+				E4FE3629AB31931B6DB783E3 /* UIPopoverController+MKCommons.h in Headers */,
+				0243AD05AB8B89D6EAF52AC0 /* UISegmentedControl+MKCommons.h in Headers */,
+				FC0FD8209262B72D482062B4 /* UIView+MKCommons.h in Headers */,
+				C13A8A0CE3B8FADF728A64D8 /* UIViewController+MKCommons.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		29810D03622C7BC8A93B298F /* Pods-MKCommons-MKCommons-MKCommons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCE907FC36603D73406638CC /* Build configuration list for PBXNativeTarget "Pods-MKCommons-MKCommons-MKCommons" */;
+			buildPhases = (
+				69277A76A0A53C344FF606C0 /* Sources */,
+				7AADA074FF634A69D9818AA8 /* Frameworks */,
+				F6419813E84DC90FF2906967 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MKCommons-MKCommons-MKCommons";
+			productName = "Pods-MKCommons-MKCommons-MKCommons";
+			productReference = 76FFDD707054219FDA4E972E /* MKCommons.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		3AC4C15D5DAAD8FDCE4B16F8 /* Pods-Tests-MKLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8DD29D13487437300E57BA0 /* Build configuration list for PBXNativeTarget "Pods-Tests-MKLog" */;
+			buildPhases = (
+				80454AE97F869697199DD51D /* Sources */,
+				CBA48ED35BF09F4C86AF05D6 /* Frameworks */,
+				85A4808E9992BC60B8BA2393 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A602EDF3265D25343EE520AD /* PBXTargetDependency */,
+			);
+			name = "Pods-Tests-MKLog";
+			productName = "Pods-Tests-MKLog";
+			productReference = E9F2FC8E24B4D0E55BC18D76 /* libPods-Tests-MKLog.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		50C68A7A62F5E833ACE40C6B /* Pods-Tests-MKLog-MKLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 453B77B8C1421F0D2ABEE09C /* Build configuration list for PBXNativeTarget "Pods-Tests-MKLog-MKLog" */;
+			buildPhases = (
+				274ACEF2D448AD3625647BE9 /* Sources */,
+				236FDE0497A8115E624B1CFC /* Frameworks */,
+				03C8A12806B7AF4BC83598A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tests-MKLog-MKLog";
+			productName = "Pods-Tests-MKLog-MKLog";
+			productReference = D643207F261BE9F475C00B88 /* MKLog.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		6F5BE931A283816962C08E6B /* Pods-MKCommons-MKCommons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DA7B8347A04F8DD29B64F11 /* Build configuration list for PBXNativeTarget "Pods-MKCommons-MKCommons" */;
+			buildPhases = (
+				18E5B9A5126CA03A02654E99 /* Sources */,
+				B3B2C736AC2A7C0F89661103 /* Frameworks */,
+				C611A2F8584B3DF735511962 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				781C66D507996C152E4125DF /* PBXTargetDependency */,
+				207929852E5FACDFA52961C0 /* PBXTargetDependency */,
+				EB751A033DC21938CECA0A2E /* PBXTargetDependency */,
+			);
+			name = "Pods-MKCommons-MKCommons";
+			productName = "Pods-MKCommons-MKCommons";
+			productReference = 823ED322509001A229B715BE /* libPods-MKCommons-MKCommons.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		917EE876D0123C5036E8AB91 /* Pods-Tests-MKCommons-MKCommons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD478870FA5947676C0EAE78 /* Build configuration list for PBXNativeTarget "Pods-Tests-MKCommons-MKCommons" */;
+			buildPhases = (
+				FF9F1AD8BF8F7A520FD256A2 /* Sources */,
+				B0E71D71E7F30E2BB86BD612 /* Frameworks */,
+				A671721CD245F200A22F922C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tests-MKCommons-MKCommons";
+			productName = "Pods-Tests-MKCommons-MKCommons";
+			productReference = FF3B37365E407087F3C4ADAF /* MKCommons.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		98CB87BFD6DAD424FF3F987E /* Pods-MKCommons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9342B29035852984F598435F /* Build configuration list for PBXNativeTarget "Pods-MKCommons" */;
+			buildPhases = (
+				D600FCF26F37C92974161F54 /* Sources */,
+				136CA5C96CAE4C618C8B6FC9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB1742ECA176E05DC7C58E20 /* PBXTargetDependency */,
+				B9D85DECB32C97A4EDA6143D /* PBXTargetDependency */,
+				1290C981A7D96F8537E5366A /* PBXTargetDependency */,
+			);
+			name = "Pods-MKCommons";
+			productName = "Pods-MKCommons";
+			productReference = 1B44497A1CF3A6DCBAA4C35D /* libPods-MKCommons.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AA0F166CAD405DFD02A76E20 /* Pods-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8857976F85388C4DDF748E17 /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
+			buildPhases = (
+				EC910D7DB0A4A50C88807EE5 /* Sources */,
+				344FED440A8A896CBF163357 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F4162972DE91B290AFD9394 /* PBXTargetDependency */,
+				36B1C9D8EE8EDDEE7B40CDDF /* PBXTargetDependency */,
+				1F5620D2118F8A45A6C06948 /* PBXTargetDependency */,
+			);
+			name = "Pods-Tests";
+			productName = "Pods-Tests";
+			productReference = 77AB35357607BA552948AF94 /* libPods-Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B33AA5D2CC9CEE3CFFE7FE4F /* Pods-MKCommons-MKLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF7ED33801D6AEA0346C5D40 /* Build configuration list for PBXNativeTarget "Pods-MKCommons-MKLog" */;
+			buildPhases = (
+				1B0391BC2E574F8C7ECB06CE /* Sources */,
+				FDA362AD182A994DE69E641E /* Frameworks */,
+				C2AE5707A37F550BEA357853 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F290685372A399F17C3A4D60 /* PBXTargetDependency */,
+			);
+			name = "Pods-MKCommons-MKLog";
+			productName = "Pods-MKCommons-MKLog";
+			productReference = 09B0DCDF33C0953A607B4DF5 /* libPods-MKCommons-MKLog.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BD1231274EFCB6C748DA688C /* Pods-MKCommons-PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CF801D4F5B892897154DFA4 /* Build configuration list for PBXNativeTarget "Pods-MKCommons-PureLayout" */;
+			buildPhases = (
+				B41382213E987F62815CF408 /* Sources */,
+				9F8FC30F308464157DF5CAB4 /* Frameworks */,
+				096C5B361308D0CCE336F05B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MKCommons-PureLayout";
+			productName = "Pods-MKCommons-PureLayout";
+			productReference = 720CD5CC2FDF05BA8EB8D0E0 /* libPods-MKCommons-PureLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C1D7059B9F267FD25A8ABADD /* Pods-MKCommons-MKLog-MKLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85137FEBE4375613E8F82EB9 /* Build configuration list for PBXNativeTarget "Pods-MKCommons-MKLog-MKLog" */;
+			buildPhases = (
+				2EEA821F195BBFC463BB8424 /* Sources */,
+				3FB2603CEBC23A6AA26193B3 /* Frameworks */,
+				58B5E070C70BB6161AE96BEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MKCommons-MKLog-MKLog";
+			productName = "Pods-MKCommons-MKLog-MKLog";
+			productReference = CFD504E273A3E35188ECC82E /* MKLog.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		CEFD025C6A47FB3091DAA7A1 /* Pods-Tests-MKCommons */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44CCAED59337A41195857F3C /* Build configuration list for PBXNativeTarget "Pods-Tests-MKCommons" */;
+			buildPhases = (
+				88589E1E56DA5364125F2A8F /* Sources */,
+				C70BE3941E9D6611E984CA87 /* Frameworks */,
+				C6FB1CCCC447AF86768942E4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F2A1E276C65E3585E88DA82 /* PBXTargetDependency */,
+				14C59D8DD6E2E684921F6AD6 /* PBXTargetDependency */,
+				4EB009FE0BBA378FB5646A16 /* PBXTargetDependency */,
+			);
+			name = "Pods-Tests-MKCommons";
+			productName = "Pods-Tests-MKCommons";
+			productReference = 6890D52722C0E505860D03EE /* libPods-Tests-MKCommons.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F5723F34044E3DB42F7DA380 /* Pods-Tests-PureLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D82C8CAF940B88708B4525EB /* Build configuration list for PBXNativeTarget "Pods-Tests-PureLayout" */;
+			buildPhases = (
+				5170A5B20C0E6262563D90BB /* Sources */,
+				0DFB80A4E2EF06C9650B48D0 /* Frameworks */,
+				C4786F524002BA0DA1BBCF2D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Tests-PureLayout";
+			productName = "Pods-Tests-PureLayout";
+			productReference = B03968BF6FCED44C917B8985 /* libPods-Tests-PureLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F69B93DA74D35014F4AF38C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 1CD41FE0E93B395524D5FF03 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3021E86DC3BA3F2720BCE62D;
+			productRefGroup = AE60AB37236B3721E0BFAACF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98CB87BFD6DAD424FF3F987E /* Pods-MKCommons */,
+				6F5BE931A283816962C08E6B /* Pods-MKCommons-MKCommons */,
+				29810D03622C7BC8A93B298F /* Pods-MKCommons-MKCommons-MKCommons */,
+				B33AA5D2CC9CEE3CFFE7FE4F /* Pods-MKCommons-MKLog */,
+				C1D7059B9F267FD25A8ABADD /* Pods-MKCommons-MKLog-MKLog */,
+				BD1231274EFCB6C748DA688C /* Pods-MKCommons-PureLayout */,
+				AA0F166CAD405DFD02A76E20 /* Pods-Tests */,
+				CEFD025C6A47FB3091DAA7A1 /* Pods-Tests-MKCommons */,
+				917EE876D0123C5036E8AB91 /* Pods-Tests-MKCommons-MKCommons */,
+				3AC4C15D5DAAD8FDCE4B16F8 /* Pods-Tests-MKLog */,
+				50C68A7A62F5E833ACE40C6B /* Pods-Tests-MKLog-MKLog */,
+				F5723F34044E3DB42F7DA380 /* Pods-Tests-PureLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03C8A12806B7AF4BC83598A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58B5E070C70BB6161AE96BEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A671721CD245F200A22F922C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6419813E84DC90FF2906967 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18E5B9A5126CA03A02654E99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8661FB5AAE74F434ADD7008D /* MKBigLoadingIndicator.m in Sources */,
+				F1C97271085109319EAA8F12 /* MKDragDropTableView.m in Sources */,
+				A92CE0D54EB6D727A4A8B75E /* MKEmailHelper.m in Sources */,
+				A5EE8CAD644B184E7A1511A8 /* MKFallbackQueue.m in Sources */,
+				472328A5F391385B03BDBB6A /* MKFormTableView.m in Sources */,
+				008EE4D6BC8555D55DD0AAB5 /* MKFormTableViewCellButton.m in Sources */,
+				57140CCB7FA5BED009F0C91F /* MKFormTableViewCellDatePicker.m in Sources */,
+				00B8A2D41D29670A98F4F37C /* MKFormTableViewCellInfo.m in Sources */,
+				2F527E5E797EE083347A91CC /* MKFormTableViewCellSeparator.m in Sources */,
+				835BA726B75D51A28A03E353 /* MKFormTableViewCellTextField.m in Sources */,
+				2FD3A44D5F9D97ABE050CC30 /* MKLoadingIndicator.m in Sources */,
+				77F97173FD13FC733E6AEB96 /* MKMutableParallelArray.m in Sources */,
+				966061824A9283825ECE8A92 /* MKPermissionUtil.m in Sources */,
+				C99DD03574F8B2C3959143A7 /* MKPreferencesManager.m in Sources */,
+				ABD8D2B96B5B32AB3DF51209 /* MKSerialManager.m in Sources */,
+				67F0577E87E36870032CA6E7 /* MKStopwatch.m in Sources */,
+				CBFED4833764E832EE1E70D2 /* MKSynchronizedCounter.m in Sources */,
+				C8DFD46AEA576D369282FCFD /* MKSystemHelper.m in Sources */,
+				80EB3E75AA6D960D24E5CDEE /* NSDate+MKDateUtils.m in Sources */,
+				94718AB3F0799D05E45A124C /* NSError+MKCommons.m in Sources */,
+				0D34E63BB17FE60D0F7BE705 /* NSString+MKCommons.m in Sources */,
+				069667EFA1ABD0DC182BE1BD /* NSTimeZone+MKDateUtils.m in Sources */,
+				C619CBCFE8E12F79AB16E234 /* Pods-MKCommons-MKCommons-dummy.m in Sources */,
+				378ABA4EC182DDFCF29BB308 /* UIAlertView+MKCommons.m in Sources */,
+				7AEFE71438AB895B033B3020 /* UIButton+MKCommons.m in Sources */,
+				EA4D9C26B670FFB9C37ACA11 /* UIColor+MKCommons.m in Sources */,
+				B977E1FDBFBA318C9555C2D0 /* UIImage+MKCommons.m in Sources */,
+				F2CAD737CB9BF47012853F6E /* UIImageView+MKParallax.m in Sources */,
+				BB4A940AA5B4564CB95FF545 /* UIPopoverController+MKCommons.m in Sources */,
+				13E8BABBF096821F0E322C4A /* UISegmentedControl+MKCommons.m in Sources */,
+				C4A9D3AF3659997C1CEC9787 /* UIView+MKCommons.m in Sources */,
+				4B311266F8D9A482007C42DB /* UIViewController+MKCommons.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B0391BC2E574F8C7ECB06CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98EF3E1D252E8D44FA95FD94 /* MKLog.m in Sources */,
+				5356421A8F427C7F52723CAA /* Pods-MKCommons-MKLog-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		274ACEF2D448AD3625647BE9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EEA821F195BBFC463BB8424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5170A5B20C0E6262563D90BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				835F52647D82CBCB0B8F9366 /* ALView+PureLayout.m in Sources */,
+				A078FF9E4F88A9AD2910D3C5 /* NSArray+PureLayout.m in Sources */,
+				BCBABC19DBF3D3B12ACF5352 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				EBE22A8D892A5A027BDCCE9D /* Pods-Tests-PureLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69277A76A0A53C344FF606C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80454AE97F869697199DD51D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				613488B08B8689EA3B0B676B /* MKLog.m in Sources */,
+				78FCC8D6831CB490AFA43A42 /* Pods-Tests-MKLog-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88589E1E56DA5364125F2A8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				751F6C59DB58CB0034B88FCA /* MKBigLoadingIndicator.m in Sources */,
+				8FE68AA5E54C2451D1FEDF37 /* MKDragDropTableView.m in Sources */,
+				C86718C6F48C6361C7FA0451 /* MKEmailHelper.m in Sources */,
+				4ED742F2D72F2D20014C39FA /* MKFallbackQueue.m in Sources */,
+				552F6152DD5A38AA576B95A9 /* MKFormTableView.m in Sources */,
+				553B5EC977FBF932E1C76871 /* MKFormTableViewCellButton.m in Sources */,
+				3430B360CB3E60B98C7E1C24 /* MKFormTableViewCellDatePicker.m in Sources */,
+				B52AAB5C7981EA1CB92163AE /* MKFormTableViewCellInfo.m in Sources */,
+				BD651BCA23E8FB17C91E28B9 /* MKFormTableViewCellSeparator.m in Sources */,
+				238156341F0B3ED786EA9AE9 /* MKFormTableViewCellTextField.m in Sources */,
+				FA6815BFFB98BFE314A8DBB5 /* MKLoadingIndicator.m in Sources */,
+				512FCB1C360B598042FC9361 /* MKMutableParallelArray.m in Sources */,
+				86271F4800A7FC59727FB533 /* MKPermissionUtil.m in Sources */,
+				0D07C1AA4C3EB557CBB986CF /* MKPreferencesManager.m in Sources */,
+				626AF23CCB1EE7F5CDE11050 /* MKSerialManager.m in Sources */,
+				4BFAEB2987CA2465A2BE04B2 /* MKStopwatch.m in Sources */,
+				F0025D1CD2572CB9F20E9C2C /* MKSynchronizedCounter.m in Sources */,
+				6CD3DB7028A6B721167AB464 /* MKSystemHelper.m in Sources */,
+				6FA6FD738A2284BDB7F368B9 /* NSDate+MKDateUtils.m in Sources */,
+				07DD52EB5E1040F3A1FB95FC /* NSError+MKCommons.m in Sources */,
+				5306FA7461B9762E73EF5134 /* NSString+MKCommons.m in Sources */,
+				37F67E5614AB9739B92334A5 /* NSTimeZone+MKDateUtils.m in Sources */,
+				0A8CA47E9BD2D101E7216D60 /* Pods-Tests-MKCommons-dummy.m in Sources */,
+				30E833B4FE1A88B016F3C470 /* UIAlertView+MKCommons.m in Sources */,
+				0A2A2F4364505E9CF7548877 /* UIButton+MKCommons.m in Sources */,
+				E15E1F443F417D61FC66A36E /* UIColor+MKCommons.m in Sources */,
+				385C35F781B2044A54C20A1F /* UIImage+MKCommons.m in Sources */,
+				9C93C96679949FD0A4F3E4B3 /* UIImageView+MKParallax.m in Sources */,
+				5E2F8EC3EFF04869391CB2A3 /* UIPopoverController+MKCommons.m in Sources */,
+				26186DCD93EC7D28FE51B00A /* UISegmentedControl+MKCommons.m in Sources */,
+				F9595F0CF4057765030E8A6A /* UIView+MKCommons.m in Sources */,
+				1051384C153AF10A4802AFE3 /* UIViewController+MKCommons.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B41382213E987F62815CF408 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				68D8364F1AB6166E1540E40F /* ALView+PureLayout.m in Sources */,
+				AC99CB272C72A2E579534AF2 /* NSArray+PureLayout.m in Sources */,
+				57B3F2D8E67CD4E99028735E /* NSLayoutConstraint+PureLayout.m in Sources */,
+				AE1C4BA0DC9955F3D8B9A53F /* Pods-MKCommons-PureLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D600FCF26F37C92974161F54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61C3D299F6FE40FCC8A690A6 /* Pods-MKCommons-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC910D7DB0A4A50C88807EE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBDC91F915D7415A0A6FE9C /* Pods-Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF9F1AD8BF8F7A520FD256A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F2A1E276C65E3585E88DA82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-MKCommons-MKCommons";
+			target = 917EE876D0123C5036E8AB91 /* Pods-Tests-MKCommons-MKCommons */;
+			targetProxy = 23F1B79AF31931192F2DA05A /* PBXContainerItemProxy */;
+		};
+		1290C981A7D96F8537E5366A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MKCommons-PureLayout";
+			target = BD1231274EFCB6C748DA688C /* Pods-MKCommons-PureLayout */;
+			targetProxy = 6181868840AC6D3486C6DDB4 /* PBXContainerItemProxy */;
+		};
+		14C59D8DD6E2E684921F6AD6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-MKLog";
+			target = 3AC4C15D5DAAD8FDCE4B16F8 /* Pods-Tests-MKLog */;
+			targetProxy = 8D231C7F325D97640727042D /* PBXContainerItemProxy */;
+		};
+		1F5620D2118F8A45A6C06948 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-PureLayout";
+			target = F5723F34044E3DB42F7DA380 /* Pods-Tests-PureLayout */;
+			targetProxy = FC6D465E0DE71AE921ACD51F /* PBXContainerItemProxy */;
+		};
+		207929852E5FACDFA52961C0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MKCommons-MKLog";
+			target = B33AA5D2CC9CEE3CFFE7FE4F /* Pods-MKCommons-MKLog */;
+			targetProxy = 0836D71B05AE199FECDCB444 /* PBXContainerItemProxy */;
+		};
+		36B1C9D8EE8EDDEE7B40CDDF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-MKLog";
+			target = 3AC4C15D5DAAD8FDCE4B16F8 /* Pods-Tests-MKLog */;
+			targetProxy = EBED43949917D7B743C05E04 /* PBXContainerItemProxy */;
+		};
+		4EB009FE0BBA378FB5646A16 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-PureLayout";
+			target = F5723F34044E3DB42F7DA380 /* Pods-Tests-PureLayout */;
+			targetProxy = 91922CF36960036C90C22723 /* PBXContainerItemProxy */;
+		};
+		781C66D507996C152E4125DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MKCommons-MKCommons-MKCommons";
+			target = 29810D03622C7BC8A93B298F /* Pods-MKCommons-MKCommons-MKCommons */;
+			targetProxy = 4DCBD91D7072338D12E04D89 /* PBXContainerItemProxy */;
+		};
+		9F4162972DE91B290AFD9394 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-MKCommons";
+			target = CEFD025C6A47FB3091DAA7A1 /* Pods-Tests-MKCommons */;
+			targetProxy = 3D686468595D79454FCF4618 /* PBXContainerItemProxy */;
+		};
+		A602EDF3265D25343EE520AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Tests-MKLog-MKLog";
+			target = 50C68A7A62F5E833ACE40C6B /* Pods-Tests-MKLog-MKLog */;
+			targetProxy = 984A8DB00A393FEFCBA0246F /* PBXContainerItemProxy */;
+		};
+		B9D85DECB32C97A4EDA6143D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MKCommons-MKLog";
+			target = B33AA5D2CC9CEE3CFFE7FE4F /* Pods-MKCommons-MKLog */;
+			targetProxy = 93909AD1853383191DF1FABC /* PBXContainerItemProxy */;
+		};
+		EB751A033DC21938CECA0A2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MKCommons-PureLayout";
+			target = BD1231274EFCB6C748DA688C /* Pods-MKCommons-PureLayout */;
+			targetProxy = 6BBB69D74EA2F3E701B244C0 /* PBXContainerItemProxy */;
+		};
+		F290685372A399F17C3A4D60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MKCommons-MKLog-MKLog";
+			target = C1D7059B9F267FD25A8ABADD /* Pods-MKCommons-MKLog-MKLog */;
+			targetProxy = 2ECCBD75691D972B23F0934F /* PBXContainerItemProxy */;
+		};
+		FB1742ECA176E05DC7C58E20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-MKCommons-MKCommons";
+			target = 6F5BE931A283816962C08E6B /* Pods-MKCommons-MKCommons */;
+			targetProxy = 4D031BE1188C76CCEE686CA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00B95ED7237A6ED40ACED700 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D32C3A8D980A0221C23274E8 /* Pods-MKCommons-PureLayout-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MKCommons-PureLayout/Pods-MKCommons-PureLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2012BB5C1C5C3A125D24BBC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC8A412B11ACD2C417DD80B /* Pods-Tests-MKCommons-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-MKCommons/Pods-Tests-MKCommons-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		272751DDFE65D3E22F3F533D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6724265F7F7FF208508333E5 /* Pods-MKCommons.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		30E515362DFB2EFD99354565 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MKCommons;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		414FCE44B88A36D7722A2307 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6BF05C0E3FC47260389E3B9 /* Pods-Tests-PureLayout-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-PureLayout/Pods-Tests-PureLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		471C3A758470422507AFB1D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MKLog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		5567EBDA7726458C46340C06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D0AED5B8744988EE6336C50 /* Pods-MKCommons-MKCommons-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MKCommons-MKCommons/Pods-MKCommons-MKCommons-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		57E9320BE349C103B3EE086A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MKLog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		581683A7705BCB7F8313446C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6BF05C0E3FC47260389E3B9 /* Pods-Tests-PureLayout-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-PureLayout/Pods-Tests-PureLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		65BF9BF12CC0F2EE826564EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MKCommons;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		671827273C5BF447AF3CA29C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1582757EB5DA5F8D0940349 /* Pods-MKCommons-MKLog-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MKCommons-MKLog/Pods-MKCommons-MKLog-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		75367FC025D9518E138CC9E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MKLog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		83256393A912B460F18947E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C3CBF78F18E284AC4A107BC /* Pods-Tests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		918EFACC4044753354DD7BC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95586F86C28FF0CCE48F5208 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D32C3A8D980A0221C23274E8 /* Pods-MKCommons-PureLayout-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MKCommons-PureLayout/Pods-MKCommons-PureLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AF2A1ED663787B4DDCBC7D7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF13B869AF6D3854279123E2 /* Pods-Tests-MKLog-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-MKLog/Pods-Tests-MKLog-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BE60E96FBCDF61CF92DB8BED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC18B7AEA2C9C3AB0BA8F604 /* Pods-MKCommons.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BEC1B1C654B63128557014A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 828CA17B2B71F4454FA0BEE3 /* Pods-Tests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C924B5DDABA039D14595E8D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF13B869AF6D3854279123E2 /* Pods-Tests-MKLog-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-MKLog/Pods-Tests-MKLog-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CD390AEAA2EC49EA516D590D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DA241DB221C7AC61C3A02051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MKCommons;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		DF2B804923287F6C00FFF646 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1582757EB5DA5F8D0940349 /* Pods-MKCommons-MKLog-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MKCommons-MKLog/Pods-MKCommons-MKLog-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E493287F86A3B75241DFF503 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EC8A412B11ACD2C417DD80B /* Pods-Tests-MKCommons-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Tests-MKCommons/Pods-Tests-MKCommons-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E53CC698CA746C2080F832ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D0AED5B8744988EE6336C50 /* Pods-MKCommons-MKCommons-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-MKCommons-MKCommons/Pods-MKCommons-MKCommons-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F1A22FEDD297DCCD0FC9FB49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MKLog;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		FC0D0FAD01E2545F87DBC44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MKCommons;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CD41FE0E93B395524D5FF03 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD390AEAA2EC49EA516D590D /* Debug */,
+				918EFACC4044753354DD7BC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44CCAED59337A41195857F3C /* Build configuration list for PBXNativeTarget "Pods-Tests-MKCommons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E493287F86A3B75241DFF503 /* Debug */,
+				2012BB5C1C5C3A125D24BBC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		453B77B8C1421F0D2ABEE09C /* Build configuration list for PBXNativeTarget "Pods-Tests-MKLog-MKLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57E9320BE349C103B3EE086A /* Debug */,
+				471C3A758470422507AFB1D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85137FEBE4375613E8F82EB9 /* Build configuration list for PBXNativeTarget "Pods-MKCommons-MKLog-MKLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1A22FEDD297DCCD0FC9FB49 /* Debug */,
+				75367FC025D9518E138CC9E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8857976F85388C4DDF748E17 /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83256393A912B460F18947E8 /* Debug */,
+				BEC1B1C654B63128557014A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8DA7B8347A04F8DD29B64F11 /* Build configuration list for PBXNativeTarget "Pods-MKCommons-MKCommons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5567EBDA7726458C46340C06 /* Debug */,
+				E53CC698CA746C2080F832ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9342B29035852984F598435F /* Build configuration list for PBXNativeTarget "Pods-MKCommons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				272751DDFE65D3E22F3F533D /* Debug */,
+				BE60E96FBCDF61CF92DB8BED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CF801D4F5B892897154DFA4 /* Build configuration list for PBXNativeTarget "Pods-MKCommons-PureLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B95ED7237A6ED40ACED700 /* Debug */,
+				95586F86C28FF0CCE48F5208 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8DD29D13487437300E57BA0 /* Build configuration list for PBXNativeTarget "Pods-Tests-MKLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C924B5DDABA039D14595E8D3 /* Debug */,
+				AF2A1ED663787B4DDCBC7D7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD478870FA5947676C0EAE78 /* Build configuration list for PBXNativeTarget "Pods-Tests-MKCommons-MKCommons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65BF9BF12CC0F2EE826564EB /* Debug */,
+				30E515362DFB2EFD99354565 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D82C8CAF940B88708B4525EB /* Build configuration list for PBXNativeTarget "Pods-Tests-PureLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				581683A7705BCB7F8313446C /* Debug */,
+				414FCE44B88A36D7722A2307 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCE907FC36603D73406638CC /* Build configuration list for PBXNativeTarget "Pods-MKCommons-MKCommons-MKCommons" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC0D0FAD01E2545F87DBC44B /* Debug */,
+				DA241DB221C7AC61C3A02051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF7ED33801D6AEA0346C5D40 /* Build configuration list for PBXNativeTarget "Pods-MKCommons-MKLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF2B804923287F6C00FFF646 /* Debug */,
+				671827273C5BF447AF3CA29C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F69B93DA74D35014F4AF38C /* Project object */;
+}
