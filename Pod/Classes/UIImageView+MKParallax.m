@@ -29,7 +29,7 @@
     parallaxImageFrame.origin.y = -scrollOffset / 4;
     if (scrollOffset > 0) {
         // TODO: is this a good way in terms of performance?
-        parallaxImageFrame.size.height += fabsf(scrollOffset);
+        parallaxImageFrame.size.height += fabsf((float)scrollOffset);
     } else if (scrollOffset < 0) {
 
     }

@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.version          = "1.12.0"
   s.summary          = "A collection of common utils"
   s.description      = <<-DESC
-                       A collection of common utils
+                       A collection of common utils. Mainly leftovers that are not in separate pods.
                        DESC
   s.homepage         = "https://github.com/mikumi/mkcommons-obj"
   s.license          = 'MIT'

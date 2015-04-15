@@ -22,6 +22,8 @@ static const int ButtonImageTitleDefaultSpacing = 6.0f;
 //============================================================
 @implementation UIButton (MKCommons)
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 /**
  * // DOCU: this method comment needs be updated.
  */
@@ -43,6 +45,7 @@ static const int ButtonImageTitleDefaultSpacing = 6.0f;
     // lower the text and push it left to center it
     self.titleEdgeInsets = UIEdgeInsetsMake(0.0, -imageSize.width, -(totalHeight - titleSize.height), 0.0);
 }
+#pragma clang diagnostic pop
 
 /**
  * // DOCU: this method comment needs be updated.
