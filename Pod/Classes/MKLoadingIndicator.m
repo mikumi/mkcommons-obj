@@ -119,11 +119,13 @@ static NSUInteger _counter = 0;
  */
 + (void)updateLoadingIndicator
 {
+#ifndef MKCOMMONS_APP_EXTENSIONS
     if (_counter > 0) {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     } else {
         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     }
+#endif
 }
 
 /**

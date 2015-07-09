@@ -158,6 +158,7 @@ static NSString   *_indicatorText    = @"Loading";
 */
 + (void)bigNetworkActivityIndicatorVisible:(BOOL)isVisible
 {
+#ifndef MKCOMMONS_APP_EXTENSIONS
     @synchronized(ViewLock) {
         UIView *const rootView = [UIApplication sharedApplication].keyWindow.rootViewController.view;
 
@@ -204,6 +205,7 @@ static NSString   *_indicatorText    = @"Loading";
             _bigIndicatorView = nil;
         }
     }
+#endif
 }
 
 /**

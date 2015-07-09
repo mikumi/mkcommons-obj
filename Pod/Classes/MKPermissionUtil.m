@@ -46,6 +46,7 @@ static NSString *const DidAskPermissionKeyPrefix = @"MKPermissionUtilDidAskPermi
 #pragma ide diagnostic ignored "UnavailableInDeploymentTarget"
 - (BOOL)hasAskedPermission:(MKPermissionType)permissionType
 {
+#ifndef MKCOMMONS_APP_EXTENSIONS
     if (permissionType == MKPermissionTypePushNotifications &&
             ![[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         return YES;
@@ -53,6 +54,9 @@ static NSString *const DidAskPermissionKeyPrefix = @"MKPermissionUtilDidAskPermi
     NSString *const preferencesKey = [self permissionKeyForType:permissionType];
     BOOL const hasAsked = [self.preferencesManager boolForKey:preferencesKey];
     return hasAsked;
+#else
+    return NO;
+#endif
 }
 #pragma clang diagnostic pop
 
@@ -67,6 +71,7 @@ static NSString *const DidAskPermissionKeyPrefix = @"MKPermissionUtilDidAskPermi
         return;
     }
 
+#ifndef MKCOMMONS_APP_EXTENSIONS
     self.alert = [[UIAlertView alloc]
             initWithTitle:title message:message delegate:self cancelButtonTitle:noTitle
             otherButtonTitles:yesTitle, nil];
@@ -78,6 +83,7 @@ static NSString *const DidAskPermissionKeyPrefix = @"MKPermissionUtilDidAskPermi
             [self requestNativePermission:permissionType];
         }
     }];
+#endif
 }
 
 #pragma mark - Private Implementation
@@ -100,6 +106,7 @@ static NSString *const DidAskPermissionKeyPrefix = @"MKPermissionUtilDidAskPermi
         case MKPermissionTypePushNotifications:
 #pragma clang diagnostic push
 #pragma ide diagnostic ignored "UnavailableInDeploymentTarget"
+#ifndef MKCOMMONS_APP_EXTENSIONS
             if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
                 [[UIApplication sharedApplication]
                         registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:
@@ -107,6 +114,7 @@ static NSString *const DidAskPermissionKeyPrefix = @"MKPermissionUtilDidAskPermi
                                         UIUserNotificationTypeSound
                                 categories:nil]];
             }
+#endif
 #pragma clang diagnostic pop
             break;
 
