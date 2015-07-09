@@ -20,6 +20,24 @@ it, simply add the following line to your Podfile:
 pod "MKCommons"
 ```
 
+## NOTES
+
+If you want to use MKCommons in an App Extension, please add this build step to your podfile:
+
+```
+post_install do |installer_representation|
+  installer_representation.project.targets.each do |target|
+    if target.name.end_with? "MKCommons"
+      target.build_configurations.each do |build_configuration|
+        if build_configuration.build_settings['APPLICATION_EXTENSION_API_ONLY'] == 'YES'
+          build_configuration.build_settings['GCC_PREPROCESSOR_DEFINITIONS'] = ['$(inherited)', 'MKCOMMONS_APP_EXTENSIONS=1']
+        end
+      end
+    end
+  end
+end
+```
+
 ## Author
 
 Michael Kuck, me@michael-kuck.com
