@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MKCommons"
-  s.version          = "1.12.0"
+  s.version          = "1.12.1"
   s.summary          = "A collection of common utils"
   s.description      = <<-DESC
                        A collection of common utils. Mainly leftovers that are not in separate pods.
