@@ -34,19 +34,11 @@
 /**
 * // DOCU: this method comment needs be updated.
 */
-+ (NSString *)pathToDirectory:(MKSystemHelperPathType)pathType
++ (NSURL *)pathToDirectory:(MKSystemHelperPathType)pathType
 {
     NSSearchPathDirectory const searchPathType = (NSSearchPathDirectory)pathType;
-
-    NSArray  *const paths = NSSearchPathForDirectoriesInDomains(searchPathType, NSUserDomainMask, YES);
-    NSString *const path  = paths[0];
-    BOOL    isDirectoryExist = NO;
-    NSError *error;
-    if (![[NSFileManager defaultManager] fileExistsAtPath:path isDirectory:&isDirectoryExist] && (!isDirectoryExist)) {
-        [[NSFileManager defaultManager]
-                createDirectoryAtPath:path withIntermediateDirectories:NO attributes:nil error:&error];
-    }
-    return path;
+    NSURL *const directory = [[[NSFileManager defaultManager] URLsForDirectory:searchPathType inDomains:NSUserDomainMask] lastObject];
+    return directory;
 }
 
 /**
