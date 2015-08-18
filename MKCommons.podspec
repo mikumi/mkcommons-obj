@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MKCommons"
-  s.version          = "1.13.0"
+  s.version          = "1.14.0"
   s.summary          = "A collection of common utils"
   s.description      = <<-DESC
                        A collection of common utils. Mainly leftovers that are not in separate pods.
@@ -29,6 +29,6 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'PureLayout', '~> 2.0.5'
+  s.dependency 'PureLayout', '~> 3.0.0'
   s.dependency 'MKLog', '~> 0.1.1'
 end
