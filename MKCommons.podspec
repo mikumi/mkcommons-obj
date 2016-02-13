@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MKCommons"
-  s.version          = "1.14.0"
+  s.version          = "1.14.1"
   s.summary          = "A collection of common utils"
   s.description      = <<-DESC
                        A collection of common utils. Mainly leftovers that are not in separate pods.
@@ -21,6 +21,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
+  s.watchos.deployment_target = '2.0'
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
@@ -30,5 +31,5 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'PureLayout', '~> 3.0.0'
-  s.dependency 'MKLog', '~> 0.1.1'
+  s.dependency 'MKLog', '~> 0.1.2'
 end
