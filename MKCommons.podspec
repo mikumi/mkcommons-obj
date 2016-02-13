@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '7.0'
   s.requires_arc = true
-  s.watchos.deployment_target = '2.0'
 
   s.source_files = 'Pod/Classes/**/*'
   s.resource_bundles = {
