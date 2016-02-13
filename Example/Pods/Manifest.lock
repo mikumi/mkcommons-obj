@@ -1,20 +1,20 @@
 PODS:
-  - MKCommons (1.14.0):
-    - MKLog (~> 0.1.1)
+  - MKCommons (1.14.1):
+    - MKLog (~> 0.1.2)
     - PureLayout (~> 3.0.0)
-  - MKLog (0.1.1)
-  - PureLayout (3.0.0)
+  - MKLog (0.1.2)
+  - PureLayout (3.0.1)
 
 DEPENDENCIES:
   - MKCommons (from `../`)
 
 EXTERNAL SOURCES:
   MKCommons:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
-  MKCommons: 592b26f4705585bca6284b4216c6d2831be209ff
-  MKLog: 4f794acd0f5d557b63bfdb49f59953593be94b0b
-  PureLayout: 270dfee2236f697ab1d5e2771c2e5c248495fa0d
+  MKCommons: 7835b246163463897289b65756dc21b87c2c418b
+  MKLog: 9e714e441dfe2765534e8b3a6a45dc8442aa56c3
+  PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
