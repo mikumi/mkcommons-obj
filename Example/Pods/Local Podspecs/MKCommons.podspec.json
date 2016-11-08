@@ -13,8 +13,7 @@
     "tag": "1.14.1"
   },
   "platforms": {
-    "ios": "7.0",
-    "watchos": "2.0"
+    "ios": "7.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
