@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MKCommons"
-  s.version          = "1.14.1"
+  s.version          = "1.15.0"
   s.summary          = "A collection of common utils"
   s.description      = <<-DESC
                        A collection of common utils. Mainly leftovers that are not in separate pods.
@@ -23,9 +23,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.resource_bundles = {
-    'MKCommons' => ['Pod/Assets/*.png']
-  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

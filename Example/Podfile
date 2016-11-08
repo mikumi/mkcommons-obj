@@ -1,11 +1,9 @@
-source 'https://github.com/CocoaPods/Specs.git'
+target 'MKCommons' do
+    pod 'MKCommons', :path => '../'
 
-target 'MKCommons', :exclusive => true do
-  pod "MKCommons", :path => "../"
-end
+    target 'Tests' do
+        inherit! :search_paths
 
-target 'Tests', :exclusive => true do
-  pod "MKCommons", :path => "../"
 
-  
+    end
 end
