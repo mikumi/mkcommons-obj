@@ -1,11 +1,11 @@
-source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
 
-target 'MKCommons', :exclusive => true do
-  pod "MKCommons", :path => "../"
-end
+target 'MKCommons' do
+    pod 'MKCommons', :path => '../'
 
-target 'Tests', :exclusive => true do
-  pod "MKCommons", :path => "../"
+    target 'Tests' do
+        inherit! :search_paths
 
-  
+
+    end
 end
