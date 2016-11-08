@@ -1,6 +1,0 @@
-framework module MKCommons {
-  umbrella header "MKCommons-umbrella.h"
-
-  export *
-  module * { export * }
-}
